@@ -32,10 +32,10 @@
        
               <ul class="kt-menu__nav ">
          
-                <li class="kt-menu__item " aria-haspopup="true"><a href="investigator/dashboard.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Case Analyst</span></a>
+                <li class="kt-menu__item " aria-haspopup="true"><a href="case/dashboard.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Case Analyst</span></a>
                 </li>
              
-                <li class="kt-menu__item " aria-haspopup="true"><a href="idea/ideadashboard.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text">Info Analyst</span></a>
+                <li class="kt-menu__item " aria-haspopup="true"><a href="info/dashboard.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text">Info Analyst</span></a>
                 </li>
                   <li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/dashboard.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-mail-1"></i><span class="kt-menu__link-text">Reviewer</span></a>
                 </li>

@@ -16,7 +16,7 @@
                         
 					<div class="kt-aside__brand kt-grid__item" id="kt_aside_brand">
 						<div class="kt-aside__brand-logo">
-								<a href="idea/ideadashboard.php">
+								<a href="info/dashboard.php">
 								<img src=" ./assets/media/company-logos/whistle.png" alt="" width="100px" height="100px" />
 							</a>
                                                                 	
@@ -32,13 +32,13 @@
 							
 							<ul class="kt-menu__nav ">
 								
-								<li class="kt-menu__item " aria-haspopup="true"><a href="idea/view.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Analyze</span></a>
+								<li class="kt-menu__item " aria-haspopup="true"><a href="info/view.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Info</span></a>
 								</li>
 							
 
 								
 
-								<li class="kt-menu__item " aria-haspopup="true"><a href="idea/Report.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text"> Report</span></a></li>
+								<li class="kt-menu__item " aria-haspopup="true"><a href="info/Report.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text"> Report</span></a></li>
 						
 						
 							</ul> 

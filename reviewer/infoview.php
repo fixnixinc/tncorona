@@ -1,9 +1,9 @@
 <?php
     include "../php/common/config.php";
-  $query="SELECT * from info where status='created' or status='Reported' or status='reinvestigate' order by id desc";
+  $query="SELECT * FROM `info` where status='Reported' order by id desc";
   $result=mysqli_query($link,$query);
 ?>
-<!DOCTYPE html>   
+<!DOCTYPE html>     
 
 <html lang="en" >
     <!-- begin::Head -->
@@ -11,7 +11,7 @@
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Info | List</title>
+        <title>Reviewer | Case</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -69,6 +69,13 @@
            
         <link rel="shortcut icon" href=" ./assets/media/company-logos/whistle.png" />
     </head>
+ <!--    <script type="text/javascript">
+   
+    fetch('https://5d1b152edd81710014e8825d.mockapi.io/fixnix/whistle')
+    .then(res => res.json())//response type
+    .then(data => console.log(data)); //
+  </script> -->
+
 
   <?php 
    include 'siteHeader2.php';
@@ -82,7 +89,7 @@
 <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
-<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-10%;">
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-15%;">
 
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
@@ -97,7 +104,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Info Lists
+My Lists
 </h3>
 </div>
 
@@ -108,7 +115,7 @@ Info Lists
 <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
 <thead>
   <tr>
-  <th>Info No</th>
+  <th>Info NO</th>
   <th>CreatedDate</th>
   <th>Category</th>
   <th>Country</th>
@@ -125,29 +132,15 @@ Info Lists
 ?>
 <tbody>
   <tr>
-    <td><?php echo $rows['ran'];?></td>
+   <td><?php echo $rows['ran'];?></td>
      <td><?php echo $rows['createat'];?></td>
      <td><?php echo $rows['category'];?></td>
       <td><?php echo $rows['country'];?></td>
        <td><?php echo $rows['name'];?></td>
         <td><?php echo $rows['email'];?></td>
          <td><?php echo $rows['phone'];?></td>
-          <td>      <?php
-      if($rows['status']=="created"){
-        ?>
-       <button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
-     <?php } ?>
-      <?php
-    if($rows['status']=="Reported"){
-        ?>
-       <button class="btn btn-warning" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
-     <?php } ?>
-      <?php
-      if($rows['status']=="reinvestigate"){
-        ?>
-       <button class="btn btn-danger" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
-     <?php } ?></td>
-      <td><button type="button" class="btn btn-primary"><a href="info/index.php?id=<?php echo $rows['ran'];?>" style="color: white;"> Info</a></button></td>
+         <td><button class="btn btn-warning" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button></td>
+           <td><button type="button" class="btn btn-primary"><a href="reviewer/infoindex.php?id=<?php echo $rows['ran'];?>" style="color: white;"> Review</a></button></td>
   </tr>
 </tbody>
 <?php

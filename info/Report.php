@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM Idea where status='permanentlyclosed' order by id desc";
+    $query = "SELECT * FROM info where status='permanentlyclosed' or status='Reported' order by id desc";
     $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
@@ -11,7 +11,7 @@
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Idea | Report List</title>
+        <title>Info | Report List</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -88,7 +88,7 @@
 <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
-<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-15%;">
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-10%;">
 
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
@@ -103,7 +103,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Idea Lists
+Info Lists
 </h3>
 </div>
 
@@ -114,7 +114,7 @@ Idea Lists
 <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
 <thead>
   <tr>
-  <th >Idea</th>
+  <th >Info No</th>
   <th>Created Date</th>
   <th>Category</th>
   <th>Email Id</th>
@@ -128,14 +128,14 @@ Idea Lists
  while($rows=mysqli_fetch_assoc($result)) {
   ?>
 <tbody>
-  <td><?php echo $rows['tipno'];?></td>
+  <td><?php echo $rows['ran'];?></td>
    <td><?php echo $rows['createat'];?></td>
     <td><?php echo $rows['category'];?></td>
      <td><?php echo $rows['email'];?></td>
       <td><?php echo $rows['phone'];?></td>
        <td><?php echo $rows['Description'];?></td>
 <td><button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button></td>
-         <td><a href="idea/reportgenerator.php?id=<?php echo $rows['tipno'];?>" class="btn btn-primary">Report</a></td>
+         <td><a href="info/reportgenerator.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Report</a></td>
 </tbody>
 <?php
 }

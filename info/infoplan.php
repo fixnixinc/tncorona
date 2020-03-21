@@ -253,7 +253,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
            
                 <div id="searchbox2">
            
-        <select id="countries" name="countries" class="form-control" style="background:transparent;border-color: #B8B8BB;" >
+        <select id="countries" name="countries" class="form-control" style="background:transparent;border-color: #B8B8BB;" required="">
        <option>Select Your Country</option>
          <option value='ad' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ad" data-title="Andorra">Andorra</option>
   <option value='ae' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ae" data-title="United Arab Emirates">United Arab Emirates</option>
@@ -514,7 +514,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
           </div>
              <div class="col-10">
          
-           <textarea type="text" rows="8" class="form-control output" name="Description" id="Description"  placeholder="Type something here....." style="background:transparent;border-color: #B8B8BB;"></textarea> <span></span>
+           <textarea type="text" rows="8" class="form-control output" name="Description" id="Description"  placeholder="Type something here....." style="background:transparent;border-color: #B8B8BB;" required=""></textarea> <span></span>
           </div>
           <div class="resp">
             <label aria-hidden="true" class="col-form-label"style="float: right;font-size: 15px;">Artifacts<i class="btn btn-danger btn-block"><span class="flaticon-attachment"></span></i>
@@ -540,13 +540,13 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
            </label>
            <div id="details">
          <div class="col-md-4">
-           <input type="text" placeholder="FullName" id="name" name="name" class="form-control" style="background:transparent;border-color: #B8B8BB; "> &nbsp;
+           <input type="text" placeholder="FullName" id="name" name="name" class="form-control" style="background:transparent;border-color: #B8B8BB; " required=""> &nbsp;
         </div>
       <div class="col-md-4">
-            <input type="text" placeholder="Email" id="email" name="email" class="form-control"  style="background:transparent;border-color: #B8B8BB;">&nbsp;
+            <input type="text" placeholder="Email" id="email" name="email" class="form-control"  style="background:transparent;border-color: #B8B8BB;" required="">&nbsp;
       </div>
       <div class="col-md-4">
-        <input type="text" placeholder="Phone" id="phone" name="phone" class="form-control"  style="background:transparent;border-color: #B8B8BB;">
+        <input type="text" placeholder="Phone" id="phone" name="phone" class="form-control"  style="background:transparent;border-color: #B8B8BB;" required="">
       </div>
 
 
@@ -559,7 +559,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 </div>
                  <div>
                  
-                    <input type="submit" name="submit"  id="Submit" onclick="reload()" class="btn btn-primary sub"data-toggle="modal" value="Submit">
+                    <input type="submit" name="submit"  id="Submit" class="btn btn-primary sub"data-toggle="modal" value="Submit">
                 </div><br>
 </div>
 </form>
