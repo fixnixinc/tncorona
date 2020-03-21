@@ -1,9 +1,9 @@
 <?php
-include "../php/common/config.php";
-  $query="SELECT * FROM info where status='permanentlyclosed' order by id desc";
-  $result=mysqli_query($link,$query);
+    include "../php/common/config.php";
+    $query = "SELECT * FROM `case` where status='permanentlyclosed' order by id desc";
+    $result = mysqli_query($link,$query);
 ?>
-<!DOCTYPE html>     
+<!DOCTYPE html>   
 
 <html lang="en" >
     <!-- begin::Head -->
@@ -11,7 +11,7 @@ include "../php/common/config.php";
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Reviewer | Tip Report</title>
+        <title>Reviewer | Case Report</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -76,7 +76,6 @@ include "../php/common/config.php";
     .then(data => console.log(data)); //
   </script> -->
 
-
   <?php 
    include 'siteHeader2.php';
 ?>
@@ -104,7 +103,7 @@ include "../php/common/config.php";
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-My Lists
+Idea Lists
 </h3>
 </div>
 
@@ -115,34 +114,28 @@ My Lists
 <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
 <thead>
   <tr>
-  <th>Tip NO</th>
-  <th>CreatedDate</th>
+  <th >Case No</th>
+  <th>Created Date</th>
   <th>Category</th>
-  <th>Country</th>
-  <th>Name</th>
-  <th>Email</th>
-  <th>Phone</th>
+  <th>Email Id</th>
+  <th>Phone No</th>
+  <th>Description</th>
   <th>Status</th>
   <th>Action</th>
   </tr>
 </thead>
-<?php
-   while ($rows=mysqli_fetch_assoc($result)) {
-     # code...
-?>
+ <?php
+ while($rows=mysqli_fetch_assoc($result)) {
+  ?>
 <tbody>
-  <tr>
-   <td><?php echo $rows['ran'];?></td>
-     <td><?php echo $rows['createat'];?></td>
-     <td><?php echo $rows['category'];?></td>
-      <td><?php echo $rows['country'];?></td>
-       <td><?php echo $rows['name'];?></td>
-        <td><?php echo $rows['email'];?></td>
-         <td><?php echo $rows['phone'];?></td>
+  <td><?php echo $rows['ran'];?></td>
+   <td><?php echo $rows['createat'];?></td>
+    <td><?php echo $rows['category'];?></td>
+     <td><?php echo $rows['email'];?></td>
+      <td><?php echo $rows['phone'];?></td>
+       <td><?php echo $rows['Description'];?></td>
          <td><button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button></td>
-  
-           <td><button type="button" class="btn btn-primary"><a href="reviewer/reportgenerator.php?id=<?php echo $rows['ran'];?>" style="color: white;"> Report</a></button></td>
-  </tr>
+         <td><a href="reviewer/casereportgenerator.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Report</a></td>
 </tbody>
 <?php
 }

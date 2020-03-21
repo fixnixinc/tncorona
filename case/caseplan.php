@@ -215,7 +215,7 @@ include "../siteheader.php";
             <div class="col-md-10">
                 <div id="searchbox2">
            
-        <select id="countries" name="countries" class="form-control" style="border-color:#B8B8BB;background:transparent;  ">
+        <select id="countries" name="countries" class="form-control" style="border-color:#B8B8BB;background:transparent;" required="">
        <option>Select your country</option>
          <option value='ad' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ad" data-title="Andorra">Andorra</option>
   <option value='ae' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ae" data-title="United Arab Emirates">United Arab Emirates</option>
@@ -476,7 +476,7 @@ include "../siteheader.php";
           </div>
              <div class="col-10">
          
-           <textarea type="text" rows="8" class="form-control output" name="Description" id="Description"  placeholder="Type something here....." style="border-color:#B8B8BB;background:transparent;"></textarea> <span></span>
+           <textarea type="text" rows="8" class="form-control output" name="Description" id="Description"  placeholder="Type something here....." style="border-color:#B8B8BB;background:transparent;" required=""></textarea> <span></span>
             <label aria-hidden="true"class="resp" style="color: black;font-size: 15px;">Artifacts<i class="btn btn-danger btn-block"><span class="flaticon-attachment"></span></i>
            <input type="file" name="Artifacts" hidden=""></label>
           </div>
@@ -502,13 +502,13 @@ include "../siteheader.php";
 
            <div id="details">
          <div class="col-md-4">
-           <input type="text" placeholder="FullName" id="name" name="name" class="form-control" style="border-color:#B8B8BB;background:transparent;">&nbsp;
+           <input type="text" placeholder="FullName" id="name" name="name" class="form-control" style="border-color:#B8B8BB;background:transparent;" required="">&nbsp;
         </div>
       <div class="col-md-4">
-        <input type="text" placeholder="Email" id="email" name="email" class="form-control" style="border-color:#B8B8BB;background:transparent;">&nbsp;
+        <input type="text" placeholder="Email" id="email" name="email" class="form-control" style="border-color:#B8B8BB;background:transparent;" required="">&nbsp;
       </div>
       <div class="col-md-4">
-        <input type="text" placeholder="Phone" id="phone" name="phone" class="form-control" style="border-color:#B8B8BB;background:transparent;">
+        <input type="text" placeholder="Phone" id="phone" name="phone" class="form-control" style="border-color:#B8B8BB;background:transparent;" required="">
       </div>
 
 

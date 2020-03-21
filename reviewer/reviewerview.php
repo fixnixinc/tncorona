@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-  $query="SELECT * FROM info where status='Reported' order by id desc";
+  $query="SELECT * FROM `case` where status='Analyzed' order by id desc";
   $result=mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>     
@@ -11,7 +11,7 @@
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Reviewer | Tip</title>
+        <title>Reviewer | Case</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -89,7 +89,7 @@
 <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
-<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-15%;">
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-10%;">
 
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
@@ -115,7 +115,7 @@ My Lists
 <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
 <thead>
   <tr>
-  <th>Tip NO</th>
+  <th>Case NO</th>
   <th>CreatedDate</th>
   <th>Category</th>
   <th>Country</th>

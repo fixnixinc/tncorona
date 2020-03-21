@@ -1,7 +1,7 @@
 <?php
     include "../php/common/config.php";
-  $query="SELECT * from info where status='created' or status='Reported' or status='reinvestigate' order by id desc";
-  $result=mysqli_query($link,$query);
+    $query = "SELECT * FROM `case` WHERE status='created' OR status='Analyzed' OR status='reanalyze' ORDER BY id DESC";
+    $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
 
@@ -11,7 +11,7 @@
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Info | List</title>
+        <title>Case | Analyze List</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -69,9 +69,15 @@
            
         <link rel="shortcut icon" href=" ./assets/media/company-logos/whistle.png" />
     </head>
+ <!--    <script type="text/javascript">
+   
+    fetch('https://5d1b152edd81710014e8825d.mockapi.io/fixnix/whistle')
+    .then(res => res.json())//response type
+    .then(data => console.log(data)); //
+  </script> -->
 
   <?php 
-   include 'siteHeader2.php';
+   include '../case/siteHeader.php';
 ?>
     <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" >
 
@@ -97,7 +103,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Info Lists
+Case Lists
 </h3>
 </div>
 
@@ -108,47 +114,46 @@ Info Lists
 <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
 <thead>
   <tr>
-  <th>Info No</th>
-  <th>CreatedDate</th>
+  <th >Idea No</th>
+  <th>Created Date</th>
   <th>Category</th>
   <th>Country</th>
   <th>Name</th>
   <th>Email</th>
-  <th>Phone</th>
   <th>Status</th>
   <th>Action</th>
   </tr>
 </thead>
-<?php
-   while ($rows=mysqli_fetch_assoc($result)) {
-     # code...
-?>
+ <?php
+ while($rows=mysqli_fetch_assoc($result)) {
+  ?>
 <tbody>
-  <tr>
-    <td><?php echo $rows['ran'];?></td>
-     <td><?php echo $rows['createat'];?></td>
-     <td><?php echo $rows['category'];?></td>
-      <td><?php echo $rows['country'];?></td>
-       <td><?php echo $rows['name'];?></td>
-        <td><?php echo $rows['email'];?></td>
-         <td><?php echo $rows['phone'];?></td>
-          <td>      <?php
+  <td><?php echo $rows['ran'];?></td>
+   <td><?php echo $rows['createat'];?></td>
+    <td><?php echo $rows['category'];?></td>
+      <td><?php echo $rows['countries'];?></td>
+     <td><?php echo $rows['name'];?></td>
+      <td><?php echo $rows['email'];?></td>
+      <td>
+      <?php
       if($rows['status']=="created"){
         ?>
        <button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
      <?php } ?>
       <?php
-    if($rows['status']=="Reported"){
+    if($rows['status']=="Analyzed"){
         ?>
        <button class="btn btn-warning" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
      <?php } ?>
       <?php
-      if($rows['status']=="reinvestigate"){
+      if($rows['status']=="reanalyze"){
         ?>
        <button class="btn btn-danger" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
-     <?php } ?></td>
-      <td><button type="button" class="btn btn-primary"><a href="info/index.php?id=<?php echo $rows['ran'];?>" style="color: white;"> Info</a></button></td>
-  </tr>
+     <?php } ?>
+
+</td>
+         <td><a href="case/index.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Analyze</a></td>
+      
 </tbody>
 <?php
 }
@@ -166,7 +171,7 @@ Info Lists
 </div>
 
 <?php
-include 'sidemenu.php';
+include '../case/sidemenu2.php';
  ?>
 
         <!-- begin::Global Config(global config for global JS sciprts) -->
