@@ -170,27 +170,7 @@ Case-<?php echo $_GET['id'];?>
        </div>
    </div>
 </div><br>
-<div class="container control-group">
-<div class="row">
-      <div class="col-md-4 input_val">
 
-      <label style="font-size: 14px;">Possible Cost Saving</label><br>
- <input type="text" class="form-control" disabled value="<?php echo $rows['PCS'];?>">
-
-   </div>
-   
-    <div class="col-md-4 input_val">
-<label>Idea</label><br>
- <input type="text" class="form-control" disabled value="<?php echo $rows['Ideai'];?>">
-</div>
-
-<!-- <div class="col-md-4 input_val">
-<label>Modus Operandi</label><br>  
- <input type="text" class="form-control" disabled value="<?php echo $rows['Ideai'];?>">
-
-</div> -->
-  </div>    
-</div>
 <br>
 <div class="container">
 <div class="form-group">
@@ -212,7 +192,7 @@ Case-<?php echo $_GET['id'];?>
    </div>
 
    <div class="form-group">
-  <label style="font-size: 14px;"><b>Idea Update</b></label>
+  <label style="font-size: 14px;"><b>Case Update</b></label>
       <div class="">
    <textarea type="text" class="form-control"  id="WBU" disabled placeholder="Give WhistleBlower on update"  style="height: 150px; border-color:#A1E6EA"><?php echo $rows['WBU'];?> </textarea>
    <span id="apdate" style="color: red;"></span>
