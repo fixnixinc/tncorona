@@ -948,10 +948,10 @@ $(document).ready(function() {
     }
     if(sa=="gb")
     {
-        document.getElementById("conf").innerHTML="170,247";
-       document.getElementById("death").innerHTML="6526";
-       document.getElementById("case").innerHTML="691";
-       document.getElementById("info").innerHTML="754";
+        document.getElementById("conf").innerHTML="2,46,063";
+       document.getElementById("death").innerHTML="8,8317";
+       document.getElementById("case").innerHTML="761";
+       document.getElementById("info").innerHTML="845";
     }
      
 
