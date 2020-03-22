@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en" >
@@ -7,7 +6,7 @@
 <base href="/corona/">
         <meta charset="utf-8"/>
 
-        <title>Metronic | Dashboard</title>
+        <title>| Dashboard</title>
         <meta name="description" content="Latest updates and statistic charts">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -120,52 +119,65 @@ a
 </div>
 <!-- end: Header Menu --> <!-- begin:: Header Topbar -->
 <div class="kt-header__topbar">
-<!-- 
+
+
    <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
  
- -->
-           <!-- <a class="kt-header__topbar-icon" title="Business Unit" href="view/common/overview.php"><i class="flaticon2-user"></i>
+
+     <!--       <a class="kt-header__topbar-icon" title="Business Unit" href="view/common/overview.php"><i class="flaticon2-user"></i>
            <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
    
          <a href="view/common/addadminuser.php" class="kt-header__topbar-icon" title="Add User">
            <i class="flaticon-feed"></i><span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a> -->
-  <!--           <a href="view/common/project.php" class="kt-header__topbar-icon" title="Project & Task">
+            <a href="view/common/project.php" class="kt-header__topbar-icon" title="Project & Task">
            <i class="kt-menu__link-icon flaticon2-analytics-2"></i>
            <span class="kt-hidden kt-hiddenbadge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
-           <a href="view/common/timeline.php" class="kt-header__topbar-icon" title="View Whistle">
+           <a href="view/common/timeline.php" class="kt-header__topbar-icon" title="Timeline">
            <i class="flaticon-chat"></i>
-           <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a> -->
+           <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
      
-           <!-- <a href="view/policy/ModuleSelection.php?i=1" class="kt-header__topbar-icon" title="Setup Guide">
+          <!--  <a href="view/policy/ModuleSelection.php?i=1" class="kt-header__topbar-icon" title="Setup Guide">
            <i class="flaticon-globe"></i><span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a> -->
-   <!--     <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
+       <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
 
 
    </div>
  </div>
- -->
 
-  <!--  <div class="kt-header__topbar-item dropdown">
+   <div class="kt-header__topbar-item dropdown">
+ 
+<a href="blower/blowlist.php" class="kt-header__topbar-icon" title="View Whistle">
+           <i class="flaticon-list"></i>
+           <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
+     
+
+       
+
+       <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
+         
+       </div>
        <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="true" title="Notification">
            <span class="kt-header__topbar-icon"><i class="flaticon2-bell-alarm-symbol"></i></span>
            <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span>
        </div>
-       <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
-           <form>
-
-           </form>
-       </div>
-   </div> -->
+   </div>
+   <div class="kt-header__topbar-item kt-header__topbar-item--langs">
+   <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+     <span class="kt-header__topbar-icon" title="Logout" onclick="logout();">
+ <img src="assets/icons/logout.svg" alt="" />
+</span>
+   </div>
+</div>
 
 <!-- <div id="google_translate_element"></div> -->
-<div class="kt-header__topbar-item kt-header__topbar-item--langs">
+<!-- <div class="kt-header__topbar-item kt-header__topbar-item--langs">
    <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
      <span class="kt-header__topbar-icon" title="Logout" onclick="logout();">
  <img src="./assets/media/icons/logout.svg" alt="" />
 </span>
    </div>
 </div>
-
+ -->
 </div>
 
 <!-- end:: Header Topbar -->

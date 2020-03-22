@@ -114,7 +114,7 @@ Case Lists
 <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
 <thead>
   <tr>
-  <th >Idea No</th>
+  <th >Case No</th>
   <th>Created Date</th>
   <th>Category</th>
   <th>Country</th>
