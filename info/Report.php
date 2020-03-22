@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM info where status='permanentlyclosed' or status='Reported' order by id desc";
+    $query = "SELECT * FROM info where status='permanentlyclosed' or status='Analyzed' order by id desc";
     $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   

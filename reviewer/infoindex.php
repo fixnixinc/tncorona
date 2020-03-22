@@ -18,12 +18,12 @@
       }
       else if($reinvestigate==true)
       {
-       $status="reinvestigate";
+       $status="reanalyze";
       }
         $sql="UPDATE info SET resolution='$resolution',reinvestigate='$reinvestigate',status='$status' WHERE id=$id";
         if(mysqli_query($link,$sql))
         {
-            header("Location:reviewerview.php");
+            header("Location:infoview.php");
         }
     }
 ?>
@@ -34,7 +34,7 @@
 <base href="/corona/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>Reviewer - Reward Tip</title>
+        <title>Reviewer</title>
         <meta name="description" content="Base form control examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -183,7 +183,7 @@ if ($rows=mysqli_fetch_assoc($result)) {
   <label class="kt-radio kt-radio--solid kt-radio--success">
   <input type="radio" name="radio1" value="1"/>Resolution<span></span></label>&nbsp;&nbsp;&nbsp;
   <label class="kt-radio kt-radio--solid kt-radio--danger">
-<input type="radio" name="radio1" value="2"/>Re-Investigate<span></span></label>
+<input type="radio" name="radio1" value="2"/>Re-Analyze<span></span></label>
 <br>
 
     <!-- <label style="font-size: 14px;"><strong>Resolution </strong></label> -->
@@ -197,7 +197,7 @@ if ($rows=mysqli_fetch_assoc($result)) {
 <div class="rad ra2" style="display: none;">
 
 <!--  <span id="resolution" class="form-control" style="font-size: 13px;height: 150px;"></span> -->
-<textarea id="reinvestigation" name="reinvestigate" class="form-control" style="font-size: 13px;height: 150px;border-color: #A1E6EA;" placeholder="Re-Investigate"></textarea>
+<textarea id="reinvestigation" name="reinvestigate" class="form-control" style="font-size: 13px;height: 150px;border-color: #A1E6EA;" placeholder="Re-Analyze"></textarea>
 <!-- <span id="reinvestigation" class="form-control" style="font-size: 13px;height: 150px;"></span>
  -->        </div>
 </div>

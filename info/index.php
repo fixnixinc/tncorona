@@ -14,7 +14,7 @@
       // print_r($id);
         $WBUpdate=$_POST['WBUpdate'];
         $MUpdate=$_POST['MUpdate'];
-$status="Reported";
+$status="Analyzed";
    $sql1="UPDATE info SET WBUpdate='$WBUpdate',MUpdate='$MUpdate',status='$status' WHERE id=$id";
          
 
@@ -38,7 +38,7 @@ $status="Reported";
 <base href="/corona/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>Investigator</title>
+        <title>Info Index</title>
         <meta name="description" content="Base form control examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -253,7 +253,7 @@ Info - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) .
       <div class="form-group">
    
    
-  <label style="font-size: 14px;"><strong> Reinvestigate:</strong></label> 
+  <label style="font-size: 14px;"><strong> Reanalyze:</strong></label> 
       <div class="">
    <textarea type="text" class="form-control"   style="height: 150px; border-color:#A1E6EA" disabled=""><?php echo $rows2['reinvestigate'];?> </textarea>
    <!-- <span class="form-control" style="height: 150px; border-color:#A1E6EA"><?php echo $rows['reinvestigate'];?></span> -->

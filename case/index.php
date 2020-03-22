@@ -12,7 +12,7 @@
       $ran = $_POST['ran']; 
      $Synopsis=$_POST['Synopsis'];
      $WBU=$_POST['WBU'];
-      $status="Analyzed";
+      $status="Reported";
   $sql1="UPDATE `case` SET Synopsis='$Synopsis',WBU='$WBU',status='$status' WHERE id=$id";
        if(mysqli_query($link,$sql1))
        {

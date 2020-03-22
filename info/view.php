@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-  $query="SELECT * from info where status='created' or status='Reported' or status='reinvestigate' order by id desc";
+  $query="SELECT * from info where status='created' or status='Analyzed' or status='reanalyze' order by id desc";
   $result=mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
@@ -138,12 +138,12 @@ Info Lists
        <button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
      <?php } ?>
       <?php
-    if($rows['status']=="Reported"){
+    if($rows['status']=="Analyzed"){
         ?>
        <button class="btn btn-warning" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
      <?php } ?>
       <?php
-      if($rows['status']=="reinvestigate"){
+      if($rows['status']=="reanalyze"){
         ?>
        <button class="btn btn-danger" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
      <?php } ?></td>
