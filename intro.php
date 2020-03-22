@@ -172,7 +172,7 @@
                 </div>
                 <div class="panel-body text-center" style="background-color: #FEF5F5;">        
            
-                    <strong style="color: #E53E3E; font-size: 24px;" id="conf">170,247</strong>
+                    <strong style="color: #E53E3E; font-size: 24px;" id="conf">307,321</strong>
                 </div>
             </div>
 
@@ -185,7 +185,7 @@
                 </div>
                 <div class="panel-body text-center" style="background-color: #F0FFF4;">  
        
-                    <strong style="color: #38A169; font-size: 24px;" id="death">6,526</strong>
+                    <strong style="color: #38A169; font-size: 24px;" id="death">13,065</strong>
                 </div>
             </div>
 
@@ -199,7 +199,7 @@
                     <h1 class="panel-title text-center"style="color: #27DDFA; font-size: 18px;"><b>Case</b></h1>
                 </div>
                 <div class="panel-body text-center" style="background-color: #E2F8FB;">        
-                 <strong style="color: #27DDFA; font-size: 24px;" id="case">691</strong>
+                 <strong style="color: #27DDFA; font-size: 24px;" id="case">1,117</strong>
                
 
                 </div>
@@ -215,7 +215,7 @@
                     <h1 class="panel-title text-center"style="color: #FC63E4; font-size: 18px;"><b>Info</b></h1>
                 </div>
                 <div class="panel-body text-center" style="background-color: #FCEEFA;">                    
-                    <strong style="color: #FC63E4; font-size: 24px;" id="info">754</strong>
+                    <strong style="color: #FC63E4; font-size: 24px;" id="info">1,338</strong>
                 </div>
             </div>
 
