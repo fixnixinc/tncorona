@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM `case` WHERE status='created' OR status='Analyzed' OR status='reanalyze' ORDER BY id DESC";
+    $query = "SELECT * FROM `case` WHERE status='created' OR status='Reported' OR status='reinvestigate' ORDER BY id DESC";
     $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
@@ -141,12 +141,12 @@ Case Lists
        <button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
      <?php } ?>
       <?php
-    if($rows['status']=="Analyzed"){
+    if($rows['status']=="Reported"){
         ?>
        <button class="btn btn-warning" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
      <?php } ?>
       <?php
-      if($rows['status']=="reanalyze"){
+      if($rows['status']=="reinvestigate"){
         ?>
        <button class="btn btn-danger" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
      <?php } ?>

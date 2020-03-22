@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-  $query="SELECT * FROM `info` where status='Reported' order by id desc";
+  $query="SELECT * FROM `info` where status='Analyzed' order by id desc";
   $result=mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>     
@@ -11,7 +11,7 @@
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Reviewer | Case</title>
+        <title>Reviewer | Info</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

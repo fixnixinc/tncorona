@@ -19,13 +19,13 @@
         $status="permanentlyclosed";
       }
       else if($reinvestigate==true){
-        $status="reanalyze";
+        $status="reinvestigate";
 
       }
         $sql="UPDATE `case` SET resolution='$resolution',reinvestigate='$reinvestigate',status='$status' WHERE id=$id";
         if(mysqli_query($link,$sql))
         {
-         header("Location:ideaview.php"); 
+         header("Location:reviewerview.php"); 
         }
        
     }
@@ -178,7 +178,7 @@ if($rows1=mysqli_fetch_assoc($result1)) {
   <label class="kt-radio kt-radio--solid kt-radio--success">
   <input type="radio" name="radio1" value="1"/>Resolution<span></span></label>&nbsp;&nbsp;&nbsp;
   <label class="kt-radio kt-radio--solid kt-radio--danger">
-<input type="radio" name="radio1" value="2"/>Re-Analyze<span></span></label>
+<input type="radio" name="radio1" value="2"/>Re-Investigate<span></span></label>
 <br>
 
     <!-- <label style="font-size: 14px;"><strong>Resolution </strong></label> -->
@@ -193,7 +193,7 @@ if($rows1=mysqli_fetch_assoc($result1)) {
 
 <!--  <span id="resolution" class="form-control" style="font-size: 13px;height: 150px;"></span> -->
 
-<textarea name="reinvestigate" class="form-control" style="font-size: 13px;height: 150px;border-color: #A1E6EA;" placeholder="Re-Analyze"></textarea>
+<textarea name="reinvestigate" class="form-control" style="font-size: 13px;height: 150px;border-color: #A1E6EA;" placeholder="Re-Investigate"></textarea>
 <!-- <span id="reinvestigation" class="form-control" style="font-size: 13px;height: 150px;"></span>
  -->        </div>
 
