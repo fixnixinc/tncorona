@@ -147,7 +147,7 @@ Info Lists
         ?>
        <button class="btn btn-danger" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
      <?php } ?></td>
-      <td><button type="button" class="btn btn-primary"><a href="info/index.php?id=<?php echo $rows['ran'];?>" style="color: white;"> Info</a></button></td>
+      <td><button type="button" class="btn btn-primary"><a href="info/index.php?id=<?php echo $rows['ran'];?>" style="color: white;"> Analyze</a></button></td>
   </tr>
 </tbody>
 <?php

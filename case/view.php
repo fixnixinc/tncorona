@@ -152,7 +152,7 @@ Case Lists
      <?php } ?>
 
 </td>
-         <td><a href="case/index.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Analyze</a></td>
+         <td><a href="case/index.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Investigate</a></td>
       
 </tbody>
 <?php
