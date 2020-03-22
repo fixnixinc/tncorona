@@ -19,136 +19,23 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Case | Dashboard</title>
     <base href="/corona/">
-    <script src="https://code.highcharts.com/highcharts.js"></script> 
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css" />
-    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
-    <script type="text/javascript" src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>      
-    <link rel="stylesheet" type="text/css" href="assets/jquery-ui-1.11.4/jquery-ui.css" />    
-    <script src="js/audit/auditManagement.js"></script> 
-    <script src="js/audit/auditByCompliance.js"></script>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-<script src="https://code.highcharts.com/modules/treemap.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-<script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
 
-   
+ 
+   <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
                     
    <link href="assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
-        <link rel="shortcut icon" href=" ./assets/media/company-logos/whistle.png" />
+<link rel="shortcut icon" href="assets/media/logos/fixnix.png"/>
 
   </head>
-
-    <style>
-
-
-    .tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-
-/* Style the close button */
-.topright {
-    float: right;
-    cursor: pointer;
-    font-size: 28px;
-}
-
-.topright:hover {color: red;}
-    .highcharts-credits{
-      visibility: hidden;
-    }
-    .jqstooltip { 
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      visibility: hidden;
-      background: rgb(0, 0, 0) transparent;
-      background-color: rgba(0,0,0,0.6);
-      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;
-    }
-     .jqsfield { 
-        color: white;
-        font: 10px arial, san serif;
-        text-align: left;
-      }
-      .desc {
-        padding-top: 25px;
-      }
-      #chartdiv1 {
-        background-color: white;
-       height: 350px;     
-      }
-      #chartdiv2 {
-        height: 350px;
-        background-color: white;
-      }
-      #chartdiv3{
-        background-color: white;
-        height: 620px;      
-      }
-       #chart_4 {
-        height: 620px;
-        background-color: white;
-      }
-      #chart_7
-      {
-        height: 620px;
-        background-color: white; 
-      }      
-      #chartdiv1 a, #chartdiv2 a, #chartdiv3 a, #chart_4 a{
-      position: absolute;
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      font-family: Verdana;
-      font-size: 11px;
-      opacity: 0.7;
-      display: none !important;
-      left: 5px;
-      top: 5px;    
-    }
-    
-      </style>
+ 
       <?php 
-        include 'siteHeader2.php';
+        include '../case/siteHeader2.php';
 
       ?>
        <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: #E2E2DD;">
@@ -273,487 +160,29 @@
 <br>
 
 
-
 <div class="row">
-  <div class="col-md-6">
-
-<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
-<div class="kt-portlet__head kt-portlet__head--noborder">
-<div class="kt-portlet__head-label">
-  <h3 class="kt-portlet__head-title">
-       Category
-      </h3>
-</div>
-</div>
-<div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit" >
-<div class="kt-widget4 kt-widget4--sticky">
-<div class="kt-widget4__chart">
-<div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
-  <div >
-    <a href="investigator/view.php">
-  <div id="container3"></div></a>
-</div>
-
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-3d.js"></script>
-<script src="https://code.highcharts.com/modules/cylinder.js"></script>
-<!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-<!-- <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-3d.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script> -->
-
-<!-- <div id="container" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto"></div> -->
-
-<!-- Data from www.netmarketshare.com. Select Browsers => Desktop share by version. Download as tsv. -->
-
-
-<div class="kt-widget4__item">
-    <script type="text/javascript">
-      Highcharts.chart('container3', {
-         chart: {
-        type: 'column',
-        options3d: {
-            enabled: true,
-            alpha: 15,
-            beta: 15,
-            depth: 50,
-            viewDistance: 25
-        }
-    },
-    title: {
-        text: null,
-        enabled: false
-    },
-    xAxis: {
-      categories: ["Accountting & Other Financial Impropriety", "Bribery or Corruption", "Money Laundering", "Sanctions", "Theft/Fraud", "Health and Safety"],
-    },
-    plotOptions: {
-        series: {
-            depth: 25,
-            colorByPoint: true
-        }
-    },
-    series: [{
-        data: [5, 4, 7, 10, 3, 1],
-        name: 'Category',
-        showInLegend: false
-    }]
-});
-    </script>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-
-<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
-<div class="kt-portlet__head kt-portlet__head--noborder">
-<div class="kt-portlet__head-label">
-  <h3 class="kt-portlet__head-title">
-       Encounter
-      </h3>
-</div>
-</div>
-<div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit" >
-<div class="kt-widget4 kt-widget4--sticky">
-<div class="kt-widget4__chart">
-<div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
-  <div >
-    <a href="investigator/view.php">
-  <div id="container4"></div></a>
-</div>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-<div class="kt-widget4__item">
-
-<script type="text/javascript">
-  Highcharts.setOptions({
-    colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
-        return {
-            radialGradient: {
-                cx: 0.5,
-                cy: 0.3,
-                r: 0.7
-            },
-            stops: [
-                [0, color],
-                [1, Highcharts.color(color).brighten(-0.3).get('rgb')] // darken
-            ]
-        };
-    })
-});
-
-// Build the chart
-Highcharts.chart('container4', {
-    chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false,
-        type: 'pie'
-    },
-    title: {
-        text: null,
-        enabled: false
-    },
-    tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    },
-    accessibility: {
-        point: {
-            valueSuffix: '%'
-        }
-    },
-    plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-                enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                connectorColor: 'silver'
-            }
-        }
-    },
-    series: [{
-        name: 'Share',
-        data: [
-            { name: 'It happened to me', y: 10.41 },
-            { name: 'I Observed it', y: 11.84 },
-            { name: 'Told to be by Co-Worker', y: 10.85 },
-            { name: 'Told to me by someone outside the Company', y: 4.67 },
-            { name: 'I heard it', y: 4.18 }
-        ]
-    }]
-});
-</script>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-
-
-<div class="row">
-
-    <div class="col-md-6">
+<div class="col-md-12">
         <!--begin:: Widgets/Trends-->
 <div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
 <div class="kt-portlet__head kt-portlet__head--noborder">
 <div class="kt-portlet__head-label">
   <h3 class="kt-portlet__head-title">
-       Business Unit
+   Case Category
       </h3>
 </div>
 </div>
-<div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit">
+<div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit" >
 <div class="kt-widget4 kt-widget4--sticky">
 <div class="kt-widget4__chart">
+<div id="chartdiv1" class="display-none" style="display: block;height: 600px;width: 800px;"></div>
 <div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
-  <div>
-  <div id="container"></div>
-</div>
-
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-
-
 <div class="kt-widget4__item">
-
-
-<script type="text/javascript">
-Highcharts.chart('container', {
-  chart: {
-    type: 'pie'
-  },
-  title: {
-    text: ''
-  },
-  subtitle: {
-    text: ''
-  },
-  plotOptions: {
-    series: {
-      dataLabels: {
-        enabled: true,
-        format: '{point.name}: {point.y:.1f}%'
-      }
-    }
-  },
-
-  tooltip: {
-    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-  },
-
-  series: [
-    {
-      name: "Browsers",
-      colorByPoint: true,
-      data: [
-        {
-          name: "Pied-pier",
-          y: 20,
-          drilldown: "Fixnix"
-        },
-        {
-          name: "Hooli",
-          y: 19.33,
-          drilldown: "Google"
-        },
-        
-        {
-          name: "Fixnix",
-          y: 18.95,
-          drilldown: "Facebook"
-        },
-        {
-          name: "Others",
-          y: 23.55,
-          drilldown: "Apple"
-        }
-      ]
-    }
-  ],
-  drilldown: {
-    series: [
-      {
-        name: "Fixnix",
-        id: "Fixnix",
-        data: [
-          [
-            "Accountting & Other Financial Impropriety",
-            10
-          ],
-          [
-            "Bribery or Corruption",
-            15
-          ],
-          [
-            "Money Laundering",
-            7
-          ],
-          [
-            "Sanctions",
-            4
-          ],
-          [
-            "Theft/Fraud",
-            6
-          ],
-          [
-            "Health and Safety",
-            14
-          ]
-        ]
-      },
-      {
-        name: "Google",
-        id: "Google",
-        data: [
-          [
-            "Accountting & Other Financial Impropriety",
-            18
-          ],
-          [
-            "Bribery or Corruption",
-            3
-          ],
-          [
-            "Money Laundering",
-            4
-          ],
-          [
-            "Sanctions",
-            17
-          ],
-          [
-            "Theft/Fraud",
-            2
-          ],
-          [
-            "Health and Safety",
-            1
-          ]
-        ]
-      },
-      {
-        name: "Facebook",
-        id: "Facebook",
-        data: [
-          [
-            "Accountting & Other Financial Impropriety",
-            3
-          ],
-          [
-            "Bribery or Corruption",
-            8
-          ],
-          [
-            "Money Laundering",
-            9
-          ],
-          [
-            "Sanctions",
-            14
-          ],
-          [
-            "Theft/Fraud",
-            6
-          ],
-          [
-            "Health and Safety",
-            4
-          ]
-        ]
-      },
-      {
-        name: "Apple",
-        id: "Apple",
-       data: [
-          [
-            "Accountting & Other Financial Impropriety",
-            5
-          ],
-          [
-            "Bribery or Corruption",
-            8
-          ],
-          [
-            "Money Laundering",
-            18
-          ],
-          [
-            "Sanctions",
-            7
-          ],
-          [
-            "Theft/Fraud",
-            5
-          ],
-          [
-            "Health and Safety",
-            6
-          ]
-        ]
-      },
-    ]
-  }
-});
-</script>
 </div>
 </div>  
 </div>
 </div>
 </div>
 </div>
-</div>
-
-  <div class="col-md-6">
-        <!--begin:: Widgets/Trends-->
-<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
-<div class="kt-portlet__head kt-portlet__head--noborder">
-<div class="kt-portlet__head-label">
-  <h3 class="kt-portlet__head-title">
-       Relationship
-      </h3>
-</div>
-</div>
-<div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit" >
-<div class="kt-widget4 kt-widget4--sticky">
-<div class="kt-widget4__chart">
-<div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
-  <div >
-    <a href="investigator/view.php">
-  <div id="container1"></div></a>
-</div>
-
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-
-<div class="kt-widget4__item">
-
-<script type="text/javascript">
-Highcharts.chart('container1', {
-  chart: {
-    type: 'pie'
-  },
-  title: {
-    text: ''
-  },
-  subtitle: {
-    text: ''
-  },
-  plotOptions: {
-    series: {
-      dataLabels: {
-        enabled: true,
-        format: '{point.name}: {point.y:.1f}%'
-      }
-    }
-  },
-
-  tooltip: {
-    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-  },
-
-  series: [
-    {
-      name: "Browsers",
-      colorByPoint: true,
-      data: [
-        {
-          name: "Employee",
-          y: 20,
-          drilldown: "Fixnix"
-        },
-        {
-          name: "Temporary Employee",
-          y: 19.33,
-          drilldown: "Google"
-        },
-        
-        {
-          name: "Contractor",
-          y: 18.95,
-          drilldown: "Facebook"
-        },
-        {
-          name: "Consultant",
-          y: 23.55,
-          drilldown: "Apple"
-        },
-        {
-          name: "Former Employee",
-          y: 23.55,
-          drilldown: "Samsung"
-        }
-      ]
-    }
-  ],
-});
-    </script>
-    </div>
-   </div>  
-  </div>
- </div>
 </div>
 </div>
 </div>
@@ -768,6 +197,199 @@ Highcharts.chart('container1', {
 <?php 
 include "../case/sidemenu2.php";
  ?>
-      </body>
+     <style>
+
+
+    .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Style the close button */
+.topright {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.topright:hover {color: red;}
+    .highcharts-credits{
+      visibility: hidden;
+    }
+    .jqstooltip { 
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      visibility: hidden;
+      background: rgb(0, 0, 0) transparent;
+      background-color: rgba(0,0,0,0.6);
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;
+    }
+     .jqsfield { 
+        color: white;
+        font: 10px arial, san serif;
+        text-align: left;
+      }
+      .desc {
+        padding-top: 25px;
+      }
+      #chartdiv1 {
+        background-color: white;
+       height: 350px;     
+      }
+        
+      #chartdiv1 a, #chartdiv2 a, #chartdiv3 a, #chart_4 a{
+      position: absolute;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-family: Verdana;
+      font-size: 11px;
+      opacity: 0.7;
+      display: none !important;
+      left: 5px;
+      top: 5px;    
+    }
     
-</html>
+      </style>
+<script> 
+
+  $(document).ready( function() {
+
+            $.ajax({
+              type:"POST",
+              dataType: "json",
+              url: "case/json.php",
+              data:"",
+              success:category
+            }); 
+          });
+
+            function category(data){
+
+   //console.log(data);
+  var chartData=[];
+for(i=0;i<data.length;i++)
+     {
+    chartData.push({"name":data[i].category,"value":parseInt(data[i].count),"color":"#E85774"});
+      }
+      console.log(chartData);  
+ Highcharts.chart('chartdiv1', {
+    chart: {
+        type: 'packedbubble',
+        height: '100%',
+    },
+    
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}</b>: {point.value} %'
+    },
+    plotOptions: {
+        packedbubble: {
+            minSize: '20%',
+            maxSize: '50%',
+            zMin: 0,
+            zMax: 50,
+            layoutAlgorithm: {
+                gravitationalConstant: 0.03,
+                splitSeries: true,
+                seriesInteraction: false,
+                dragBetweenSeries: true,
+                parentNodeLimit: true
+            },
+            dataLabels: {
+                enabled: false,
+                format: '{point.name}',
+                filter: {
+                    property: 'value',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    textOutline: 'none',
+                    fontWeight: 'normal',
+
+                }
+            }
+        }
+    },
+    "series": [{
+        name:'case',
+        colorByPoint: false,
+        data:chartData,
+    }]
+});
+}
+
+ </script>
+
+ <style type="text/css">
+   .highcharts-figure, .highcharts-data-table table {
+    min-width: 320px; 
+    max-width: 800px;
+    margin: 1em auto;
+}
+.highcharts-title
+{
+  display: none;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #EBEBEB;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 100px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color:red;
+}
+.highcharts-data-table th {
+  font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: red;
+}
+
+ </style>
