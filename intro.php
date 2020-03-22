@@ -333,106 +333,106 @@ $(document).ready(function() {
      var sa=document.getElementById("countries").value;
      if(sa=="China")
         {
-      document.getElementById("conf").innerHTML="81,214";
-      document.getElementById("death").innerHTML="3,253";
+      document.getElementById("conf").innerHTML="81,310";
+      document.getElementById("death").innerHTML="3,265";
       document.getElementById("case").innerHTML="431";
       document.getElementById("info").innerHTML="457";
        }
     if(sa=="italy")
     {
-        document.getElementById("conf").innerHTML="41,038";
-       document.getElementById("death").innerHTML="3,405";
+        document.getElementById("conf").innerHTML="53,578";
+       document.getElementById("death").innerHTML="4,825";
        document.getElementById("case").innerHTML="66";
        document.getElementById("info").innerHTML="70";
     }
       if(sa=="iran")
     {
-        document.getElementById("conf").innerHTML="18,407";
-       document.getElementById("death").innerHTML="1,284";
+        document.getElementById("conf").innerHTML="20,610";
+       document.getElementById("death").innerHTML="1,556";
        document.getElementById("case").innerHTML="54";
        document.getElementById("info").innerHTML="57";
     }
      if(sa=="Korea")
     {
-      document.getElementById("conf").innerHTML="8,652";
-      document.getElementById("death").innerHTML="94";
+      document.getElementById("conf").innerHTML="8,897";
+      document.getElementById("death").innerHTML="104";
       document.getElementById("case").innerHTML="42";
       document.getElementById("info").innerHTML="44";
     }
      if(sa=="Spain")
     {
-        document.getElementById("conf").innerHTML="18,077";
-       document.getElementById("death").innerHTML="833";
+        document.getElementById("conf").innerHTML="25,496";
+       document.getElementById("death").innerHTML="1,381";
        document.getElementById("case").innerHTML="12";
        document.getElementById("info").innerHTML="13";
     }
      if(sa=="France")
     {
-        document.getElementById("conf").innerHTML="10,995";
-       document.getElementById("death").innerHTML="372";
+        document.getElementById("conf").innerHTML="14,459";
+       document.getElementById("death").innerHTML="562";
        document.getElementById("case").innerHTML="12";
        document.getElementById("info").innerHTML="13";
     }
      if(sa=="Germany")
     {
-        document.getElementById("conf").innerHTML="16,290";
-       document.getElementById("death").innerHTML="44";
+        document.getElementById("conf").innerHTML="22,364";
+       document.getElementById("death").innerHTML="84";
        document.getElementById("case").innerHTML="12";
        document.getElementById("info").innerHTML="13";
     }
      if(sa=="States")
     {
-        document.getElementById("conf").innerHTML="14,363";
-       document.getElementById("death").innerHTML="217";
+        document.getElementById("conf").innerHTML="26,863";
+       document.getElementById("death").innerHTML="348";
        document.getElementById("case").innerHTML="8";
        document.getElementById("info").innerHTML="8";
     }
  
       if(sa=="Japan")
     {
-        document.getElementById("conf").innerHTML="943";
-       document.getElementById("death").innerHTML="33";
+        document.getElementById("conf").innerHTML="1,055";
+       document.getElementById("death").innerHTML="35";
        document.getElementById("case").innerHTML="4";
        document.getElementById("info").innerHTML="4";
     }
      if(sa=="Switzerland")
     {
-        document.getElementById("conf").innerHTML="4,222";
-       document.getElementById("death").innerHTML="43";
+        document.getElementById("conf").innerHTML="6,863";
+       document.getElementById("death").innerHTML="80";
        document.getElementById("case").innerHTML="4";
        document.getElementById("info").innerHTML="4";
     }
      if(sa=="Kingdom")
     {
-        document.getElementById("conf").innerHTML="3,269";
-       document.getElementById("death").innerHTML="144";
+        document.getElementById("conf").innerHTML="5,018";
+       document.getElementById("death").innerHTML="233";
        document.getElementById("case").innerHTML="3";
        document.getElementById("info").innerHTML="3";
     }
      if(sa=="Netherlands")
     {
-        document.getElementById("conf").innerHTML="2,460";
-       document.getElementById("death").innerHTML="76";
+        document.getElementById("conf").innerHTML="3,631";
+       document.getElementById("death").innerHTML="136";
        document.getElementById("case").innerHTML="3";
        document.getElementById("info").innerHTML="3";
     }
      if(sa=="Belgium")
     {
-        document.getElementById("conf").innerHTML="1,795";
-       document.getElementById("death").innerHTML="21";
+        document.getElementById("conf").innerHTML="2,815";
+       document.getElementById("death").innerHTML="67";
        document.getElementById("case").innerHTML="2";
        document.getElementById("info").innerHTML="2";
     }
      if(sa=="Sweden")
     {
-        document.getElementById("conf").innerHTML="1,439";
-       document.getElementById("death").innerHTML="11";
+        document.getElementById("conf").innerHTML="1,770";
+       document.getElementById("death").innerHTML="20";
        document.getElementById("case").innerHTML="3";
        document.getElementById("info").innerHTML="3";
     }
      if(sa=="Norway")
     {
-        document.getElementById("conf").innerHTML="1,790";
+        document.getElementById("conf").innerHTML="2,164";
        document.getElementById("death").innerHTML="7";
        document.getElementById("case").innerHTML="4";
        document.getElementById("info").innerHTML="4";
@@ -441,8 +441,8 @@ $(document).ready(function() {
 
       if(sa=="Singapore")
     {
-        document.getElementById("conf").innerHTML="345";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="432";
+       document.getElementById("death").innerHTML="2";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
@@ -451,42 +451,42 @@ $(document).ready(function() {
 
      if(sa=="Austria")
     {
-        document.getElementById("conf").innerHTML="2,013";
-       document.getElementById("death").innerHTML="6";
+        document.getElementById("conf").innerHTML="3,021";
+       document.getElementById("death").innerHTML="8";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Malaysia")
     {
-        document.getElementById("conf").innerHTML="900";
-       document.getElementById("death").innerHTML="2";
+        document.getElementById("conf").innerHTML="1,183";
+       document.getElementById("death").innerHTML="9";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Hong Kong")
     {
-        document.getElementById("conf").innerHTML="208";
+        document.getElementById("conf").innerHTML="274";
        document.getElementById("death").innerHTML="4";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Denmark")
     {
-        document.getElementById("conf").innerHTML="1,223";
-       document.getElementById("death").innerHTML="6";
+        document.getElementById("conf").innerHTML="1,418";
+       document.getElementById("death").innerHTML="13";
        document.getElementById("case").innerHTML="4";
        document.getElementById("info").innerHTML="4";
     }
      if(sa=="Bahrain")
     {
-        document.getElementById("conf").innerHTML="278";
+        document.getElementById("conf").innerHTML="310";
        document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Australia")
     {
-        document.getElementById("conf").innerHTML="814";
+        document.getElementById("conf").innerHTML="1,286";
        document.getElementById("death").innerHTML="7";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
@@ -494,50 +494,50 @@ $(document).ready(function() {
    
       if(sa=="Greece")
     {
-        document.getElementById("conf").innerHTML="464";
-       document.getElementById("death").innerHTML="6";
+        document.getElementById("conf").innerHTML="530";
+       document.getElementById("death").innerHTML="13";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Canada")
     {
-        document.getElementById("conf").innerHTML="873";
-       document.getElementById("death").innerHTML="12";
+        document.getElementById("conf").innerHTML="1,328";
+       document.getElementById("death").innerHTML="19";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Arab")
     {
-        document.getElementById("conf").innerHTML="140";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="153";
+       document.getElementById("death").innerHTML="2";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Iraq")
     {
-        document.getElementById("conf").innerHTML="192";
-       document.getElementById("death").innerHTML="13";
+        document.getElementById("conf").innerHTML="214";
+       document.getElementById("death").innerHTML="17";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Kuwait")
     {
-        document.getElementById("conf").innerHTML="148";
+        document.getElementById("conf").innerHTML="176";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Iceland")
     {
-        document.getElementById("conf").innerHTML="330";
+        document.getElementById("conf").innerHTML="373";
        document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Egypt")
     {
-        document.getElementById("conf").innerHTML="256";
-       document.getElementById("death").innerHTML="7";
+        document.getElementById("conf").innerHTML="294";
+       document.getElementById("death").innerHTML="10";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
@@ -545,93 +545,93 @@ $(document).ready(function() {
 
       if(sa=="India")
     {
-        document.getElementById("conf").innerHTML="197";
-       document.getElementById("death").innerHTML="4";
+        document.getElementById("conf").innerHTML="332";
+       document.getElementById("death").innerHTML="6";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Thailand")
     {
-        document.getElementById("conf").innerHTML="322";
+        document.getElementById("conf").innerHTML="411";
        document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="San Marino")
     {
-        document.getElementById("conf").innerHTML="109";
-       document.getElementById("death").innerHTML="7";
+        document.getElementById("conf").innerHTML="144";
+       document.getElementById("death").innerHTML="20";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Israel")
     {
-        document.getElementById("conf").innerHTML="251";
-       document.getElementById("death").innerHTML="4";
+        document.getElementById("conf").innerHTML="883";
+       document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Taiwan")
     {
-        document.getElementById("conf").innerHTML="59";
-       document.getElementById("death").innerHTML="1";
+        document.getElementById("conf").innerHTML="153";
+       document.getElementById("death").innerHTML="2";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Lebanon")
     {
-        document.getElementById("conf").innerHTML="99";
-       document.getElementById("death").innerHTML="3";
+        document.getElementById("conf").innerHTML="230";
+       document.getElementById("death").innerHTML="4";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Finland")
     {
-        document.getElementById("conf").innerHTML="244";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="523";
+       document.getElementById("death").innerHTML="1    ";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
    
       if(sa=="Czech Republic")
     {
-        document.getElementById("conf").innerHTML="298";
+        document.getElementById("conf").innerHTML="995";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Portugal")
     {
-        document.getElementById("conf").innerHTML="245";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="1,280";
+       document.getElementById("death").innerHTML="12";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Philippines")
     {
-        document.getElementById("conf").innerHTML="140";
-       document.getElementById("death").innerHTML="12";
+        document.getElementById("conf").innerHTML="380";
+       document.getElementById("death").innerHTML="25";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
    
      if(sa=="Brazil")
     {
-        document.getElementById("conf").innerHTML="200";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="1,021";
+       document.getElementById("death").innerHTML="18";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Slovenia")
     {
-        document.getElementById("conf").innerHTML="319";
+        document.getElementById("conf").innerHTML="383";
        document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Ireland")
     {
-        document.getElementById("conf").innerHTML="557";
+        document.getElementById("conf").innerHTML="785";
        document.getElementById("death").innerHTML="3";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
@@ -640,29 +640,29 @@ $(document).ready(function() {
 
       if(sa=="Russia")
     {
-        document.getElementById("conf").innerHTML="199";
+        document.getElementById("conf").innerHTML="306";
        document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Saudi Arabia")
     {
-        document.getElementById("conf").innerHTML="274";
+        document.getElementById("conf").innerHTML="392";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Algeria")
     {
-        document.getElementById("conf").innerHTML="90";
-       document.getElementById("death").innerHTML="9";
+        document.getElementById("conf").innerHTML="139";
+       document.getElementById("death").innerHTML="15";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Indonesia")
     {
-        document.getElementById("conf").innerHTML="311";
-       document.getElementById("death").innerHTML="25";
+        document.getElementById("conf").innerHTML="450";
+       document.getElementById("death").innerHTML="38";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
@@ -675,14 +675,14 @@ $(document).ready(function() {
     }
      if(sa=="Qatar")
     {
-        document.getElementById("conf").innerHTML="460";
+        document.getElementById("conf").innerHTML="481";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="2";
        document.getElementById("info").innerHTML="2";
     }
      if(sa=="Romania")
     {
-        document.getElementById("conf").innerHTML="277";
+        document.getElementById("conf").innerHTML="367";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
@@ -690,29 +690,29 @@ $(document).ready(function() {
    
       if(sa=="Argentina")
     {
-        document.getElementById("conf").innerHTML="128";
-       document.getElementById("death").innerHTML="3";
+        document.getElementById("conf").innerHTML="158";
+       document.getElementById("death").innerHTML="4";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
      if(sa=="Poland")
     {
-        document.getElementById("conf").innerHTML="355";
-       document.getElementById("death").innerHTML="3";
+        document.getElementById("conf").innerHTML="536";
+       document.getElementById("death").innerHTML="5";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Pakistan")
     {
-        document.getElementById("conf").innerHTML="454";
-       document.getElementById("death").innerHTML="2";
+        document.getElementById("conf").innerHTML="733";
+       document.getElementById("death").innerHTML="3";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Ecuador")
     {
-        document.getElementById("conf").innerHTML="260";
-       document.getElementById("death").innerHTML="3";
+        document.getElementById("conf").innerHTML="532";
+       document.getElementById("death").innerHTML="7";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
@@ -726,21 +726,21 @@ $(document).ready(function() {
 
      if(sa=="Croatia")
     {
-        document.getElementById("conf").innerHTML="110";
+        document.getElementById("conf").innerHTML="206";
        document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Chile")
     {
-        document.getElementById("conf").innerHTML="342";
+        document.getElementById("conf").innerHTML="537";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="0";
     }
       if(sa=="Estonia")
     {
-        document.getElementById("conf").innerHTML="267";
+        document.getElementById("conf").innerHTML="306";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
@@ -748,8 +748,8 @@ $(document).ready(function() {
    
      if(sa=="Peru")
     {
-        document.getElementById("conf").innerHTML="234";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="318";
+       document.getElementById("death").innerHTML="5";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="1";
     }
@@ -762,21 +762,21 @@ $(document).ready(function() {
     }
      if(sa=="Costa Rica")
     {
-        document.getElementById("conf").innerHTML="87";
-       document.getElementById("death").innerHTML="1";
+        document.getElementById("conf").innerHTML="117";
+       document.getElementById("death").innerHTML="2";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }1
      if(sa=="Hungary")
     {
-        document.getElementById("conf").innerHTML="73";
-       document.getElementById("death").innerHTML="1";
+        document.getElementById("conf").innerHTML="103";
+       document.getElementById("death").innerHTML="7";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Latvia")
     {
-        document.getElementById("conf").innerHTML="86";
+        document.getElementById("conf").innerHTML="124";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
@@ -784,35 +784,35 @@ $(document).ready(function() {
    
       if(sa=="Mexico")
     {
-        document.getElementById("conf").innerHTML="43";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="2013";
+       document.getElementById("death").innerHTML="2";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="South Africa")
     {
-        document.getElementById("conf").innerHTML="150";
+        document.getElementById("conf").innerHTML="240";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Slovakia")
     {
-        document.getElementById("conf").innerHTML="319";
+        document.getElementById("conf").innerHTML="178";
        document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }1
      if(sa=="Belarus")
     {
-        document.getElementById("conf").innerHTML="51";
+        document.getElementById("conf").innerHTML="76";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="1";
     }1
      if(sa=="Albania")
     {
-        document.getElementById("conf").innerHTML="64";
+        document.getElementById("conf").innerHTML="76";
        document.getElementById("death").innerHTML="2";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
@@ -835,8 +835,8 @@ $(document).ready(function() {
 
       if(sa=="Luxembourg")
     {
-        document.getElementById("conf").innerHTML="335";
-       document.getElementById("death").innerHTML="4";
+        document.getElementById("conf").innerHTML="670";
+       document.getElementById("death").innerHTML="8";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="1";
     }
@@ -849,28 +849,28 @@ $(document).ready(function() {
     }
      if(sa=="New Zealand")
     {
-        document.getElementById("conf").innerHTML="39";
+        document.getElementById("conf").innerHTML="66";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Dominican Republic")
     {
-        document.getElementById("conf").innerHTML="5";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="112";
+       document.getElementById("death").innerHTML="3";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Bosnia and Herzegovina")
     {
-        document.getElementById("conf").innerHTML="63";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="93";
+       document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="1";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Afghanistan")
     {
-        document.getElementById("conf").innerHTML="22";
+        document.getElementById("conf").innerHTML="24";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
@@ -885,21 +885,21 @@ $(document).ready(function() {
    
       if(sa=="Bulgaria")
     {
-        document.getElementById("conf").innerHTML="107";
+        document.getElementById("conf").innerHTML="163";
        document.getElementById("death").innerHTML="3";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Serbia")
     {
-        document.getElementById("conf").innerHTML="103";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="171";
+       document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Malta")
     {
-        document.getElementById("conf").innerHTML="53";
+        document.getElementById("conf").innerHTML="73";
        document.getElementById("death").innerHTML="0";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
@@ -913,15 +913,15 @@ $(document).ready(function() {
     }
      if(sa=="Colombia")
     {
-        document.getElementById("conf").innerHTML="102";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="196";
+       document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
      if(sa=="Cyprus")
     {
-        document.getElementById("conf").innerHTML="67";
-       document.getElementById("death").innerHTML="0";
+        document.getElementById("conf").innerHTML="84";
+       document.getElementById("death").innerHTML="1";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
@@ -934,8 +934,8 @@ $(document).ready(function() {
     }
       if(sa=="Morocco")
     {
-        document.getElementById("conf").innerHTML="63";
-       document.getElementById("death").innerHTML="2";
+        document.getElementById("conf").innerHTML="96";
+       document.getElementById("death").innerHTML="3";
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
@@ -948,10 +948,10 @@ $(document).ready(function() {
     }
     if(sa=="gb")
     {
-        document.getElementById("conf").innerHTML="2,46,063";
-       document.getElementById("death").innerHTML="8,8317";
-       document.getElementById("case").innerHTML="761";
-       document.getElementById("info").innerHTML="845";
+        document.getElementById("conf").innerHTML="3,05,092";
+       document.getElementById("death").innerHTML="13,022";
+       document.getElementById("case").innerHTML="691";
+       document.getElementById("info").innerHTML="754";
     }
      
 
