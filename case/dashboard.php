@@ -26,6 +26,11 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/maps/modules/map.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
                     
@@ -174,7 +179,14 @@
 <div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit" >
 <div class="kt-widget4 kt-widget4--sticky">
 <div class="kt-widget4__chart">
+
 <div id="chartdiv1" class="display-none" style="display: block;height: 600px;width: 800px;"></div>
+
+<pre id="csv" style="display: none;">
+
+
+</pre>
+ 
 <div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
 <div class="kt-widget4__item">
 </div>
@@ -300,53 +312,79 @@ include "../case/sidemenu2.php";
    //console.log(data);
   var chartData=[];
 for(i=0;i<data.length;i++)
+{
+  if(data[i].category=="infection")
      {
-    chartData.push({"name":data[i].category,"value":parseInt(data[i].count),"color":"#E85774"});
+    chartData.push({"name":data[i].createat,"y":parseInt(data[i].count),"value":data[i].category,"color":"#D98668"});
       }
-      console.log(chartData);  
- Highcharts.chart('chartdiv1', {
-    chart: {
-        type: 'packedbubble',
-        height: '100%',
-    },
-    
-    tooltip: {
-        useHTML: true,
-        pointFormat: '<b>{point.name}</b>: {point.value} %'
-    },
-    plotOptions: {
-        packedbubble: {
-            minSize: '20%',
-            maxSize: '50%',
-            zMin: 0,
-            zMax: 50,
-            layoutAlgorithm: {
-                gravitationalConstant: 0.03,
-                splitSeries: true,
-                seriesInteraction: false,
-                dragBetweenSeries: true,
-                parentNodeLimit: true
-            },
-            dataLabels: {
-                enabled: false,
-                format: '{point.name}',
-                filter: {
-                    property: 'value',
-                    operator: '>',
-                    value: 250
-                },
-                style: {
-                    textOutline: 'none',
-                    fontWeight: 'normal',
+       if(data[i].category=="Possibleinfection")
+     {
+    chartData.push({"name":data[i].createat,"y":parseInt(data[i].count),"value":data[i].category,"color":"#AEBFC3"});
+      }
+    }
+      console.log(chartData);
 
-                }
-            }
-        }
+Highcharts.chart('chartdiv1', {
+    chart: {
+        type: 'heatmap',
+        inverted: true
     },
-    "series": [{
+
+    // data: {
+    //     csv: document.getElementById('csv').innerHTML
+    // },
+
+    title: {
+        text: 'Highcharts heat map',
+        align: 'left'
+    },
+
+    subtitle: {
+        text: '',
+        align: 'left'
+    },
+
+    // xAxis: {
+    //     tickPixelInterval: 50,
+    //     min: Date.UTC(2019, 5, 1),
+    //     max: Date.UTC(201, 5, 30)
+    // },
+
+    yAxis: {
+        title: {
+            text: null
+        },
+        labels: {
+            format: '{value}:'
+        },
+        minPadding: 0,
+        maxPadding: 0,
+        startOnTick: true,
+        endOnTick: true,
+        tickPositions: [1],
+        tickWidth: [1,2],
+        min: 0,
+        max: 80
+    },
+
+    // colorAxis: {
+    //     stops: [
+    //         [0, '#3060cf'],
+    //         [1, '#fffbbc'],
+    //         [4, '#c4463a']
+    //     ],
+    //     min: -5
+    // },
+  tooltip: {
+            headerFormat: '<br/>',
+            pointFormat: '{point.name:%Y-%m-%d %H:%M} {point.y}:00: <b>{point.value} </b>'
+        },
+   "series": [{
         name:'case',
-        colorByPoint: false,
+        colorByPoint: true,
         data:chartData,
+        // one day
+      
     }]
 });
 }
