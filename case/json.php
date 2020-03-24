@@ -1,7 +1,7 @@
 <?php
 include "../php/common/config.php";
 
-$query = "SELECT category ,count(createat) as count FROM `case` GROUP BY category";
+$query = "SELECT createat, count(status) as count,category  FROM `case` group by createat,category";
 
 $result = mysqli_query($link,$query);
 // print_r($result);
