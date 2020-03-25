@@ -1077,6 +1077,7 @@ Swal.fire({
   width : 1380,
   height: 1500,
   imageAlt: 'Custom image',
+   customClass: 'swal-wide',
   confirmButtonColor:"Accept",
   confirmButtonText:"Accept"
 },function (isConfirm){
@@ -1088,3 +1089,16 @@ $('.swal2-confirm').click(function(result){
 });
 }
       </script>
+
+      <style type="text/css">
+          @media screen and (max-width: 425px)
+          {
+            .swal-wide
+            {
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                overflow-x: auto;
+                }          
+            }
+      </style>
