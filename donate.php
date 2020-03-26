@@ -93,13 +93,16 @@ exit;
 <head>
    <base href="/corona/">
 <meta charset="UTF-8">
-<title>Corona</title>
+<title>Corona Virus Relif Fund | Help people affested by corona</title>
 </head>
 <?php include "siteheader.php" ?>
 <body>
 
 <link href="css/style.css" type="text/css" rel="stylesheet" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="We want to help for affected people in corona. So please join me  and donate for fund in corona affected people and children">
+<meta name="keyword" content="Donate | Corona Virus Relif Fund | Donate for Corona virus affected people | Donate for Corona virus affected Children">
+
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

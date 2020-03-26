@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM `case` where status='permanentlyclosed' order by id desc";
+    $query = "SELECT * FROM `case` WHERE status='created' OR status='Reported' OR status='reinvestigate' ORDER BY id DESC";
     $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
@@ -11,7 +11,7 @@
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Reviewer | Case Report</title>
+        <title>Case | Analyze List</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -77,7 +77,7 @@
   </script> -->
 
   <?php 
-   include 'siteHeader2.php';
+   include '../case/siteHeader.php';
 ?>
     <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" >
 
@@ -88,7 +88,7 @@
 <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
-<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-15%;">
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-10%;">
 
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
@@ -103,7 +103,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Idea Lists
+Case Lists
 </h3>
 </div>
 
@@ -117,9 +117,9 @@ Idea Lists
   <th >Case No</th>
   <th>Created Date</th>
   <th>Category</th>
-  <th>Email Id</th>
-  <th>Phone No</th>
-  <th>Description</th>
+  <th>Country</th>
+  <th>Name</th>
+  <th>Email</th>
   <th>Status</th>
   <th>Action</th>
   </tr>
@@ -131,11 +131,29 @@ Idea Lists
   <td><?php echo $rows['ran'];?></td>
    <td><?php echo $rows['createat'];?></td>
     <td><?php echo $rows['category'];?></td>
-     <td><?php echo $rows['email'];?></td>
-      <td><?php echo $rows['phone'];?></td>
-       <td><?php echo $rows['Description'];?></td>
-         <td><button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button></td>
-         <td><a href="reviewer/casereportgenerator.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Report</a></td>
+      <td><?php echo $rows['countries'];?></td>
+     <td><?php echo $rows['name'];?></td>
+      <td><?php echo $rows['email'];?></td>
+      <td>
+      <?php
+      if($rows['status']=="created"){
+        ?>
+       <button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
+     <?php } ?>
+      <?php
+    if($rows['status']=="Reported"){
+        ?>
+       <button class="btn btn-warning" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
+     <?php } ?>
+      <?php
+      if($rows['status']=="reinvestigate"){
+        ?>
+       <button class="btn btn-danger" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
+     <?php } ?>
+
+</td>
+         <td><a href="case/index.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Investigate</a></td>
+      
 </tbody>
 <?php
 }
@@ -153,7 +171,7 @@ Idea Lists
 </div>
 
 <?php
-include 'sidemenu.php';
+include '../case/sidemenu2.php';
  ?>
 
         <!-- begin::Global Config(global config for global JS sciprts) -->

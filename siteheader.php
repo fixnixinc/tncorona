@@ -123,7 +123,7 @@ a.logo1
   <div class="nav1" style="margin-right: 40%;margin-top:30px;">
     <a href=""></a>
   <a href="contributors.php" id="a1">Contributors</a>
-  <a href="donate.php">Donate</a>
+  <!-- <a href="donate.php">Donate</a> -->
   <a href="news.php">News</a>  
   <a href="analytics.html">Analytics</a>
   <a href="who.php">W&nbsp;H&nbsp;O</a>

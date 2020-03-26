@@ -1,7 +1,7 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM `Idea` WHERE status='NewIdea' OR status='Analyzed' OR status='reanalyze' ORDER BY id DESC";
-    $result = mysqli_query($link,$query);
+  $query="SELECT * from info where status='created' or status='Analyzed' or status='reanalyze' order by id desc";
+  $result=mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
 
@@ -11,7 +11,7 @@
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Idea | Analyze List</title>
+        <title>Info | List</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -69,12 +69,6 @@
            
         <link rel="shortcut icon" href=" ./assets/media/company-logos/whistle.png" />
     </head>
- <!--    <script type="text/javascript">
-   
-    fetch('https://5d1b152edd81710014e8825d.mockapi.io/fixnix/whistle')
-    .then(res => res.json())//response type
-    .then(data => console.log(data)); //
-  </script> -->
 
   <?php 
    include 'siteHeader2.php';
@@ -88,7 +82,7 @@
 <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
-<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-15%;">
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-10%;">
 
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
@@ -103,7 +97,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Idea Lists
+Info Lists
 </h3>
 </div>
 
@@ -114,29 +108,32 @@ Idea Lists
 <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
 <thead>
   <tr>
-  <th >Idea No</th>
-  <th>Created Date</th>
+  <th>Info No</th>
+  <th>CreatedDate</th>
   <th>Category</th>
+  <th>Country</th>
   <th>Name</th>
-  <th>Email Id</th>
-  <th>Phone No</th>
+  <th>Email</th>
+  <th>Phone</th>
   <th>Status</th>
   <th>Action</th>
   </tr>
 </thead>
- <?php
- while($rows=mysqli_fetch_assoc($result)) {
-  ?>
+<?php
+   while ($rows=mysqli_fetch_assoc($result)) {
+     # code...
+?>
 <tbody>
-  <td><?php echo $rows['tipno'];?></td>
-   <td><?php echo $rows['createat'];?></td>
-    <td><?php echo $rows['category'];?></td>
-      <td><?php echo $rows['name'];?></td>
-     <td><?php echo $rows['email'];?></td>
-      <td><?php echo $rows['phone'];?></td>
-      <td>
-      <?php
-      if($rows['status']=="NewIdea"){
+  <tr>
+    <td><?php echo $rows['ran'];?></td>
+     <td><?php echo $rows['createat'];?></td>
+     <td><?php echo $rows['category'];?></td>
+      <td><?php echo $rows['country'];?></td>
+       <td><?php echo $rows['name'];?></td>
+        <td><?php echo $rows['email'];?></td>
+         <td><?php echo $rows['phone'];?></td>
+          <td>      <?php
+      if($rows['status']=="created"){
         ?>
        <button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
      <?php } ?>
@@ -149,11 +146,9 @@ Idea Lists
       if($rows['status']=="reanalyze"){
         ?>
        <button class="btn btn-danger" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
-     <?php } ?>
-
-</td>
-         <td><a href="idea/index.php?id=<?php echo $rows['tipno'];?>" class="btn btn-primary">Analyze</a></td>
-      
+     <?php } ?></td>
+      <td><button type="button" class="btn btn-primary"><a href="info/index.php?id=<?php echo $rows['ran'];?>" style="color: white;"> Analyze</a></button></td>
+  </tr>
 </tbody>
 <?php
 }

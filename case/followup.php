@@ -16,7 +16,7 @@ include "../php/common/config.php";
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Corona | FollowUp</title>
+        <title>Case | FollowUp</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -132,7 +132,7 @@ include "../php/common/config.php";
      <div class="row form-group">
              <label  class="col-md-10" style="color: black;">Case Update:</label>
                 <div class="col-md-12 " >
-              <textarea type="text" id="WBUpdate" rows="8" class="form-control" placeholder=""  style="background: transparent; color: #ffffff;"disabled=""><?php echo $rows2['WBU'];?></textarea>
+              <textarea type="text" id="WBUpdate" rows="8" class="form-control" placeholder=""  style="background: transparent; color:black;"disabled=""><?php echo $rows2['WBU'];?></textarea>
             </div>
           </div>
           <?php
@@ -228,7 +228,7 @@ include "../php/common/config.php";
   <label style="font-size: 14px;  background-color: #f71462;"><b>Updated to Case - <?php echo $count;?></b></label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-        <?php echo $rows['Synopsis'];?>
+        <?php echo $rows['WBU'];?>
       </div>
    </div><br>
  <?php

@@ -151,7 +151,7 @@ a
 <div class="kt-header__topbar-item kt-header__topbar-item--langs">
    <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
      <span class="kt-header__topbar-icon" title="Logout" onclick="logout();">
- <img src="./assets/media/icons/logout.svg" alt="" />
+ <img src="assets/icons/logout.svg" alt="" />
 </span>
    </div>
 </div>

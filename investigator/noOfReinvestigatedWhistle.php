@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM blower WHERE status='closed' ORDER BY id DESC";
+    $query = "SELECT * FROM `case` WHERE status='reinvestigate' ORDER BY id DESC";
     $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
@@ -76,10 +76,11 @@
     .then(data => console.log(data)); //
   </script> -->
 
+ 
+      <?php 
+        include 'siteHeader2.php';
 
-  <?php 
-   include 'siteHeader2.php';
-?>
+      ?>
     <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" >
 
        
@@ -89,7 +90,7 @@
 <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
-<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-15%;">
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-10%;">
 
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
@@ -115,30 +116,46 @@ List
 <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
 <thead>
   <tr>
-  <th>Id</th>
+  <th >Case No</th>
   <th>Created Date</th>
-   <th>Company</th>
   <th>Category</th>
-  <th>Relationship</th>
-  <th>Encounter</th>
-  <th>Department</th>
+  <th>Country</th>
+  <th>Name</th>
+  <th>Email</th>
   <th>Status</th>
   <th>Action</th>
   </tr>
 </thead>
-<?php
+ <?php
  while($rows=mysqli_fetch_assoc($result)) {
   ?>
 <tbody>
-  <td><?php echo $rows['id'];?></td>
+  <td><?php echo $rows['ran'];?></td>
    <td><?php echo $rows['createat'];?></td>
-    <td><?php echo $rows['company'];?></td>
-     <td><?php echo $rows['category'];?></td>
-      <td><?php echo $rows['relationship'];?></td>
-       <td><?php echo $rows['encounter'];?></td>
-       <td><?php echo $rows['department'];?></td>
-      <td><button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button></td>
-         <td><a href="idea/index.php?id=<?php echo $rows['tipno'];?>" class="btn btn-primary">Analyze</a></td>
+    <td><?php echo $rows['category'];?></td>
+      <td><?php echo $rows['countries'];?></td>
+     <td><?php echo $rows['name'];?></td>
+      <td><?php echo $rows['email'];?></td>
+      <td>
+      <?php
+      if($rows['status']=="created"){
+        ?>
+       <button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
+     <?php } ?>
+      <?php
+    if($rows['status']=="Reported"){
+        ?>
+       <button class="btn btn-warning" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
+     <?php } ?>
+      <?php
+      if($rows['status']=="reinvestigate"){
+        ?>
+       <button class="btn btn-danger" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button>
+     <?php } ?>
+
+</td>
+         <td><a href="case/index.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Investigate</a></td>
+      
 </tbody>
 <?php
 }
@@ -156,7 +173,7 @@ List
 </div>
 
 <?php
-include '../blower/sidemenu2.php';
+include '../case/sidemenu2.php';
  ?>
 
         <!-- begin::Global Config(global config for global JS sciprts) -->

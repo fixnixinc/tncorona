@@ -1,11 +1,13 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT count(status) as count FROM Idea WHERE status='NewIdea' ORDER BY id DESC";
+    $query = "SELECT count(status) as count FROM `case` WHERE status='created' ORDER BY id DESC";
     $result = mysqli_query($link,$query);
-      $sql = "SELECT count(status) as count FROM Idea WHERE status='Analyzed' ORDER BY id DESC";
+      $sql = "SELECT count(status) as count FROM `case` WHERE status='Reported' ORDER BY id DESC";
     $result1 = mysqli_query($link,$sql);
-     $sql2 = "SELECT count(status) as count FROM Idea WHERE status='closed' ORDER BY id DESC";
-    $result3 = mysqli_query($link,$sql2);
+     $sql2 = "SELECT count(status) as count FROM `case` WHERE status='closed' ORDER BY id DESC";
+    $result2 = mysqli_query($link,$sql2);
+     $sql3 = "SELECT count(status) as count FROM `case` WHERE status='Reported' ORDER BY id DESC";
+    $result3 = mysqli_query($link,$sql3);
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>IdeaAnalyst | Dashboard</title>
+    <title>Investigator | Dashboard</title>
     <base href="/corona/">
     <script src="https://code.highcharts.com/highcharts.js"></script> 
     <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
@@ -149,8 +151,7 @@
         include 'siteHeader2.php';
 
       ?>
-   
-       <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+       <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: #E2E2DD;">
        <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 
@@ -163,12 +164,9 @@
 <!--Begin::Row-->
 
 <div class="row">
-   <?php
- if($rows=mysqli_fetch_assoc($result)) {
-  ?>
-  <div class="col-md-4">
+  <div class="col-md-3">
 
-    <a href="idea/newideas.php" style="color: #5D4E4F;">
+    <a href="/corona/investigator/noOfPlan.php" style="color: #5D4E4F;">
     <label style="border: 1px #ffffff; background-image: linear-gradient(to right,#F5FCFF, #DBF3FA, #B7E9F7, #92DFF3, #7AD7F0); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;  ">
       <span class="kt-widget17__icon">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--brand">
@@ -179,20 +177,21 @@
             </g>
         </svg> </span>
         <br><br>
-    
+                     <?php
+ if($rows=mysqli_fetch_assoc($result)) {
+  ?> 
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 16px;">
-          New Ideas
-      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span style="font-size: 16px;color: black;"><?php echo $rows['count']; ?></span>
+          New Case
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
+      <?php
+    }
+    ?>
     </label>
   </a>
   </div>
-<?php
-}
-?>
-  
-  <div class="col-md-4">
-     <a href="idea/analyzed.php" style="color: #5D4E4F;">
+  <div class="col-md-3">
+     <a href="/corona/investigator/noOfInvestigatedWhistle.php" style="color: #5D4E4F;">
     <label style="border: 1px #ffffff;background-image: linear-gradient(to right,#B08D57, #9C7A3C, #895E1A, #804A00); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;  ">
       <span class="kt-widget17__icon">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success">
@@ -203,23 +202,22 @@
             </g>
         </svg> </span>
         <br><br>
-            <?php
+                             <?php
  if($rows=mysqli_fetch_assoc($result1)) {
-  ?>
+  ?> 
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 16px;">
-          Analyzed Ideas
-      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span style="font-size: 16px; color:black;" ><?php echo $rows['count'];?></span>
+          Investigated Case
+      </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php
     }
-
     ?>
     </label>
   </a>
   </div>
-
-  <div class="col-md-4">
-    <a href="idea/returned.php" style="color: #5D4E4F;">
+  <div class="col-md-3">
+    <a href="/corona/investigator/noOfReinvestigatedWhistle.php" style="color: #5D4E4F;">
     <label style="border: 1px #ffffff;background-image: linear-gradient(to right,#ED81EE, #DE6DF1, #C74EF4, #AF2EFA); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;  ">
       <span class="kt-widget17__icon">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--warning">
@@ -230,23 +228,47 @@
             </g>
         </svg> </span>
         <br><br>
-          
-                 <?php
- if($rows=mysqli_fetch_assoc($result3)) {
-  ?>
+                                    <?php
+ if($rows=mysqli_fetch_assoc($result2)) {
+  ?>  
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 16px;">
-          Returned Ideas
-      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span style="font-size: 16px; color:black;" ><?php echo $rows['count'];?></span>
+          Reinvestigated Info
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php
     }
-
     ?>
     </label>
 
   </a>
   </div>
-
+  <div class="col-md-3">
+    <a href="/corona/investigator/noOfDueFollowup.php" style="color: #5D4E4F;">
+    <label style="border: 1px #ffffff; background-color: #af8c9d;background-image: linear-gradient(315deg, #af8c9d 0%, #8cacac 74%); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;">
+      <!-- background color -->
+      <!-- background-color: #bdd4e7; background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%); -->
+     <span class="kt-widget17__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--danger">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                <path d="M3,16 L5,16 C5.55228475,16 6,15.5522847 6,15 C6,14.4477153 5.55228475,14 5,14 L3,14 L3,12 L5,12 C5.55228475,12 6,11.5522847 6,11 C6,10.4477153 5.55228475,10 5,10 L3,10 L3,8 L5,8 C5.55228475,8 6,7.55228475 6,7 C6,6.44771525 5.55228475,6 5,6 L3,6 L3,4 C3,3.44771525 3.44771525,3 4,3 L10,3 C10.5522847,3 11,3.44771525 11,4 L11,19 C11,19.5522847 10.5522847,20 10,20 L4,20 C3.44771525,20 3,19.5522847 3,19 L3,16 Z" id="Combined-Shape" fill="#000000" opacity="0.3"></path>
+                <path d="M16,3 L19,3 C20.1045695,3 21,3.8954305 21,5 L21,15.2485298 C21,15.7329761 20.8241635,16.200956 20.5051534,16.565539 L17.8762883,19.5699562 C17.6944473,19.7777745 17.378566,19.7988332 17.1707477,19.6169922 C17.1540423,19.602375 17.1383289,19.5866616 17.1237117,19.5699562 L14.4948466,16.565539 C14.1758365,16.200956 14,15.7329761 14,15.2485298 L14,5 C14,3.8954305 14.8954305,3 16,3 Z" id="Rectangle-102-Copy" fill="#000000"></path>
+            </g>
+        </svg> </span>
+        <br><br>
+                                              <?php
+ if($rows=mysqli_fetch_assoc($result3)) {
+  ?>  
+      <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 16px;">
+          Due for Followup
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
+      <?php
+    }
+    ?>
+    </label>
+  </a>
+  </div>
 </div>
 <br>
 
@@ -268,7 +290,8 @@
 <div class="kt-widget4__chart">
 <div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
   <div >
-  <div id="container3"></div>
+    <a href="investigator/view.php">
+  <div id="container3"></div></a>
 </div>
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -307,7 +330,7 @@
         enabled: false
     },
     xAxis: {
-      categories: ["Employee Engagement", "Strategy", "Open Innovation", "Agile", "Continuous Improvement", "Enterprise Transformation"],
+      categories: ["Accountting & Other Financial Impropriety", "Bribery or Corruption", "Money Laundering", "Sanctions", "Theft/Fraud", "Health and Safety"],
     },
     plotOptions: {
         series: {
@@ -316,7 +339,7 @@
         }
     },
     series: [{
-        data: [5, 4, 7, 1, 3, 1],
+        data: [5, 4, 7, 10, 3, 1],
         name: 'Category',
         showInLegend: false
     }]
@@ -335,7 +358,7 @@
 <div class="kt-portlet__head kt-portlet__head--noborder">
 <div class="kt-portlet__head-label">
   <h3 class="kt-portlet__head-title">
-      Idea Cluster
+       Encounter
       </h3>
 </div>
 </div>
@@ -344,124 +367,74 @@
 <div class="kt-widget4__chart">
 <div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
   <div >
-  <div id="container4"></div>
+    <a href="investigator/view.php">
+  <div id="container4"></div></a>
 </div>
 <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-more.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 <div class="kt-widget4__item">
 
 <script type="text/javascript">
-    Highcharts.chart('container4', {
+  Highcharts.setOptions({
+    colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+        return {
+            radialGradient: {
+                cx: 0.5,
+                cy: 0.3,
+                r: 0.7
+            },
+            stops: [
+                [0, color],
+                [1, Highcharts.color(color).brighten(-0.3).get('rgb')] // darken
+            ]
+        };
+    })
+});
 
+// Build the chart
+Highcharts.chart('container4', {
     chart: {
-        type: 'bubble',
-        plotBorderWidth: 1,
-        zoomType: 'xy'
-    },
-    tooltip: {
-      enabled: false
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
     },
     title: {
         text: null,
         enabled: false
     },
-    legend: {
-        enabled: false
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
     },
-
-  
-
     accessibility: {
         point: {
-            valueDescriptionFormat: '{index}. {point.name}, fat: {point.x}g, sugar: {point.y}g, obesity: {point.z}%.'
+            valueSuffix: '%'
         }
     },
-
-    xAxis: {
-        gridLineWidth: 1,
-        title: {
-            text: ''
-        },
-        labels: {
-            format: '{value}'
-        },
-        plotLines: [{
-            color: 'black',
-            dashStyle: 'dot',
-            width: 2,
-            value: 65,
-            label: {
-                rotation: 0,
-                y: 15,
-                style: {
-                    fontStyle: 'italic'
-                },
-                text: 'Safe fat intake 65g/day'
-            },
-            zIndex: 3
-        }],
-        accessibility: {
-            rangeDescription: 'Range: 60 to 100 grams.'
-        }
-    },
-
-    yAxis: {
-        startOnTick: false,
-        endOnTick: false,
-        title: {
-            text: ''
-        },
-        labels: {
-            format: '{value}'
-        },
-        maxPadding: 0.2,
-        plotLines: [{
-            color: 'black',
-            dashStyle: 'dot',
-            width: 2,
-            value: 50,
-            label: {
-                align: 'right',
-                style: {
-                    fontStyle: 'italic'
-                },
-                text: 'Safe sugar intake 50g/day',
-                x: -10
-            },
-            zIndex: 3
-        }],
-        accessibility: {
-            rangeDescription: 'Range: 0 to 160 grams.'
-        }
-    },
-
-
     plotOptions: {
-        series: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
             dataLabels: {
                 enabled: true,
-                format: '{point.name}'
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                connectorColor: 'silver'
             }
         }
     },
-
     series: [{
+        name: 'Share',
         data: [
-            { x: 95, y: 95, z: 20.8, name: 'Open Innovation', country: 'sexiual harrasement' },
-            { x: 86.5, y: 108.9, z: 9, name: 'Enterprise Transformation', country: 'Theft' },
-            { x: 80.8, y: 91.5, z: 18.8, name: 'Employee Engagement', country: 'Fraud' },
-            { x: 85.8, y: 101.5, z: 13.7, name: 'Strategy', country: 'Fraud' },
-            { x: 87.8, y: 97.5, z: 9, name: 'Agile', country: 'Fraud' },
-            { x: 90.8, y: 109.5, z: 11, name: 'Continuous Improvement', country: 'Fraud' },
-           
-          
+            { name: 'It happened to me', y: 10.41 },
+            { name: 'I Observed it', y: 11.84 },
+            { name: 'Told to be by Co-Worker', y: 10.85 },
+            { name: 'Told to me by someone outside the Company', y: 4.67 },
+            { name: 'I heard it', y: 4.18 }
         ]
     }]
-
 });
 </script>
 </div>
@@ -474,6 +447,317 @@
 
 </div>
 
+
+<div class="row">
+
+    <div class="col-md-6">
+        <!--begin:: Widgets/Trends-->
+<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
+<div class="kt-portlet__head kt-portlet__head--noborder">
+<div class="kt-portlet__head-label">
+  <h3 class="kt-portlet__head-title">
+       Business Unit
+      </h3>
+</div>
+</div>
+<div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit">
+<div class="kt-widget4 kt-widget4--sticky">
+<div class="kt-widget4__chart">
+<div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
+  <div>
+  <div id="container"></div>
+</div>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+
+<div class="kt-widget4__item">
+
+
+<script type="text/javascript">
+Highcharts.chart('container', {
+  chart: {
+    type: 'pie'
+  },
+  title: {
+    text: ''
+  },
+  subtitle: {
+    text: ''
+  },
+  plotOptions: {
+    series: {
+      dataLabels: {
+        enabled: true,
+        format: '{point.name}: {point.y:.1f}%'
+      }
+    }
+  },
+
+  tooltip: {
+    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+  },
+
+  series: [
+    {
+      name: "Browsers",
+      colorByPoint: true,
+      data: [
+        {
+          name: "Pied-pier",
+          y: 20,
+          drilldown: "Fixnix"
+        },
+        {
+          name: "Hooli",
+          y: 19.33,
+          drilldown: "Google"
+        },
+        
+        {
+          name: "Fixnix",
+          y: 18.95,
+          drilldown: "Facebook"
+        },
+        {
+          name: "Others",
+          y: 23.55,
+          drilldown: "Apple"
+        }
+      ]
+    }
+  ],
+  drilldown: {
+    series: [
+      {
+        name: "Fixnix",
+        id: "Fixnix",
+        data: [
+          [
+            "Accountting & Other Financial Impropriety",
+            10
+          ],
+          [
+            "Bribery or Corruption",
+            15
+          ],
+          [
+            "Money Laundering",
+            7
+          ],
+          [
+            "Sanctions",
+            4
+          ],
+          [
+            "Theft/Fraud",
+            6
+          ],
+          [
+            "Health and Safety",
+            14
+          ]
+        ]
+      },
+      {
+        name: "Google",
+        id: "Google",
+        data: [
+          [
+            "Accountting & Other Financial Impropriety",
+            18
+          ],
+          [
+            "Bribery or Corruption",
+            3
+          ],
+          [
+            "Money Laundering",
+            4
+          ],
+          [
+            "Sanctions",
+            17
+          ],
+          [
+            "Theft/Fraud",
+            2
+          ],
+          [
+            "Health and Safety",
+            1
+          ]
+        ]
+      },
+      {
+        name: "Facebook",
+        id: "Facebook",
+        data: [
+          [
+            "Accountting & Other Financial Impropriety",
+            3
+          ],
+          [
+            "Bribery or Corruption",
+            8
+          ],
+          [
+            "Money Laundering",
+            9
+          ],
+          [
+            "Sanctions",
+            14
+          ],
+          [
+            "Theft/Fraud",
+            6
+          ],
+          [
+            "Health and Safety",
+            4
+          ]
+        ]
+      },
+      {
+        name: "Apple",
+        id: "Apple",
+       data: [
+          [
+            "Accountting & Other Financial Impropriety",
+            5
+          ],
+          [
+            "Bribery or Corruption",
+            8
+          ],
+          [
+            "Money Laundering",
+            18
+          ],
+          [
+            "Sanctions",
+            7
+          ],
+          [
+            "Theft/Fraud",
+            5
+          ],
+          [
+            "Health and Safety",
+            6
+          ]
+        ]
+      },
+    ]
+  }
+});
+</script>
+</div>
+</div>  
+</div>
+</div>
+</div>
+</div>
+</div>
+
+  <div class="col-md-6">
+        <!--begin:: Widgets/Trends-->
+<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
+<div class="kt-portlet__head kt-portlet__head--noborder">
+<div class="kt-portlet__head-label">
+  <h3 class="kt-portlet__head-title">
+       Relationship
+      </h3>
+</div>
+</div>
+<div class="kt-portlet__body kt-portlet__body--fluid kt-portlet__body--fit" >
+<div class="kt-widget4 kt-widget4--sticky">
+<div class="kt-widget4__chart">
+<div class="kt-widget4__items kt-widget4__items--bottom kt-portlet__space-x kt-margin-b-20">
+  <div >
+    <a href="investigator/view.php">
+  <div id="container1"></div></a>
+</div>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+<div class="kt-widget4__item">
+
+<script type="text/javascript">
+Highcharts.chart('container1', {
+  chart: {
+    type: 'pie'
+  },
+  title: {
+    text: ''
+  },
+  subtitle: {
+    text: ''
+  },
+  plotOptions: {
+    series: {
+      dataLabels: {
+        enabled: true,
+        format: '{point.name}: {point.y:.1f}%'
+      }
+    }
+  },
+
+  tooltip: {
+    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+  },
+
+  series: [
+    {
+      name: "Browsers",
+      colorByPoint: true,
+      data: [
+        {
+          name: "Employee",
+          y: 20,
+          drilldown: "Fixnix"
+        },
+        {
+          name: "Temporary Employee",
+          y: 19.33,
+          drilldown: "Google"
+        },
+        
+        {
+          name: "Contractor",
+          y: 18.95,
+          drilldown: "Facebook"
+        },
+        {
+          name: "Consultant",
+          y: 23.55,
+          drilldown: "Apple"
+        },
+        {
+          name: "Former Employee",
+          y: 23.55,
+          drilldown: "Samsung"
+        }
+      ]
+    }
+  ],
+});
+    </script>
+    </div>
+   </div>  
+  </div>
+ </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

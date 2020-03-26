@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-    $query = "SELECT * FROM `case` where status='permanentlyclosed' order by id desc";
+    $query = "SELECT * FROM `info` where status='permanentlyclosed' order by id desc";
     $result = mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
@@ -11,7 +11,7 @@
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Reviewer | Case Report</title>
+        <title>Reviewer | Idea Report</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -114,7 +114,7 @@ Idea Lists
 <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
 <thead>
   <tr>
-  <th >Case No</th>
+  <th >Info No</th>
   <th>Created Date</th>
   <th>Category</th>
   <th>Email Id</th>
@@ -135,7 +135,7 @@ Idea Lists
       <td><?php echo $rows['phone'];?></td>
        <td><?php echo $rows['Description'];?></td>
          <td><button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button></td>
-         <td><a href="reviewer/casereportgenerator.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Report</a></td>
+         <td><a href="reviewer/inforeportgenerator.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Report</a></td>
 </tbody>
 <?php
 }

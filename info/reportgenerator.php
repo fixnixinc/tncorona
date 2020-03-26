@@ -1,9 +1,9 @@
 <?php
        include "../php/common/config.php";
      $tipno = $_GET['id'];
-    $query = "SELECT * FROM Idea WHERE tipno='$tipno'";
+    $query = "SELECT * FROM info WHERE ran='$tipno'";
     $result = mysqli_query($link,$query);
-     $query1 = "SELECT * FROM Idea WHERE tipno='$tipno'";
+     $query1 = "SELECT * FROM info WHERE ran='$tipno'";
     $result1 = mysqli_query($link,$query1);
 ?>
 
@@ -15,7 +15,7 @@
 <base href="/corona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Idea | Report</title>
+        <title>Report</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -104,7 +104,7 @@
 <i class="kt-font-btipnod flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;font-size: 20px;">
-Idea-<?php echo $_GET['id'];?>
+Info-<?php echo $_GET['id'];?>
 </h3>
 </div>
 </div>
@@ -171,25 +171,7 @@ Idea-<?php echo $_GET['id'];?>
    </div>
 </div><br>
 <div class="container control-group">
-<div class="row">
-      <div class="col-md-4 input_val">
-
-      <label style="font-size: 14px;">Possible Cost Saving</label><br>
- <input type="text" class="form-control" disabled value="<?php echo $rows['PCS'];?>">
-
-   </div>
-   
-    <div class="col-md-4 input_val">
-<label>Idea</label><br>
- <input type="text" class="form-control" disabled value="<?php echo $rows['Ideai'];?>">
-</div>
-
-<!-- <div class="col-md-4 input_val">
-<label>Modus Operandi</label><br>  
- <input type="text" class="form-control" disabled value="<?php echo $rows['Ideai'];?>">
-
-</div> -->
-  </div>    
+  
 </div>
 <br>
 <div class="container">
@@ -206,15 +188,15 @@ Idea-<?php echo $_GET['id'];?>
 <div class="form-group">
   <label style="font-size: 14px;"><b>Synopsis</b></label>
       <div class="">
-   <textarea type="text" class="form-control"  id="Synopsis" placeholder="" disabled style="height: 150px; border-color:#A1E6EA"><?php echo $rows['Synopsis'];?></textarea>
+   <textarea type="text" class="form-control" placeholder="" disabled style="height: 150px; border-color:#A1E6EA"><?php echo $rows['MUpdate'];?></textarea>
    <span id="apdate" style="color: red;"></span>
 </div>
    </div>
 
    <div class="form-group">
-  <label style="font-size: 14px;"><b>Idea Update</b></label>
+  <label style="font-size: 14px;"><b>Info Update</b></label>
       <div class="">
-   <textarea type="text" class="form-control"  id="WBU" disabled placeholder="Give WhistleBlower on update"  style="height: 150px; border-color:#A1E6EA"><?php echo $rows['WBU'];?> </textarea>
+   <textarea type="text" class="form-control" disabled placeholder="Give WhistleBlower on update"  style="height: 150px; border-color:#A1E6EA"><?php echo $rows['WBUpdate'];?> </textarea>
    <span id="apdate" style="color: red;"></span>
 </div>
    </div>
@@ -241,14 +223,14 @@ Idea-<?php echo $_GET['id'];?>
   <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Management Synopsis - <?php echo $count;?></b></label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-       <?php echo $rows1['Synopsis'];?>
+       <?php echo $rows1['MUpdate'];?>
       </div>
    </div><br>
     <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Updated to Idea - <?php echo $count;?></b></label>
+  <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Updated to Info - <?php echo $count;?></b></label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-        <?php echo $rows1['WBU'];?>
+        <?php echo $rows1['WBUpdate'];?>
       </div>
    </div>
  </div><br>

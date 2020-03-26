@@ -4,10 +4,13 @@
 <base href="/corona/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>Contributors</title>
-        <meta name="description" content="Base form control examples">
+        <title>Contributors For Help in Corona Virus</title>
+        <meta name="description" content="Corona Speak Contributors For Help in Corona Virus">
+        <meta name="keyword" content="Contributors | Help For corono affected people">
+
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<link rel="canonical" href="https://www.coronaspeak.com/corona/contributors.php" />
 
        
 <link href="assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />

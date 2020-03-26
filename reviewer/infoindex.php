@@ -1,33 +1,30 @@
 <?php
-     include "../php/common/config.php";
-     $tipno = $_GET['id'];
-    $query = "SELECT * FROM `case` WHERE ran='$tipno'";
+       include "../php/common/config.php";
+     $ran = $_GET['id'];
+    $query = "SELECT * FROM info WHERE ran='$ran' order by id desc";
     $result = mysqli_query($link,$query);
-    $query1 = "SELECT * FROM `case` WHERE ran='$tipno' order by id desc";
-    $result1 = mysqli_query($link,$query1);
-     $query2 = "SELECT * FROM `case` WHERE ran='$tipno'";
-    $result2 = mysqli_query($link,$query2);
-       if(isset($_POST['submit']))
+    $query1 = "SELECT * FROM `info` WHERE ran='$ran'";
+  $result1=mysqli_query($link,$query1);
+     if(isset($_POST['submit']))
     {
       $id=$_POST['id'];
-    
+      print_r($id);
+        $reward=$_POST['reward'];
         $resolution=$_POST['resolution'];
- 
         $reinvestigate=$_POST['reinvestigate'];
         if($resolution==true)
         {
         $status="permanentlyclosed";
       }
-      else if($reinvestigate==true){
-        $status="reinvestigate";
-
+      else if($reinvestigate==true)
+      {
+       $status="reanalyze";
       }
-        $sql="UPDATE `case` SET resolution='$resolution',reinvestigate='$reinvestigate',status='$status' WHERE id=$id";
+        $sql="UPDATE info SET resolution='$resolution',reinvestigate='$reinvestigate',status='$status' WHERE id=$id";
         if(mysqli_query($link,$sql))
         {
-         header("Location:reviewerview.php"); 
+            header("Location:infoview.php");
         }
-       
     }
 ?>
 
@@ -50,15 +47,15 @@
 
 <!--begin:: Global Optional Vendors -->
 <link href="assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
+<!-- <link href="assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" /> -->
 <link href="assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/general/bootstrap-datetipnogepicker/datetipnogepicker.css" rel="stylesheet" type="text/css" />
+<link href="assets/vendors/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/general/ion-tipnogeslider/css/ion.tipnogeSlider.css" rel="stylesheet" type="text/css" />
+<link href="assets/vendors/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
@@ -136,49 +133,57 @@ include 'siteHeader2.php';
 
 <!-- begin:: Content -->
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item">
+ 
 
 <div class="kt-portlet">
 <div class="kt-portlet__head kt-portlet__head--lg" style="background-color:#2a5aa8;">
 <div class="kt-portlet__head-label">
 <span class="kt-portlet__head-icon">
-<i class="kt-font-btipnod flaticon2-line-chart"></i>
+<i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Case- <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) . "  " . substr($_GET['id'],8,4) . "  " . substr($_GET['id'], 12, 4); ?>
+Info -
+<?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) . "  " . substr($_GET['id'],8,4) . "  " . substr($_GET['id'], 12, 4); ?>
 </h3>
 </div>        
 </div>
+<div style="margin-left: 140px;">
+<div class="container" style="margin-top: : 150px;margin-left: 35%;">
+
+<div class="form-group" >
+<div class="col-md-3">
+<input type="hidden" name="search" id="search"  class="form-control" placeholder="Enter the Tip Number">
+
+</div>
 
 
 
+
+</div>
+</div><br>
+</div><hr>
 <form method="post" action="">
-<br><br>
- 
+
+
 <br>
 <br>
 <?php
-if($rows1=mysqli_fetch_assoc($result1)) {
+if ($rows=mysqli_fetch_assoc($result)) {
 ?>
-
 <div class="container">
-<label style="font-size: 14px;"><strong>Case Update</strong></label>
+<label style="font-size: 14px;"><strong>Management Update</strong></label>
 <div class="">
-  <input type="hidden" name="id" value="<?php echo $rows1['id'];?>">
-<textarea type="text" class="form-control" style="height: 150px;" disabled><?php echo $rows1['Synopsis'];?></textarea>
+<textarea type="text" class="form-control" id="MUpdate" placeholder="Ask WhistleBlower for more Info" style="height: 150px;" disabled> <?php echo $rows['MUpdate'];?> </textarea>
 
 </div>
 </div>
-
-
-<?php
-}
-?>
+<input type="hidden" name="id" value="<?php echo $rows['id'];?>">
 <br>
   <div class="container">
   <label class="kt-radio kt-radio--solid kt-radio--success">
   <input type="radio" name="radio1" value="1"/>Resolution<span></span></label>&nbsp;&nbsp;&nbsp;
   <label class="kt-radio kt-radio--solid kt-radio--danger">
-<input type="radio" name="radio1" value="2"/>Re-Investigate<span></span></label>
+<input type="radio" name="radio1" value="2"/>Re-Analyze<span></span></label>
 <br>
 
     <!-- <label style="font-size: 14px;"><strong>Resolution </strong></label> -->
@@ -192,11 +197,9 @@ if($rows1=mysqli_fetch_assoc($result1)) {
 <div class="rad ra2" style="display: none;">
 
 <!--  <span id="resolution" class="form-control" style="font-size: 13px;height: 150px;"></span> -->
-
-<textarea name="reinvestigate" class="form-control" style="font-size: 13px;height: 150px;border-color: #A1E6EA;" placeholder="Re-Investigate"></textarea>
+<textarea id="reinvestigation" name="reinvestigate" class="form-control" style="font-size: 13px;height: 150px;border-color: #A1E6EA;" placeholder="Re-Analyze"></textarea>
 <!-- <span id="reinvestigation" class="form-control" style="font-size: 13px;height: 150px;"></span>
  -->        </div>
-
 </div>
 <br>
 
@@ -208,121 +211,244 @@ if($rows1=mysqli_fetch_assoc($result1)) {
       });
     });
   </script>
-  <script type="text/javascript">
-  function alert()
-  {
-            Swal.fire({
-              title: "Reviewed",
-              text: "whistle Has Been Reviewed",
-              type: "success",
-              closeOnConfirm: false,
-              showLoaderOnConfirm: true
-            }, function () {
-              setTimeout(function () {
-                 window.location="/corona/`case`/Report.php";
-              }, 5000);
-            });
-            
-
-}
-</script> 
-
   <div class="container">
 <button type="button" id="toggle" class="flaticon2-arrow" style="border-radius: 25px; background-color: #86346C; color: #ffffff; font-size: 16px;margin-top: 8%;">  History</button>
-<input type="submit" name="submit" value="Review" class="btn btn-danger" style="float: right;" data-toggle="modal" data-target="#update" onclick="alert()">
+<input type="submit" name="submit" value="Review" class="btn btn-danger" style="float: right;" onclick="alert()">
 </div>
+
 
 <div id="toggleData" class="collapse">
 <div>
 <div class="container" id="data"><br>
 <!-- <div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;"> -->
-<?php
-if ($rows=mysqli_fetch_assoc($result)) {
-?>
 
-  <div class="container">
-  <div class="row form-group">
+<div class="row form-group">        
+<!-- <div class="col-md-4">
+<label>Tip No</label><br>  
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['ran']; ?>">
+
+</div> -->
 <div class="col-md-6">
-<label><i class=" fa fa-podcast" style="color: red;"></i><strong>Category</strong></label><br>
-
-<input type="text" name="email" class="form-control" disabled value="<?php echo $rows['category'];?>">
-
+<label><b>Created Date</b></label><br>
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['createat']; ?>">
 </div>
-
 <div class="col-md-6">
-<label><strong>Country</strong></label><br>
- <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['countries'];?>"></div>
-</div>
-</div>
-<!-- <div class="container">
-  <label>Category :</label>
-<input type="text" name="email" class="form-control" disabled value="<?php echo $rows['category'];?>">
+<label><b>Name of the Company</b> </label><br>
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['company']; ?>">
 </div>
 
-<div class="container">
-  <label>Description :</label>
-  <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['Description'];?>">
-</div>
-<br> -->
-
-
-<div class="container">
-     <label class="" style="font-size: 14px;"><strong>Details :</strong></label>
- 
-<div class="panel-body"style="border: 1px solid #e2e5ec;border-color:#A1E6EA">
-<div id="people1" class="">
-<br>
-<div class="row">
-  <div class="input-group" style="margin:20px;">
-   <div class="col-md-4 input_val">
-     <label>Full Name :</label>
-  <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['name'];?>">
-   </div>
-   <div class="col-md-4 input_val">
-     <label>Email :</label>
-     <!--<input type="text" placeholder="Designation" class="form-control" style="border-color: #216582;">-->
-    <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['email'];?>">
-   </div>
-   <div class="col-md-4 input_val">
-     <label>Phone No :</label>
-    <!-- <input type="text" placeholder="Department" class="form-control" style="border-color: #216582;">-->
-  <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['phone'];?>">   </div>
- 
-<!-- <div class="input-group after-add-more col-md-1">
-           <button class="btn add-more" type="button" title="Add Row"><i style="color:green;font-size:20px;" class="fa flaticon-plus"></i></button>
-       </div> -->
-
-       </div> 
-   </div>
-   <br><br>
-</div>
-</div>
-<br>
-</div>
-<br>
+    </div>
 
    
    <!--<div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;">-->
 
- 
+    <div class="row form-group">
+
+<div class="col-md-6">
+<label><b>Incident Informations</b></label>
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['incidentinfo']; ?>">
+
+</div>
+<div class="col-md-6">
+<label><b>Department</b></label><br>
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['department']; ?>">
+</div>
+
+    </div>
+
+   
+<!--<div class="container hide" id="data" style="border:2px solid #C3C8C6; margin-left: -18px; height: 90px;"> -->
+
+<!--</div>-->
+
+  <!-- <div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;">-->
+<div class="row form-group">
+<div class="col-md-6">
+<label><i class=" fa fa-podcast" style="color: red;"></i><b>Category</b></label><br>
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['category']; ?>">
+
+</div>
+<div class="col-md-6">
+<label><b>Place</b></label><br>
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['place']; ?>"></div>
 
 
+</div>
+  <!--   <div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;"> -->
+  <div class="row form-group">
+  <div class="col-md-6">
+<label><b>Encounter</b></label><br>
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['encounter']; ?>">
+</div>
 
+<div class="col-md-6">
+<label><b>Relationship</b></label><br>
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['relationship']; ?>">
+</div>
+
+      </div>
+   
+
+ <!--<div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;">-->
+<div class="row form-group">
+           
+
+<!--
+<div class="col-md-6">
+<label>Authorities Know</label><br>
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['authorityknows']; ?>">
+</div> -->
+
+
+</div>
+
+ <!-- <div id="authknowsarea"> -->
+<!--     <div class="row form-group">
+    <div class="col-md-6">
+<label>Authority's Email_ID</label><br>
+<input type="text" class="form-control" disabled="" value="<?php echo $rows['emailauth'] ;?>">
+</div>
+<div class="col-md-6">
+<label>Authority's Name</label><br>
+
+<input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['nameauth'] ;?>"></div>
+         
+
+</div>
+           
+<div class="row form-group">
+
+<div class="col-md-6">
+<label>Authority's Phone No.</label><br>
+
+<input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['phoneauth'] ;?>">             </div>
+
+</div>
+</div> -->
 </div>
 </div>
 
 <div class="container">
 
-<div class="control-group">
+<h3><strong>Reviewer Details</strong></h3>
+<br>
+</div>
+<div class="container">
+     <label class="" style="font-size: 14px;"><strong>People Involved:</strong></label>
+ 
+
+<div id="people1" class="">
+<br>
+<div class="row">
+  <div class="input-group">
+   <div class="col-md-4 input_val">
+     <label><b>Name</b></label>
+
+<input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['namepi'] ;?>">
+   </div>
+   <div class="col-md-4 input_val">
+     <label><b>Designation</b></label>
+     <!--<input type="text" placeholder="Designation" class="form-control" style="border-color: #216582;">-->
+
+<input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['designationpi'] ;?>">
+   </div>
+   <div class="col-md-4 input_val">
+     <label><b>Department</b></label>
+    <!-- <input type="text" placeholder="Department" class="form-control" style="border-color: #216582;">-->
+ <input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['departmentpi'] ;?>">   </div>
+ 
+<!-- <div class="input-group after-add-more col-md-1">
+           <button class="btn add-more" type="button" title="Add Row"><i class="fa flaticon-plus"></i></button>
+       </div> -->
+
+       </div>  
+       </div>                                  
    
+</div><br><br>
+<div class="control-group">
+<div class="row">
+      <div class="col-md-4 input_val">
+
+      <label style="font-size: 14px;"><b>Reported Monetory</b></label><br>
+      <input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['monetaryvalue'] ;?>">
+   </div>
+   
+    <div class="col-md-4 input_val">
+<label><b>Suspected Monetory loss</b></label><br>
+    <span id="SMLoss" class="form-control"><?php echo $rows['SMLoss'];?></span>
+</div>
+
+<div class="col-md-4 input_val">
+<label><b>Modus Operandi</b></label><br>
+ <span id="MOperandi" class="form-control"><?php echo $rows['MOperandi'];?></span>  
+</div>
+
+  </div>    
 </div>
 
 <div class="container"><br>
 </div>
-
-
+<!-- <div class="form-group">
+  <label style="font-size: 14px;"><strong>WhistleBlower Update:</strong></label>
+      <div class="">
+   <textarea type="text" class="form-control" id="WBUpdate" placeholder="Give WhistleBlower on update"  style="height: 150px;" disabled><?php echo $rows['WBUpdate'];?> </textarea>
+</div>
+   </div> -->
+   <!-- <div class="container"> -->
   <div class="form-group">
-    
+  <label style="font-size: 14px;  background-color: coral;"><b>Artifacts</b></label>
+ <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
+        <a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
+      </div>
+   </div>
+
+ <!-- </div> -->
+<br>
+
+<?php
+}
+?>
+
+   <?php
+   $count=1;
+   while($rows1=mysqli_fetch_assoc($result1)){
+    ?>
+   <div class="form-group">
+  <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Management Synopsis - <?php echo $count;?></b></label>
+   
+  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
+       <?php echo $rows1['WBUpdate'];?>
+      </div>
+   </div><br>
+    <div class="form-group">
+  <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Updated to Blower - <?php echo $count;?></b></label>
+   
+  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
+        <?php echo $rows1['MUpdate'];?>
+      </div>
+   </div><br>
+ <?php 
+ $count++;
+} 
+?>
+<div class="container">
+  <div class="row">
+    <div class="col-md-11">
+  <button type="button" class="collapsible btn btn-success">Interaction</button>
+
+  <div id="demo" class="collapse">
+    &nbsp;
+    <h3>Chat History </h3>
+  <div style="min-height: 200px; width: 1119px; max-height: 100px; overflow: auto;border:1px solid #C3C8C6;">
+          <div class="conversations"></div>
+     
+      </div>
+   </div>
+</div>
+</div>
+</div>
+  <div class="form-group">
+   
       <script type="text/javascript">
 
         $(document).ready(function() {
@@ -367,53 +493,26 @@ if ($rows=mysqli_fetch_assoc($result)) {
  
 </div>
 </div>
-<div class="container">
-<div class="form-group">
-  <label style="font-size: 14px;  background-color: coral;">Artifacts</label>
-  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-        <a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
-      </div>
-   </div>
- </div>
- <?php
-}
-?>
-<BR>
-
-   <?php
-   $count=1;
-   while($rows2=mysqli_fetch_assoc($result2)){
-    ?>
-    <div class="container">
-   <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Management Synopsis - <?php echo $count;?></b></label>
-   
-  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-       <?php echo $rows2['Synopsis'];?>
-      </div>
-   </div><br>
-    <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Updated to `case` - <?php echo $count;?></b></label>
-   
-  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-        <?php echo $rows2['WBU'];?>
-      </div>
-   </div>
- </div><br>
- <?php 
- $count++;
-} 
-?>
-
 </div>
- 
 
 <br>
 <div class="container">
   <div class="row">
+ <!--    <div class="col-md-11">
+  <button type="button" class="" style="background-color: green; color: white;" id="intro">Interaction</button>
 
+  <div id="demo" class="collapse">
+  <div style="min-height: 200px; width: 1119px; max-height: 100px; overflow: auto;border:1px solid #C3C8C6;">
+          <div class="conversations"></div>
+     
+      </div>
+   </div>
+</div> -->
 <div class="col-md-1">
-  
+    <div class="img" style="margin-left: 1090px;margin-top: -45px;">
+       
+          <a href="" data-toggle="modal" data-target="#myModal"><i class='fa fa-comments' style="color:  red; font-size: 38px;" title="Review"></i></a>
+            </div>
 </div>
 </div>
 </div>
@@ -544,36 +643,36 @@ $("#people").hide();
 });
 });
 </script>
+<script type="text/javascript">
+  function alert()
+  {
+            Swal.fire({
+              title: "Reviewed",
+              text: "whistle Has Been Reviewed",
+              type: "success",
+              closeOnConfirm: false,
+              showLoaderOnConfirm: true
+            }, function () {
+              setTimeout(function () {
+                 window.location="/corona/reviewer/report.php";
+              }, 5000);
+            });
+           
 
-<!-- <script>
-$(document).ready(function(){
-  $("#authknowsarea").hide();
-$("input[type='text']").change(function(){
-if($(this).val()=="NO")
-{
-$("#authknowarea").hide();
 }
-if($(this).val()=="YES")
-{
-$("#authknowsarea").show();
-}
-});
-});
-</script> -->
-
-
-                                                  <!-- update part-->
+</script>                                            
+ <!-- update part-->
 
 
 <script>
-            var KTAppOptions = {"colors":{"state":{"btipnod":"#2c77f4","light":"#ffffff","dark":"#282a3c","primary":"#5867dd","success":"#34bfa3","info":"#36a3f7","warning":"#ffb822","danger":"#fd3995"},"base":{"label":["#c5cbe3","#a1a8c3","#3d4465","#3e4466"],"shape":["#f0f3ff","#d9dffa","#afb4d4","#646c9a"]}}};
+            var KTAppOptions = {"colors":{"state":{"brand":"#2c77f4","light":"#ffffff","dark":"#282a3c","primary":"#5867dd","success":"#34bfa3","info":"#36a3f7","warning":"#ffb822","danger":"#fd3995"},"base":{"label":["#c5cbe3","#a1a8c3","#3d4465","#3e4466"],"shape":["#f0f3ff","#d9dffa","#afb4d4","#646c9a"]}}};
         </script>
         <!-- end::Global Config -->
 
     <!--begin:: Global Mandatory Vendors -->
 <script src="assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
 <script src="assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- <script src="assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script> -->
 <script src="assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
 <script src="assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
 <script src="assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
@@ -592,7 +691,7 @@ $("#authknowsarea").show();
 <script src="assets/vendors/general/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
 <script src="assets/vendors/general/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
 <script src="assets/vendors/custom/js/vendors/bootstrap-timepicker.init.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-datetipnogepicker/datetipnogepicker.js" type="text/javascript"></script>
+<script src="assets/vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
 <script src="assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
 <script src="assets/vendors/general/bootstrap-maxlength/src/bootstrap-maxlength.js" type="text/javascript"></script>
 <script src="assets/vendors/custom/vendors/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>
@@ -600,7 +699,7 @@ $("#authknowsarea").show();
 <script src="assets/vendors/general/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
 <script src="assets/vendors/custom/js/vendors/bootstrap-switch.init.js" type="text/javascript"></script>
 <script src="assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
-<script src="assets/vendors/general/ion-tipnogeslider/js/ion.tipnogeSlider.js" type="text/javascript"></script>
+<script src="assets/vendors/general/ion-rangeslider/js/ion.rangeSlider.js" type="text/javascript"></script>
 <script src="assets/vendors/general/typeahead.js/dist/typeahead.bundle.js" type="text/javascript"></script>
 <script src="assets/vendors/general/handlebars/dist/handlebars.js" type="text/javascript"></script>
 <script src="assets/vendors/general/inputmask/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
@@ -657,5 +756,5 @@ getUrl=getUrl.replace(/=/g,'":"');
  getUrl='{"'+getUrl+'"}';
  var obj=JSON.parse(getUrl);
  console.log(obj.id);
- document.getElementById("tipno").value=obj.id;
+ document.getElementById("ran").value=obj.id;
 </script>
