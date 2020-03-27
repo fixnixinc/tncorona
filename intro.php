@@ -64,96 +64,101 @@
        <div class="panel-body" style="background-color: #EAEBFC">                        
    <select name="countries" id="countries" style="width: 100%;" onchange="fun()">
    <option value='gb' data-image="images/msdropdown/icons/global.jpeg" style="background: transparent;" data-imagecss="flag ad" data-title="Andorra">Global</option>
-    <option value='italy' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag it" data-title="Italy">Italy</option>
+   <option value='States' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag us" data-title="United States">United States</option>
    <option value='China' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag cn" data-title="China">China</option>
+    <option value='italy' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag it" data-title="Italy">Italy</option>
+   <option value='Spain' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag es" data-title="Spain">Spain</option>
+   <option value='Germany' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag de" data-title="Germany">Germany</option>
     <option value='iran' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ir" data-title="Iran">Iran</option>
-     <option value='Spain' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag es" data-title="Spain">Spain</option>
     <option value='france' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag fr" data-title="France">France</option>
-     <option value='States' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag us" data-title="United States">United States</option>
+    <option value='Switzerland' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ch" data-title="Switzerland">Switzerland</option>
     <option value='Kingdom' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag uk" data-title="United Kingdom">United Kingdom</option>
-    <option value='Netherlands' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag an" data-title="Netherlands Antilles">Netherlands Antilles</option>
     <option value='Korea' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag kr" data-title="Korea (South)">Korea (South)</option>
-     <option value='Germany' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag de" data-title="Germany">Germany</option>
-     <option value='Switzerland' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ch" data-title="Switzerland">Switzerland</option>
+    <option value='Netherlands' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag an" data-title="Netherlands Antilles">Netherlands Antilles</option>
     <option value='Belgium' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag be" data-title="Belgium">Belgium</option>
-    <option value='Indonesia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag id" data-title="Indonesia">Indonesia</option>
-     <option value='Japan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag jp" data-title="Japan">Japan</option>
-    <option value='Philippines' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ph" data-title="Philippines">Philippines</option>
-    <option value='Turkey' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag tr" data-title="Turkey">Turkey</option>
-    <option value='Sweden' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag se" data-title="Sweden">Sweden</option>
-    <option value='San Marino' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag sm" data-title="San Marino">San Marino</option>
-    <option value='Canada' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ca" data-title="Canada">Canada</option>
-         <option value='Iraq' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag iq" data-title="Iraq">Iraq</option>
-    <option value='Algeria' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag dz" data-title="Algeria">Algeria</option>
-     <option value='Greece' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag gr" data-title="Greece">Greece</option>
-    <option value='Portugal' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag pt" data-title="Portugal">Portugal</option>
-    <option value='Malaysia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag my" data-title="Malaysia">Malaysia</option>
-     <option value='Egypt' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag eg" data-title="Egypt">Egypt</option>
     <option value='Austria' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag at" data-title="Austria">Austria</option>
-     <option value='Luxembourg' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lu" data-title="Luxembourg">Luxembourg</option>
-               <!-- <option value='Others' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag " data-title="Others">Others</option>!-->
-          <option value='Norway' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag no" data-title="Norway">Norway</option>
+    <option value='Canada' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ca" data-title="Canada">Canada</option>
+    <option value='Turkey' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag tr" data-title="Turkey">Turkey</option>
+    <option value='Portugal' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag pt" data-title="Portugal">Portugal</option>
+    <option value='Norway' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag no" data-title="Norway">Norway</option>
     <option value='Australia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag au" data-title="Australia">Australia</option>
-     <option value='Ecuador' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ec" data-title="Ecuador">Ecuador</option>
-    <option value='Poland' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag pl" data-title="Poland">Poland</option>
-     <option value='India' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag in" data-title="India">India</option>
-    <option value='Peru' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag pe" data-title="Peru">Peru</option>
-    <option value='Hong Kong' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag hk" data-title="Hong Kong">Hong Kong</option>
-    <option value='Lebanon' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lb" data-title="Lebanon">Lebanon</option>
-    <option value='Argentina' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ar" data-title="Argentina">Argentina</option>
-    <option value='Hungary' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag hu" data-title="Hungary">Hungary</option>
-    <option value='Ireland' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ie" data-title="Ireland">Ireland</option>
-<option value='Pakistan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag pk" data-title="Pakistan">Pakistan</option>
-<option value='Panama' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag pa" data-title="Panama">Panama</option>
- <option value='Bulgaria' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag bg" data-title="Bulgaria">Bulgaria</option>
-    <option value='Dominican Republic' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag do" data-title="Dominican Republic">Dominican Republic</option>
-     <option value='Morocco' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ma" data-title="Morocco">Morocco</option>
- <option value='Burkina Faso' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag bf" data-title="Burkina Faso">Burkina Faso</option>
- <option value='Ukraine' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ua" data-title="Ukraine">Ukraine</option>
-     <option value='Singapore' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag sg" data-title="Singapore">Singapore</option>
-    <option value='Mexico' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag mx" data-title="Mexico">Mexico</option>
-    <option value='Arab' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ae" data-title="United Arab Emirates">UAE</option>
-    <option value='Taiwan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag tw" data-title="Taiwan">Taiwan</option>
-    <option value='Costa Rica' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag cr" data-title="Costa Rica">Costa Rica</option>
-    <option value='Albania' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag al" data-title="Albania">Albania</option>
     <option value='Israel' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag il" data-title="Israel">Israel</option>
+    <option value='Brazil' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag br" data-title="Brazil">Brazil</option>
+    <option value='Sweden' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag se" data-title="Sweden">Sweden</option>
+    <option value='Malaysia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag my" data-title="Malaysia">Malaysia</option>
+    <option value='Czechia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag cz" data-title="Czechia">Czechia</option>
+    <option value='Denmark' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag dk" data-title="Denmark">Denmark</option>
+    <option value='Ireland' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ie" data-title="Ireland">Ireland</option>
+    <option value='Luxembourg' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lu" data-title="Luxembourg">Luxembourg</option>
+    <option value='Ecuador' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ec" data-title="Ecuador">Ecuador</option>
+    <option value='Japan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag jp" data-title="Japan">Japan</option>
     <option value='Chile' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag cl" data-title="Chile">Chile</option>
-    <option value='Finland' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag fi" data-title="Finland">Finland</option>
-    <option value='Iceland' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag is" data-title="Iceland">Iceland</option>
-     <option value='Thailand' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag th" data-title="Thailand">Thailand</option>    
-    <option value='Slovenia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag si" data-title="Slovenia">Slovenia</option>
-    <option value='Bahrain' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag bh" data-title="Bahrain">Bahrain</option>
+    <option value='Poland' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag pl" data-title="Poland">Poland</option>
+    <option value='Pakistan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag pk" data-title="Pakistan">Pakistan</option>
+    <option value='Thailand' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag th" data-title="Thailand">Thailand</option>
+    <option value='Indonesia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag id" data-title="Indonesia">Indonesia</option>
     <option value='Russia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ru" data-title="Russian Federation">Russia</option>
-    <option value='Croatia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag hr" data-title="Croatia (Hrvatska)">Croatia</option>
-    <option value='Colombia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag co" data-title="Colombia">Colombia</option>
-    <option value='Slovakia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag sk" data-title="Slovakia">Slovakia</option>
-      <option value='Serbia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag cs" data-title="Serbia and Montenegro">Serbia and Montenegro</option>
-    <option value='Lithuania' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lt" data-title="Lithuania">Lithuania</option>
-    <option value='Bosnia and Herzegovina' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ba" data-title="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-       <option value='Cyprus' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag cy" data-title="Cyprus">Cyprus</option>
-       <option value='Moldova' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag md" data-title="Moldova">Moldova</option>
-      <option value='Czechia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag cz" data-title="Czechia">Czechia</option>
-    <option value='Qatar' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag qa" data-title="Qatar">Qatar</option>
-    <option value='Saudi Arabia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag sa" data-title="Saudi Arabia">Saudi Arabia</option>
     <option value='Romania' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ro" data-title="Romania">Romania</option>
-    <option value='Estonia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ee" data-title="Estonia">Estonia</option>
+    <option value='Saudi Arabia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag sa" data-title="Saudi Arabia">Saudi Arabia</option>
+    <option value='Finland' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag fi" data-title="Finland">Finland</option>
     <option value='South Africa' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag za" data-title="South Africa">South Africa</option>
-     <option value='Kuwait' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag kw" data-title="Kuwait">Kuwait</option>
-   
-     <option value='Latvia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lv" data-title="Latvia">Latvia</option>
-     <option value='Armenia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag am" data-title="Armenia">Armenia</option>
-     <option value='Latvia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lv" data-title="Latvia">Latvia</option>
-     <option value='Uruguay' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag uy" data-title="Uruguay">Uruguay</option>
-     <option value='Jordan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag jo" data-title="Jordan">Jordan</option>
-     <option value='Vietnam' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag vn" data-title="Vietnam">Vietnam</option>
-     <option value='Andorra' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ad" data-title="Andorra">Andorra</option>
-     <option value='North Macedonia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag mk" data-title="North Macedonia">North Macedonia</option>
-     <option value='Brunei' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag bn" data-title="Brunei">Brunei</option>
-     <option value='Sri Lanka' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lk" data-title="Sri Lanka">Sri Lanka</option>
-     <option value='Belarus' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag by" data-title="Belarus">Belarus</option>
-     <option value='Malta' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag mt" data-title="Malta">Malta</option>
-     <option value='Venezuela' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ve" data-title="Venezuela">Venezuela</option>
-     <option value='New Zealand' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag nz" data-title="New Zealand">New Zealand</option>
+    <option value='Greece' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag gr" data-title="Greece">Greece</option>
+    <option value='Philippines' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ph" data-title="Philippines">Philippines</option>
+    <option value='Iceland' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag is" data-title="Iceland">Iceland</option>
+    <option value='India' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag in" data-title="India">India</option>
+    <option value='Singapore' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag sg" data-title="Singapore">Singapore</option>
+    <option value='Panama' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag pa" data-title="Panama">Panama</option>
+    <option value='Argentina' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ar" data-title="Argentina">Argentina</option>
+    <option value='Mexico' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag mx" data-title="Mexico">Mexico</option>
+    <option value='Peru' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag pe" data-title="Peru">Peru</option>
+    <option value='Estonia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ee" data-title="Estonia">Estonia</option>
+    <option value='Slovenia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag si" data-title="Slovenia">Slovenia</option>
+    <option value='Croatia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag hr" data-title="Croatia (Hrvatska)">Croatia</option>
+    <option value='Qatar' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag qa" data-title="Qatar">Qatar</option>
+    <option value='Hong Kong' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag hk" data-title="Hong Kong">Hong Kong</option>
+    <option value='Egypt' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag eg" data-title="Egypt">Egypt</option>
+    <option value='Colombia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag co" data-title="Colombia">Colombia</option>
+    <option value='Dominican Republic' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag do" data-title="Dominican Republic">Dominican Republic</option>
+    <option value='Bahrain' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag bh" data-title="Bahrain">Bahrain</option>
+    <option value='Serbia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag cs" data-title="Serbia and Montenegro">Serbia and Montenegro</option>
+    <option value='Iraq' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag iq" data-title="Iraq">Iraq</option>
+    <option value='New Zealand' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag nz" data-title="New Zealand">New Zealand</option>
+    <option value='Lebanon' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lb" data-title="Lebanon">Lebanon</option>
+    <option value='Algeria' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag dz" data-title="Algeria">Algeria</option>
+    <option value='Lithuania' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lt" data-title="Lithuania">Lithuania</option>
+    <option value='Arab' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ae" data-title="United Arab Emirates">UAE</option>
+    <option value='Armenia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag am" data-title="Armenia">Armenia</option>
+    <option value='Hungary' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag hu" data-title="Hungary">Hungary</option>
+    <option value='Latvia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lv" data-title="Latvia">Latvia</option>
+    <option value='Bulgaria' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag bg" data-title="Bulgaria">Bulgaria</option>
+    <option value='Morocco' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ma" data-title="Morocco">Morocco</option>
+    <option value='Slovakia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag sk" data-title="Slovakia">Slovakia</option>
+    <option value='Taiwan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag tw" data-title="Taiwan">Taiwan</option>
+    <option value='Uruguay' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag uy" data-title="Uruguay">Uruguay</option>
+    <option value='Costa Rica' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag cr" data-title="Costa Rica">Costa Rica</option>
+    <option value='Bosnia and Herzegovina' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ba" data-title="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+    <option value='Kuwait' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag kw" data-title="Kuwait">Kuwait</option>
+    <option value='Andorra' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ad" data-title="Andorra">Andorra</option>
+    <option value='Ukraine' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ua" data-title="Ukraine">Ukraine</option>
+    <option value='Jordan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag jo" data-title="Jordan">Jordan</option>
+    <option value='San Marino' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag sm" data-title="San Marino">San Marino</option>
+    <option value='North Macedonia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag mk" data-title="North Macedonia">North Macedonia</option>
+    <option value='Moldova' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag md" data-title="Moldova">Moldova</option>
+    <option value='Albania' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag al" data-title="Albania">Albania</option>
+    <option value='Vietnam' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag vn" data-title="Vietnam">Vietnam</option>
+    <option value='Burkina Faso' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag bf" data-title="Burkina Faso">Burkina Faso</option>
+    <option value='Cyprus' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag cy" data-title="Cyprus">Cyprus</option>
+    <option value='Malta' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag mt" data-title="Malta">Malta</option>
+    <option value='Oman' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag om" data-title="Oman">Oman</option>
+    <option value='Kazakhstan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag kz" data-title="Kazakhstan">Kazakhstan</option>
+    <option value='Azerbaijan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag az" data-title="Azerbaijan">Azerbaijan</option>
+    <option value='Brunei' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag bn" data-title="Brunei">Brunei</option>
+    <option value='Venezuela' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ve" data-title="Venezuela">Venezuela</option>
+    <option value='Sri Lanka' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag lk" data-title="Sri Lanka">Sri Lanka</option>
+    <option value='Sri Lanka' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag sg" data-title="Sri Lanka">Sri Lanka</option>
+    <!-- <option value='Others' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag " data-title="Others">Others</option>!-->
+     <option value='Bulgaria' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag bg" data-title="Bulgaria">Bulgaria</option>    
+     <option value='Belarus' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag by" data-title="Belarus">Belarus</option>  
      <option value='Palestine' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag ps" data-title="Palestine">Palestine</option>
      <option value='Cambodia' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag kh" data-title="Cambodia">Cambodia</option>
      <option value='Afghanistan' data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag af" data-title="Afghanistan">Afghanistan</option>
@@ -173,7 +178,7 @@
                 </div>
                 <div class="panel-body text-center" style="background-color: #FEF5F5;">        
            
-                    <strong style="color: #E53E3E; font-size: 24px;" id="conf">170,247</strong>
+                    <strong style="color: #E53E3E; font-size: 24px;" id="conf">540,926</strong>
                 </div>
             </div>
 
@@ -186,7 +191,7 @@
                 </div>
                 <div class="panel-body text-center" style="background-color: #F0FFF4;">  
        
-                    <strong style="color: #38A169; font-size: 24px;" id="death">6,526</strong>
+                    <strong style="color: #38A169; font-size: 24px;" id="death">24,293</strong>
                 </div>
             </div>
 
@@ -200,7 +205,7 @@
                     <h1 class="panel-title text-center"style="color: #27DDFA; font-size: 18px;"><b>Case</b></h1>
                 </div>
                 <div class="panel-body text-center" style="background-color: #E2F8FB;">        
-                 <strong style="color: #27DDFA; font-size: 24px;" id="case">691</strong>
+                 <strong style="color: #27DDFA; font-size: 24px;" id="case">1,317</strong>
                
 
                 </div>
@@ -216,7 +221,7 @@
                     <h1 class="panel-title text-center"style="color: #FC63E4; font-size: 18px;"><b>Info</b></h1>
                 </div>
                 <div class="panel-body text-center" style="background-color: #FCEEFA;">                    
-                    <strong style="color: #FC63E4; font-size: 24px;" id="info">754</strong>
+                    <strong style="color: #FC63E4; font-size: 24px;" id="info">1,438</strong>
                 </div>
             </div>
 
@@ -342,10 +347,10 @@ $(document).ready(function() {
      var sa=document.getElementById("countries").value;
     if(sa=="gb")
     {
-        document.getElementById("conf").innerHTML="532,926";
-       document.getElementById("death").innerHTML="24,093";
-       document.getElementById("case").innerHTML="1,117";
-       document.getElementById("info").innerHTML="1,338";
+        document.getElementById("conf").innerHTML="540,926";
+       document.getElementById("death").innerHTML="24,293";
+       document.getElementById("case").innerHTML="1,317";
+       document.getElementById("info").innerHTML="1,438";
     }
         if(sa=="China")
         {
@@ -398,8 +403,8 @@ $(document).ready(function() {
     }
      if(sa=="States")
     {
-        document.getElementById("conf").innerHTML="85,594";
-       document.getElementById("death").innerHTML="348";
+        document.getElementById("conf").innerHTML="85,625";
+       document.getElementById("death").innerHTML="1303";
        document.getElementById("case").innerHTML="98";
        document.getElementById("info").innerHTML="118";
     }
@@ -1056,12 +1061,33 @@ $(document).ready(function() {
        document.getElementById("case").innerHTML="0";
        document.getElementById("info").innerHTML="0";
     }
+    if(sa=="Oman")
+    {
+        document.getElementById("conf").innerHTML="131";
+       document.getElementById("death").innerHTML="0";
+       document.getElementById("case").innerHTML="0";
+       document.getElementById("info").innerHTML="0";
+    }
+    if(sa=="Kazakhstan")
+    {
+        document.getElementById("conf").innerHTML="125";
+       document.getElementById("death").innerHTML="1";
+       document.getElementById("case").innerHTML="0";
+       document.getElementById("info").innerHTML="0";
+    }
+    if(sa=="Azerbaijan")
+    {
+        document.getElementById("conf").innerHTML="122";
+       document.getElementById("death").innerHTML="3";
+       document.getElementById("case").innerHTML="0";
+       document.getElementById("info").innerHTML="0";
+    }
 
      if(sa=="Others")
     {
         document.getElementById("conf").innerHTML="712";
        document.getElementById("death").innerHTML="8";
-       document.getElementById("case").innerHTML="3";
+       document.getElementById("case").innerHTML="10";
        document.getElementById("info").innerHTML="3";
     }
      
@@ -1090,5 +1116,3 @@ $('.swal2-confirm').click(function(result){
 });
 }
       </script>
-
-      <!--27-03-2020 -->
