@@ -16,7 +16,23 @@ require 'nav_footer.html';
             vertical-align: center;
             top: 136px;
         }
-        
+      .btn-danger {
+  font-family: Raleway-SemiBold;
+  font-size: 13px;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 30px;
+  border: 2px solid rgba(217, 83, 78, 0.75);
+  border-radius: 40px;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-danger:hover {
+  color: #FFF;
+  background: rgba(217, 83, 78, 0.75);
+  border: 2px solid rgba(217, 83, 78, 0.75);
+} 
     </style>
 
     <link href="./fonts/css/fontawesome.css" rel="stylesheet">
@@ -36,10 +52,8 @@ require 'nav_footer.html';
     </div>
 
    <div style="height: 135px;"></div>
-
- <div class="container-fluid" style="background-color: #BEF0FE; height: 135px; width: 100%; "> 
-  <center><button class="btn_center" style="margin-top: 45px;">Submit your case / info here</button></center>
+<div class="container-fluid" style="background-color:#668eba; height: 135px; width: 100%; "> 
+  <center><a href="case/caseplan.php"><button class="btn_center btn-danger" style="margin-top: 40px;">Submit your case / info here</button></a></center>
  </div>
-
 </body>
 </html>

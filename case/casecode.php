@@ -53,9 +53,11 @@ include "../php/common/config.php";
   });
   }
 </script>
-<?php
-  include "../siteheader.php";
-?>
+<?php 
+include '../nav_header.html';
+
+
+ ?>
 
   <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading"> <br><br>
 
@@ -125,8 +127,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 }
 ?>
-<?php
-include "../footer.php"; ?>
+
 <script type="text/javascript">
   const myInp = document.getElementById("copy");
   const btnCopy = document.getElementById("cpybtn");
