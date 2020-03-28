@@ -71,7 +71,7 @@
 }
     </style>
    <?php
-      include "siteheader.php";
+      include "nav_header.html";
     ?>
 
 <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading bg">
@@ -251,7 +251,7 @@
 </div> 
 <div style="width:100%;">
   <?php
-include "footer.php"
+      include "nav_footer.html"; 
 ?>
   
 </div>

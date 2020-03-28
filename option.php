@@ -118,7 +118,7 @@ footer p  {
 
 </style>
       <?php
-      include "siteheader.php";
+      include "nav_header.html";
     ?>
       <body>
  
@@ -144,7 +144,10 @@ footer p  {
         
       </body>
       <?php 
-      include "footer.php"; ?>
+      include "nav_footer.html"; 
+
+
+      ?>
 
     <!-- end::Body -->
 </html>

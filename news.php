@@ -72,7 +72,7 @@ $chats = $timeManager->timeLine(); //chat retrive
 
 
 <?php
-include "siteheader.php";
+include "nav_header.html";
 ?>
       <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" >
 
@@ -172,7 +172,7 @@ $string = preg_replace($url, '<a href="$0" target="_new" title="$0">$0</a>', $ch
 
 <?php
 include "../sidemenu.php";
-include "footer.php"
+include "nav_footer.html"
 ?>
 
               <!-- begin::Global Config(global config for global JS sciprts) -->
