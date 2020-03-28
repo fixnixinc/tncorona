@@ -5,3 +5,4 @@
     define ('DB_PASSWORD', 'CoronaSpeak1234#@');
     define ('DB_SCHEMA', 'corona');
     define ('CONF_KEY_ROUTING', 'routing');
+
