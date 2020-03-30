@@ -841,7 +841,7 @@
 				});			
 			}
 		}
-		var websites = ["https://tncoronaspeak.com/corona/option.php","https://t.me/coronaspeak","https://tncoronaspeak.com/corona/tamilnadu/infection_db/index.html"]
+		var websites = ["https://tncoronaspeak.com/corona/case/caseplan.php","https://t.me/coronaspeak","https://tncoronaspeak.com/corona/tamilnadu/infection_db/index.html"]
 		function func(item,a){
 			$(item).css("cursor","pointer");
 		}
