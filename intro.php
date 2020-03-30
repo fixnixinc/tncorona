@@ -1,3 +1,4 @@
+<?php include "nav_header.html";?>
 <!DOCTYPE html>
 	<html>
 	<head>
@@ -57,55 +58,12 @@
 	</style>
 	<body>
 		<div class="wrapper">
-			<div class="main-header">
-	
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-		<a class="navbar-brand" href="#">
-			<img src="./assets/img/modified_logo.png" width="45" height="45" class="d-inline-block align-top" alt="">
-			<label style="padding-top:8px"><strong>TamilNadu CoronaSpeak</strong></label>
-		</a>
-
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-
-
-	<div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<ul class="navbar-nav mx-auto order-0">
-
-			<li class="nav-item" id="top_links_head">
-				<a class="nav-link" href="https://tncoronaspeak.com/corona/case/caseplan.php">Speak<span class="sr-only">(current)</span></a>
-			</li>
-
-			<li class="nav-item" id="top_links_head">
-				<a class="nav-link" href="http://t.me/coronaspeak">Chat</a>
-			</li>
-
-			<li class="nav-item" id="top_links_head">
-				<a class="nav-link" href="https://tncoronaspeak.com/corona/tamilnadu/infection_db/index.html">Corona Infection Database </a>
-			</li> 
-		
-				</ul>
-
-				<ul class="navbar-nav ml-auto">
-				<!-- 	<li class="nav-item" style="margin-right: 6px;">
-						<button type="button" class="btn btn-outline-secondary btn-sm" style="border-radius:24px;" onclick="window.location.href='https://tncoronaspeak.com/corona/login.php'">Admin</button>
-					</li>
-				
-					<li class="nav-item">
-						<button type="button" class="btn btn-outline-secondary btn-sm" style="border-radius:24px;" onclick="window.location.href='https://tncoronaspeak.com/corona/caselogin.php'">Track</button>
-					</li> -->
-				</ul>
-
-	</div>
-	</nav>
-				</div>
+			
 				
 				<div>
 					<div class="content" id="stats">
 						<div class="container-fluid">
-							<h4 class="page-title">Global Data</h4>
+							<!-- <h4 class="page-title">Global Data</h4> -->
 							<div class="row">
 								<div class="col-md-2">
 									<div >
@@ -461,14 +419,16 @@
 									</div>
 									<div class="row">
 										<div class="col-sm-12 col-md-4 text1">
+											<a href="https://tncoronaspeak.com/corona/tamilnadu/infection_db/index.html">
 													<center>
 													<button id="database_button" type="button" class="btn btn-outline-light" style="margin-top: 10px;border-radius: 50px;width: 330px;" onclick="func2(2)"><i class="fas fa-database" ></i> Corona TamilNadu Infection Database
 													</button>
 													</center>
+												</a>
 					
 										</div>
 									<div class="col-sm-12 col-md-4 text2">
-											<a href="case/caseplan.php">
+											<a href="case/speak.php">
 												<center>
 												<button id="submit_button"type="button" class="btn btn-outline-light" style="margin-top: 10px; border-radius: 50px; width: 330px;">  Submit your case / info here 
 												</button>
@@ -476,30 +436,38 @@
 											</a>
 									</div>
 										<div class="col-sm-12 col-md-4 text3">
+											<a href="http://t.me/coronaspeak">
 											<center>
 											<button id="connect_button" type="button" style="margin-top: 10px;border-radius: 50px;width: 330px;" class="btn btn-outline-light" onclick="func2(0)"><i class="fab fa-telegram" ></i> Connect Us through Telegram
 											</button>
 											</center>
+										</a>
 										</div>								
 									</div>
 
 					</div>
-					<footer class="footer">
+					<!-- <footer class="footer">
 						<div class="container-fluid">
 							<div style="width: 100%;" >
 							<div class="jumbotron jumbotron-fluid bg-light">
 								<div class="container" id="faaltu">
-									<a href="https://tncoronaspeak.com/corona/option.php" id="bottom_links_foot" style="color: #231F1F; font-size: 14px; margin-right: 18px; float: left;">SPEAK</a>
-									<a href="http://t.me/coronaspeak" id="bottom_links_foot" style="color: #231F1F; font-size: 14px; margin-right: 18px; float: left;">CHAT</a>
+									<a href="https://tncoronaspeak.com/corona/case/speak.php" id="bottom_links_foot" style="color: #231F1F; font-size: 14px; margin-right: 18px; float: left;">SPEAK</a>
+									<a href="https://telegra.ph/TN-Corona-Speak-03-27" id="bottom_links_foot" style="color: #231F1F; font-size: 14px; margin-right: 18px; float: left;">CHAT</a>
 									<a href="https://tncoronaspeak.com/corona/tamilnadu/infection_db/index.html" id="bottom_links_foot" style="color: #231F1F; font-size: 14px; margin-right: 18px; float: left;">CORONA INFECTION DATABASE</a>
-								</div>
+								</div> -->
 								<div class="container ml-auto">
 									<div class="row" id="my_icons" style="display:none;position:relative">
-										<div id="icon_speak" style="display:block;width:50px;height:50px;overflow:hidden;border-radius: 50%;position:absolute	;" onmouseover="func(this)" onclick="func2(0)"><img  style="width:auto;height:100%;" src="assets/img/speakup.png"/></div>
-										<div id="icon_chat" style="display:block;width:50px;height:50px;overflow:hidden;border-radius: 50%;position:absolute;" onmouseover="func(this)" onclick="func2(1)"><img  style="width:auto;height:100%;" src="assets/img/telegram.png"/></div>									
-										<div id="icon_database" style="display:block;width:60px;height:60px;overflow:hidden;border-radius: 50%;position:absolute;" onmouseover="func(this)" onclick="func2(2)"><img  style="width:auto;height:100%;" src="assets/img/database.png"/></div>								
+										<a href="https://tncoronaspeak.com/corona/case/speak.php">
+										<div id="icon_speak" style="display:block;width:50px;height:50px;overflow:hidden;border-radius: 50%;position:absolute	;"><img  style="width:auto;height:100%;" src="assets/img/speakup.png"/></div>
+									</a>
+									<a href="http://t.me/coronaspeak">
+										<div id="icon_chat" style="display:block;width:50px;height:50px;overflow:hidden;border-radius: 50%;position:absolute;"><img  style="width:auto;height:100%;" src="assets/img/telegram.png"/></div>	
+										</a>
+										<a href="https://tncoronaspeak.com/corona/tamilnadu/infection_db/index.html">								
+										<div id="icon_database" style="display:block;width:60px;height:60px;overflow:hidden;border-radius: 50%;position:absolute;"><img  style="width:auto;height:100%;" src="assets/img/database.png"/></div>	
+										</a>							
 									</div>
-									<div class="row" style="position:relative">
+									<!-- <div class="row" style="position:relative">
 										<div id="facebook" style="position: absolute;"><a href="https://www.facebook.com/coronaSpeak/"><i class="fab fa-facebook" style="font-size: 25px;" ></i></a></div>&nbsp;
 										<div id="linkedinra" style="position: absolute;"><a href="https://www.linkedin.com/showcase/coronaspeak"><i class="fab fa-linkedin" style="font-size: 25px;"></i></a></div>&nbsp;
 										<div id="twitter" style="position: absolute;"><a href="https://twitter.com/CoronaSpeak"><i class="fab fa-twitter-square" style="font-size: 25px;"></i></a></div>&nbsp;
@@ -518,11 +486,13 @@
 						</div>
 
 						</div>
-					</footer>
+					</footer> -->
 				</div>
+				<?php include "nav_footer.html"; ?>
 			</div>
 		</div>
 		</body>
+
 	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
 	<script src="assets/js/anna.js"></script>
 	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
