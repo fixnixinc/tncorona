@@ -75,7 +75,7 @@
 			<ul class="navbar-nav mx-auto order-0">
 
 			<li class="nav-item" id="top_links_head">
-				<a class="nav-link" href="https://tncoronaspeak.com/corona/option.php">Speak<span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="https://tncoronaspeak.com/corona/case/caseplan.php">Speak<span class="sr-only">(current)</span></a>
 			</li>
 
 			<li class="nav-item" id="top_links_head">
