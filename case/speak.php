@@ -69,8 +69,9 @@ if($infection=="")
 <!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>TN Coronaspeak | Case</title>
-        <meta name="description" content="Base form control examples">
+        <title>Tamilnadu CoronaSpeak | corona tamil nadu cases</title>
+        <meta name="description" content="Coronaspeak provide information in corona cases in district wise">
+        <meta name="keywords" content="Tamil Nadu coronavirus update , Corona cases in tamilnadu , corona cases in Chennai , corona TamilNadu , coronavirus Madurai">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

@@ -5,7 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8">
 		<base href="/tncorona/">
-		<title>CoronaSpeak Analytics</title>
+		<title>Tamilnadu CoronaSpeak District Wise |  Tamilnadu coronavirus</title>
+		<meta name="description" content="Corona Speak provide update information about corona speak in Tamilnadu with district wise">
+		<meta name="keywords" content="Tamil Nadu coronavirus update , coronavirus Tamil news , corona Chennai update , Tamil Nadu from Corona , corona cases in Tamilnadu , coronavirus news Tamilnadu">
 		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
