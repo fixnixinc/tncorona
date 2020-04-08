@@ -5,4 +5,5 @@
     define ('DB_PASSWORD', 'Admin1234#@');
     define ('DB_SCHEMA', 'corona');
     define ('CONF_KEY_ROUTING', 'routing');
-
+?>
+<!-- Updates with the latest design -->
