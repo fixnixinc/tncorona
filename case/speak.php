@@ -20,7 +20,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                 $taking_test=$_POST['taking_test'];
                  $age=$_POST['age'];
 
-                  $gender=$_POST['gender']; 
+                  $gender=$_POST['gender'];
                   $fever=$_POST['fever'];
                   $drycough=$_POST['drycough'];
                    $feelingsmell=$_POST['feelingsmell'];
@@ -181,7 +181,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                 </div>
               </div>
             </a>
-            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step" id="sample5">
+            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step" id="sample5" onclick="showvalue()">
               <div class="kt-wizard-v1__nav-body">
                 <div class="kt-wizard-v1__nav-icon">
                   <i class="flaticon-globe"></i>
@@ -290,7 +290,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                     <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
                     <input type="radio" id="above60" name="age" value=">60">
                     <label for="above60">>60</label><span></span> </label><br>
-                    
+                   
                 </div>
                 <div class="form-group">
                   <p style="font-size: 20px; font-weight: 500">3. What is your gender?</p>
@@ -303,7 +303,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                     <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
                     <input type="radio" id="other" name="gender" value="Other">
                     <label for="other">Other</label><span></span></label><br>
-                                        
+                                       
                 </div>
                 <div class="form-group">
                   <p style="font-size: 20px; font-weight: 500">4. Do you have fever?</p>
@@ -319,7 +319,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                     <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
                     <input type="radio" id="notAware" name="fever" value="Not aware">
                     <label for="notAware">Not aware</label><span></span></label><br>
-                                        
+                                       
                 </div>
                 <div class="form-group">
                   <p style="font-size: 20px; font-weight: 500">5. Do you have dry cough?</p>
@@ -329,10 +329,10 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                     <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
                     <input type="radio" id="no" name="drycough" value="No">
                     <label for="no">No</label><span></span></label><br>
-                                        
+                                       
                 </div>
                
-              
+             
               </div>
             </div>
           </div>
@@ -388,7 +388,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                     <input type="radio" id="normal" name="coughrange" value="Normal">
                     <label for="normal">Normal</label><span></span></label><br>
                 </div>
-                
+               
               </div>
             </div>
           </div>
@@ -444,8 +444,8 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                     <input type="radio" id="normal" name="weaknessbody" value="Normal">
                     <label for="normal">Normal</label><span></span></label><br>
                 </div>
-                
-                
+               
+               
               </div>
             </div>
           </div>
@@ -515,28 +515,28 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                 </div>
                 <div class="form-group">
                   <p style="font-size: 20px; font-weight: 500">20. Do you have any of these health condition?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success" style="color: black;">
                     <input type="checkbox" id="diabetes" name="healthcondition" value="Diabetes" checked="checked">
                     <label for="diabetes">Diabetes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success" style="color: black;">
                     <input type="checkbox" id="high_bp" name="healthcondition" value="High BP">
                     <label for="high_bp">High BP</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success" style="color: black;">
                     <input type="checkbox" id="heart_diseases" name="healthcondition" value="Heart Diseases">
                     <label for="heart_diseases">Heart Diseases</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success" style="color: black;">
                     <input type="checkbox" id="kidney" name="healthcondition" value="Kidney">
                     <label for="kidney">Kidney</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success" style="color: black;">
                     <input type="checkbox" id="lungs" name="healthcondition" value="Lungs">
                     <label for="lungs">Lungs</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success" style="color: black;">
                     <input type="checkbox" id="stroke" name="healthcondition" value="Stroke">
                     <label for="stroke">Stroke</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success" style="color: black;">
                     <input type="checkbox" id="immuno" name="healthcondition" value="Immuno compromised condition">
                     <label for="immuno">Immuno compromised condition</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
+                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success" style="color: black;">
                     <input type="checkbox" id="noneoftheabove" name="healthcondition" value="None of the above">
                     <label for="noneoftheabove">None of the above</label><span></span></label><br>
                 </div>
@@ -548,11 +548,11 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                     <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
                     <input type="radio" id="normal" name="diseasesymptoms" value="Normal">
                     <label for="normal">Normal</label><span></span></label><br>
-                </div> 
+                </div>
                 <div class="form-group">
                   <p style="font-size: 20px; font-weight: 500">22. Other info</p>
                     <textarea type="text" rows="8" class="form-control output" name="Description" id="Description"  placeholder="Type something here....." style="border-color:#B8B8BB;background:transparent;"></textarea>
-                </div> 
+                </div>
                 <div class="form-group">
                   <p style="font-size: 20px; font-weight: 500">23. Proof</p>
                     <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone_2">
@@ -565,11 +565,11 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                          </label>
                       </div>
                     </div>
-                </div> 
+                </div>
                
                      <input type="hidden" name="secretkey" id="secretkey">
           <input type="hidden" name="ran" id="ran">
-              
+             
               </div>
             </div>
           </div>
@@ -635,8 +635,9 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
               </div>
             </div>
           </div>
-            
+            <div id="sub1" style="display: none;">
            <input type="submit" name="submit" value="submit" style="float: right;" class="btn btn-success">
+           </div>
           <!--end: Form Wizard Step 5-->
 
           <!--begin: Form Actions -->
@@ -674,7 +675,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   </div>
 </div>
 </div>
-
+<?php include '../footer.php'; ?>
 
 </head>
 <body>
@@ -790,10 +791,10 @@ $(document).ready(function(){
         $('#p2').hide();
          $('#p3').hide();
           $('#p4').hide();
+          $('#sub1').show();
     });
 });
 </script>
 </head>
 <body>
-
-
+  <!--updates by Aravind -->

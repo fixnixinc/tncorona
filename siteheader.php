@@ -222,7 +222,7 @@ span.psw {
     background-color:#88c3ea;
     padding:10px;
    }
-  
+ 
    }
   </style>
   <style type="text/css">
@@ -251,7 +251,7 @@ span.psw {
     <button class="btn btn-success"  onclick="document.getElementById('id01').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">ADMIN</button>&nbsp;&nbsp;&nbsp;
             </span> -->
               <span class="kt-header__topbar-icon">
-       <button class="btn btn-success"   onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">TRACK</button>
+      <!--  <button class="btn btn-success"   onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">TRACK</button> -->
             </span>
     </div>
   </div>
@@ -318,7 +318,7 @@ span.psw {
             </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
               <span class="kt-header__topbar-icon">
             </span>
-       <button class="btn btn-success"   onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">TRACK</button>
+      <!--  <button class="btn btn-success"   onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">TRACK</button> -->
     </div>
  
   </div>
