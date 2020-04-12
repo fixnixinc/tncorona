@@ -6,7 +6,7 @@
 <base href="/coronaspeak/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>Metronic | Home 2</title>
+        
         <meta name="description" content="Support center home example">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -273,9 +273,9 @@ span.psw {
 <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
   <div class="kt-header__brand-logo">
     <a href="intro.php" style="font-size: 1.2rem;font-weight: 500;">
-      <img alt="Logo" src="./assets/media/logos/speakup.jpeg" style="height:100px;width:100px;" class="kt-header__brand-logo-default"/>
+      <img alt="Logo" src="./assets/media/logos/logo.png" style="height:100px;width:100px;" class="kt-header__brand-logo-default"/>
       <span style="color:black;" id="covid">COVID-19</span>
-          <img alt="Logo" src="./assets/media/logos/speakup.jpeg" class="kt-header__brand-logo-sticky" style="height:60px;width:60px;" class="kt-header__brand-logo-default"/>
+          <img alt="Logo" src="./assets/media/logos/speakup.jpeg" class="kt-header__brand-logo-sticky" style="height:25px;width:155px;" class="kt-header__brand-logo-default"/>
       <!-- CORONASPEAK -->
     <!--   <img alt="Logo" src="./assets/media/logos/logo-2-sm.png" class="kt-header__brand-logo-sticky"/> -->
     </a>    
@@ -296,7 +296,7 @@ span.psw {
         <a class="nav-link" href="https://telegra.ph/TN-Corona-Speak-03-27" role="tab" style="font-size: 1.2rem;">CHAT</a>
       </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <li class="nav-item">
-        <a class="nav-link" href="https://www.coronaspeak.com/coronaspeak/infection_db/infection_records.html" role="tab" style="font-size: 1.2rem;">INFECTION</a>
+        <a class="nav-link" href="./infection_db/index.php" role="tab" style="font-size: 1.2rem;">INFECTION</a>
       </li>
        
     </ul>

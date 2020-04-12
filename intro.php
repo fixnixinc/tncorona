@@ -318,6 +318,12 @@ width:100%;
     background: #afd135;
   }
 
+  @media only screen and (max-width: 600px){
+    #note{
+      display: none;
+    }
+  }
+
 </style>
 
 
@@ -331,8 +337,8 @@ width:100%;
 <div class="kt-portlet">
   <div class="kt-portlet__body" id="banner">
    <div class="banner-container">
-<div class="heading">
-Speak Covid19. Save TamilNadu
+<div class="heading" id="note">
+No matter what's troubling you, get the support you need, right now from Tamilnadu government. We’re in This together
 </div>
 <div class="sub-heading">
 
@@ -340,7 +346,7 @@ Join millions protecting Tamil Nadu from Corona
 </div>
 <br><br>
 <div class="home-actions">
-<span class="chat button"><a href="case/speak.php" style="color: white;">SPEAK</a></span>
+<span class="chat button"><a href="case/speak.php" style="color: white;">GET HELP -  IT GETS BETTER</a></span>
 <span class="appointment button"><a href="https://telegra.ph/TN-Corona-Speak-03-27" style="color: white;">CHAT</a></span>
 </div>
 
@@ -569,7 +575,7 @@ Track the Submission
 												<div class="col-7 d-flex align-items-center">
 													<div class="numbers">
 														<p class="card-category"  style="color:orange">Confirmed</p>
-														<h4 class="card-title" id="confirmed_cases"  style="color:orange">42</h4>
+														<h4 class="card-title" id="confirmed_cases"  style="color:orange">738</h4>
 													</div>
 												</div>
 											</div>
@@ -583,7 +589,7 @@ Track the Submission
 												<div class="col-7 d-flex align-items-center">
 													<div class="numbers">
 														<p class="card-category"  style="color:blue">Active</p>
-														<h4 class="card-title" id="active_cases"  style="color:blue">33</h4>
+														<h4 class="card-title" id="active_cases"  style="color:blue">710</h4>
 													</div>
 												</div>
 											</div>
@@ -597,7 +603,7 @@ Track the Submission
 												<div class="col-7 d-flex align-items-center">
 													<div class="numbers">
 														<p class="card-category" style="color:green">Recovered</p>
-														<h4 class="card-title" style="color:green" id="recovered_cases"></h4>
+														<h4 class="card-title" style="color:green" id="recovered_cases">221</h4>
 													</div>
 												</div>
 											</div>
@@ -611,7 +617,7 @@ Track the Submission
 												<div class="col-7 d-flex align-items-center">
 													<div class="numbers">
 														<p class="card-category" style="color:red">Death</p>
-														<h4 class="card-title" id="death_cases" style="color:red"></h4>
+														<h4 class="card-title" id="death_cases" style="color:red">7</h4>
 													</div>
 												</div>
 											</div>
@@ -930,7 +936,7 @@ Track the Submission
 </style>
 
 
-        <script>
+        <scriptTA>
             var KTAppOptions = {"colors":{"state":{"brand":"#374afb","light":"#ffffff","dark":"#282a3c","primary":"#5867dd","success":"#34bfa3","info":"#36a3f7","warning":"#ffb822","danger":"#fd3995"},"base":{"label":["#c5cbe3","#a1a8c3","#3d4465","#3e4466"],"shape":["#f0f3ff","#d9dffa","#afb4d4","#646c9a"]}}};
         </script>
        <script>
