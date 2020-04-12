@@ -46,7 +46,7 @@
 												<div class="col-7 d-flex align-items-center">
 													<div class="numbers">
 														<p class="card-category"  style="color:orange">Confirmed</p>
-														<h4 class="card-title" id="confirmed_cases"  style="color:orange">42</h4>
+														<h4 class="card-title" id="confirmed_cases"  style="color:orange"></h4>
 													</div>
 												</div>
 											</div>
@@ -60,7 +60,7 @@
 												<div class="col-7 d-flex align-items-center">
 													<div class="numbers">
 														<p class="card-category"  style="color:blue">Active</p>
-														<h4 class="card-title" id="active_cases"  style="color:blue">33</h4>
+														<h4 class="card-title" id="active_cases"  style="color:blue"></h4>
 													</div>
 												</div>
 											</div>

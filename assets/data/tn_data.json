@@ -1,130 +1,247 @@
-Data = {
-        "Chennai": {
-        "2020-03-27":[19,0,0,1],
-        "2020-03-28":[20,0,18,2]
-    },
-        "Erode": {
-        "2020-03-27":[5,0,5,0],
-        "2020-03-28":[5,0,5,0]
-    },
-        "Coimbatore": {
-        "2020-03-27":[1,0,1,0],
-        "2020-03-28":[1,0,1,0]
-    },
-        "Thirunelveli": {
-        "2020-03-27":[1,0,1,0],
-        "2020-03-28":[1,0,1,0]        
-    },
-        "Tiruppur": {
-        "2020-03-27":[1,0,1,0],
-        "2020-03-28":[1,0,1,0]        
-    },
-        "Madurai": {
-        "2020-03-27":[3,1,2,0],
-        "2020-03-28":[3,1,2,0]
-    },
-        "Salem": {
-        "2020-03-27":[5,0,5,0],
-        "2020-03-28":[6,0,6,0]        
-    },
-        "Vellore": {
-        "2020-03-27":[1,0,1,0],
-        "2020-03-28":[2,0,2,0]        
-    },
-        "Tiruchirapalli": {
-        "2020-03-27":[1,0,1,0],
-        "2020-03-28":[1,0,1,0]        
-    },
-        "Thiruvallur": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Kanchipuram": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Krishnagiri": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Dharmapuri": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Villupuram": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Cuddalore": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Nilgiris": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Namakkal": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Perambalur": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Ariyalur": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Nagapattinam": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Tiruvannamalai": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Thiruvarur": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Thanjavur": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[1,0,1,0]        
-    },
-        "Pudukottai": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Karur": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Theni": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Sivagangai": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Virudhnagar": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[1,0,1,0]        
-    },
-        "Ramanathapuram": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Thoothukudi": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Kanniyakumari": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    },
-        "Dindigul": {
-        "2020-03-27":[0,0,0,0],
-        "2020-03-28":[0,0,0,0]        
-    }
-}
+Data = [
+  {
+    "Row Labels": "Ariyalur",
+    "Confirmed": 1,
+    "Active": 1,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Chengalpattu",
+    "Confirmed": 40,
+    "Active": 40,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Chennai",
+    "Confirmed": 182,
+    "Active": 181,
+    "Recovered": 1,
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Coimbatore",
+    "Confirmed": 97,
+    "Active": 97,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Cuddalore",
+    "Confirmed": 15,
+    "Active": 15,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Dindigul",
+    "Confirmed": 55,
+    "Active": 55,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Erode",
+    "Confirmed": 60,
+    "Active": 56,
+    "Recovered": 4,
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Kallakurichi",
+    "Confirmed": 3,
+    "Active": 3,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Kancheepuram",
+    "Confirmed": 7,
+    "Active": 6,
+    "Recovered": 1,
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Kanniyakumari",
+    "Confirmed": 15,
+    "Active": 15,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Karur",
+    "Confirmed": 22,
+    "Active": 22,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Madurai",
+    "Confirmed": 25,
+    "Active": 24,
+    "Recovered": "",
+    "Deceased": 1
+  },
+  {
+    "Row Labels": "Nagapattinam",
+    "Confirmed": 24,
+    "Active": 24,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Namakkal",
+    "Confirmed": 41,
+    "Active": 41,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Perambalur",
+    "Confirmed": 1,
+    "Active": 1,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Ramanathapuram",
+    "Confirmed": 2,
+    "Active": 2,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Ranipet",
+    "Confirmed": 36,
+    "Active": 36,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Salem",
+    "Confirmed": 14,
+    "Active": 14,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Sivaganga",
+    "Confirmed": 6,
+    "Active": 6,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tenkasi",
+    "Confirmed": 1,
+    "Active": 1,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Thanjavur",
+    "Confirmed": 11,
+    "Active": 11,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "The Nilgiris",
+    "Confirmed": 9,
+    "Active": 9,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Theni",
+    "Confirmed": 41,
+    "Active": 41,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Thiruvallur",
+    "Confirmed": 29,
+    "Active": 29,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Thiruvarur",
+    "Confirmed": 13,
+    "Active": 13,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Thoothukkudi",
+    "Confirmed": 24,
+    "Active": 24,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tiruchirappalli",
+    "Confirmed": 39,
+    "Active": 39,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tirunelveli",
+    "Confirmed": 58,
+    "Active": 58,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tirupathur",
+    "Confirmed": 16,
+    "Active": 16,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tiruppur",
+    "Confirmed": 26,
+    "Active": 26,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tiruvannamalai",
+    "Confirmed": 7,
+    "Active": 7,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Vellore",
+    "Confirmed": 11,
+    "Active": 11,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Viluppuram",
+    "Confirmed": 27,
+    "Active": 27,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Virudhunagar",
+    "Confirmed": 11,
+    "Active": 11,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Grand Total",
+    "Confirmed": 969,
+    "Active": 962,
+    "Recovered": 6,
+    "Deceased": 1
+  }
+]

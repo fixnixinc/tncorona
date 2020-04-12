@@ -570,16 +570,16 @@ Track the Submission
 							<div class="row">
 								<div class="col-md-2">
 									<div >
-										<div class="card-body ">
-											<div class="row">
-												<div class="col-7 d-flex align-items-center">
-													<div class="numbers">
-														<p class="card-category"  style="color:orange">Confirmed</p>
-														<h4 class="card-title" id="confirmed_cases"  style="color:orange">738</h4>
-													</div>
-												</div>
-											</div>
-										</div>
+									  <div class="card-body ">
+                      <div class="row">
+                        <div class="col-7 d-flex align-items-center">
+                          <div class="numbers">
+                            <p class="card-category"  style="color:orange">Confirmed</p>
+                            <h4 class="card-title" id="active_cases"  style="color:orange">1075</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 									</div>
 								</div>
 								<div class="col-md-2">
@@ -589,7 +589,7 @@ Track the Submission
 												<div class="col-7 d-flex align-items-center">
 													<div class="numbers">
 														<p class="card-category"  style="color:blue">Active</p>
-														<h4 class="card-title" id="active_cases"  style="color:blue">710</h4>
+														<h4 class="card-title" id="active_cases"  style="color:blue">1014</h4>
 													</div>
 												</div>
 											</div>
@@ -603,7 +603,7 @@ Track the Submission
 												<div class="col-7 d-flex align-items-center">
 													<div class="numbers">
 														<p class="card-category" style="color:green">Recovered</p>
-														<h4 class="card-title" style="color:green" id="recovered_cases">221</h4>
+														<h4 class="card-title" style="color:green" id="recovered_cases">50</h4>
 													</div>
 												</div>
 											</div>
@@ -617,7 +617,7 @@ Track the Submission
 												<div class="col-7 d-flex align-items-center">
 													<div class="numbers">
 														<p class="card-category" style="color:red">Death</p>
-														<h4 class="card-title" id="death_cases" style="color:red">7</h4>
+														<h4 class="card-title" id="death_cases" style="color:red">11</h4>
 													</div>
 												</div>
 											</div>
@@ -936,7 +936,7 @@ Track the Submission
 </style>
 
 
-        <scriptTA>
+        <script>
             var KTAppOptions = {"colors":{"state":{"brand":"#374afb","light":"#ffffff","dark":"#282a3c","primary":"#5867dd","success":"#34bfa3","info":"#36a3f7","warning":"#ffb822","danger":"#fd3995"},"base":{"label":["#c5cbe3","#a1a8c3","#3d4465","#3e4466"],"shape":["#f0f3ff","#d9dffa","#afb4d4","#646c9a"]}}};
         </script>
        <script>

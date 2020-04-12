@@ -15,14 +15,15 @@
   <title>TamilNadu Infection Database</title>
 
   <script>
-    $(document).ready(function(){
-    $('#infectionReportTable').DataTable({
+        $(document).ready(function() {
+        $('#tn_rec').DataTable( {
         "processing": true,
         "serverSide": true,
-        "ajax": "getData.php"
-    });
-});
-</script>
+        "ajax": "getdata.php",
+            } );
+        } );
+
+    </script>
     
     <style>
         table thead{
@@ -35,7 +36,7 @@
 
 </head>
 <body>
-    <table id="infectionReportTable" class="display" style="width:100%;background-color: #163778;margin-top: 24px;">
+    <table id='tn_rec' class="display" style="width:100%;background-color: #163778;margin-top: 24px;">
     <thead>
         <tr>
             <th>ID</th>
