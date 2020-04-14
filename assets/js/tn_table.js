@@ -33,4 +33,3 @@ for ( var j in countries) {
     $('#my_table').find('tbody').append('<tr style="color:black;" id=' +  countries[i] + "_table"  + '><td> <span  id="' + countries[i].replace(" ","_") + '"></span>' + countries[i] + '</td><td>' + Data[countries[i]][today][0] + '</td><td>' + Data[countries[i]][today][2] + '</td><td>' + Data[countries[i]][today][3] + '</td><td>' + Data[countries[i]][today][1] + '</td></tr>')
     cnt = cnt + 1;
 }
-

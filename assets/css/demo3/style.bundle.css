@@ -58,7 +58,8 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #fff;
+   }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -35429,7 +35430,8 @@ body {
     .kt-header__topbar .kt-header__topbar-item:hover .kt-header__topbar-icon, .kt-header__topbar .kt-header__topbar-item.show .kt-header__topbar-icon {
       -webkit-transition: all 0.3s;
       transition: all 0.3s;
-      background-color: #f2f3f7 !important; }
+  
+    }
       .kt-header__topbar .kt-header__topbar-item:hover .kt-header__topbar-icon i, .kt-header__topbar .kt-header__topbar-item.show .kt-header__topbar-icon i {
         -webkit-transition: all 0.3s;
         transition: all 0.3s;

@@ -11527,7 +11527,7 @@ code {
     .nav-tabs.nav-tabs-line.nav-tabs-line-light.nav.nav-tabs .nav-link:hover > i, .nav-tabs.nav-tabs-line.nav-tabs-line-light.nav.nav-tabs .nav-link.active > i,
     .nav-tabs.nav-tabs-line.nav-tabs-line-light a.nav-link:hover > i,
     .nav-tabs.nav-tabs-line.nav-tabs-line-light a.nav-link.active > i {
-      color: white; }
+      color: red; }
   .nav-tabs.nav-tabs-line.nav-tabs-line-light.nav-tabs-line-2x, .nav-tabs.nav-tabs-line.nav-tabs-line-light.nav-tabs-line-3x {
     border-bottom-color: rgba(255, 255, 255, 0.1); }
   .nav-tabs.nav-tabs-line.nav-tabs-line-dark.nav.nav-tabs .nav-link:hover,
@@ -33510,7 +33510,8 @@ body {
       left: 0;
       z-index: 98;
       -webkit-box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.1);
-      box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.1); }
+      box-shadow: 0px 0px 40px 0px rgba(82, 63, 105, 0.1);
+        border-bottom: 3px solid #D9D7D6; }
       .kt-header--fixed.kt-header--minimize .kt-header .kt-header__top {
         height: 60px; }
         .kt-header--fixed.kt-header--minimize .kt-header .kt-header__top .kt-header__brand-logo-default {
