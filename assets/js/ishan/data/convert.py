@@ -13,20 +13,27 @@ for i in lines:
     first = 0
     text = i
     text = text.rstrip("\n")
-    print(text.split(","))
+    
     text = text.split(",")
+    if len(text) > 7:
+        # Join 2nd an first one 
+        barray = []
+        barray.append(text[0])
+        barray.append("South Korea")
+        for i in range(3,8):
+            barray.append(text[i])
+        text = barray
     country = text[1]
     prevCountry = text[1]
     country = text[1]
 
+    print(text)
     if text[5] is '':
         text[5] = 0
     if text[6] is '':
         text[6] = 0
-    if text[7] is '':
-        text[7] = 0
 
-    array = [int(text[5]),int(text[6]),int(text[7])]
+    array = [int(text[5]),int(text[6])]
     print(array)
     if data.get(country) is None:
         data[country] = {}

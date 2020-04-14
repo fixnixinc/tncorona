@@ -81,6 +81,10 @@
     <head><!--begin::Base Path (base relative path for assets of this page) -->
 <base href="/tncorona/"><!--end::Base Path -->
         <meta charset="utf-8"/>
+         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
        <title>Corona Speak | Coronavirus Prevention and Updated News</title>
         <meta name="description" content="Support center home example">
@@ -98,6 +102,34 @@
 <!--end:: Global Mandatory Vendors -->
 
 <!--begin:: Global Optional Vendors -->
+<!-- js -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8">
+    <base href="/tncorona/">
+    <title>Tamilnadu CoronaSpeak District Wise |  Tamilnadu coronavirus</title>
+    <meta name="description" content="Corona Speak provide update information about corona speak in Tamilnadu with district wise">
+    <meta name="keywords" content="Tamil Nadu coronavirus update , coronavirus Tamil news , corona Chennai update , Tamil Nadu from Corona , corona cases in Tamilnadu , coronavirus news Tamilnadu">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <!-- <link rel="stylesheet" href="assets/css/ready.css"> -->
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.qtip.min.css"> 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="./assets/flags/country-flag.css">
+    <script src="./assets/flags/country-flag.js"></script>
+    <script src="assets/static/country_to_code.json"></script>
+    <script src="assets/static/code_to_country.json"></script>
+    <script src="assets/static/latlng.json"></script>
+    <script src="assets/data/tn_data.json"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="assets/js/today.js"></script>
+    <link rel="shortcut icon" href="/assets/media/company-logos/virus.png" />
+<!-- js -->
+
 <link href="assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
@@ -742,7 +774,7 @@ Track the Submission
 								</div> -->
 							</div>
 							<div class="row">
-								<div class="col-md-12" id="">
+								<div class="col-md-12" id="worldmap">
 									<div class="card">
 										<div class="card-header">
 											<!-- <h4 class="card-title">Tamil Nadu Cases</h4> -->
@@ -944,103 +976,84 @@ Track the Submission
         </script>
         <!-- end::Global Config -->
 
-      <!--begin:: Global Mandatory Vendors -->
-<script src="assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
-<script src="assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
-<script src="assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
-<script src="assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
-<!--end:: Global Mandatory Vendors -->
-
-<!--begin:: Global Optional Vendors -->
-<script src="assets/vendors/general/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/block-ui/jquery.blockUI.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/js/vendors/bootstrap-datepicker.init.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/js/vendors/bootstrap-timepicker.init.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-maxlength/src/bootstrap-maxlength.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/vendors/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-select/dist/js/bootstrap-select.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/js/vendors/bootstrap-switch.init.js" type="text/javascript"></script>
-<script src="assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
-<script src="assets/vendors/general/ion-rangeslider/js/ion.rangeSlider.js" type="text/javascript"></script>
-<script src="assets/vendors/general/typeahead.js/dist/typeahead.bundle.js" type="text/javascript"></script>
-<script src="assets/vendors/general/handlebars/dist/handlebars.js" type="text/javascript"></script>
-<script src="assets/vendors/general/inputmask/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
-<script src="assets/vendors/general/inputmask/dist/inputmask/inputmask.date.extensions.js" type="text/javascript"></script>
-<script src="assets/vendors/general/inputmask/dist/inputmask/inputmask.numeric.extensions.js" type="text/javascript"></script>
-<script src="assets/vendors/general/nouislider/distribute/nouislider.js" type="text/javascript"></script>
-<script src="assets/vendors/general/owl.carousel/dist/owl.carousel.js" type="text/javascript"></script>
-<script src="assets/vendors/general/autosize/dist/autosize.js" type="text/javascript"></script>
-<script src="assets/vendors/general/clipboard/dist/clipboard.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/dropzone/dist/dropzone.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/js/vendors/dropzone.init.js" type="text/javascript"></script>
-<script src="assets/vendors/general/quill/dist/quill.js" type="text/javascript"></script>
-<script src="assets/vendors/general/@yaireo/tagify/dist/tagify.polyfills.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/@yaireo/tagify/dist/tagify.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/summernote/dist/summernote.js" type="text/javascript"></script>
-<script src="assets/vendors/general/markdown/lib/markdown.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-markdown/js/bootstrap-markdown.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/js/vendors/bootstrap-markdown.init.js" type="text/javascript"></script>
-<script src="assets/vendors/general/bootstrap-notify/bootstrap-notify.min.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/js/vendors/bootstrap-notify.init.js" type="text/javascript"></script>
-<script src="assets/vendors/general/jquery-validation/dist/jquery.validate.js" type="text/javascript"></script>
-<script src="assets/vendors/general/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/js/vendors/jquery-validation.init.js" type="text/javascript"></script>
-<script src="assets/vendors/general/toastr/build/toastr.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/dual-listbox/dist/dual-listbox.js" type="text/javascript"></script>
-<script src="assets/vendors/general/raphael/raphael.js" type="text/javascript"></script>
-<script src="assets/vendors/general/morris.js/morris.js" type="text/javascript"></script>
-<script src="assets/vendors/general/chart.js/dist/Chart.bundle.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/vendors/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/vendors/jquery-idletimer/idle-timer.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/waypoints/lib/jquery.waypoints.js" type="text/javascript"></script>
-<script src="assets/vendors/general/counterup/jquery.counterup.js" type="text/javascript"></script>
-<script src="assets/vendors/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
-<script src="assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-<script src="assets/vendors/custom/js/vendors/sweetalert2.init.js" type="text/javascript"></script>
-<script src="assets/vendors/general/jquery.repeater/src/lib.js" type="text/javascript"></script>
-<script src="assets/vendors/general/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
-<script src="assets/vendors/general/jquery.repeater/src/repeater.js" type="text/javascript"></script>
-<script src="assets/vendors/general/dompurify/dist/purify.js" type="text/javascript"></script>
-<script src="assets/js/anna.js"></script>
-<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-<script src="assets/js/core/popper.min.js"></script>
-<script src="assets/js/core/bootstrap.min.js"></script>
-<script src="assets/js/plugin/chartist/chartist.min.js"></script>
-<script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
-<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-<script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
-<script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
-<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
-<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
-             <script src="assets/js/demo2/scripts.bundle.js" type="text/javascript"></script>
-       <script src="assets/js/graph2.js"></script>
-	<script src="assets/js/tn_table.js"></script>
 
 
+      </body>
+    <script src="assets/js/core/jquery.3.2.1.min.js"></script>
+  <script src="assets/js/anna.js"></script>
+  <script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap.min.js"></script>
+  <script src="assets/js/plugin/chartist/chartist.min.js"></script>
+  <script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+  <!-- <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script> -->
+  <script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+  <script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+  <script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+  <script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+  <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="assets/js/ready.min.js"></script>
+  <script src="assets/js/demo.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="assets/js/graph.js"></script>
+  <script src="assets/js/graph2.js"></script>
+  <script src="assets/js/tn_table.js"></script>
   <script type="text/javascript" src="assets/js/jquery.qtip.min.js"></script>
-
   <script>
     $("#Layer_1").css("width",window.innerWidth*0.8 + "px");
     $("#Layer_1").css("height",window.innerHeight*0.9 + "px");
+    $("#strip").css("width",document.getElementsByClassName("container-fluid").clientWidth)//window.innerWidth + "px");
+    $("#strip").css("height","200" + "px");
+    $("#joinus").css("margin-left",window.innerWidth*0.2 + "px");
+    $("#joinus").css("margin-right",window.innerWidth*0.2 + "px");
+
+    // $("#joinus").css("height",window.innerHeight*0.5 + "px");
+    $(".th").css("width",document.getElementById("corona_logo").clientWidth)
+    $(".anna").css("height","450px");
+    $(".anna").css("width",document.getElementById("corona_logo").clientWidth*0.8); 
+    $(".face").css("height",document.getElementById("corona_logo").clientHeight*0.7);
+    $(".face").css("width",document.getElementById("corona_logo").clientWidth*0.7);
     document.getElementById("confirmed_cases").innerHTML = total[0];
     document.getElementById("recovered_cases").innerHTML = total[3];
     document.getElementById("active_cases").innerHTML = total[2];
     document.getElementById("death_cases").innerHTML = total[1];
+    $("#database_button").css("width",window.innerWidth*0.25);
+    $("#submit_button").css("width",window.innerWidth*0.25);
+    $("#connect_button").css("width",window.innerWidth*0.25);
+    $("#facebook").css("left",window.innerWidth*0.32)
+    $("#linkedinra").css("left",window.innerWidth*0.37)
+    $("#twitter").css("left",window.innerWidth*0.42)
+    $("#instagram").css("left",window.innerWidth*0.47)
+    console.log(document.getElementById("joinus").clientHeight + document.getElementById("database_button").clientHeight + "ALLAH!!!")
     if( window.innerWidth < 765 || window.matchMedia("(max-width: 700px)").matches){
+      $("#my_icons").css("display","block");
+      $("#icon_speak").css("left",window.innerWidth*0.23);    
+      $("#icon_speak").css("top","-55px");    
+      $("#icon_chat").css("left",window.innerWidth*0.39);   
+      $("#icon_chat").css("top","-55px");   
+      $("#icon_database").css("left",window.innerWidth*0.55);   
+      $("#icon_database").css("top","-55px");   
+
+      $("#facebook").css("left",window.innerWidth*0.15)
+      $("#facebook").css("top","35px")
+
+      $("#linkedinra").css("left",window.innerWidth*0.27)
+      $("#linkedinra").css("top","35px")
+
+      $("#twitter").css("left",window.innerWidth*0.39)
+      $("#twitter").css("top","35px")
+
+      $("#instagram").css("left",window.innerWidth*0.51)
+      $("#instagram").css("top","35px")
+
+      $("#faaltu").css("display","none");
+      console.log("ANNANNANANAN");
+      $("#strip").css("height",document.getElementById("joinus").clientHeight*1.2 + "px");
       $("#Layer_1").css("width",window.innerWidth + "px");
       $("#Layer_1").css("height",window.innerHeight*0.8 + "px");
+      $("#database_button").css("display","none");
+      $("#submit_button").css("display","none");
+      $("#connect_button").css("display","none");
       //$("body").css("display","none");
     }
     console.log("HIHIHIHIIH" + window.innerWidth + "Fusgiudguirdg u")
@@ -1049,15 +1062,66 @@ Track the Submission
       function resize_my(){
         console.log("BETO" + window.innerWidth);
         if(window.innerWidth < 765 || window.matchMedia("(max-width: 700px)").matches){
+          $("#my_icons").css("display","block");
+          $("#icon_speak").css("left",window.innerWidth*0.23);    
+          $("#icon_speak").css("top","-55px");    
+          $("#icon_chat").css("left",window.innerWidth*0.39);   
+          $("#icon_chat").css("top","-55px");   
+          $("#icon_database").css("left",window.innerWidth*0.55);   
+          $("#icon_database").css("top","-55px");   
+
+
+
+          $("#facebook").css("left",window.innerWidth*0.15)
+          $("#facebook").css("top","35px")
+
+          $("#linkedinra").css("left",window.innerWidth*0.27)
+          $("#linkedinra").css("top","35px")
+
+          $("#twitter").css("left",window.innerWidth*0.39)
+          $("#twitter").css("top","35px")
+
+          $("#instagram").css("left",window.innerWidth*0.51)
+          $("#instagram").css("top","35px")
+          $("#faaltu").css("display","none");
+
+          $("#strip").css("height","200" + "px");
           $("#Layer_1").css("width",window.innerWidth + "px");
           $("#Layer_1").css("height",window.innerHeight*0.8 + "px");
+          $("#database_button").css("display","none");
+          $("#submit_button").css("display","none");
+          $("#connect_button").css("display","none");
+          //$("body").css("display","none");
         }
         else if(window.innerWidth > 765)
         {
+          $("#my_icons").css("display","none");
+          $("#facebook").css("left",window.innerWidth*0.32)
+          $("#linkedinra").css("left",window.innerWidth*0.37)
+          $("#twitter").css("left",window.innerWidth*0.42)
+          $("#instagram").css("left",window.innerWidth*0.47)
+          $("#faaltu").css("display","block");
+          console.log("BETA");
+          $("#database_button").css("width",window.innerWidth*0.33);
+          $("#submit_button").css("width",window.innerWidth*0.33);
+          $("#connect_button").css("width",window.innerWidth*0.33);
+          $("#strip").css("width",window.innerWidth + "px");
+          $("#strip").css("height","200" + "px");
+          $("#database_button").css("display","block");
+          $("#submit_button").css("display","block");
+          $("#connect_button").css("display","block");
 
         }
         $("#Layer_1").css("width",window.innerWidth*0.8 + "px");
         $("#Layer_1").css("height",window.innerHeight*0.9 + "px");
+        $(".anna").css("width",document.getElementById("corona_logo").clientWidth*0.8);
+        $(".face").css("height",document.getElementById("corona_logo").clientHeight*0.7);
+        $(".face").css("width",document.getElementById("corona_logo").clientWidth*0.7);
+        // console.log($("#regions_div").css("width"));
+        $("#strip").css("width",window.innerWidth + "px");
+        $("#joinus").css("margin-left",window.innerWidth*0.2 + "px");
+        $("#joinus").css("margin-right",window.innerWidth*0.2 + "px");
+        drawRegionsMap();
       }
     )
     var color1 = "rgb(256,0, 0)";
@@ -1092,7 +1156,6 @@ Track the Submission
     }
     // document.getElementById("Virudhnagar_title").innerHTML = "POP";
     function high(item) {
-      console.log(Data["Chennai"]);
       var classname = $(item).attr("class");
       var replace_color = "";
       $("."+classname).css("cursor","pointer");
@@ -1242,7 +1305,9 @@ Track the Submission
       window.location.href = websites[a]; 
     }
   </script>
-      </body>
+  <style>
+  </style>
+
       </html>
     
 

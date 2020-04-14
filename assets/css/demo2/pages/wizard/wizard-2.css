@@ -89,17 +89,18 @@
     background-color: #f4f6f9;
     width: 100%; }
     .kt-wizard-v2 .kt-wizard-v2__wrapper .kt-form {
-      width: 80%;
-      padding: 4rem 6rem 6rem; }
+      width: 100%;
+      padding: 4rem 6rem 4rem; }
       @media (max-width: 1399px) {
         .kt-wizard-v2 .kt-wizard-v2__wrapper .kt-form {
           width: 100%; } }
       @media (max-width: 768px) {
         .kt-wizard-v2 .kt-wizard-v2__wrapper .kt-form {
-          padding: 2rem 2.5rem 4rem; } }
+          padding: 2rem 2.5rem 4rem; 
+          } }
       .kt-wizard-v2 .kt-wizard-v2__wrapper .kt-form .kt-wizard-v2__content {
         padding-bottom: 1.3rem;
-        border-bottom: 1px solid #eeeef4;
+        border-bottom: 1px solid transparent;
         margin-bottom: 2rem; }
         .kt-wizard-v2 .kt-wizard-v2__wrapper .kt-form .kt-wizard-v2__content .kt-wizard-v2__review .kt-wizard-v2__review-item {
           padding-bottom: 1rem;

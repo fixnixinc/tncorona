@@ -1,4 +1,4 @@
-var today = "siogndsjihn";
+var today = "2020-03-25";
 var baby = Object.keys(Data["Chennai"]);
 console.log(baby);
 today = baby[(baby.length)-1];
@@ -18,9 +18,9 @@ function fun1(){
             alert("Accept");
         });
         $('.swal2-confirm').click(function(result){
-        window.location.href = 'https://www.coronaspeak.com/tncorona/option.php';
+        window.location.href = 'https://www.coronaspeak.com/corona/case/speak.php';
     });
 }
 function fun2(){
-    window.location.href = "https://www.coronaspeak.com/tncorona/contributors.php";
+    window.location.href = "https://www.coronaspeak.com/corona/contributors.php";
 }
