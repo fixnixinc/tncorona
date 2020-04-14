@@ -43,7 +43,6 @@
             <th>Patient Number</th>
             <th>State Patient No.</th>
             <th>Date Announced</th>
-            <th>Total Deaths</th>
             <th>Age Bracket</th>
             <th>Gender</th>
             <th>Detected City</th>
@@ -65,11 +64,10 @@
     </thead>
     <tfoot>
         <tr>
-           <th>ID</th>
+            <th>ID</th>
             <th>Patient Number</th>
             <th>State Patient No.</th>
             <th>Date Announced</th>
-            <th>Total Deaths</th>
             <th>Age Bracket</th>
             <th>Gender</th>
             <th>Detected City</th>
