@@ -66,10 +66,6 @@
     <head><!--begin::Base Path (base relative path for assets of this page) -->
 <base href="/tncorona/"><!--end::Base Path -->
         <meta charset="utf-8"/>
-         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
        <title>Corona Speak | Coronavirus Prevention and Updated News</title>
         <meta name="description" content="Support center home example">
@@ -88,34 +84,6 @@
 <!--end:: Global Mandatory Vendors -->
 
 <!--begin:: Global Optional Vendors -->
-<!-- js -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta charset="utf-8">
-    <base href="/tncorona/">
-    <title>Tamilnadu CoronaSpeak District Wise |  Tamilnadu coronavirus</title>
-    <meta name="description" content="Corona Speak provide update information about corona speak in Tamilnadu with district wise">
-    <meta name="keywords" content="Tamil Nadu coronavirus update , coronavirus Tamil news , corona Chennai update , Tamil Nadu from Corona , corona cases in Tamilnadu , coronavirus news Tamilnadu">
-
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <!-- <link rel="stylesheet" href="assets/css/ready.css"> -->
-    <link rel="stylesheet" href="assets/css/demo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/jquery.qtip.min.css"> 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <link rel="stylesheet" href="./assets/flags/country-flag.css">
-    <script src="./assets/flags/country-flag.js"></script>
-    <script src="assets/static/country_to_code.json"></script>
-    <script src="assets/static/code_to_country.json"></script>
-    <script src="assets/static/latlng.json"></script>
-    <script src="assets/data/tn_data.json"></script>
-    <script src="https://d3js.org/d3.v4.js"></script>
-    <script src="assets/js/today.js"></script>
-    <link rel="shortcut icon" href="/assets/media/company-logos/virus.png" />
-<!-- js -->
-
 <link href="assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
@@ -589,76 +557,35 @@ The maps and district information provides latest data on Covid19 infections, de
                 <div class="kt-wizard-v2__nav-icon">
                   <i class="flaticon-globe" style="color:#034ea2; "></i>
                 </div>
-eout="unhigh(this)" class="Krishnagiri_text" transform="matrix(1 0 0 1 570.2075 416.9229)" fill="#010101" font-family="'ArialMT'" font-size="44">Krishnagiri</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Madurai_text" transform="matrix(1 0 0 1 593.4038 1323.9053)" fill="#010101" font-family="'ArialMT'" font-size="44">Madurai</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Nagapattinam_text" transform="matrix(1 0 0 1 1260.29 1013.7422)" fill="#010101" font-family="'ArialMT'" font-size="44">Nagapattinam</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Namakkal_text" transform="matrix(1 0 0 1 606.8223 849.1855)" fill="#010101" font-family="'ArialMT'" font-size="44">Namakkal</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Nilgiris_text" transform="matrix(1 0 0 1 153.7773 810.7979)" fill="#010101" font-family="'ArialMT'" font-size="44">Nilgiris</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Perambalur_text" transform="matrix(1 0 0 1 853.1396 862.3018)" fill="#010101" font-family="'ArialMT'" font-size="44">Perambalur</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Pudukkottai_text" transform="matrix(1 0 0 1 827.7495 1194.7998)" fill="#010101" font-family="'ArialMT'" font-size="44">Pudukkottai</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Ramanathapuram_text" transform="matrix(1 0 0 1 790.2495 1530.0352)" fill="#010101" font-family="'ArialMT'" font-size="44">Ramanathapuram</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Salem_text" transform="matrix(1 0 0 1 650.0996 721.1357)" fill="#010101" font-family="'ArialMT'" font-size="44">Salem</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Sivagangai_text" transform="matrix(1 0 0 1 722.4805 1379.2393)" fill="#010101" font-family="'ArialMT'" font-size="44">Sivagangai</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Thanjavur_text" transform="matrix(1 0 0 1 952.3994 1049.2207)" fill="#010101" font-family="'ArialMT'" font-size="44">Thanjavur</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Theni_text" transform="matrix(1 0 0 1 417.5288 1353.9658)" fill="#010101" font-family="'ArialMT'" font-size="44">Theni</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Thoothkudi_text" transform="matrix(1 0 0 1 593.4038 1659.0479)" fill="#010101" font-family="'ArialMT'" font-size="44">Thoothukudi</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Tiruchirapalli_text" transform="matrix(1 0 0 1 718.7402 971.6445)" fill="#010101" font-family="'ArialMT'" font-size="44">Tiruchirappalli</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Thriunelveli_text" transform="matrix(1 0 0 1 386.7329 1743.0557)" fill="#010101" font-family="'ArialMT'" font-size="44">Thirunelveli</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Tiruppur_text" transform="matrix(1 0 0 1 386.7329 1013.7422)" fill="#010101" font-family="'ArialMT'" font-size="44">Tiruppur</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Tiruvannamalai_text" transform="matrix(1 0 0 1 924.2207 440.9258)" fill="#010101" font-family="'ArialMT'" font-size="44">Tiruvannamalai</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Thiruvarur_text" transform="matrix(1 0 0 1 1098.9863 1112.1953)" fill="#010101" font-family="'ArialMT'" font-size="44">Thiruvarur</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Vellore_text" transform="matrix(1 0 0 1 936.8555 317.9131)" fill="#010101" font-family="'ArialMT'" font-size="44">Vellore</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Villupuram_text" transform="matrix(1 0 0 1 984.4629 647.04)" fill="#010101" font-family="'ArialMT'" font-size="44">Villupuram</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Virudhnagar_text" transform="matrix(1 0 0 1 496.812 1493.8398)" fill="#010101" font-family="'ArialMT'" font-size="44">Virudhunagar</text>
-											<text onmouseover="high(this)" onmouseout="unhigh(this)" class="Thiruvallur_text" transform="matrix(1 0 0 1 1231.0244 197.6348)" fill="#010101" font-family="'ArialMT'" font-size="44">Thiruvallur</text>
-										</g>
-										</svg>	
-										<style>
-										#Layer_1 path {
-											fill: #f2f2f2;
-											stroke: #000000;
-											stroke-width: 2px;
-											stroke-dasharray: 2,2;
-											stroke-linejoin: round;
-										}
-										</style>									
-										</div>
-									</div>
-							</div>
-						</div>
-                 
-<!--                     <div class="tab-pane" id="kt_tabs_1_3" role="tabpanel">
-                <div class="col-md-12" id="corona_logo">
-									<div class="card">
-										<div class="card-header">
-											<h4 class="card-title">Tamil Nadu District-Wise</h4>		
-										</div>
-										<div class="card-body">
-											<div class="table-responsive">
-											<table class="table" id="my_table">
-												<thead>
-													<tr>
-													<th scope="col">District</th>
-													<th scope="col">Confirmed</th>
-													<th scope="col">Active</th>
-													<th scope="col">Recovered</th>																								
-													<th scope="col">Death</th>
-													</tr>
-												</thead>
-												<tbody>
-												
-												</tbody>										
-											</table>
-											</div>
-										</div>
-									</div>
-								</div>
-
-                    </div>
-                   -->
-                </div>     
-            </div>
-
+                <div class="kt-wizard-v2__nav-label">
+                  <div class="kt-wizard-v2__nav-label-title">
+                DISTRICT MAP
+                  </div>
+                  <div class="kt-wizard-v2__nav-label-desc">
+             
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step">
+              <div class="kt-wizard-v2__nav-body">
+                <div class="kt-wizard-v2__nav-icon">
+                  <i class="flaticon-bus-stop" style="color: #afd135;"></i>
+                </div>
+                <div class="kt-wizard-v2__nav-label">
+                  <div class="kt-wizard-v2__nav-label-title">
+                   TAMILNADU DISTRICT WISE
+                  </div>
+                  <div class="kt-wizard-v2__nav-label-desc">
+                    <!-- Choose Your countries Map -->
+                  </div>
+                </div>
+              </div>
+            </a>
+           
+           
+         
+          </div>
         </div>
         <!--end: Form Wizard Nav -->
 
@@ -728,6 +655,17 @@ eout="unhigh(this)" class="Krishnagiri_text" transform="matrix(1 0 0 1 570.2075 
         </script>
         <!-- end::Global Config -->
 
+      <!--begin:: Global Mandatory Vendors -->
+<script src="assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+<!-- <script src="assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script> -->
+<script src="assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
+<script src="assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+<script src="assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
+<!--end:: Global Mandatory Vendors -->
 
 <!--begin:: Global Optional Vendors -->
 <script src="assets/vendors/general/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
@@ -1065,8 +1003,6 @@ eout="unhigh(this)" class="Krishnagiri_text" transform="matrix(1 0 0 1 570.2075 
         drilldown: {
             series: []
         }
-
-
 
  
 });
