@@ -21,7 +21,7 @@ $columns = array(
     array( 'db' => 'id','dt' => 0),
     array( 'db' => 'patient_number','dt' => 1),
     array( 'db' => 'state_pt_number','dt' => 2),
-    
+    array( 'db' => 'date_announced','dt' => 2),
     array( 'db' => 'age_bracket','dt' => 3),
     array( 'db' => 'gender','dt' => 4),    
     array( 'db' => 'detected_city','dt' => 5),
@@ -49,4 +49,5 @@ require( 'ssp.class.php' );
 echo json_encode(
     SSP::simple( $_GET, $dbDetails, $table, $primaryKey, $columns )
 );
-
+?>
+<!-- Corrected the column Entry -->
