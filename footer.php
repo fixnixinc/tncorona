@@ -96,8 +96,7 @@
           </div>
           <!-- <i class="fa fa-user fa-2x" aria-hidden="true" title="Admin"  onclick="document.getElementById('id01').style.display='block'" style="color:#88c3ea;"></i> -->
           <button class="btn btn-success"   onclick="document.getElementById('id01').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: white;">ADMIN</button> &nbsp; &nbsp;&nbsp;
-          <button class="btn btn-success"   onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: white;">TRACK</button> &nbsp; &nbsp;&nbsp;
-           <button class="btn btn-success" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: white;"><a href="districtlist.php" style="color: white;">DISTRICT</a></button>
+          <button class="btn btn-success"   onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: white;">TRACK</button>
         </div>        
        
          <div  class="kt-footer__section">

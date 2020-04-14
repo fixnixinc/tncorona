@@ -1,33 +1,4 @@
 <?php
- include '../php/common/config.php';
-  if(isset($_POST['admin']))
-  {
-   $email=$_POST['email'];
-    $password=$_POST['password'];
-      $sql="SELECT email,password FROM user Where email='$email' and password='$password'";
-     $result=mysqli_query($link,$sql);
-            if($rows=mysqli_fetch_assoc($result))
-             {    
-             
-             
-               if($rows['email']=='tncoronaspeak@nixwhistle.com'&& $rows['password'] == 'tncoronaspeak')
-               {
-               
-                 // echo "Sucessfully";
-                header("location:/tncorona/view/common/overview.php");
-               // break;
-               }
-             
-           
-             else
-               {
-                // echo "Error: " . $sql . "<br>" . $link->error;
-                // alert("incorrect username and password");
-               }
-  }
-}
-?>
-<?php
    include "../php/common/config.php";
    $target_dir = "../documents/";
 $target_file = $target_dir . basename($_FILES["Artifacts"]["name"]);

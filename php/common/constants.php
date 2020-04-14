@@ -6,4 +6,4 @@
     define ('DB_SCHEMA', 'corona');
     define ('CONF_KEY_ROUTING', 'routing');
 ?>
-<!-- Updates with the latest design new-->
+<!-- Updates with the latest design new 436-->

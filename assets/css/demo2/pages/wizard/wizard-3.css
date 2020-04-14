@@ -26,8 +26,8 @@
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-        flex: 0 0 25%; }
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%; }
         .kt-wizard-v3 .kt-wizard-v3__nav .kt-wizard-v3__nav-items .kt-wizard-v3__nav-item .kt-wizard-v3__nav-body {
           -webkit-box-flex: 1;
           -ms-flex: 1;

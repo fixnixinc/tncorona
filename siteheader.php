@@ -3,10 +3,10 @@
 <html lang="en" >
     <!-- begin::Head -->
     <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/tncorona/"><!--end::Base Path -->
+<base href="/coronaspeak/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>Metronic | Home 2</title>
+        
         <meta name="description" content="Support center home example">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -51,8 +51,6 @@
 <link href="./assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <!--end:: Global Optional Vendors -->
 
 <!--begin::Global Theme Styles(used by all pages) -->
@@ -63,23 +61,23 @@
         <!--begin::Layout Skins(used by all pages) -->
                 <!--end::Layout Skins -->
 
-        <link rel="shortcut icon" href="./assets/media/company-logos/speakup1.png" />
+        <link rel="shortcut icon" href="./assets/media/logos/modified_logo.png" />
     </head>
     <style type="text/css">
-     /*.kt-sc__bottom .nav-tabs .nav-item .nav-link, .kt-sc-2 .kt-sc__bottom .nav-tabs .nav-item a.nav-link {*/
-    /*font-size: 1.2rem;*/
-    /*padding: 0 0 0.5rem;*/
-    /*font-weight: 500;*/
-    /*color: #48465b;*/
-    /*margin-top: 5px;*/
-    /*border-bottom: 2px solid red;*/
-    /*vertical-align: text-top*/
-/*}*/
+     .kt-sc__bottom .nav-tabs .nav-item .nav-link, .kt-sc-2 .kt-sc__bottom .nav-tabs .nav-item a.nav-link {
+    font-size: 1.2rem;
+    padding: 0 0 0.5rem;
+    font-weight: 500;
+    color: #48465b;
+    margin-top: 5px;
+    border-bottom: 2px solid transparent;
+    vertical-align: text-top
+   
+}
 
 
 .nav-tabs.nav-tabs-line {
     border-bottom: 1px solid transparent;
-
 
 }
 input[type=text], input[type=password] {
@@ -143,7 +141,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 40%; /* Could be more or less, depending on screen size */
+  width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -158,9 +156,8 @@ span.psw {
 
 .close:hover,
 .close:focus {
-  color: white;
+  color: red;
   cursor: pointer;
-
 
 }
 
@@ -170,7 +167,6 @@ span.psw {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
 }
-
 
 @-webkit-keyframes animatezoom {
   from {-webkit-transform: scale(0)}
@@ -200,7 +196,6 @@ span.psw {
   border: 1px solid #888;
   width: 40%; /* Could be more or less, depending on screen size */
 }
- 
 }
  @media only screen and (max-width: 767px) {
 /* Modal Content/Box */
@@ -212,69 +207,28 @@ span.psw {
 }
 }
 @media only screen and (max-width: 767px) {
-  .kt-header__topbar-wrapper{
+  #covid{
     display:none;
   }
-  @media(max-width: 767px) {
-    .nav-item1{
-      display:none;
-    }
+
+
   }
-  
-.goog-te-gadget{
-           float: right;      
-          }
-.cov{
-  display: none;
-}
-.let{
-  margin-top: -40px;
-}
-}
 
-.goog-logo-link, .goog-logo-link:link, .goog-logo-link:visited, .goog-logo-link:hover, .goog-logo-link:active{
-              visibility: hidden;
-          }
-         
-          #demo1{
-              cursor:pointer;
-          }
-          .goog-te-banner-frame.skiptranslate {
-          display: none;
-          }
-.goog-te-combo  {padding: 1px 1px 1px 15px;-moz-appearance: none; appearance: none; -webkit-appearance: none;border: 1px solid transparent;box-sizing: border-box;border-bottom:1px solid #afd135;font-size: 1.2rem;font-weight: 500;color:black;background-color:white;}
 
-.goog-te-combo:hover{
-  background-color: white;
-  border:2px solid #afd135; 
-  color: #48465b;
-}
 
 </style>
 <style>
- .nav-item:hover
- {
-  border-bottom:3px solid #034ea2;
- }
-    @media(max-width: 1024px) {
-    .drop{
-      display:none;
-    }
+   .nav-item:hover{
+    background-color:#88c3ea;
+    padding:10px;
    }
-   @media(max-width: 1024px) {
-    .cov{
-      display:none;
-    }
-    }
+ 
    }
-   
-
-   
   </style>
-  <style>
-    .kt-header__topbar-icon:hover{
-   color: white;
-
+  <style type="text/css">
+     button:hover{
+    background-color:red;
+   
   </style>
     <!-- end::Head -->
 
@@ -289,7 +243,7 @@ span.psw {
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed" style="background-color: white;">
   <div class="kt-header-mobile__logo">
     <a href="demo2/index.html">
-      <img alt="Logo" src="./assets/media/company-logos/speakup1.png" style="height:60px;width:60px;">
+      <img alt="Logo" src="./assets/media/logos/speakup.jpeg" style="height:50px;width:50px;">
      
     </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      <div>
@@ -297,11 +251,10 @@ span.psw {
     <button class="btn btn-success"  onclick="document.getElementById('id01').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">ADMIN</button>&nbsp;&nbsp;&nbsp;
             </span> -->
               <span class="kt-header__topbar-icon">
-       <button class="btn btn-success" onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #afd135;font-weight: 500;color: #48465b;">TRACK</button>
+      <!--  <button class="btn btn-success"   onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">TRACK</button> -->
             </span>
     </div>
   </div>
-
   <div class="kt-header-mobile__toolbar">
    
     <!-- <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button> -->
@@ -312,20 +265,17 @@ span.psw {
   <div class="kt-grid kt-grid--hor kt-grid--root">
     <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
       <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
-
-
-
         <!-- begin:: Header -->
-<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed "  data-ktheader-minimize="on"  style=" background-color: white;">
+<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed "  data-ktheader-minimize="on"  style=" background-color: white;border-bottom:3px solid #88c3ea;">
   <div class="kt-header__top">
     <div class="kt-container ">
       <!-- begin:: Brand -->
 <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
   <div class="kt-header__brand-logo">
     <a href="intro.php" style="font-size: 1.2rem;font-weight: 500;">
-      <img alt="Logo" src="./assets/media/company-logos/speakup1.png" style="height:80px;width:140px;margin-top:-10%;" class="kt-header__brand-logo-default"/>
-          <img alt="Logo" src="./assets/media/company-logos/speakup1.png" class="kt-header__brand-logo-sticky" style="height:60px;width:80px;">
-          <span style="color:black;" class="cov">COVID-19</span>
+      <img alt="Logo" src="./assets/media/logos/logo.png" style="height:100px;width:100px;" class="kt-header__brand-logo-default"/>
+      <span style="color:black;" id="covid">COVID-19</span>
+          <img alt="Logo" src="./assets/media/logos/speakup.jpeg" class="kt-header__brand-logo-sticky" style="height:25px;width:155px;" class="kt-header__brand-logo-default"/>
       <!-- CORONASPEAK -->
     <!--   <img alt="Logo" src="./assets/media/logos/logo-2-sm.png" class="kt-header__brand-logo-sticky"/> -->
     </a>    
@@ -334,33 +284,26 @@ span.psw {
 </div>
 <!-- end:: Brand -->  
     <!-- begin:: Header Topbar -->
-<div class="kt-header__topbar let" >
-    <div class="kt-header__topbar" >
-      <span class="kt-header__topbar-icon1">
+<div class="kt-header__topbar" >
+
+      <span class="kt-header__topbar-icon">
       <div class="kt-sc__bottom">
-    <ul class="nav nav-tabs  nav-tabs-line " role="tablist" style="margin-top:6%;">
-    
-      <li class="nav-item" id="speak">
-        <a class="nav-link active" href="case/speak.php" role="tab" style="font-size: 1.2rem;border-bottom:none;">SPEAK</a>
+    <ul class="nav nav-tabs  nav-tabs-line" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" href="case/speak.php" role="tab" style="font-size: 1.2rem;">SPEAK</a>
+      </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li class="nav-item">
+        <a class="nav-link" href="https://telegra.ph/TN-Corona-Speak-03-27" role="tab" style="font-size: 1.2rem;">CHAT</a>
+      </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li class="nav-item">
+        <a class="nav-link" href="./infection_db/index.php" role="tab" style="font-size: 1.2rem;">INFECTION</a>
       </li>
-      <li class="nav-item" id="hchat">
-        <a class="nav-link" href="https://telegra.ph/TN-Corona-Speak-03-27" role="tab" style="font-size: 1.2rem;border-bottom:none;">CHAT</a>
-      </li>
-      <li class="nav-item" id="infection">
-        <a class="nav-link" href="./infection_db/index.php" role="tab" style="font-size: 1.2rem;border-bottom:none;">INFECTION DATABASE</a>
-      </li>
-      <li class="nav-item1">
-       <div id="google_translate_element" style="margin-left:160%;"></div>
-     </li>
+       
     </ul>
   </div>
-
 </span>
- </div>
-</div>
-<!-- <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed "  data-ktheader-minimize="on"  style=" background-color: #808080;height: 40px;">
+    </div>
  
-</div> -->
   <!--end: My cart-->
 
   <!--begin: Notifications -->
@@ -374,8 +317,8 @@ span.psw {
     <button class="btn btn-success"  onclick="document.getElementById('id01').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">ADMIN</button>
             </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
               <span class="kt-header__topbar-icon">
-       <button class="btn btn-success drop"   onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #afd135;font-weight: 500;color: #48465b;">TRACK</button>
             </span>
+      <!--  <button class="btn btn-success"   onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">TRACK</button> -->
     </div>
  
   </div>
@@ -394,7 +337,7 @@ span.psw {
       <label for="password" style=" font-size: 1.2rem;" i class="fa fa-lock">&nbsp;&nbsp;<b>PASSWORD:</b></label>
     <input class="form-control" type="password" placeholder="Password" name="password" id="password"><br><br>
         <center>
-      <button type="submit" name="admin" style="background: #034ea2;border-radius: 8px;width:30%;height:50px;border:2px solid #034ea2;font-weight: 500;color: white;">Login</button>
+      <button type="submit" name="admin" style="background: #007c91;border-radius: 26px;width:30%;height:25%;border:2px solid #4b830d;font-weight: 500;color: white;">Login</button>
       </center>
      
     </div>
@@ -409,17 +352,17 @@ span.psw {
   <form class="modal-content" action="" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
- <img src="img_avatar2.png" alt="Avatar" class="avatar">
+   <!--    <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
     </div>
 
     <div class="container" style="line-height:350%;color:#525150;">
-      <label for="email" style=" font-size: 1.2rem;"  i class="fa fa-file">&nbsp;&nbsp;<b>SPEAK NUMBER:</b></label>
+      <label for="email" style=" font-size: 1.2rem;"  i class="fa fa-file">&nbsp;&nbsp;<b>CASE/INFO NUMBER:</b></label>
        <input class="form-control" type="text"  placeholder="case/info number" id="email" name="ran" autocomplete="off"><br>
 
       <label for="password" style=" font-size: 1.2rem;color:#525150;"  i class="fa fa-key">&nbsp;&nbsp;<b>SECRETKEY:</b></label>
     <input class="form-control" type="text" placeholder="secretkey" name="secretkey" id="password"><br><br>
         <center>
-      <button type="submit" name="track" style="background: #afd135;border-radius: 8px;width:40%;height:10%;border:2px solid  #afd135;font-weight: 500;color: white;">SUBMIT</button>
+      <button type="submit" name="track" style="background:  #007c91;border-radius: 26px;width:35%;height:32%;border:2px solid #4b830d;font-weight: 500;color: white;">SUBMIT</button>
       </center>
      
     </div>
@@ -574,11 +517,4 @@ cleanPhoneNumber= function(e) {
 };
 
 phone.onpaste = cleanPhoneNumber;
-    </script>
-    </script>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-  document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
-}
-</script>
+  </script>
