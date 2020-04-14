@@ -295,10 +295,10 @@ span.psw {
       <li class="nav-item">
         <a class="nav-link" href="https://telegra.ph/TN-Corona-Speak-03-27" role="tab" style="font-size: 1.2rem;">CHAT</a>
       </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <li class="nav-item">
+     <!--  <li class="nav-item">
         <a class="nav-link" href="./infection_db/index.php" role="tab" style="font-size: 1.2rem;">INFECTION</a>
       </li>
-       
+        -->
     </ul>
   </div>
 </span>
