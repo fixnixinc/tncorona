@@ -17,11 +17,11 @@
   <script>
         $(document).ready(function(){
         $('#tn_records').DataTable({
-        "processing":true,
-        "serverSide":true,
-        "ajax":"getdata.php",
-            });
+        "processing": true,
+        "serverSide": true,
+        "ajax": "getdata.php"
         });
+    });
 
     </script>
     
@@ -36,7 +36,7 @@
 
 </head>
 <body>
-    <table id='tn_records' class="display" style="width:100%;background-color: #163778;margin-top: 24px;">
+    <table id="tn_records" class="display" style="width:100%;background-color: #163778;margin-top: 24px;">
     <thead>
         <tr>
             <th>ID</th>
