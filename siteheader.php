@@ -518,3 +518,5 @@ cleanPhoneNumber= function(e) {
 
 phone.onpaste = cleanPhoneNumber;
   </script>
+
+<!-- Rectifying -->
