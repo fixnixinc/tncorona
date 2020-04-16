@@ -541,91 +541,6 @@ The maps and district information provides latest data on Covid19 infections, de
                
 
 
-
-
-<div>
-<div class="kt-grid__item kt-grid__item--fluid">
-    <div class="kt-portlet">
-  <div class="kt-portlet__body kt-portlet__body--fit">
-    <div class="kt-grid  kt-wizard-v2 kt-wizard-v2--white" id="kt_wizard_v2" data-ktwizard-state="step-first">
-      <div class="kt-grid__item kt-wizard-v2__aside">
-        <!--begin: Form Wizard Nav -->
-        <div class="kt-wizard-v2__nav" >
-          <div class="kt-wizard-v2__nav-items" >
-            <!--doc: Replace A tag with SPAN tag to disable the step link click -->
-            <a class="kt-wizard-v2__nav-item"  data-ktwizard-type="step" data-ktwizard-state="current">
-              <div class="kt-wizard-v2__nav-body">
-                <div class="kt-wizard-v2__nav-icon">
-                  <i class="flaticon-globe" style="color:#034ea2; "></i>
-                </div>
-                <div class="kt-wizard-v2__nav-label">
-                  <div class="kt-wizard-v2__nav-label-title">
-                DISTRICT MAP
-                  </div>
-                  <div class="kt-wizard-v2__nav-label-desc">
-             
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step">
-              <div class="kt-wizard-v2__nav-body">
-                <div class="kt-wizard-v2__nav-icon">
-                  <i class="flaticon-bus-stop" style="color: #afd135;"></i>
-                </div>
-                <div class="kt-wizard-v2__nav-label">
-                  <div class="kt-wizard-v2__nav-label-title">
-                   TAMILNADU DISTRICT WISE
-                  </div>
-                  <div class="kt-wizard-v2__nav-label-desc">
-                    <!-- Choose Your countries Map -->
-                  </div>
-                </div>
-              </div>
-            </a>
-           
-           
-         
-          </div>
-        </div>
-        <!--end: Form Wizard Nav -->
-
-      </div>
-    
-          <!--end: Form Wizard Step 2-->
-
-          <!--begin: Form Wizard Step 3-->
-       
-          <!--end: Form Wizard Step 3-->
-
-          <!--begin: Form Wizard Step 4-->
-         
-          <!--end: Form Wizard Step 4-->
-
-          <!--begin: Form Wizard Step 5-->
-         
-          <!--end: Form Wizard Step 5-->
-
-          <!--begin: Form Wizard Step 6-->
-       
-          <!--end: Form Wizard Step 6-->
-
-          <!--begin: Form Actions -->
-          <div class="kt-form__actions">
-          <!--   <button class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev" style="background-color: #afd135;" >
-              Previous
-            </button> -->
-       <!--      <button class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit" style="background-color: #afd135;">
-              Submit
-            </button> -->
-          <!--   <button class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" style="background-color: #034ea2;">
-              Next Step
-            </button> -->
-          </div>
-          <!--end: Form Actions -->
-        </form>
-        <!--end: Form Wizard Form-->
-      </div>
     </div>
   </div>
 </div>
@@ -637,7 +552,16 @@ The maps and district information provides latest data on Covid19 infections, de
 </div>
 </div>
 </div>
-
+<div class="container">
+  <div class='tableauPlaceholder' id='viz1587030737912' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TNCoronaSpeak1&#47;TNCoronaSpeak' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>               
+   <script type='text/javascript'>                    
+   var divElement = document.getElementById('viz1587030737912');                    
+ var vizElement = divElement.getElementsByTagName('object')[0];                   
+  vizElement.style.minWidth='420px';vizElement.style.maxWidth='820px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                  
+    var scriptElement = document.createElement('script');                   
+     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';               
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
 </div>
 </div>
 </div>

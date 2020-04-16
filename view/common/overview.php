@@ -236,7 +236,7 @@ width:100%;
                           <div class="scroller kt-scroll" data-scroll="true" data-height="290" data-mobile-height="200" data-always-visible="1" data-rail-visible1="0" data-handle-color="#FFA130">
                             <ul class="feeds">
                               <?php
-  $link=mysqli_connect("localhost","root","CoronaSpeak1234#@","corona");
+  $link=mysqli_connect("localhost","root","Admin1234#@","corona");
 
   $que="SELECT * from `case` order by id desc ";
   $res=mysqli_query($link,$que);

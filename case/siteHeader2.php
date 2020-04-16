@@ -196,9 +196,9 @@ a
                  $.ajax({
                         dataType: "json",
                         type: "POST",
-                        url: "/tncorona/login.php"
+                        url: "/tncorona/intro.php"
                          });
-                 window.location="/tncorona/login.php";
+                 window.location="/tncorona/intro.php";
             }
 </script>
 
