@@ -288,10 +288,10 @@ else
 <!DOCTYPE html>
 <html>
  <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/coronaspeak/">
+<base href="/tncorona/">
         <meta charset="utf-8"/>
 
-        <title>CoronaSpeak</title>
+        <title>TNCoronaSpeak</title>
         <meta name="description" content="Base form control examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -300,7 +300,7 @@ else
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">        <!--end::Fonts -->
         <!--begin:: Global Mandatory Vendors -->
         <!--begin::Page Custom Styles(used by this page) -->
-                             <link href="./assets/css/demo2/pages/wizard/wizard-1.css" rel="stylesheet" type="text/css" />
+                              <link href="./assets/css/demo2/pages/wizard/wizard-1.css" rel="stylesheet" type="text/css" />
                      <link href="./assets/css/demo2/pages/wizard/wizard-3.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
 <!--end:: Global Mandatory Vendors -->
@@ -609,7 +609,7 @@ You can stay anonymous and choose to followup with us also
 
       </div>
      </div>
-     <div id="details">
+   <!--   <div id="details">
             <div class="row">
          <div class="col-md-4 ">
            <input type="text" placeholder="FullName" id="name" name="name" class="form-control">&nbsp;
@@ -629,7 +629,7 @@ You can stay anonymous and choose to followup with us also
       </div>
   </div>
 
-</div>
+</div> -->
        
    <input type="hidden" name="secretkey" id="secretkey">
           <input type="hidden" name="ran" id="ran">
@@ -1236,7 +1236,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>1</span> Anxiety
+                  <span>1</span> Trivial
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -1244,7 +1244,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>2</span> Depression
+                  <span>2</span> Energy
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -1252,7 +1252,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>3</span> Stress
+                  <span>3</span> WorthWhile
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -1260,7 +1260,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>4</span> Self Esteem
+                  <span>4</span>Enthusiastic
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -1275,6 +1275,7 @@ You can stay anonymous and choose to followup with us also
             </a>
           </div>
         </div>
+      </div>
         <!--end: Form Wizard Nav -->
 
       </div>
@@ -1986,22 +1987,18 @@ You can stay anonymous and choose to followup with us also
           <!--end: Form Actions -->
         </form>
        
-        <!--end: Form Wizard Form-->
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
-
- </div>
-
-
-</div>
-
 </div>
 </div>
 </div>
-<br><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
  
 <script type="text/javascript">
   $(document).ready(function(){
@@ -2101,7 +2098,7 @@ You can stay anonymous and choose to followup with us also
 
        
                     <!--begin::Page Scripts(used by this page) -->
-                            <script src="./assets/js/demo2/pages/wizard/wizard-1.js" type="text/javascript"></script>
+                          <script src="./assets/js/demo2/pages/wizard/wizard-1.js" type="text/javascript"></script>
                             <script src="./assets/js/demo2/pages/wizard/wizard-3.js" type="text/javascript"></script>
                             <script src="./assets/js/demo2/pages/crud/forms/widgets/select2.js" type="text/javascript"></script>
     <!-- end::Body -->
