@@ -13,7 +13,7 @@ include "../php/common/config.php";
 <html lang="en" >
     <!-- begin::Head -->
     <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/tncorona/"><!--end::Base Path -->
+<base href="/coronaspeak/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
         <title>Case | FollowUp</title>
@@ -164,18 +164,142 @@ include "../php/common/config.php";
          </div> -->
       <div class="row form-group">
         <div class="col-md-6">
-          <label style="color: black;">Category</label><br>
+          <label style="color: black;">City</label><br>
         <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
-             <input type="text" id="company" name="company" class="form-control"value="<?php echo $rows['category']; ?>"disabled style="background: transparent;">
+             <input type="text" id="company" name="company" class="form-control"value="<?php echo $rows['city']; ?>"disabled style="background: transparent;">
         </div>
         <div class="col-md-6">
-          <label style="color: black;">County</label><br>
-           <input type="text" id="category" name="category" class="form-control"value="<?php echo $rows['countries']; ?>"disabled style=";background: transparent;">
+          <label style="color: black;">ZipCode</label><br>
+           <input type="text" id="category" name="category" class="form-control"value="<?php echo $rows['zipcode']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+ <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">1. For whom are You taking this test?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['taking_test']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">2. What is your age group?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['age']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+ 
+
+ <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">3. What is your gender?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['gender']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">4. Do you have fever?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['fever']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+       <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">5. Do you have dry cough?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['drycough']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">6. Do you have lost or less Feeling to smell?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['feelingsmell']; ?>"disabled style=";background: transparent;">
          <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
         </div>
       </div>
 
- 
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">7. Do you have throat pain?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['throatpain']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">8. Does your Body feel weak?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['bodyweak']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">9. Do you have No Hunger?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['nohunger']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">10. Do you have normal or heavy cough?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['coughrange']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">11. Do you have breath shortness?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control"value="<?php echo $rows['shortness']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">12. Do you have normal breathing?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['breathing']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">13. Do you Feel drowsy or sleep?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['drowsy']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">14. Do you feel Pain in chest?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['chestpain']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+  <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">15. Do you have Weakness across body?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['weaknessbody']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">16. Have you  visited outside state or country  in last 21 days?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['visitedoutside']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">17. Have you  came in contact with anyone affected?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['contactaffect']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">18. Have you visited any of the corona infected countries in last 21 days?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['infectedcountry']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-6">
+          <label style="color: black;">19. Have you or your family came in contact with anyone affected in last 21 days?</label><br>
+        <!--   <span id="companyName" class="form-control"  style="background: transparent;color: white;"></span> -->
+             <input type="text" class="form-control" value="<?php echo $rows['familycontact']; ?>"disabled style="background: transparent;">
+        </div>
+        <div class="col-md-6">
+          <label style="color: black;">20. Do you have any of these health condition?</label><br>
+           <input type="text"  class="form-control"value="<?php echo $rows['healthcondition']; ?>"disabled style=";background: transparent;">
+         <!--  <span id="category" class="form-control"  style="background: transparent; color: #ffffff;"></span> -->
+        </div>
+      </div>
          <div class="panel-body" style="border: 1px solid #e2e5ec; border-color: #A1E6EA;">
 
     <div class="row form-group" class="container hide" id="authknowsarea">
@@ -216,7 +340,7 @@ include "../php/common/config.php";
 <div id="" class="">
 <div class="row">
   <div class="input-group" style="margin: 20px;">
-<a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
+<a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifact'];?></a>
     </div>
   </div>
 </div>

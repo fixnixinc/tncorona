@@ -63,7 +63,7 @@ $companyId=$id[0]['id'];
 <base href="/tncorona/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>Project & Task | corona</title>
+        <title>Project & Task | coronaspeak</title>
         <meta name="description" content="Wizard examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -116,18 +116,18 @@ $companyId=$id[0]['id'];
         <!--begin::Layout Skins(used by all pages) -->
                 <!--end::Layout Skins -->
 
-        <link rel="shortcut icon" href=" ./assets/media/company-logos/whistle.png" />
+        <link rel="shortcut icon" href="./assets/media/company-logos/speakup1.png" />
     </head>
     <?php
     include '../siteHeader.php';
     ?>
-<body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: #e0d9d9;" onload="getAction()">
+<body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: white;" onload="getAction()">
 
        
     
 
 	
-	<div class="kt-grid kt-grid--hor kt-grid--root">
+	<div class="kt-grid kt-grid--hor kt-grid--root" >
 		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper" style="margin-top: -10%;">
 			
@@ -135,7 +135,7 @@ $companyId=$id[0]['id'];
 											<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
 <!-- begin:: Content -->
-	<div class="kt-container  kt-grid__item kt-grid__item--fluid">
+	<div class="kt-container  kt-grid__item kt-grid__item--fluid" style="box-shadow:3px 3px 5px 6px #ccc;;">
 		<div class="kt-portlet">
 	<div class="kt-portlet__body kt-portlet__body--fit">
 		<div class="kt-grid  kt-wizard-v2 kt-wizard-v2--white" id="kt_wizard_v2" data-ktwizard-state="step-first">
@@ -147,7 +147,7 @@ $companyId=$id[0]['id'];
 						<a class="kt-wizard-v2__nav-item"  data-ktwizard-type="step" data-ktwizard-state="current">
 							<div class="kt-wizard-v2__nav-body">
 								<div class="kt-wizard-v2__nav-icon">
-									<i class="flaticon-globe"></i>
+									<i class="flaticon-globe" style="color: #034ea2;"></i>
 								</div>
 								<div class="kt-wizard-v2__nav-label">
 									<div class="kt-wizard-v2__nav-label-title">
@@ -163,7 +163,7 @@ $companyId=$id[0]['id'];
 						<a class="kt-wizard-v2__nav-item"  data-ktwizard-type="step">
 							<div class="kt-wizard-v2__nav-body">
 								<div class="kt-wizard-v2__nav-icon">
-									<i class="flaticon-responsive"></i>
+									<i class="flaticon-responsive" style="color: #034ea2;"></i>
 								</div>
 								<div class="kt-wizard-v2__nav-label">
 									<div class="kt-wizard-v2__nav-label-title">
@@ -233,7 +233,7 @@ $companyId=$id[0]['id'];
 							</div> 
 						</div>
 						  <div class="form-group">
-                                    <button class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"  onclick="saveProject()">Save</button>
+                                    <button class="btn btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"  onclick="saveProject()" style="background-color: #afd135;color: white;">Save</button>
                                 </div> 
 					</div>
                           
@@ -269,13 +269,13 @@ $companyId=$id[0]['id'];
                         <label for="projectname">Due Date</label>
                         <div class="input-icon">
                           
-                          <i class="fa fa-calendar"></i>
-                          <input type="date" class="form-control todo-taskbody-due" placeholder="Due Date..." id="duedate" style="width: 94%;"> </div>
+                          
+                          <input type="date" class="form-control todo-taskbody-due" placeholder="Due Date..." id="duedate" style=""> </div>
                       </div>
                     
-                <div class="col-xl-6">
-										<div class="form-group">
-                                            <label>Team</label><br><br>
+                
+										<div class="form-group col-md-6">
+                                            <label>Team</label><br>
 											 <select id="sd1"class="form-control select2" multiple="" style="width: 100%;">
                            <option>--Select User--</option>   
                           <?php foreach($allUsers as $users){ ?>
@@ -284,7 +284,7 @@ $companyId=$id[0]['id'];
                           <?php } ?>
                         </select>
 										</div>
-									</div>
+									
 								</div>
                                 <div class="form-group">
                                     <label>Status</label>
@@ -315,7 +315,7 @@ $companyId=$id[0]['id'];
 						<!-- <button class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
 							Previous
 						</button> -->
-						<button class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit" onclick="saveTask()">
+						<button class="btn btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit" onclick="saveTask()" style="background-color: #afd135;color: white;">
 							Submit
 						</button>
 					<!-- 	<button class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next">
@@ -343,16 +343,16 @@ $companyId=$id[0]['id'];
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
 <!-- begin:: Content -->
-<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid ">
  
 
-<div class="kt-portlet">
-<div class="kt-portlet__head kt-portlet__head--lg" style="background-color:#2a5aa8;">
+<div class="kt-portlet kt-container">
+<div class="kt-portlet__head kt-portlet__head--lg">
 <div class="kt-portlet__head-label">
 <span class="kt-portlet__head-icon">
-<i class="kt-font-brand flaticon2-line-chart"></i>
+<i class="kt-font flaticon2-line-chart" style="color: #034ea2;"></i>
 </span>
-<h3 class="kt-portlet__head-title" style="color: white;">
+<h3 class="kt-portlet__head-title">
 Project & Task
 </h3>
 </div>

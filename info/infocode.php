@@ -1,54 +1,77 @@
 <?php
 include "../php/common/config.php";
 ?>
+<!DOCTYPE html>
 
- <!DOCTYPE html>
 <html lang="en" >
- <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/tncorona/"><!--end::Base Path -->
+    <!-- begin::Head -->
+    <head><!--begin::Base Path (base relative path for assets of this page) -->
+<base href="/coronaspeak/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>Info | Number</title>
-        <meta name="description" content="Base form control examples">
+        <title></title>
+        <meta name="description" content="Wizard examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link href="../assets/vendors/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <!--begin::Fonts -->
-      
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-               
+        <!--begin::Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">        <!--end::Fonts -->
+
+        
+                    <!--begin::Page Custom Styles(used by this page) -->
+                             <link href="./assets/css/demo2/pages/wizard/wizard-1.css" rel="stylesheet" type="text/css" />
+                        <!--end::Page Custom Styles -->
+        
         <!--begin:: Global Mandatory Vendors -->
-<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
 <!--end:: Global Mandatory Vendors -->
 
-<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
-<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
-<link href="../assets/vendors/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
-<link href="../assets/toggleButton/bootstrap-toggle.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="assets/jquery-ui-1.11.4/jquery-ui.css"/>
- <link href="assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
- <link rel="shortcut icon" href="corona/LG3.png" />
-         <link rel="shortcut icon" href="./assets/media/company-logos/virus.png" />
-         <link href="../assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
-        <script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-      <script src="../assets/vendors/custom/js/vendors/sweetalert2.init.js" type="text/javascript"></script>
-    </head>
+<!--begin:: Global Optional Vendors -->
+<link href="./assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/quill/dist/quill.snow.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/dual-listbox/dist/dual-listbox.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
+<link href="./assets/vendors/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+<!--end:: Global Optional Vendors -->
 
+<!--begin::Global Theme Styles(used by all pages) -->
+                    
+                    <link href="./assets/css/demo2/style.bundle.css" rel="stylesheet" type="text/css" />
+                <!--end::Global Theme Styles -->
+
+        <!--begin::Layout Skins(used by all pages) -->
+                <!--end::Layout Skins -->
+
+        <link rel="shortcut icon" href="./assets/media/logos/favicon.ico" />
+    </head>
 <script type="text/javascript">
   function closeWin()
   {
     Swal.fire({
       title:'Good job!',
-  text:'Your Info has been created!',
+  text:'Your Case has been created!',
   type:'success'
   }).then(function() {
       window.location="/tncorona/intro.php";
@@ -56,15 +79,13 @@ include "../php/common/config.php";
   }
 </script>
 <?php
-  include "../nav_header.html";
+  include "../siteheader.php";
 ?>
-
   <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading"> <br><br>
-
-
+   
 <?php
 
-$sql = "SELECT `secretkey`,`ran` from `info` order by id DESC limit 1";
+$sql = "SELECT secretkey,ran from info order by id DESC limit 1";
 $result = mysqli_query($link, $sql);
 if (mysqli_num_rows($result) > 0) {
 
@@ -73,103 +94,54 @@ if (mysqli_num_rows($result) > 0) {
 
 ?>
 <div class="container">
-<button type="button" class="btn btn-danger" onclick="closeWin()" style="float: right;">Close</button>
+<button type="button" class="btn btn-info" onclick="closeWin()" style="float: right;background-color: #034ea2;">Close</button>
 </div>
-<div class="container">
+
+          <div class="container">
 
           <div class="container" style="padding-left: 20%;">
-         
             <div>
 <!--                 <div class="" style="text-align: center;font-size: 20px;"><strong>WhistleBlower - Remember this is for future use</strong></div> -->
-              <div class="modal-body">
+              <div class="modal-body" style="text-align:center;">
                <div class="form-group">
-                <label style="font-size: 20px;"><b>Speak Number</b></label><br>
+                <label style="font-size: 20px;"><b>Info Number</b></label><br>
                 <span class="no" id="quantity" maxlength="14" style="border-color: #30B7B7; color:black;font-size: 36px;"><?php echo substr($row['ran'], 0, 4) . "  " . substr($row['ran'], 4, 4) . "  " . substr($row['ran'],8,4) . "  " . substr($row['ran'], 12, 4);?></span>
-                <!-- <span class="no" id="quantity" maxlength="14" style="border-color: #30B7B7; color: #ffffff;font-size: 36px;"><?php echo  $row['ran'];?></span> -->
                 <input type="text" id="copy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['ran']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;
                 <button id="cpybtn" style="background: transparent; border-radius: 50px; width: 40px; height: 40px;" title="Copy to Clipboard"><i class="fa flaticon2-copy" style="color: red; font-size: 20px;"></i></button>
             </div>
 
-
              
  <div class="form-group">
-              <label style="font-size: 20px;"><b>Speak code</b></label><br>
-              <span id="quantity" class="no" maxlength="14" style="border-color: #30B7B7; color: black; font-size: 36px;"><?php echo substr($row['secretkey'], 0, 4) . "  " . substr($row['secretkey'], 4, 4) . "  " . substr($row['secretkey'],8,4) . "  " . substr($row['secretkey'], 12, 4);?></span>
+              <label style="font-size: 20px;"><b>Secret code</b></label><br>
+              <span id="quantity" class="no" maxlength="14" style="border-color: #30B7B7; color:black; font-size: 36px;"><?php echo substr($row['secretkey'], 0, 4) . "  " . substr($row['secretkey'], 4, 4) . "  " . substr($row['secretkey'],8,4) . "  " . substr($row['secretkey'], 12, 4);?></span>
               <input type="text" id="secCopy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['secretkey']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <button id="cpySec" style="background: transparent; border-radius: 50px; width: 40px; height: 40px;" title="Copy to Clipboard"><i class="fa flaticon2-copy" style="color: red; font-size: 20px;"></i></button>
              </div>
 
-               <br>
-              <input type="text" id="together" style="position: absolute; left: -1000px; top: -1000px;" value="Case Number: <?php echo $row['ran']; ?>       Secret Code: <?php echo $row['secretkey']; ?>">
+              <br>
+              <input type="text" id="together" style="position: absolute; left: -1000px; top: -1000px;" value="Info Number: <?php echo $row['ran']; ?>       Secret Code: <?php echo $row['secretkey']; ?>">
               <button id="tog" style="background: transparent; border-radius: 50px; width: 100px; height: 50px; color: red; margin-left: 15%;" title="Copy together to Clipboard">Copy Together</button>
 
-              </div>
 
-             
-
-           <!--    <div class="modal-footer">
-
-                <button type="button" class="btn btn-success" onclick="window.location.href='idea/Ideain.php'">Close</button>
-              </div> -->
-            </div>
+              </div>    
+              </div>      
    
-   <div>
-                <div class="form-group">
-                  <label style="font-size: 16px;" ><span style="color: black; font-size: 34px;">Remember this for future use</span></label>
+            <div>
+                <div class="form-group" style="text-align: center;">
+                  <label style="font-size: 16px;"><span style="color: black; font-size: 34px;">Remember this for future use</span></label>
                 </div>
               </div>
             </div>
-            </div>
-
-
-
+          </div>
 <?php
 }
-}
+  }
 ?>
-
-          <div class="jumbotron  bg-light">
-            <div class="container" style="margin-left: 230px;">
-             <a href="https://tncoronaspeak.com/tncorona/option.php" id="bottom_links_foot" style="color: #231F1F; font-size: 14px; margin-right: 18px; float: left;">SPEAK</a>
-             <a href="https://telegra.ph/TN-Corona-Speak-03-27" id="bottom_links_foot" style="color: #231F1F; font-size: 14px; margin-right: 18px; float: left;">CHAT</a>
-             <a href="#" id="bottom_links_foot" style="color: #231F1F; font-size: 14px; margin-right: 18px; float: left;">CORONA INFECTION DATABASE</a>
-             
-             
-            </div>
-
-            <div class="container" >
-              <div class="form-row d-flex justify-content-end" >
-               <!--  <div  class="col-sm-1"> -->
-                  <div class="form-group">
-                      <a href="https://www.facebook.com/coronaSpeak/"><i class="fa fa-facebook-square" style="font-size:32px"></i></a>&nbsp;
-                  <!-- </div> -->
-                
-                </div>
-               <!--  <div class="col-sm-1"> -->
-                <div class="form-group">
-                  <a href="https://www.linkedin.com/showcase/coronaspeak"><i class="fa fa-linkedin-square" style="font-size:32px"></i></a>&nbsp;
-                </div>
-<div class="form-group">             
-     <a href="https://twitter.com/CoronaSpeak"><i class="fa fa-twitter-square" style="font-size:32px"></i>
-</a>&nbsp;
-                </div>
-<div class="form-group">                 
- <a href="https://instagram.com/CoronaSpeak"><i class="fa fa-instagram" style="font-size:32px"></i></a>
-</div>
-               
-              </div>
-            </div>
-      </div>
-
-       <nav class="navbar navbar-light bg-light">
-           <div class="mx-auto order-0">
-             <label style="font-size: 12px;">An Open Initiative of <span><a href="https://www.nixwhistle.com"><strong>NixWhistle</strong>  </a>and<span><a href="https://tncoronaspeak.com/tncorona/contributors.php" id="bottom_links_foot" style=" font-size: 12px;"> Volunteers</a></span></span> </label>  <br>      
-            </div>
-         </nav>
+<?php
+include "../footer.php"; ?>
 <script type="text/javascript">
   const myInp = document.getElementById("copy");
   const btnCopy = document.getElementById("cpybtn");
-  myInp.type ='text';
 
   btnCopy.onclick= function() {
     myInp.select();
@@ -202,13 +174,12 @@ if (mysqli_num_rows($result) > 0) {
   }
 </script>
 
-
 <script>
             var KTAppOptions = {"colors":{"state":{"brand":"#2c77f4","light":"#ffffff","dark":"#282a3c","primary":"#5867dd","success":"#34bfa3","info":"#36a3f7","warning":"#ffb822","danger":"#fd3995"},"base":{"label":["#c5cbe3","#a1a8c3","#3d4465","#3e4466"],"shape":["#f0f3ff","#d9dffa","#afb4d4","#646c9a"]}}};
         </script>
         <!-- end::Global Config -->
-      <script src="../assets/js/demo3/scripts.bundle.js" type="text/javascript"></script>
-      <script src="../assets/toggleButton/bootstrap-toggle.min.js"></script>
+      <script src="assets/js/demo3/scripts.bundle.js" type="text/javascript"></script>
+      <script src="assets/toggleButton/bootstrap-toggle.min.js"></script>
       <script type="text/javascript" src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>  
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.boot strapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -219,19 +190,16 @@ if (mysqli_num_rows($result) > 0) {
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
    
     <!--begin:: Global Mandatory Vendors -->
-<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
-<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-<script src="../assets/vendors/custom/js/vendors/sweetalert2.init.js" type="text/javascript"></script>
+<script src="assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+<script src="assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
+<script src="assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+<script src="assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
+<script src="assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
 
-         
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
             </body>

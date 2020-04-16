@@ -15,13 +15,13 @@
   <title>TamilNadu Infection Database</title>
 
   <script>
-        $(document).ready(function(){
-        $('#tn_records').DataTable({
+        $(document).ready(function() {
+        $('#tn_rec').DataTable( {
         "processing": true,
         "serverSide": true,
-        "ajax": "getdata.php"
-        });
-    });
+        "ajax": "getdata.php",
+            } );
+        } );
 
     </script>
     
@@ -36,13 +36,14 @@
 
 </head>
 <body>
-    <table id="tn_records" class="display" style="width:100%;background-color: #163778;margin-top: 24px;">
+    <table id='tn_rec' class="display" style="width:100%;background-color: #163778;margin-top: 24px;">
     <thead>
         <tr>
             <th>ID</th>
             <th>Patient Number</th>
             <th>State Patient No.</th>
             <th>Date Announced</th>
+            <th>Total Deaths</th>
             <th>Age Bracket</th>
             <th>Gender</th>
             <th>Detected City</th>
@@ -64,10 +65,11 @@
     </thead>
     <tfoot>
         <tr>
-            <th>ID</th>
+           <th>ID</th>
             <th>Patient Number</th>
             <th>State Patient No.</th>
             <th>Date Announced</th>
+            <th>Total Deaths</th>
             <th>Age Bracket</th>
             <th>Gender</th>
             <th>Detected City</th>
@@ -91,5 +93,3 @@
 
 </body>
 </html>
-
-<!-- Corrected the column Entry -->

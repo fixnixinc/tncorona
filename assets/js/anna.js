@@ -1,8 +1,7 @@
-  console.log("YOU CALLED NE" + today);
-  // $("#regions_div").css("width",document.getElementById("worldmap").offsetWidth+"px");
+
 	var array = [['Country','Confirmed Cases','Death Cases']]
 	for (var i in Data) {
-		array.push([i,Data[i][today][0],Data[i][today][1]])
+		array.push([i,Data[i]["2020-03-22"][0],Data[i]["2020-03-22"][2]])
 	}
 	console.log("skjfndrsligtw iltuhtiu gehtiu4hukzehtkatyikeGiuGH,UK")
       google.charts.load('current', {
@@ -15,16 +14,14 @@
 
      
       function drawRegionsMap() {
-        // console.log("RO ALLED NE" + window.innerHeight);
         var data = google.visualization.arrayToDataTable(array);
+
         var options = 
-	      {
-		      colorAxis: {colors: ['#034ea2','#afd135']},
-          width: $("worldmap").css("width",window.innerWidth*0.9),
-          height: window.innerHeight*0.7
-	      };
+	{
+		colorAxis: {colors: ['yellow', 'red']}
+	};
+
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
         chart.draw(data, options);
       }
-console.log(today)

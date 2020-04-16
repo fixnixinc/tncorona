@@ -39,15 +39,18 @@
                 </li>
                   <li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/dashboard.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-mail-1"></i><span class="kt-menu__link-text">Reviewer</span></a>
                 </li>
-           
+                 
+                  <li class="kt-menu__item " aria-haspopup="true"><a href="tracking.php" class="kt-menu__link "><i class="kt-menu__link-icon la la-comment"></i><span class="kt-menu__link-text">Tracking</span></a>
+                </li>
+
+                <li class="kt-menu__item " aria-haspopup="true"><a href="logistics.php" class="kt-menu__link "><i class="kt-menu__link-icon fa flaticon-customer"></i><span class="kt-menu__link-text">Logistics</span></a>
+                </li>
               </ul>
            
          
                   </div>
-            
+           
 
   </div>
 </body>
 </html>
-
-    
