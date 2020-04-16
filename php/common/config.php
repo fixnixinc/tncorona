@@ -1,6 +1,6 @@
  <?php
 
-$link = mysqli_connect("localhost", "root", "password", "corona");
+$link = mysqli_connect("localhost", "root", "Admin1234#@", "corona");
 
 if (!$link) 
 {
@@ -10,3 +10,4 @@ if (!$link)
    exit;
 }
 ?>
+<!-- Designs updated by Jeevitha -->

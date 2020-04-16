@@ -2,8 +2,8 @@
     // Constants for connecting to DB
     define ('SERVER_NAME', 'localhost');
     define ('DB_USER_NAME', 'root');
-    define ('DB_PASSWORD', 'password');
+    define ('DB_PASSWORD', 'Admin1234#@');
     define ('DB_SCHEMA', 'corona');
     define ('CONF_KEY_ROUTING', 'routing');
 ?>
-<!-- Updates with the latest design -->
+<!-- Designs updated by Jeevitha -->
