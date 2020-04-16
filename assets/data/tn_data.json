@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
  {
    "A": "Patient Number",
@@ -180774,3 +180775,252 @@
 
 // Updated the JSON File
 >>>>>>> b313364743b5953a814352e905682ce202052d57
+=======
+Data = [
+  {
+    "Row Labels": "Ariyalur",
+    "Confirmed": 1,
+    "Active": 1,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Chengalpattu",
+    "Confirmed": 40,
+    "Active": 40,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Chennai",
+    "Confirmed": 182,
+    "Active": 181,
+    "Recovered": 1,
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Coimbatore",
+    "Confirmed": 97,
+    "Active": 97,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Cuddalore",
+    "Confirmed": 15,
+    "Active": 15,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Dindigul",
+    "Confirmed": 55,
+    "Active": 55,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Erode",
+    "Confirmed": 60,
+    "Active": 56,
+    "Recovered": 4,
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Kallakurichi",
+    "Confirmed": 3,
+    "Active": 3,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Kancheepuram",
+    "Confirmed": 7,
+    "Active": 6,
+    "Recovered": 1,
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Kanniyakumari",
+    "Confirmed": 15,
+    "Active": 15,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Karur",
+    "Confirmed": 22,
+    "Active": 22,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Madurai",
+    "Confirmed": 25,
+    "Active": 24,
+    "Recovered": "",
+    "Deceased": 1
+  },
+  {
+    "Row Labels": "Nagapattinam",
+    "Confirmed": 24,
+    "Active": 24,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Namakkal",
+    "Confirmed": 41,
+    "Active": 41,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Perambalur",
+    "Confirmed": 1,
+    "Active": 1,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Ramanathapuram",
+    "Confirmed": 2,
+    "Active": 2,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Ranipet",
+    "Confirmed": 36,
+    "Active": 36,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Salem",
+    "Confirmed": 14,
+    "Active": 14,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Sivaganga",
+    "Confirmed": 6,
+    "Active": 6,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tenkasi",
+    "Confirmed": 1,
+    "Active": 1,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Thanjavur",
+    "Confirmed": 11,
+    "Active": 11,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "The Nilgiris",
+    "Confirmed": 9,
+    "Active": 9,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Theni",
+    "Confirmed": 41,
+    "Active": 41,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Thiruvallur",
+    "Confirmed": 29,
+    "Active": 29,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Thiruvarur",
+    "Confirmed": 13,
+    "Active": 13,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Thoothukkudi",
+    "Confirmed": 24,
+    "Active": 24,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tiruchirappalli",
+    "Confirmed": 39,
+    "Active": 39,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tirunelveli",
+    "Confirmed": 58,
+    "Active": 58,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tirupathur",
+    "Confirmed": 16,
+    "Active": 16,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tiruppur",
+    "Confirmed": 26,
+    "Active": 26,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Tiruvannamalai",
+    "Confirmed": 7,
+    "Active": 7,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Vellore",
+    "Confirmed": 11,
+    "Active": 11,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Viluppuram",
+    "Confirmed": 27,
+    "Active": 27,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Virudhunagar",
+    "Confirmed": 11,
+    "Active": 11,
+    "Recovered": "",
+    "Deceased": ""
+  },
+  {
+    "Row Labels": "Grand Total",
+    "Confirmed": 969,
+    "Active": 962,
+    "Recovered": 6,
+    "Deceased": 1
+  }
+]
+>>>>>>> 1ea19a2fd4f4129b48777c69600112b043baca26

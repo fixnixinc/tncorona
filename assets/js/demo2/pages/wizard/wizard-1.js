@@ -126,9 +126,10 @@ var KTWizard1 = function () {
 	}
 
 	var initSubmit = function() {
+		var btn = formEl.find('[data-ktwizard-type="action-submit"]');
 
-		$('#submit').click(function(e) {
-			
+		btn.on('click', function(e) {
+			e.preventDefault();
 
 			if (validator.form()) {
 				// See: src\js\framework\base\app.js
@@ -136,7 +137,19 @@ var KTWizard1 = function () {
 				//KTApp.block(formEl);
 
 				// See: http://malsup.com/jquery/form/#ajaxSubmit
-		
+				formEl.ajaxSubmit({
+					success: function() {
+						KTApp.unprogress(btn);
+						//KTApp.unblock(formEl);
+
+						swal.fire({
+							"title": "", 
+							"text": "The application has been successfully submitted!", 
+							"type": "success",
+							"confirmButtonClass": "btn btn-secondary"
+						});
+					}
+				});
 			}
 		});
 	}
