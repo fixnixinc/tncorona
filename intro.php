@@ -340,10 +340,11 @@ width:100%;
   <div class="kt-portlet__body" id="banner">
    <div class="banner-container">
 <div class="heading">
-No matter what's troubling you, get the support you need, right now from Tamilnadu government. We’re in This together
+  Get help. Get better.
 </div>
 <div class="sub-heading">
-Join millions protecting Tamil Nadu from Corona</div><br>
+No matter what's troubling you, get the support you need, right now from Tamilnadu government. We’re in This together
+</div><br>
 <div class="home-actions">
 <span class="chat button"><a href="case/speak.php" style="color: white;">GET HELP - IT GETS BETTER</a></span>
 <span class="appointment button"><a href="https://telegra.ph/TN-Corona-Speak-03-27" style="color: white;">CHAT NOW</a></span>

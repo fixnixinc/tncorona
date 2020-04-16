@@ -1,31 +1,27 @@
-
-<!DOCTYPE html>
+<?php
+    include "php/common/config.php";
+    $query = "SELECT * FROM `logostics` order by id desc";
+    $result = mysqli_query($link,$query);
+?>
+<!DOCTYPE html>  
 
 <html lang="en" >
     <!-- begin::Head -->
-    <head>
-<base href="/tncorona/">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta charset="utf-8"/>
+    <head><!--begin::Base Path (base relative path for assets of this page) -->
+<base href="/tncorona/"><!--end::Base Path -->
+               <meta charset="utf-8"/>
 
-        <title></title>
-        <meta name="description" content="Latest updates and statistic charts">
+        <title>Case | Report List</title>
+        <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!--begin::Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">        <!--end::Fonts -->
 
-                    <!--begin::Page Vendors Styles(used by this page) -->
-                            <link href="./assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-                        <!--end::Page Vendors Styles -->
-       
-       
-        <!--begin:: Global Mandatory Vendors -->
-<link href="./assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
-<!--end:: Global Mandatory Vendors -->
+ <link href="./assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 
-<!--begin:: Global Optional Vendors -->
+<link href="./assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+
 <link href="./assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
@@ -54,115 +50,116 @@
 <link href="./assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
-  <link href="./assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
-        <link rel="shortcut icon" href="./assets/media/logos/favicon.ico" />
-   
 
+
+  <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css" />
+    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>  -->
+     
+    <!-- <script type="text/javascript" src="assets/DataTables/DataTables-1.10.12/js/jquery.dataTables.min.js"></script> -->
+        <script type="text/javascript" src="../../assets/DataTables/Buttons-1.2.1/js/dataTables.buttons.min.js"></script>
+           <script type="text/javascript" src="../../assets/DataTables/Buttons-1.2.1/js/buttons.flash.min.js"></script>
+        <script type="text/javascript" src="../../assets/DataTables/pdfmake.min.js"></script>
+        <script type="text/javascript" src="../../assets/DataTables/pdfmake-0.1.18/build/vfs_fonts.js"></script>
+        <script type="text/javascript" src="../../assets/DataTables/Buttons-1.2.1/js/buttons.html5.min.js"></script>
+        <script type="text/javascript" src="../../assets/DataTables/Buttons-1.2.1/js/buttons.print.min.js"></script>
+        <script type="text/javascript" src="//cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>  
+ 
+   <link href="./assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
+           
+        <link rel="shortcut icon" href=" ./assets/media/company-logos/whistle.png" />
     </head>
+ <!--    <script type="text/javascript">
+   
+    fetch('https://5d1b152edd81710014e8825d.mockapi.io/fixnix/whistle')
+    .then(res => res.json())//response type
+    .then(data => console.log(data)); //
+  </script> -->
 
-    <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading"  >
+  <?php
+   include 'view/siteHeader.php';
+?>
+    <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" >
 
-<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " >
-<div class="kt-header-mobile__logo">
-<img alt="Logo" src="./assets/media/logos/fixnix-sm.png"/>
-</div>
-<div class="kt-header-mobile__toolbar">
-<button class="kt-header-mobile__toolbar-toggler kt-header-mobile__toolbar-toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
+       
+    <!-- begin:: Page -->
 
-<button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
-</div>
-</div>
-<!-- end:: Header Mobile -->
+
 <div class="kt-grid kt-grid--hor kt-grid--root">
 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
-<!-- begin:: Aside -->
-<button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
+
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper"  style="margin-top:-10%;">
+
+<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+<!-- begin:: Content -->
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
 
 
-<!-- begin:: Header -->
-<div class="kt-grid kt-grid--hor kt-grid--root">
-    <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
-      <!-- begin:: Aside -->
-<button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
-
-
-      <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
-        <!-- begin:: Header -->
-<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed " >
-      <!-- begin: Header Menu -->
-<button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
-<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
- 
-</div>
-<!-- end: Header Menu --> <!-- begin:: Header Topbar -->
-<div class="kt-header__topbar">
-
-   <div class="kt-header__topbar-item dropdown kt-header__topbar-item--langs">
- 
-
-           <a class="kt-header__topbar-icon" title="Business Unit" href="view/common/overview.php"><i class="flaticon-calendar-1"></i>
-           <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
-   
-         <a href="view/common/addadminuser.php" class="kt-header__topbar-icon" title="Add User">
-          <i class="flaticon2-user"></i></i><span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
-            <a href="view/common/project.php" class="kt-header__topbar-icon" title="Project & Task">
-           <i class="kt-menu__link-icon flaticon2-analytics-2"></i>
-           <span class="kt-hidden kt-hiddenbadge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
-           <a href="view/common/timeline.php" class="kt-header__topbar-icon" title="Timeline">
-                      <i class="flaticon-time
-"></i>
-           <span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
-     
-         <!--   <a href="view/policy/ModuleSelection.php?i=1" class="kt-header__topbar-icon" title="Setup Guide">
-           <i class="flaticon-globe"></i><span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a>
-             <a href="view/common/paymentoverview.php" class="kt-header__topbar-icon" title="Payment">
-           <i class="flaticon-presentation-1"></i><span class="kt-hidden kt-badge kt-badge--dot kt-badge--notify kt-badge--sm"></span></a> -->
-       <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
-
-
-   </div>
- </div>
-   <div class="kt-header__topbar-item kt-header__topbar-item--langs">
-   <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
-     <span class="kt-header__topbar-icon" title="Logout" onclick="logout();">
- <img src="assets/icons/logout.svg">
+<div class="kt-portlet">
+<div class="kt-portlet__head kt-portlet__head--lg" style="background-color:#2a5aa8;">
+<div class="kt-portlet__head-label">
+<span class="kt-portlet__head-icon">
+<i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
-   </div>
-</div>
-
-<!-- <div id="google_translate_element"></div> -->
-<!-- <div class="kt-header__topbar-item kt-header__topbar-item--langs">
-   <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
-     <span class="kt-header__topbar-icon" title="Logout" onclick="logout();">
- <img src="./assets/media/icons/logout.svg" alt="" />
-</span>
-   </div>
-</div>
- -->
-</div>
-
-<!-- end:: Header Topbar -->
-</div>
-</div>
-</div>
-</div>
+<h3 class="kt-portlet__head-title" style="color: white;">
+Logistics Lists
+</h3>
 </div>
 
 </div>
 
+<div class="kt-portlet__body" style="overflow-x: scroll;">
+<!--begin: Datatable -->
+<table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
+<thead>
+  <tr>
+  <th>Id</th>
+  <th>District</th>
+  <th>Date</th>
+  <th>Quarantine Facilities</th>
+  <th>Isolation Facilities</th>
+  <th>ICU Beds</th>
+  <th>Ventilators</th>
+  <th>Face Shield</th>
+  </tr>
+</thead>
+ <?php
+ while($rows=mysqli_fetch_assoc($result)) {
+  ?>
+<tbody>
+  <td><?php echo $rows['id'];?></td>
+   <td><?php echo $rows['logidistrict'];?></td>
+    <td><?php echo $rows['logidatepicker'];?></td>
+     <td><?php echo $rows['quarantinefacilities'];?></td>
+      <td><?php echo $rows['isolationfacilities'];?></td>
+       <td><?php echo $rows['icubeds'];?></td>
+        <td><?php echo $rows['Ventilators'];?></td>
+       <td><?php echo $rows['faceshields'];?></td>
+<!-- <td><button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button></td>
+         <td><a href="case/reportgenerator.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Report</a></td> -->
+</tbody>
+<?php
+}
+?>
+</table>
+<!--end: Datatable -->
+</div>
+</div>
 
-<script type="text/javascript">
-    function logout(){
-                debugger
-                 $.ajax({
-                        dataType: "json",
-                        type: "POST",
-                        url: "/tncorona/login.php"
-                         });
-                 window.location="/tncorona/login.php";
-            }
-</script>
+<!-- end:: Content -->  </div>  
 
+</div>
+</div>
+</div>
+</div>
+
+<?php
+include 'view/sidemenu.php';
+
+ ?>
+
+        <!-- begin::Global Config(global config for global JS sciprts) -->
         <script>
             var KTAppOptions = {"colors":{"state":{"brand":"#2c77f4","light":"#ffffff","dark":"#282a3c","primary":"#5867dd","success":"#34bfa3","info":"#36a3f7","warning":"#ffb822","danger":"#fd3995"},"base":{"label":["#c5cbe3","#a1a8c3","#3d4465","#3e4466"],"shape":["#f0f3ff","#d9dffa","#afb4d4","#646c9a"]}}};
         </script>
@@ -236,17 +233,19 @@
 <script src="./assets/vendors/general/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
 <script src="./assets/vendors/general/jquery.repeater/src/repeater.js" type="text/javascript"></script>
 <script src="./assets/vendors/general/dompurify/dist/purify.js" type="text/javascript"></script>
- <script src="./assets/js/demo3/scripts.bundle.js" type="text/javascript"></script>
+<!--end:: Global Optional Vendors -->
+
+<!--begin::Global Theme Bundle(used by all pages) -->
+         
+      <script src="./assets/js/demo3/scripts.bundle.js" type="text/javascript"></script>
 <!--end::Global Theme Bundle -->
 
                     <!--begin::Page Vendors(used by this page) -->
-                            <script src="./assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-                            <script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
-                            <script src="./assets/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
+                            <script src="./assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
                         <!--end::Page Vendors -->
          
                     <!--begin::Page Scripts(used by this page) -->
-                            <script src="./assets/js/demo3/pages/dashboard.js" type="text/javascript"></script>
+                            <script src="./assets/js/demo3/pages/crud/datatables/extensions/buttons.js" type="text/javascript"></script>
                         <!--end::Page Scripts -->
             </body>
     <!-- end::Body -->
