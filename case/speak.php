@@ -1,36 +1,79 @@
 <?php
  include '../php/common/config.php';
+ session_start();
   if(isset($_POST['admin']))
   {
    $email=$_POST['email'];
     $password=$_POST['password'];
-      $sql="SELECT email,password FROM user Where email='$email' and password='$password'";
+      $sql="SELECT email,password FROM user Where email= '" . $email. "' and password= '" . $password. "'";
      $result=mysqli_query($link,$sql);
             if($rows=mysqli_fetch_assoc($result))
-             {    
-             
-             
-               if($rows['email']=='tncoronaspeak@nixwhistle.com'&& $rows['password'] == 'tncoronaspeak')
+             { 
+               $_SESSION['email']=$email;
+           $_SESSION['password']=$password;  
+            $_SESSION['last_name']=$name;   
+              $password == 'CoronaSpeak';
+                if(md5($password) == 'aa18ca633f8192787eaef03a9d31187d'){
+              
+               if($_SESSION['email']=='CoronaSpeak@nixwhistle.com'&& $rows['password'] == 'CoronaSpeak')
                {
                
                  // echo "Sucessfully";
-                header("location:/tncorona/view/common/overview.php");
+                header("location:/coronaspeak/view/common/overview.php");
                // break;
                }
-             
-           
+             }
+
+               if($_SESSION['email']=='clinic' && $_SESSION['password'] == 'coronaspeak')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/coronaspeak/case/clinicview.php");
+               // break;
+               }
+               if($_SESSION['email']=='testing' && $_SESSION['password'] == 'coronaspeak')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/coronaspeak/case/testingview.php");
+               // break;
+               }
+                 if($_SESSION['email']=='hospital' && $_SESSION['password'] == 'coronaspeak')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/coronaspeak/case/hospitalview.php");
+               // break;
+               }
+           else if($rows['email']=='idea_analyst@nixwhistle.co'&& $rows['password']=='analyst')
+               {
+                 // echo "Sucessfully";
+                header("location:/coronaspeak/idea/view.php");
+               }
+            else if($rows['email']=='investigator@nixwhistle.co'&& $rows['password']=='investigator')
+               {
+                 // echo "Sucessfully";
+                header("location:/coronaspeak/investigator/view.php");
+               }
+               else if($rows['email']=='reviewer@nixwhistle.co'&& $rows['password']=='reviewer')
+               {
+                 // echo "Sucessfully";
+                header("location:/coronaspeak/reviewer/reviewerview.php");
+               }
+             }
              else
                {
                 // echo "Error: " . $sql . "<br>" . $link->error;
                 // alert("incorrect username and password");
                }
   }
-}
 ?>
+
+
 <?php
    include "../php/common/config.php";
    $target_dir = "../documents/";
-$target_file = $target_dir . basename($_FILES["Artifacts1"]["name"]);
+$target_file = $target_dir . basename($_FILES["Artifacts"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
    if(isset($_POST['submit']))
@@ -45,7 +88,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                $ran=$_POST['ran'];
                 $secretkey=$_POST['secretkey'];
                  $status="created";
-                $Artifacts1=$_FILES['Artifacts1']['name'];
+                $Artifacts=$_FILES['Artifacts']['name'];
                 $taking_test=$_POST['taking_test'];
                  $age=$_POST['age'];
 
@@ -82,12 +125,14 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
  $healthcondition=$_POST['healthcondition'];
 
  $diseasesymptoms=$_POST['diseasesymptoms'];
-
+ $city=$_POST['city'];
+ $zipcode=$_POST['zipcode'];
  if($coughrange=="")
  {
     $heat="low";
     $sql="INSERT INTO `case`(category,district,Description,name,email,phone,ran,secretkey,Artifacts,status,taking_test,age,gender,fever,drycough,feelingsmell,throatpain,bodyweak,nohunger,coughrange,shortness,breathing,drowsy,chestpain,weaknessbody,visitedoutside,contactaffect,infectedcountry,familycontact,healthcondition,diseasesymptoms,heat)
-     values('$category','$district','$Description','$name','$email','$phone','$ran','$secretkey','$Artifacts1','$status','$taking_test','$age','$gender','$fever','$drycough','$feelingsmell','$throatpain','$bodyweak','$nohunger','$coughrange','$shortness','$breathing','$drowsy','$chestpain','$weaknessbody','$visitedoutside','$contactaffect','$infectedcountry','$familycontact','$healthcondition','$diseasesymptoms','$heat')";
+     values('$category','$district','$Description','$name','$email','$phone','$ran','$secretkey','$Artifacts','$status','$taking_test','$age','$gender','$fever','$drycough','$feelingsmell','$throatpain','$bodyweak','$nohunger','$coughrange','$shortness','$breathing','$drowsy','$chestpain','$weaknessbody','$visitedoutside','$contactaffect','$infectedcountry','$familycontact','$healthcondition','$diseasesymptoms','$heat')";
+
 
      
         }
@@ -98,7 +143,6 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     $sql="INSERT INTO `case`(category,district,Description,name,email,phone,ran,secretkey,Artifacts,status,taking_test,age,gender,fever,drycough,feelingsmell,throatpain,bodyweak,nohunger,coughrange,shortness,breathing,drowsy,chestpain,weaknessbody,visitedoutside,contactaffect,infectedcountry,familycontact,healthcondition,diseasesymptoms,heat)
      values('$category','$district','$Description','$name','$email','$phone','$ran','$secretkey','$Artifacts','$status','$taking_test','$age','$gender','$fever','$drycough','$feelingsmell','$throatpain','$bodyweak','$nohunger','$coughrange','$shortness','$breathing','$drowsy','$chestpain','$weaknessbody','$visitedoutside','$contactaffect','$infectedcountry','$familycontact','$healthcondition','$diseasesymptoms','$heat')";
 
-      
         }
        else if($visitedoutside!=""||$contactaffect!=""||$infectedcountry!=""||$familycontact!=""||$healthcondition!=""||$diseasesymptoms!="")                                 
         {
@@ -106,22 +150,20 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     $sql="INSERT INTO `case`(category,district,Description,name,email,phone,ran,secretkey,Artifacts,status,taking_test,age,gender,fever,drycough,feelingsmell,throatpain,bodyweak,nohunger,coughrange,shortness,breathing,drowsy,chestpain,weaknessbody,visitedoutside,contactaffect,infectedcountry,familycontact,healthcondition,diseasesymptoms,heat)
      values('$category','$district','$Description','$name','$email','$phone','$ran','$secretkey','$Artifacts','$status','$taking_test','$age','$gender','$fever','$drycough','$feelingsmell','$throatpain','$bodyweak','$nohunger','$coughrange','$shortness','$breathing','$drowsy','$chestpain','$weaknessbody','$visitedoutside','$contactaffect','$infectedcountry','$familycontact','$healthcondition','$diseasesymptoms','$heat')";
 
-         
+        
         }
-         if(mysqli_query($link,$sql))
+ if(mysqli_query($link,$sql))
         {
            
-           if (move_uploaded_file($_FILES["Artifacts1"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["Artifacts1"]["name"]). " has been uploaded.";
+           if (move_uploaded_file($_FILES["Artifacts"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["Artifacts"]["name"]). " has been uploaded.";
             }
               echo "successfully";
            header("location:casecode.php");
         }
-        else
-        {
-           echo "Error: " . $sql4 . "<br>" . $link->error;
-        }
-
+        else{
+            echo "Error: " . $sql . "<br>" . $link->error;
+        } 
         }
  
 ?>
@@ -161,7 +203,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         }
         else
         {
-           echo "Error: " . $sql . "<br>" . $link->error;
+           echo "Error: " . $sql1 . "<br>" . $link->error;
           }
    
      
@@ -264,7 +306,7 @@ if(mysqli_query($link,$sql4))
 }
 else
 {
-     // echo "Error: " . $sql4 . "<br>" . $link->error;
+     echo "Error: " . $sql4 . "<br>" . $link->error;
 }
 
 
@@ -300,7 +342,7 @@ else
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">        <!--end::Fonts -->
         <!--begin:: Global Mandatory Vendors -->
         <!--begin::Page Custom Styles(used by this page) -->
-                              <link href="./assets/css/demo2/pages/wizard/wizard-1.css" rel="stylesheet" type="text/css" />
+                             <link href="./assets/css/demo2/pages/wizard/wizard-1.css" rel="stylesheet" type="text/css" />
                      <link href="./assets/css/demo2/pages/wizard/wizard-3.css" rel="stylesheet" type="text/css" />
 <link href="./assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
 <!--end:: Global Mandatory Vendors -->
@@ -530,10 +572,11 @@ You can stay anonymous and choose to followup with us also
 
 
                 <div name="Description" style="display: ;">
-            <p style="font-size: 20px; font-weight: 500">District :</p>
+            <p style="font-size: 20px; font-weight: 500">DISTRICT :</p>
             <div>
                 <div id="searchbox2">
-                     
+           
+                                                 
 <select id="district" name="district" class="form-control" style="border-color:#B8B8BB;background:transparent;">
        <option>Select your District</option>
          <option value='Chennai'  data-title="Chennai">Chennai</option>
@@ -577,11 +620,11 @@ You can stay anonymous and choose to followup with us also
 
 </select>
          
-         
         </div>
       </div>
     </div>
   </div>
+
 
 </div>
 <br>
@@ -609,7 +652,7 @@ You can stay anonymous and choose to followup with us also
 
       </div>
      </div>
-   <!--   <div id="details">
+     <div id="details">
             <div class="row">
          <div class="col-md-4 ">
            <input type="text" placeholder="FullName" id="name" name="name" class="form-control">&nbsp;
@@ -629,7 +672,7 @@ You can stay anonymous and choose to followup with us also
       </div>
   </div>
 
-</div> -->
+</div>
        
    <input type="hidden" name="secretkey" id="secretkey">
           <input type="hidden" name="ran" id="ran">
@@ -1101,8 +1144,8 @@ You can stay anonymous and choose to followup with us also
                     </div>
                     <div class="row">
                       <div class="col-md-6">
-                                                 
-<select id="district3" name="district3" class="form-control" style="border-color:#B8B8BB;background:transparent;">
+                                                                                       
+<select id="district2" name="district2" class="form-control" style="border-color:#B8B8BB;background:transparent;">
        <option>Select your District</option>
          <option value='Chennai'  data-title="Chennai">Chennai</option>
          <option value='Ariyalur'  data-title="Ariyalur">Ariyalur</option>
@@ -1144,7 +1187,6 @@ You can stay anonymous and choose to followup with us also
          <option value='Virudhunagar'  data-title="Virudhunagar">Virudhunagar</option>
 
 </select>
-         
                                     </div>
                                   </div>
                                 </div>
@@ -1236,7 +1278,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>1</span> Trivial
+                  <span>1</span> Anxiety
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -1244,7 +1286,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>2</span> Energy
+                  <span>2</span> Depression
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -1252,7 +1294,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>3</span> WorthWhile
+                  <span>3</span> Stress
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -1260,7 +1302,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>4</span>Enthusiastic
+                  <span>4</span> Self Esteem
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -1275,7 +1317,6 @@ You can stay anonymous and choose to followup with us also
             </a>
           </div>
         </div>
-      </div>
         <!--end: Form Wizard Nav -->
 
       </div>
@@ -1298,11 +1339,11 @@ You can stay anonymous and choose to followup with us also
 
 
                 <div name="Description" style="display: ;">
-            <p style="font-size: 20px; font-weight: 500">District :</p>
+            <p style="font-size: 20px; font-weight: 500">City :</p>
             <div>
                 <div id="searchbox2">
-           
-<select id="district2" name="district2" class="form-control" style="border-color:#B8B8BB;background:transparent;">
+                                                   
+<select id="district3" name="district3" class="form-control" style="border-color:#B8B8BB;background:transparent;">
        <option>Select your District</option>
          <option value='Chennai'  data-title="Chennai">Chennai</option>
          <option value='Ariyalur'  data-title="Ariyalur">Ariyalur</option>
@@ -1344,7 +1385,6 @@ You can stay anonymous and choose to followup with us also
          <option value='Virudhunagar'  data-title="Virudhunagar">Virudhunagar</option>
 
 </select>
-         
          
         </div>
       </div>
@@ -1987,18 +2027,22 @@ You can stay anonymous and choose to followup with us also
           <!--end: Form Actions -->
         </form>
        
+        <!--end: Form Wizard Form-->
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+ </div>
+
+
+</div>
+
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<br>
-<br>
-<br>
+<br><br>
  
 <script type="text/javascript">
   $(document).ready(function(){
@@ -2098,7 +2142,7 @@ You can stay anonymous and choose to followup with us also
 
        
                     <!--begin::Page Scripts(used by this page) -->
-                          <script src="./assets/js/demo2/pages/wizard/wizard-1.js" type="text/javascript"></script>
+                            <script src="./assets/js/demo2/pages/wizard/wizard-1.js" type="text/javascript"></script>
                             <script src="./assets/js/demo2/pages/wizard/wizard-3.js" type="text/javascript"></script>
                             <script src="./assets/js/demo2/pages/crud/forms/widgets/select2.js" type="text/javascript"></script>
     <!-- end::Body -->
