@@ -317,7 +317,7 @@ You can stay anonymous and choose to followup with us also
                   <i class="flaticon-bus-stop"></i>
                 </div>
                 <div class="kt-wizard-v1__nav-label">
-                  1. Your Info
+                  1. Screened
                 </div>
               </div>
             </a>
@@ -327,7 +327,7 @@ You can stay anonymous and choose to followup with us also
                   <i class="flaticon-list"></i>
                 </div>
                 <div class="kt-wizard-v1__nav-label">
-                  2. Symptoms
+                  2. Surveillance
                 </div>
               </div>
             </a>
@@ -337,7 +337,7 @@ You can stay anonymous and choose to followup with us also
                   <i class="flaticon-responsive"></i>
                 </div>
                 <div class="kt-wizard-v1__nav-label">
-                  3. Other Symptoms
+                  3. Active/Positive Cases
                 </div>
               </div>
             </a>
@@ -601,7 +601,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>1</span> Anxiety
+                  <span>1</span> Quarantine Facilities
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -609,7 +609,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>2</span> Depression
+                  <span>2</span> Isolation Beds
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -617,7 +617,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>3</span> Stress
+                  <span>3</span>  Face Shields
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
@@ -625,7 +625,7 @@ You can stay anonymous and choose to followup with us also
             <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
               <div class="kt-wizard-v3__nav-body">
                 <div class="kt-wizard-v3__nav-label">
-                  <span>5</span> Review
+                  <span>4</span> Review
                 </div>
                 <div class="kt-wizard-v3__nav-bar"></div>
               </div>
