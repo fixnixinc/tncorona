@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-  $query="SELECT * from info where status='created' or status='Analyzed' or status='reanalyze' order by id desc";
+  $query="SELECT * from info where status='created' or status='Analyzed' or status='reanalyze' or status='permana' order by id desc";
   $result=mysqli_query($link,$query);
 ?>
 <!DOCTYPE html>   
@@ -128,7 +128,7 @@ Info Lists
     <td><?php echo $rows['ran'];?></td>
      <td><?php echo $rows['createat'];?></td>
      <td><?php echo $rows['category'];?></td>
-      <td><?php echo $rows['district'];?></td>
+      <td><?php echo $rows['countries'];?></td>
        <td><?php echo $rows['name'];?></td>
         <td><?php echo $rows['email'];?></td>
          <td><?php echo $rows['phone'];?></td>

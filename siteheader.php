@@ -343,12 +343,12 @@ span.psw {
       <li class="nav-item" id="speak">
         <a class="nav-link active" href="case/speak.php" role="tab" style="font-size: 1.2rem;border-bottom:none;">SPEAK</a>
       </li>
-      <li class="nav-item" id="hchat">
+     <!--  <li class="nav-item" id="hchat">
         <a class="nav-link" href="https://telegra.ph/TN-Corona-Speak-03-27" role="tab" style="font-size: 1.2rem;border-bottom:none;">CHAT</a>
-      </li>
-      <li class="nav-item" id="infection">
+      </li> -->
+   <!--    <li class="nav-item" id="infection">
         <a class="nav-link" href="./infection_db/index.php" role="tab" style="font-size: 1.2rem;border-bottom:none;">INFECTION DATABASE</a>
-      </li>
+      </li> -->
       <li class="nav-item1">
        <div id="google_translate_element" style="margin-left:160%;"></div>
      </li>

@@ -19,7 +19,7 @@
                {
                
                  // echo "Sucessfully";
-                header("location:/coronaspeak/view/common/overview.php");
+                header("location:/coronaspeak/info/dashboard.php");
                // break;
                }
              }

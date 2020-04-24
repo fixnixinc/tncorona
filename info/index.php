@@ -1,9 +1,9 @@
 <?php
     include "../php/common/config.php";
       $ran = $_GET['id'];
-    $query = "SELECT * FROM info WHERE ran='$ran'";
+    $query = "SELECT * FROM `info` WHERE ran='$ran'";
   $result=mysqli_query($link,$query);
-  $query2= "SELECT * FROM info WHERE ran='$ran' order by id desc";
+  $query2= "SELECT * FROM `info` WHERE ran='$ran' order by id desc";
   $result2=mysqli_query($link,$query2);
     $query1 = "SELECT * FROM `info` WHERE ran='$ran'";
   $result1=mysqli_query($link,$query1);
@@ -243,25 +243,25 @@ Info - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) .
    <span id="apdate" style="color: red;"></span>
 </div>
    </div>
-   <!-- <?php 
+   <?php 
    if($rows2=mysqli_fetch_assoc($result2))
    {
    
-   if($rows2['status']=='reinvestigate')
+   if($rows2['status']=='reanalyze')
    {
-    ?> -->
-      <div class="form-group">
+    ?> 
+     <div class="form-group">
    
    
   <label style="font-size: 14px;"><strong> Reanalyze:</strong></label> 
       <div class="">
    <textarea type="text" class="form-control"   style="height: 150px; border-color:#A1E6EA" disabled=""><?php echo $rows2['reinvestigate'];?> </textarea>
-   <!-- <span class="form-control" style="height: 150px; border-color:#A1E6EA"><?php echo $rows['reinvestigate'];?></span> -->
+ 
 </div>
-<!-- <?php
+<?php
 }
 }
-?> -->
+?>
    </div>
 </div>
 
@@ -345,14 +345,14 @@ Info - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) .
    </div><br>
 
    <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;"></label>
+  <label style="font-size: 14px;  background-color: #f71462;color: white;">Management Update</label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
        <?php echo $rows['MUpdate'];?>
       </div>
    </div><br>
     <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;"></label>
+  <label style="font-size: 14px;  background-color: #f71462;color: white;">Update Citizen</label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
         <?php echo $rows['WBUpdate'];?>

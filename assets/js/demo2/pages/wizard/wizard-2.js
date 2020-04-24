@@ -30,7 +30,7 @@ var KTWizard2 = function () {
 
         // Change event
         wizard.on('change', function(wizard) {
-            KTUtil.scrollTop();    
+           
         });
     }
 
@@ -124,8 +124,7 @@ var KTWizard2 = function () {
             
             // Display error  
             invalidHandler: function(event, validator) {     
-                KTUtil.scrollTop();
-
+         
                 swal.fire({
                     "title": "", 
                     "text": "There are some errors in your submission. Please correct them.", 
