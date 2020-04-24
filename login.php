@@ -15,7 +15,7 @@
                {
                
                  // echo "Sucessfully";
-                header("location:/tncorona/view/common/overview.php");
+                header("location:/tncorona/info/dashboard.php");
                // break;
                }
              }

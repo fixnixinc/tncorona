@@ -223,215 +223,89 @@ if ($rows=mysqli_fetch_assoc($result)) {
 <!-- <div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;"> -->
 
 <div class="row form-group">        
-<!-- <div class="col-md-4">
-<label>Tip No</label><br>  
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['ran']; ?>">
 
-</div> -->
 <div class="col-md-6">
-<label><b>Created Date</b></label><br>
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['createat']; ?>">
+<label><strong>Category</strong></label><br>
+<span id="createdAt" class="form-control"><?php echo $rows['category'];?></span>
 </div>
 <div class="col-md-6">
-<label><b>Name of the Company</b> </label><br>
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['company']; ?>">
+<label><strong>Country</strong> </label><br>
+<span id="Business Unit" class="form-control"><?php echo $rows['countries'];?></span>
 </div>
 
-    </div>
-
-   
+    </div>  
    <!--<div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;">-->
 
-    <div class="row form-group">
-
-<div class="col-md-6">
-<label><b>Incident Informations</b></label>
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['incidentinfo']; ?>">
-
-</div>
-<div class="col-md-6">
-<label><b>Department</b></label><br>
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['department']; ?>">
-</div>
-
-    </div>
-
-   
-<!--<div class="container hide" id="data" style="border:2px solid #C3C8C6; margin-left: -18px; height: 90px;"> -->
+<!--<div class="container hide" id="data" style="border:2px solid #C3C8C6; margin-left: -18px; height: 90px;">  -->
 
 <!--</div>-->
 
   <!-- <div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;">-->
-<div class="row form-group">
-<div class="col-md-6">
-<label><i class=" fa fa-podcast" style="color: red;"></i><b>Category</b></label><br>
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['category']; ?>">
 
-</div>
-<div class="col-md-6">
-<label><b>Place</b></label><br>
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['place']; ?>"></div>
-
-
-</div>
   <!--   <div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;"> -->
-  <div class="row form-group">
-  <div class="col-md-6">
-<label><b>Encounter</b></label><br>
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['encounter']; ?>">
-</div>
-
-<div class="col-md-6">
-<label><b>Relationship</b></label><br>
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['relationship']; ?>">
-</div>
-
-      </div>
-   
-
- <!--<div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;">-->
-<div class="row form-group">
-           
-
-<!--
-<div class="col-md-6">
-<label>Authorities Know</label><br>
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['authorityknows']; ?>">
-</div> -->
 
 
-</div>
-
- <!-- <div id="authknowsarea"> -->
-<!--     <div class="row form-group">
-    <div class="col-md-6">
-<label>Authority's Email_ID</label><br>
-<input type="text" class="form-control" disabled="" value="<?php echo $rows['emailauth'] ;?>">
-</div>
-<div class="col-md-6">
-<label>Authority's Name</label><br>
-
-<input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['nameauth'] ;?>"></div>
-         
-
-</div>
-           
-<div class="row form-group">
-
-<div class="col-md-6">
-<label>Authority's Phone No.</label><br>
-
-<input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['phoneauth'] ;?>">             </div>
-
-</div>
-</div> -->
-</div>
-</div>
-
-<div class="container">
-
-<h3><strong>Reviewer Details</strong></h3>
-<br>
-</div>
-<div class="container">
-     <label class="" style="font-size: 14px;"><strong>People Involved:</strong></label>
- 
-
-<div id="people1" class="">
-<br>
-<div class="row">
-  <div class="input-group">
-   <div class="col-md-4 input_val">
-     <label><b>Name</b></label>
-
-<input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['namepi'] ;?>">
-   </div>
-   <div class="col-md-4 input_val">
-     <label><b>Designation</b></label>
-     <!--<input type="text" placeholder="Designation" class="form-control" style="border-color: #216582;">-->
-
-<input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['designationpi'] ;?>">
-   </div>
-   <div class="col-md-4 input_val">
-     <label><b>Department</b></label>
-    <!-- <input type="text" placeholder="Department" class="form-control" style="border-color: #216582;">-->
- <input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['departmentpi'] ;?>">   </div>
- 
-<!-- <div class="input-group after-add-more col-md-1">
-           <button class="btn add-more" type="button" title="Add Row"><i class="fa flaticon-plus"></i></button>
-       </div> -->
-
-       </div>  
-       </div>                                  
-   
-</div><br><br>
-<div class="control-group">
-<div class="row">
-      <div class="col-md-4 input_val">
-
-      <label style="font-size: 14px;"><b>Reported Monetory</b></label><br>
-      <input type="text" name="" class="form-control" disabled="" value="<?php echo $rows['monetaryvalue'] ;?>">
-   </div>
-   
-    <div class="col-md-4 input_val">
-<label><b>Suspected Monetory loss</b></label><br>
-    <span id="SMLoss" class="form-control"><?php echo $rows['SMLoss'];?></span>
-</div>
-
+<b>Details:</b><br><br>
+<div class="panel-body"style="border: 1px solid #e2e5ec;border-color:#A1E6EA">
+<div class="row form-group" style="margin:20px;">
 <div class="col-md-4 input_val">
-<label><b>Modus Operandi</b></label><br>
- <span id="MOperandi" class="form-control"><?php echo $rows['MOperandi'];?></span>  
+<label>Name</label>
+<span id="personsInvolved" class="form-control"><?php echo $rows['name'];?></span>
+</div>
+<div class="col-md-4 input_val">   
+<label>Email</label>
+<span id="Designation" class="form-control"><?php echo $rows['email'];?></span>
+</div>
+<div class="col-md-4 input_val">                  
+<label>Phone</label>
+<span id="Department" class="form-control"><?php echo $rows['phone'];?></span>
+</div>
+</div>
+</div><br>
+
+<br>
+
+    <div class="row form-group">
+
+<div class="col-md-12">
+<label><strong>Description</strong></label><br><br>
+<textarea id="nature" rows="7" class="form-control" disabled><?php echo $rows['Description'];?></textarea>
 </div>
 
-  </div>    
-</div>
-
-<div class="container"><br>
-</div>
-<!-- <div class="form-group">
-  <label style="font-size: 14px;"><strong>WhistleBlower Update:</strong></label>
-      <div class="">
-   <textarea type="text" class="form-control" id="WBUpdate" placeholder="Give WhistleBlower on update"  style="height: 150px;" disabled><?php echo $rows['WBUpdate'];?> </textarea>
-</div>
-   </div> -->
-   <!-- <div class="container"> -->
-  <div class="form-group">
+    </div>
+<div class="form-group">
   <label style="font-size: 14px;  background-color: coral;"><b>Artifacts</b></label>
- <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
+   
+  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
         <a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
       </div>
-   </div>
+   </div><br>
 
- <!-- </div> -->
-<br>
+   <div class="form-group">
+  <label style="font-size: 14px;  background-color: #f71462;color: white;">Management Update</label>
+   
+  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
+       <?php echo $rows['MUpdate'];?>
+      </div>
+   </div><br>
+    <div class="form-group">
+  <label style="font-size: 14px;  background-color: #f71462;color: white;">Update Citizen</label>
+   
+  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
+        <?php echo $rows['WBUpdate'];?>
+      </div>
+   </div><br>
 
+
+
+</div>
 <?php
 }
 ?>
 
-   <?php
-   $count=1;
-   while($rows1=mysqli_fetch_assoc($result1)){
-    ?>
-   <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Management Synopsis - <?php echo $count;?></b></label>
-   
-  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-       <?php echo $rows1['WBUpdate'];?>
-      </div>
-   </div><br>
-    <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;"><b>Updated to Blower - <?php echo $count;?></b></label>
-   
-  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-        <?php echo $rows1['MUpdate'];?>
-      </div>
-   </div><br>
- <?php 
- $count++;
-} 
-?>
-<div class="container">
+
+
+<!-- <div class="container">
   <div class="row">
     <div class="col-md-11">
   <button type="button" class="collapsible btn btn-success">Interaction</button>
@@ -446,7 +320,7 @@ if ($rows=mysqli_fetch_assoc($result)) {
    </div>
 </div>
 </div>
-</div>
+</div> -->
   <div class="form-group">
    
       <script type="text/javascript">
@@ -508,12 +382,12 @@ if ($rows=mysqli_fetch_assoc($result)) {
       </div>
    </div>
 </div> -->
-<div class="col-md-1">
+<!-- <div class="col-md-1">
     <div class="img" style="margin-left: 1090px;margin-top: -45px;">
        
           <a href="" data-toggle="modal" data-target="#myModal"><i class='fa fa-comments' style="color:  red; font-size: 38px;" title="Review"></i></a>
             </div>
-</div>
+</div> -->
 </div>
 </div>
 </form>

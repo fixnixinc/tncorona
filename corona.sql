@@ -38,7 +38,7 @@ CREATE TABLE `app_config` (
 --
 
 INSERT INTO `app_config` (`id`, `config_type_id`, `config_key`, `config_value`) VALUES
-(1, 1, 'super_admin_home', 'view/common/overview.php'),
+(1, 1, 'super_admin_home', 'info/dashboard.php'),
 (2, 2, 'ISO18001(OHSAS)', 'chairs'),
 (3, 2, 'ISO18001(OHSAS)', 'desks'),
 (4, 2, 'ISO22001(FSMS)', 'Food'),
@@ -117,7 +117,7 @@ INSERT INTO `app_config` (`id`, `config_type_id`, `config_key`, `config_value`) 
 (88, 19, 'auditor', 'complainceAdmin'),
 (89, 19, 'auditor', 'auditorAdmin'),
 (90, 19, 'auditee', 'auditorAdmin'),
-(91, 1, 'company_admin_home', 'view/common/overview.php'),
+(91, 1, 'company_admin_home', 'info/dashboard.php'),
 (92, 18, 'menu', 'auditDashboard'),
 (93, 19, 'grcadmin', 'auditDashboard'),
 (94, 19, 'grcadmin', 'auditorAdmin'),
@@ -185,7 +185,7 @@ INSERT INTO `app_config` (`id`, `config_type_id`, `config_key`, `config_value`) 
 (160, 1, 'bcpm_planner_home', 'view/bcpm/prePlan.php'),
 (161, 1, 'bcpm_maintainer_home', 'view/bcpm/bcpmMaintainenceAdmin.php'),
 (162, 1, 'bcpm_tester_home', 'view/bcpm/bcpmExerciseAdmin.php'),
-(163, 1, 'companyadmin_home', 'view/common/overview.php'),
+(163, 1, 'companyadmin_home', 'info/dashboard.php'),
 (164, 1, 'disaster_owner_home', 'view/disaster/disasterDashboard.php'),
 (165, 1, 'disaster_tester_home', 'view/disaster/disasterTestList.php'),
 (166, 1, 'disaster_trainer_home', 'view/disaster/disasterTrainingList.php'),

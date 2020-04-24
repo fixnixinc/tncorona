@@ -135,7 +135,7 @@ My Lists
    <td><?php echo $rows['ran'];?></td>
      <td><?php echo $rows['createat'];?></td>
      <td><?php echo $rows['category'];?></td>
-      <td><?php echo $rows['district'];?></td>
+      <td><?php echo $rows['countries'];?></td>
        <td><?php echo $rows['name'];?></td>
         <td><?php echo $rows['email'];?></td>
          <td><?php echo $rows['phone'];?></td>

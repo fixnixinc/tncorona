@@ -1,6 +1,6 @@
 <?php
     include "../php/common/config.php";
-     $tipno = $_GET['tipno'];
+     $tipno = $_GET['ran'];
     $query = "SELECT * FROM info WHERE ran='$tipno' order by id desc";
     $result = mysqli_query($link,$query);
     $query1 = "SELECT * FROM info WHERE ran='$tipno'";
@@ -104,9 +104,7 @@ font-size: 13px;
  
 </style>
 </head>
-<?php
-include '../siteHeader.php';
-?>
+
 <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 <h2 style="margin-left: 400px;"></h2>
 <form method="post">
@@ -128,8 +126,8 @@ include '../siteHeader.php';
  if($rows=mysqli_fetch_assoc($result)) {
   ?>
  <div class="container">
-  <label style="color: black;">Info Update:</label>
-  <textarea type="text" class="form-control" rows="8"  id="update" placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['WBUpdate'];?> </textarea>
+  <label style="color: black;"><strong>Info Update:</strong></label>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['WBUpdate'];?> </textarea>
 </div>
 <?php } ?>
 <br>
@@ -138,12 +136,12 @@ include '../siteHeader.php';
 </div><br>
 <div id="demo" class="collapse">
 <div class="container">
-  <label style="color: black;">Category :</label>
+  <label style="color: black;"><strong>Category :</strong></label>
 <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['category'];?>" style="background: transparent;">
 </div><br>
 
 <div class="container">
-  <label style="color: black;">Description :</label>
+  <label style="color: black;"><strong>Description :</strong></label>
   <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['Description'];?>" style="background: transparent;">
 </div>
 <br>
@@ -203,7 +201,7 @@ include '../siteHeader.php';
 <br>
 
     <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;"><b>Updated to Info- <?php echo $count;?></b></label>
+  <label style="font-size: 14px;  background-color: #f71462;"><b>Updated to Citizen- <?php echo $count;?></b></label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
         <?php echo $rows1['MUpdate'];?>

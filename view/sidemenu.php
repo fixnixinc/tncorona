@@ -16,7 +16,7 @@
                        
           <div class="kt-aside__brand kt-grid__item" id="kt_aside_brand">
             <div class="kt-aside__brand-logo">
-                <a href="view/common/overview.php">
+                <a href="info/dashboard.php">
                 <img src=" ./assets/media/company-logos/whistle.png" alt="" width="100px" height="100px" />
               </a>
                                                                  

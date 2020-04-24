@@ -14,7 +14,7 @@
                {
                
                  // echo "Sucessfully";
-                header("location:/tncorona/view/common/overview.php");
+                header("location:/tncorona/info/dashboard.php");
                // break;
                }
              
@@ -134,8 +134,8 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
    if(isset($_POST['login']))
    {
      $category=$_POST['info'];
-     
-          $countries1=$_POST['countries1'];
+      $category1=$_POST['selimg'];
+          $countries1=$_POST['district2'];
            $Description1=htmlspecialchars($_POST['Description1']);
            $name1=$_POST['name1'];
            $email1=$_POST['email1'];
@@ -182,7 +182,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                if($rows['ran']==$ran && $rows['secretkey']==$secretkey)
                {
                   echo "Sucessfully";
-                header("location:/coronaspeak/case/followup.php?ran=".$rows['ran']);
+                header("location:/tncorona/case/followup.php?ran=".$rows['ran']);
                }
              }
             
@@ -195,7 +195,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                if($rows['ran']==$ran && $rows['secretkey']==$secretkey)
                {
                   echo "Sucessfully";
-                header("location:/coronaspeak/info/followup.php?ran=".$rows['ran']);
+                header("location:/tncorona/info/followup.php?ran=".$rows['ran']);
                }
              }
                }
@@ -462,13 +462,13 @@ else
         <div class="row">
     <div class="col">
         <div class="zoom">
-        <div class="alert alert-light alert-elevate fade show" role="alert" id="disc">
+<!--         <div class="alert alert-light alert-elevate fade show" role="alert" id="disc">
             <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
             <div class="alert-text">
             Do not hesitate to share your symptoms about Covid 19 (Corona). TN Corona County Medical Association will make best effort to reach out through the near by testing center, clinic or hospital based on your criticality.
 You can stay anonymous and choose to followup with us also
             </div>
-        </div>
+        </div> -->
     </div>
     </div>
 </div>
@@ -660,7 +660,7 @@ You can stay anonymous and choose to followup with us also
                      <div class="form-group">
              
               <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;font-size: 14px;">
-         <input type="radio" name="radio1" value="Anonymous1" id="Anonymous1" checked="checked">Keen to be Anonymous
+         <input type="radio" name="radio1" value="Anonymous1"  checked="checked">Keen to be Anonymous
          <span></span>
        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          <label class="kt-radio kt-radio--solid kt-radio--danger" style="color: black; font-size: 14px;">
@@ -681,7 +681,9 @@ You can stay anonymous and choose to followup with us also
         <input type="text" placeholder="Email" id="email" name="email1" class="form-control">&nbsp;
       </div>
       <div class="col-md-4">
-        <input type="text" placeholder="Phone" id="phone" name="phone1" class="form-control">
+
+        <input type="text" placeholder="Phone" id="phone" name="phone1" class="form-control" >
+
       </div>
 
 
