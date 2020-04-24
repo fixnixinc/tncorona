@@ -171,7 +171,7 @@ Info -
 if ($rows=mysqli_fetch_assoc($result)) {
 ?>
 <div class="container">
-<label style="font-size: 14px;"><strong>Management Update</strong></label>
+<label style="font-size: 14px;"><strong> Citizen Update</strong></label>
 <div class="">
 <textarea type="text" class="form-control" id="MUpdate" placeholder="Ask WhistleBlower for more Info" style="height: 150px;" disabled> <?php echo $rows['MUpdate'];?> </textarea>
 
@@ -181,15 +181,15 @@ if ($rows=mysqli_fetch_assoc($result)) {
 <br>
   <div class="container">
   <label class="kt-radio kt-radio--solid kt-radio--success">
-  <input type="radio" name="radio1" value="1"/>Resolution<span></span></label>&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="radio1" value="1"/>District Instruction<span></span></label>&nbsp;&nbsp;&nbsp;
   <label class="kt-radio kt-radio--solid kt-radio--danger">
-<input type="radio" name="radio1" value="2"/>Re-Analyze<span></span></label>
+<input type="radio" name="radio1" value="2"/>District Detailed Analysis<span></span></label>
 <br>
 
     <!-- <label style="font-size: 14px;"><strong>Resolution </strong></label> -->
 <div class="rad ra1" style="display: none">
 <!--  <span id="resolution" class="form-control" style="font-size: 13px;height: 150px;"></span> -->
-<textarea id="resolution" name="resolution" class="form-control" style="font-size: 13px;height: 150px; border-color: #A1E6EA;" placeholder="Resolution"></textarea>
+<textarea id="resolution" name="resolution" class="form-control" style="font-size: 13px;height: 150px; border-color: #A1E6EA;" placeholder="District Instruction"></textarea>
         </div>
 
 
@@ -197,7 +197,7 @@ if ($rows=mysqli_fetch_assoc($result)) {
 <div class="rad ra2" style="display: none;">
 
 <!--  <span id="resolution" class="form-control" style="font-size: 13px;height: 150px;"></span> -->
-<textarea id="reinvestigation" name="reinvestigate" class="form-control" style="font-size: 13px;height: 150px;border-color: #A1E6EA;" placeholder="Re-Analyze"></textarea>
+<textarea id="reinvestigation" name="reinvestigate" class="form-control" style="font-size: 13px;height: 150px;border-color: #A1E6EA;" placeholder="District Detailed Analysis"></textarea>
 <!-- <span id="reinvestigation" class="form-control" style="font-size: 13px;height: 150px;"></span>
  -->        </div>
 </div>
@@ -229,7 +229,7 @@ if ($rows=mysqli_fetch_assoc($result)) {
 <span id="createdAt" class="form-control"><?php echo $rows['category'];?></span>
 </div>
 <div class="col-md-6">
-<label><strong>Country</strong> </label><br>
+<label><strong>District</strong> </label><br>
 <span id="Business Unit" class="form-control"><?php echo $rows['countries'];?></span>
 </div>
 
@@ -274,7 +274,7 @@ if ($rows=mysqli_fetch_assoc($result)) {
 
     </div>
 <div class="form-group">
-  <label style="font-size: 14px;  background-color: coral;"><b>Artifacts</b></label>
+  <label style="font-size: 14px;  background-color: coral;"><b>Attachments</b></label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
         <a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
@@ -289,7 +289,7 @@ if ($rows=mysqli_fetch_assoc($result)) {
       </div>
    </div><br>
     <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;">Update Citizen</label>
+  <label style="font-size: 14px;  background-color: #f71462;color: white;"> Citizen Update</label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
         <?php echo $rows['WBUpdate'];?>

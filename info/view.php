@@ -97,7 +97,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Info Lists
+Central Despatch
 </h3>
 </div>
 

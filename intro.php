@@ -59,6 +59,52 @@
                }
   }
 ?>
+
+<?php
+   $target_dir = "./documents/";
+$target_file = $target_dir . basename($_FILES["Artifacts"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+   if(isset($_POST['login']))
+   {
+     $category=$_POST['info'];
+      $category1=$_POST['selimg'];
+          $countries1=$_POST['district2'];
+           $Description1=htmlspecialchars($_POST['Description1']);
+           $name1=$_POST['name1'];
+           $email1=$_POST['email1'];
+           $phone1=$_POST['phone1'];
+               $ran1=$_POST['tipno1'];
+                $secretkey1=$_POST['passkey1'];
+               
+                 $status1="created";
+                $Artifacts=$_FILES['Artifacts']['name'];
+
+
+ $sql1="INSERT INTO `info` (category,countries,Description,name,email,phone,ran,secretkey,Artifacts,status)
+     values('$category1','$countries1','$Description1','$name1','$email1','$phone1','$ran1','$secretkey1','$Artifacts','$status1')";
+
+        if(mysqli_query($link,$sql1))
+        {
+           
+           if (move_uploaded_file($_FILES["Artifacts"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["Artifacts"]["name"]). " has been uploaded.";
+            }
+              echo "successfully";
+           header("location:./info/infocode.php");
+        }
+        else
+        {
+           echo "Error: " . $sql1 . "<br>" . $link->error;
+          }
+   
+     
+     
+      }
+ 
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en" >
@@ -138,7 +184,6 @@
  background-image: url('png/front.png');
         height: 1200px;
         width:100%;
-
     box-sizing:cover;
       background-repeat: no-repeat;
   }
@@ -326,6 +371,107 @@ width:100%;
   background-color: #AFD135;
 }
 </style>
+<style>
+.zoom {
+
+  transition: transform .2s; /* Animation */
+
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+#disc
+{
+
+ box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;
+}
+#content
+{
+
+ box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;
+}
+.kt-font-transform-u
+{
+
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 240px;
+    display: inline-block;
+    border-radius: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 15px;
+
+}
+</style>
+    <style type="text/css">
+          .text-line {
+        background-color: transparent;
+        color: white;
+        outline: none;
+        outline-style: none;
+        outline-offset: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom:solid white 1px;
+        padding: 3px 10px;
+        width: 700px;
+        font-size: 16px;
+    }
+     .wid{
+      position: relative;
+      height: 40px;
+    }
+      .image {
+      position: absolute;
+      right: 24px;
+      bottom: 149px;
+    }
+
+.imageandtext {
+  position: relative;
+}
+.image_grid {
+  display: inline-block;
+  padding-left: 5px;
+}
+.image_grid img {                       /*  added rule  */
+  display: block;
+}
+
+.image_grid input {
+  display: none;
+}
+.image_grid input:checked + .caption {
+  background: rgba(0,0,0,0.5);
+}
+.image_grid input:checked + .caption::after {
+  content: '✔';    
+  position: absolute;
+  top: 60%; left: 51%;
+  width: 30px; height: 30px;
+  transform: translate(-50%,-50%);
+  color: #CB3A29;
+  font-size: 20px;
+  text-align: center;
+  border: 3px solid #CB3A29;
+  border-radius: 50%;
+}
+@media screen and (min-width: 1024px) {
+  .resp {
+    position: absolute;
+    margin-left: 1140px;
+    margin-top: 100px;
+  }
+  .sub {
+    margin-left: 100%;
+  }
+}
+ </style>
 
 
     <body  class="kt-page--loading-enabled kt-page--loading kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--transparent kt-page--loading">
@@ -345,193 +491,244 @@ width:100%;
 No matter what's troubling you, get the support you need, right now from Tamilnadu government. We’re in This together
 </div><br>
 <div class="home-actions">
-<span class="chat button"><a href="case/speak.php" style="color: white;">GET HELP - IT GETS BETTER</a></span>
+
 <!-- <span class="appointment button"><a href="https://telegra.ph/TN-Corona-Speak-03-27" style="color: white;">CHAT NOW</a></span> -->
 </div>
 
 </div>
  
 </div>
+<!-- SpeakUp  start -->
+
+ <div class="kt-container  kt-grid__item kt-grid__item--fluid" id="content">
+                                         <div class="kt-portlet">
+           <!--  <div class="kt-portlet__head">
+                <div class="kt-portlet__head-label">
+                    <h3 class="kt-portlet__head-title">
+                    TITLE
+                    </h3>
+                </div>
+            </div> -->
+            <div class="kt-portlet__body">
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <!-- <li class="nav-item" >
+                        <a class="" data-toggle="tab" href="#kt_tabs_1_1">
+                            <i class="la la-comment" style="font-size: 50px; color: #034ea2;"></i>  <label style="font-size:20px;font-weight: 500;color: black;">CASE</label>
+                        </a>
+                    </li>
+                -->
+                    <li class="nav-item">
+                        <a class="" data-toggle="tab" href="#kt_tabs_1_3">
+                            <i class="flaticon-presentation" style="font-size: 50px; color: #afd135;"></i>  <label style="font-size:18px;font-weight: 500;color: black;">My Problem</label>
+                        </a>
+                    </li>
+               <!--      <li class="nav-item">
+                        <a class="" data-toggle="tab" href="#kt_tabs_1_4">
+                            <i class="fa flaticon-customer" style="font-size: 50px; color: #034ea2;"></i>  <label style="font-size:18px;font-weight: 500;color: black;">Emotinal Wellness</label>
+                        </a>
+                    </li>
+                  -->
+                </ul>
+                <div class="tab-content">
+                    
+ <div class="tab-pane active" id="kt_tabs_1_3" role="tabpanel">
+      <form class="kt-form" method="post" enctype="multipart/form-data">
+                    <!--begin: Form Wizard Step 1-->
+                    <div class="kt-wizard-v1__content" data-ktwizard-type="step-content" data-ktwizard-state="current" style="padding-left: 10%; padding-right: 10%;">
+                        <div class="kt-heading kt-heading--md" style="font-size: 18px; font-weight: 300">Setup Your Current Info:</div>
+                        <div class="kt-form__section kt-form__section--first">
+                            <div class="kt-wizard-v1__form">
+                                <div class="form-group">
+                                 <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Info:</label>
+                    </div>  
+
+                              <div class="row">
+                                   <div class="grid-two imageandtext" >
+
+  <div class="imageandtext image_grid">
+    <label for="selimg1" style="text-align: center;">Death <br><br>
+     <i class="fa fa-user-shield" style="font-size: 50px; color: #005eaa;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg1" value="death">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="imageandtext image_grid">
+    <label for="selimg2" style="text-align: center;">Neighborhood Alert<br><br>
+    <i class="fa fa-hands-helping" style="font-size: 50px; color: #4b830d;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg2" value="NeighborhoodAlert">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="imageandtext image_grid">
+    <label for="selimg3" style="text-align: center;">Travel Alert<br><br>
+       <i class="fa fa-bus-alt" style="font-size: 50px; color: #005eaa;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg3" value="travelAlert">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="imageandtext image_grid">
+    <label for="selimg4" style="text-align: center;">Feed<br><br>
+      <i class="la la-feed" style="font-size: 50px; color: #4b830d;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg4" value="feed">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="imageandtext image_grid">
+    <label for="selimg5" style="text-align: center;">Operation<br><br>
+      <i class="fa fa-ambulance" style="font-size: 50px; color: #005eaa;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg5" value="operation">
+    <div class="caption">
+     
+    </div>
+  </div>
+
+</div>
+           
+                                  <!--   <span class="form-text text-muted">Please enter your Address.</span> -->
+                                </div>
+                                        <div class="form-group">
+                                               <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">District:</label>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                                                                                       
+<select id="district2" name="district2" class="form-control" style="border-color:#B8B8BB;background:transparent;">
+       <option>Select your District</option>
+         <option value='Chennai'  data-title="Chennai">Chennai</option>
+         <option value='Ariyalur'  data-title="Ariyalur">Ariyalur</option>
+         <option value='Chengalpattu'  data-title="Chengalpattu">Chengalpattu</option>
+         <option value='Coimbatore'  data-title="Coimbatore">Coimbatore</option>
+         <option value='Cuddalore'  data-title="Cuddalore">Cuddalore</option>
+         <option value='Dharmapuri'  data-title="Dharmapuri">Dharmapuri</option>
+         <option value='Dindigul'  data-title="Dindigul">Dindigul</option>
+         <option value='Erode'  data-title="Erode">Erode</option>
+         <option value='Kallakurichi'  data-title="Kallakurichi">Kallakurichi</option>
+         <option value='Kanchipuram'  data-title="Kanchipuram">Kanchipuram</option>
+         <option value='Kanniyakumari'  data-title="Kanniyakumari">Kanniyakumari</option>
+         <option value='Karur'  data-title="Karur">Karur</option>
+         <option value='Krishnagiri'  data-title="Krishnagiri">Krishnagiri</option>
+         <option value='Madurai'  data-title="Madurai">Madurai</option>
+         <option value='Mayiladuthurai'  data-title="Mayiladuthurai">Mayiladuthurai</option>
+         <option value='Nagapattinam'  data-title="Nagapattinam">Nagapattinam</option>
+         <option value='Namakkal'  data-title="Namakkal">Namakkal</option>
+         <option value='Nilgiris'  data-title="Nilgiris">Nilgiris</option>
+         <option value='Perambalur'  data-title="Perambalur">Perambalur</option>
+         <option value='Pudukkottai'  data-title="Pudukkottai">Pudukkottai</option>
+         <option value='Ramanathapuram'  data-title="Ramanathapuram">Ramanathapuram</option>
+         <option value='Ranipet'  data-title="Ranipet">Ranipet</option>
+         <option value='Salem'  data-title="Salem">Salem</option>
+         <option value='Sivagangai'  data-title="Sivagangai">Sivagangai</option>
+         <option value='Tenkasi'  data-title="Tenkasi">Tenkasi</option>
+         <option value='Thanjavur'  data-title="Thanjavur">Thanjavur</option>
+         <option value='Theni'  data-title="Theni">Theni</option>
+         <option value='Thoothukudi'  data-title="Thoothukudi">Thoothukudi</option>
+         <option value='Tiruchirappalli'  data-title="Tiruchirappalli">Tiruchirappalli</option>
+         <option value='Tirunelveli'  data-title="Tirunelveli">Tirunelveli</option>
+         <option value='Tirupattur'  data-title="Tirupattur">Tirupattur</option>
+         <option value='Tiruppur'  data-title="Tiruppur">Tiruppur</option>
+         <option value='Tiruvallur'  data-title="Tiruvallur">Tiruvallur</option>
+         <option value='Tiruvannamalai'  data-title="Tiruvannamalai">Tiruvannamalai</option>
+         <option value='Tiruvarur'  data-title="Tiruvarur">Tiruvarur</option>
+         <option value='Vellore'  data-title="Vellore">Vellore</option>
+         <option value='Viluppuram'  data-title="Viluppuram">Viluppuram</option>
+         <option value='Virudhunagar'  data-title="Virudhunagar">Virudhunagar</option>
+
+</select>
+                                    </div>
+                                  </div>
+                                </div>
+                                   
+                                    <div class="form-group">
+                                      <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Description:</label>
+                    </div>  
+                         <textarea type="text" rows="8" class="form-control" name="Description1" id="Description1"></textarea>
+                                </div>
+                               <div class="form-group">
+                                      <div class="kt-section__content">
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Attachment:</label>
+                    </div>  
+                     <div class="form-group">
+       
+          <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone_2">
+            <div class="dropzone-msg dz-message needsclick">
+                <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
+                <!-- <span class="dropzone-msg-desc">Upload up to 10 files</span> -->
+                <label for="Artifacts" aria-hidden="true">
+         <img src="csv.svg" title="Upload File" width="35" height="35" >
+                 <input type="file" name="Artifacts" id="Artifacts" style="display: none;">
+               </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+                                        <div class="form-group">
+                                  
+                     <div class="form-group">
+             
+    
+      </div>
+     </div>
+           <div id="details1">
+            <div class="row">
+         <div class="col-md-4">
+           <input type="text" placeholder="FullName" id="name" name="name1" class="form-control" required="">&nbsp;
+        </div>
+      <div class="col-md-4">
+        <input type="text" placeholder="Email" id="email" name="email1" class="form-control">&nbsp;
+      </div>
+      <div class="col-md-4">
+
+        <input type="text"  placeholder="1234-567-890" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" id="phone" name="phone1" class="form-control" required="">
+
+      </div>
 
 
-<div class="container" style="text-align: center;border-bottom: 1px solid #979797" id="details">
-<div class="row no-margin">
-<div class="col l3 s6">
-<div class="img-container">
-<i class="fa flaticon2-shield" style="font-size: 50px; color: #034ea2;"></i>
+  </div>
 </div>
-<div class="text">
-PRIVATE &amp; CONFIDENTIAL
-</div>
-</div>
-<div class="col l3 s6">
-<div class="img-container">
-  <i class="fa fa-theater-masks" style="font-size: 50px; color: #afd135;"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                        <input type="hidden" name="passkey1" id="passkey1">
+          <input type="hidden" name="tipno1" id="tipno1">
+                   <div style="text-align:center">  
+    <input type="submit" name="login" id="info" value="submit" class="btn btn-success" style="display: inline-block;border-radius: 8px solid transparent;border:2px solid #afd135;color:#fff;background:#afd135;width: 30%;">
+</div>  
+                </form>
+
+
  </div>
-<div class="text">
-ANONYMOUS DISCUSSIONS
-</div>
-</div>
-<div class="col l3 s6">
-<div class="img-container">
-<i class="fa fa-stopwatch" style="font-size: 50px; color: #034ea2;"></i>
-</div>
-<div class="text">
-24X7 ROUND THE CLOCK SUPPORT
-</div>
-</div>
-<div class="col l3 s6">
-<div class="img-container">
-<i class="fa fa-desktop" style="font-size: 50px; color: #afd135;"></i>
-</div>
-<div class="text">ASSURED SUPPORT FROM GOVERNMENT
 
-</div>
-</div>
-</div>
-</div>
+
+
+             
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- SpeakUp end  -->
+
 <br><br>
 
-<div class="hl-help">
-  <div class="title">
-Three steps TNCoronaSpeak can help you
-</div>
-<div class="row no-margin">
-<div class="col-md-4">
-<div class="help-container">
-<div class="img-container">
-<img src="png/15861585380318471134359992370317.jpg" height="100%" width="100%;"  style="border:2px solid #D9D7D6;border-radius: 25px;">
-</div>
-<div class="content-container">
-<div class="details-container">
-<span>1</span>
-<span class="details">Self Assess your Corona Symptoms</span>
-</div>
-<div class="desc">
-If something bothering you feel free to connect with us. We will help you irrespective of any situation.
-We will stay together and fight against it.
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="help-container">
-<div class="img-container">
- <img src="png/15861585081055087752714178304005.jpg" height="100%" width="100%;" style="border:2px solid #D9D7D6;border-radius: 25px;">
-</div>
-<div class="content-container">
-<div class="details-container">
-<span>2</span>
-<span class="details">Chat with Experts </span>
-</div>
-<div class="desc">
-Never hesitate to tell us about your symptoms. Share your symptoms and get expert view about how
-you should proceed
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="help-container">
-<div class="img-container">
- <img src="png/15861585623313355370649561358679.jpg" height="100%" width="100%;" style="border:2px solid #D9D7D6;border-radius: 25px;">
-</div>
-<div class="content-container">
-<div class="details-container">
-<span>3</span>
-<span class="details">Get realtime Information</span>
-</div>
-<div class="desc">
-The maps and district information provides latest data on Covid19 infections, deaths, most authenticated by government.
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
 
 
-<div class="" style="margin-top: -9%;" id="shadow">
-  <div class="kt-portlet" >
-  <div class="kt-portlet__body  kt-portlet__body--fit">
-    <div class="row row-no-padding row-col-separator-xl">
-      <div class="col-xl-4 col-md-4 col-sm-4" style="height: 160px;">
-        <!--begin:: Widgets/Daily Sales-->
-<div class="kt-portlet kt-portlet--height-fluid">
-  <div class="kt-widget14">
-    <div class="kt-widget14__header kt-margin-b-30">
-      <div class="row">
-      <div class="col-xl-3 col-md-3 col-sm-3">
-      <i class="flaticon-chat-1" id="mental"></i>
-     </div>
-     <div class="col-xl-9 col-md-9 col-sm-9">
-      <h3 class=""  style="color: #2d2d2d; font-size: 20px;">
-        Mental Health Chat
-      </h3>
-      <span class="kt-widget14__desc" style="font-size: 14px;font-weight: 300;">
-        Check out the best mental health tips at the times of stress, addiction, other cases of extreme psychological issues
-      </span>
-    </div>
-  </div>
-    </div>
-   <!--  <div class="kt-widget14__chart">
-      <canvas  id="kt_chart_daily_sales"></canvas>
-    </div> -->
-  </div>
-</div>  
-</div>
-       <div class="col-xl-4 col-md-4 col-sm-4" style="height: 160px;">
-        <!--begin:: Widgets/Profit Share-->
-<div class="kt-portlet kt-portlet--height-fluid">
-  <div class="kt-widget14">
-     <div class="kt-widget14__header kt-margin-b-30">
-    <div class="row">
-      <div class="col-xl-3 col-md-3 col-sm-3">
-        <i class="flaticon-placeholder-3" id="tracksub"></i>
-      </div>
-      <div class="col-xl-9 col-md-9 col-sm-9">
-      <h3 class="" style="color: #2d2d2d; font-size: 20px;">
-        Track the Submission
-       </h3>
-      <span class="kt-widget14__desc" style="font-size: 14px;font-weight: 300;">
-       Post submission, followup about the action
-
-      </span>
-    </div>  
-  </div>
-</div>
-  </div>
-</div>    
-<!--end:: Widgets/Profit Share-->     </div>
-      <div class="col-xl-4 col-md-4 col-sm-4" style="height: 160px;">
-        <!--begin:: Widgets/Revenue Change-->
-<div class="kt-portlet kt-portlet--height-fluid">
-  <div class="kt-widget14">
-    <div class="kt-widget14__header kt-margin-b-30">
-      <div class="row">
-        <div class="col-xl-3 col-md-3 col-sm-3">
-          <i class="flaticon2-user-1" id="anonymous"></i>
-        </div>
-        <div class="col-xl-9 col-md-9 col-sm-9">
-      <h3 class="" style="color: #2d2d2d;font-size: 20px;">
-     
-    Anonymous Assurance
- 
-      </h3>
-      <span class="kt-widget14__desc" style="font-size: 14px;font-weight: 300;">
-      Dont need to disclose identity and can check the symptoms based action guidance recommended by Government
-      </span>
-    </div>
-     </div>
-  </div>
-</div>  
-</div>
-    </div>
-    </div>
-  </div>
-</div>
-</div>
 
 
 <br>
@@ -563,11 +760,11 @@ The maps and district information provides latest data on Covid19 infections, de
         <div class="kt-wizard-v2__nav" >
           <div class="kt-wizard-v2__nav-items" >
             <!--doc: Replace A tag with SPAN tag to disable the step link click -->
-            <a class="kt-wizard-v2__nav-item"  data-ktwizard-type="step" >
+         <!--    <a class="kt-wizard-v2__nav-item"  data-ktwizard-type="step" >
               <div class="kt-wizard-v2__nav-body">
-               <!--  <div class="kt-wizard-v2__nav-icon">
+                <div class="kt-wizard-v2__nav-icon">
                   <i class="flaticon-globe" style="color:#034ea2; "></i>
-                </div> -->
+                </div>
                 <div class="kt-wizard-v2__nav-label">
                   <div class="kt-wizard-v2__nav-label-title">
                   
@@ -577,11 +774,11 @@ The maps and district information provides latest data on Covid19 infections, de
                   </div>
                 </div>
               </div>
-            </a>
+            </a> -->
 
 
           
-    <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
+    <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step" data-ktwizard-state="step-first">
               <div class="kt-wizard-v2__nav-body">
                 <div class="kt-wizard-v2__nav-icon">
                   <i class="flaticon-bus-stop" style="color: #afd135;"></i>
@@ -619,19 +816,17 @@ The maps and district information provides latest data on Covid19 infections, de
       <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v2__wrapper" style="background-image:url('png/backimg4.jpg');">
         <!--begin: Form Wizard Form-->
         <form class="kt-form" id="kt_form" >
-          <div id="#current" >
+          <div id="current" >
           <!--begin: Form Wizard Step 1-->
-          <div class="kt-wizard-v2__content" data-ktwizard-type="step-content" data-ktwizard-state="current" >
+          <!-- <div class="kt-wizard-v2__content" data-ktwizard-type="step-content" data-ktwizard-state="current" > -->
             <!-- <div class="kt-heading kt-heading--md">Enter your Account Details</div> -->
             <div class="kt-form__section kt-form__section--first">
               <div class="kt-wizard-v2__form">
-               
-             
-                                                <div class="row">
-                                                        <div class="col-md-12" id="worldmap">
-                                                           <div class="header" style="background: #afd135;height: 6px;">
+                 <div class="row">
+                  <div class="col-md-12" id="worldmap">
+             <!--      <div class="header" style="background: #afd135;height: 6px;">
                                                                                
-                                                                        </div>
+                                </div> -->
       <!-- <div class='tableauPlaceholder' id='viz1587030737912' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TNCoronaSpeak1&#47;TNCoronaSpeak' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>    -->           
  <script type='text/javascript'>                    
            var divElement = document.getElementById('viz1587030737912');                    
@@ -657,12 +852,11 @@ The maps and district information provides latest data on Covid19 infections, de
             <!-- <div class="kt-heading kt-heading--md">Setup Your Current Location</div> -->
             <div class="kt-form__section kt-form__section--first">
               <div class="kt-wizard-v2__form">
-               
-               <div class="col-md-12" id="corona_logo">
-                                                                <div class="card" style=" box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;">
-                                             <div class="header" style="background: #afd135;height: 6px;">
-                                                                               
-                                                                        </div>
+          
+               <div class="col-md-12" id="corona_logo" style="margin-left:-100px;">
+                 <div class="card" style=" box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;">
+                      <div class="header" style="background: #afd135;height: 6px;">
+                                   </div>
                                                                          <div>
           <div class="content col-md-12" id="stats">
             <div class="container-fluid">
@@ -1340,244 +1534,26 @@ The maps and district information provides latest data on Covid19 infections, de
       window.location.href = websites[a];
     }
   </script>
-<!-- <script type="text/javascript">
-         $(document).ready( function() {
-
-            $.ajax({
-              type:"POST",
-              dataType: "json",
-              url: "case/json.php",
-              data:"",
-              success:category
-            });
-          });
-
-
-         function category(data){
-
-  Highcharts.chart('chartdiv1', {
-
-    chart: {
-            type: 'heatmap',
-            marginTop: 40,
-            marginBottom: 40,
-
-},
-
-        plotOptions: {
-            heatmap: {
-                allowPointSelect: true
-            }
-        },
-
-        title: {
-            text: ''
-        },
-
-        xAxis: {
-            categories: ['Extreme', 'High', 'Medium', 'Low', 'Negligible']
-        },
-
-        yAxis: {
-            categories: ['Remote', 'Unlikely', 'Possible', 'Likely', 'Propable'],
-            title: null
-        },
-     
-        colorAxis: {
-            min: 0,
-            minColor: '#FFFFFF',
-            maxColor: Highcharts.getOptions().colors[0]
-        },
-
-        legend: {
-            align: 'right',
-            layout: 'vertical',
-            margin: 0,
-            verticalAlign: 'top',
-            y: 25,
-            symbolHeight: 520
-        },
-
-   
-        tooltip: {
-            formatter: function () {
-              if(this.point.value>=75)
-              {
-               return '<b></b><br><b>' + this.point.value + '</b>: Possible Infection<br>';
-              }
-              else
-              {
-              return '<b></b><br><b>' + this.point.value + '</b>:Infection<br>';  
-              }
-            }
-        },
-   
-
-
-        series: [{
-            name: '',
-            borderWidth: 1,
-            drilldown: true,
-            data: [{
-                x: 0,
-                y: 0,
-                value: '77',
-                color:'#64A0F2',
-             
-                drilldown: 'foo'
-            }, {
-                x: 0,
-                y: 1,
-                value: '81',
-                 color:'#64A0F2'
-            }, {
-                x: 0,
-                y: 2,
-                value: '95',
-                 color:'#6CC877'
-               
-            }, {
-                x: 0,
-                y: 3,
-                value: '',
-                 color:'#4CC25A'
-               
-            }, {
-                x: 0,
-                y: 4,
-                value: '89',
-                 color:'#4CC25A',
-                drilldown: 'foo'
-            }, {
-                x: 1,
-                y: 0,
-                value: '14' ,
-                color:'#D9D153'
-             
-            }, {
-                x: 1,
-                y: 1,
-                value: '64',
-                 color:'#64A0F2'
-            }, {
-                x: 1,
-                y: 2,
-                value: '78',
-                 color:'#64A0F2'
-            }, {
-                x: 1,
-                y: 3,
-                value: '',
-                 color:'#64A0F2',
-                drilldown: 'foo'
-            }, {
-                x: 1,
-                y: 4,
-                value:'35' ,
-                color:'#6CC877'
-            }, {
-                x: 2,
-                y: 0,
-                value: '51',
-                color:'#F0635F'
-            }, {
-                x: 2,
-                y: 1,
-                value: '72',
-                color:'#D9D153'
-            }, {
-                x: 2,
-                y: 2,
-                value: '',
-                 color:'#D9D153',
-                drilldown: 'foo',
-                tooltip:''
-            }, {
-                x: 2,
-                y: 3,
-                value: '26',
-                 color:'#64A0F2'
-            }, {
-                x: 2,
-                y: 4,
-                value: '57' ,
-                color:'#6CC877'
-            }, {
-                x: 3,
-                y: 0,
-                value: '9',
-                color:'#F0635F'
-            }, {
-                x: 3,
-                y: 1,
-                value: '82',
-                 color:'#D9D153'
-            }, {
-                x: 3,
-                y: 2,
-                value: '4',
-                 color:'#D9D153',
-                drilldown: 'foo'
-            }, {
-                x: 3,
-                y: 3,
-                value: '',
-                 color:'#64A0F2',
-                drilldown: 'foo'
-            }, {
-                x: 3,
-                y: 4,
-                value: '87',
-                 color:'#64A0F2'
-            }, {
-                x: 4,
-                y: 0,
-                value: '39',
-                color:'#F0635F',
-                drilldown: 'foo'
-            }, {
-                x: 4,
-                y: 1,
-                value: '',
-                color:'#F0635F'
-            }, {
-                x: 4,
-                y: 2,
-                value: '72',
-                color:'#F0635F',
-                drilldown: 'foo'
-            }, {
-                x: 4,
-                y: 3,
-                value: '' ,
-                 color:'#D9D153'
-            }, {
-                x: 4,
-                y: 4,
-                value: '29',
-                color:'#D9D153'
-            }],
-            dataLabels: {
-                enabled: true,
-                color: 'black',
-                style: {
-                    textShadow: 'none',
-                    HcTextStroke: null
-                }
-            }
-        }],
-
-        drilldown: {
-            series: []
-        }
-
  
-});
-   
-}
 
-      </script> -->
+<script type="text/javascript">
+  $(document).ready(function(){
+
+  var x = Math.floor((Math.random() * 10000000) + 1000080000000000);
+  document.getElementById("tipno1").value=x;
+  var result = '';
+   var characters= 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+   var charactersLength = characters.length;
+   for ( var i = 0; i < 10; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   document.getElementById("passkey1").value=result;
+     
+});
+
+
+</script>
 
       </body>
       </html>
-<!-- Modified on 24-04-2019 a -->
+<!-- Modified on 24-04-2019 asd -->

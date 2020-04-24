@@ -186,7 +186,7 @@ width:100%;
  if($rows=mysqli_fetch_assoc($result)) {
   ?>
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
-          New info
+         New Compliants
       </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php
@@ -211,7 +211,7 @@ width:100%;
  if($rows=mysqli_fetch_assoc($result1)) {
   ?>
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
-          Investigated info
+          Investigated  
       </span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
@@ -237,7 +237,7 @@ width:100%;
  if($rows=mysqli_fetch_assoc($result3)) {
   ?>  
       <span class="kt-widget17__subtitle" style="font-weight: normal; font-size: 18px;">
-          Reinvestigated Info
+          Reinvestigated 
       </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span class="kt-widget17__subtitle" style="font-size: 20px;"><?php echo $rows['count'];?></span>
       <?php

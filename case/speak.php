@@ -125,6 +125,8 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         }
  
 ?>
+
+
 <?php
    include "../php/common/config.php";
    $target_dir = "../documents/";
@@ -169,7 +171,10 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
       }
  
 ?>
+
+
 <?php
+
  include '../php/common/config.php';
   if(isset($_POST['track']))
   {

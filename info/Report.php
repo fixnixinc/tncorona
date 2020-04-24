@@ -11,7 +11,7 @@
 <base href="/tncorona/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
-        <title>Info | Report List</title>
+        <title>Info | Report</title>
         <meta name="description" content="Buttons examples">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -103,7 +103,7 @@
 <i class="kt-font-brand flaticon2-line-chart"></i>
 </span>
 <h3 class="kt-portlet__head-title" style="color: white;">
-Info Lists
+Closed
 </h3>
 </div>
 
