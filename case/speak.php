@@ -1,5 +1,5 @@
 <?php
- include 'php/common/config.php';
+ include '../php/common/config.php';
   if(isset($_POST['admin']))
   {
    $email=$_POST['email'];
