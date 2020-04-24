@@ -6,7 +6,7 @@
 <base href="/tncorona/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>Metronic | Home 2</title>
+        <title></title>
         <meta name="description" content="Support center home example">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -340,9 +340,9 @@ span.psw {
       <div class="kt-sc__bottom">
     <ul class="nav nav-tabs  nav-tabs-line " role="tablist" style="margin-top:6%;">
     
-      <li class="nav-item" id="speak">
+      <!-- <li class="nav-item" id="speak">
         <a class="nav-link active" href="case/speak.php" role="tab" style="font-size: 1.2rem;border-bottom:none;">SPEAK</a>
-      </li>
+      </li> -->
      <!--  <li class="nav-item" id="hchat">
         <a class="nav-link" href="https://telegra.ph/TN-Corona-Speak-03-27" role="tab" style="font-size: 1.2rem;border-bottom:none;">CHAT</a>
       </li> -->
@@ -582,3 +582,6 @@ function googleTranslateElementInit() {
   document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
 }
 </script>
+
+
+<!-- Changes made -->
