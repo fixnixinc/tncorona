@@ -675,13 +675,13 @@ You can stay anonymous and choose to followup with us also
            <div id="details1">
             <div class="row">
          <div class="col-md-4">
-           <input type="text" placeholder="FullName" id="name" name="name1" class="form-control" required="">&nbsp;
+           <input type="text" placeholder="FullName" id="name" name="name1" class="form-control">&nbsp;
         </div>
       <div class="col-md-4">
         <input type="text" placeholder="Email" id="email" name="email1" class="form-control">&nbsp;
       </div>
       <div class="col-md-4">
-        <input type="text" placeholder="Phone" id="phone" name="phone1" class="form-control" required="">
+        <input type="text" placeholder="Phone" id="phone" name="phone1" class="form-control">
       </div>
 
 
