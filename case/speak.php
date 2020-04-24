@@ -681,7 +681,9 @@ You can stay anonymous and choose to followup with us also
         <input type="text" placeholder="Email" id="email" name="email1" class="form-control">&nbsp;
       </div>
       <div class="col-md-4">
+
         <input type="text" placeholder="Phone" id="phone" name="phone1" class="form-control" >
+
       </div>
 
 
