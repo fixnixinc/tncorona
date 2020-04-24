@@ -346,7 +346,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
 </div><br>
 <div class="home-actions">
 <span class="chat button"><a href="case/speak.php" style="color: white;">GET HELP - IT GETS BETTER</a></span>
-<span class="appointment button"><a href="https://telegra.ph/TN-Corona-Speak-03-27" style="color: white;">CHAT NOW</a></span>
+<!-- <span class="appointment button"><a href="https://telegra.ph/TN-Corona-Speak-03-27" style="color: white;">CHAT NOW</a></span> -->
 </div>
 
 </div>

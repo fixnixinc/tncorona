@@ -370,12 +370,12 @@ span.psw {
   <!--begin: Quick actions -->
   <div class="kt-header__topbar-item dropdown" style="margin-bottom: 20px;">
     <div class="kt-header__topbar-wrapper"  data-offset="10px,10px">
-     <!-- <span class="kt-header__topbar-icon">
-    <button class="btn btn-success"  onclick="document.getElementById('id01').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">ADMIN</button>
-            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-           <!--    <span class="kt-header__topbar-icon">
-       <button class="btn btn-success drop"   onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #afd135;font-weight: 500;color: #48465b;">TRACK</button>
-            </span> -->
+     <span class="kt-header__topbar-icon">
+   <!--  <button class="btn btn-success"  onclick="document.getElementById('id01').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #88c3ea;font-weight: 500;color: #48465b;">ADMIN</button> -->
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="kt-header__topbar-icon">
+       <button class="btn btn-success drop" onclick="document.getElementById('id02').style.display='block'" style="background: transparent;border-radius: 26px;border:2px solid #afd135;font-weight: 500;color: #48465b;">TRACK</button>
+            </span>
     </div>
  
   </div>
@@ -414,7 +414,7 @@ span.psw {
 
     <div class="container" style="line-height:350%;color:#525150;">
       <label for="email" style=" font-size: 1.2rem;"  i class="fa fa-file">&nbsp;&nbsp;<b>SPEAK NUMBER:</b></label>
-       <input class="form-control" type="text"  placeholder="case/info number" id="email" name="ran" autocomplete="off"><br>
+       <input class="form-control" type="text"  placeholder="info number" id="email" name="ran" autocomplete="off"><br>
 
       <label for="password" style=" font-size: 1.2rem;color:#525150;"  i class="fa fa-key">&nbsp;&nbsp;<b>SECRETKEY:</b></label>
     <input class="form-control" type="text" placeholder="secretkey" name="secretkey" id="password"><br><br>

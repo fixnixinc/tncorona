@@ -199,14 +199,14 @@ font-size: 13px;
 </div>
 </div>
 <br>
-
+<!-- 
     <div class="form-group">
   <label style="font-size: 14px;  background-color: #f71462;"><b>Updated to Citizen- <?php echo $count;?></b></label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
         <?php echo $rows1['MUpdate'];?>
       </div>
-   </div><br>
+   </div><br> -->
 
 </div>
 <?php
