@@ -1,3 +1,5 @@
+<?php 
+include 'siteheader.php'; ?>
 <?php
  include 'php/common/config.php';
   if(isset($_POST['login']))
@@ -45,8 +47,7 @@
 
 
 <!DOCTYPE html>
-<?php 
-include 'nav_header.html'; ?>
+
 
 <html lang="en" >
     <!-- begin::Head -->
@@ -223,7 +224,7 @@ include 'nav_header.html'; ?>
  
 <!-- end:: Page -->
 <?php 
-include 'nav_footer.html'; ?>
+include 'footer.php'; ?>
 
         <!-- begin::Global Config(global config for global JS sciprts) -->
         <script>
