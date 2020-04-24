@@ -1,74 +1,32 @@
 <?php
- include '../php/common/config.php';
- session_start();
+ include 'php/common/config.php';
   if(isset($_POST['admin']))
   {
    $email=$_POST['email'];
     $password=$_POST['password'];
-      $sql="SELECT email,password FROM user Where email= '" . $email. "' and password= '" . $password. "'";
+      $sql="SELECT email,password FROM user Where email='$email' and password='$password'";
      $result=mysqli_query($link,$sql);
             if($rows=mysqli_fetch_assoc($result))
-             { 
-               $_SESSION['email']=$email;
-           $_SESSION['password']=$password;  
-            $_SESSION['last_name']=$name;   
-              $password == 'CoronaSpeak';
-                if(md5($password) == 'aa18ca633f8192787eaef03a9d31187d'){
-              
-               if($_SESSION['email']=='CoronaSpeak@nixwhistle.com'&& $rows['password'] == 'CoronaSpeak')
+             {    
+             
+             
+               if($rows['email']=='tncoronaspeak@nixwhistle.com'&& $rows['password'] == 'tncoronaspeak')
                {
                
                  // echo "Sucessfully";
-                header("location:/coronaspeak/view/common/overview.php");
+                header("location:/tncorona/view/common/overview.php");
                // break;
                }
-             }
-
-               if($_SESSION['email']=='clinic' && $_SESSION['password'] == 'coronaspeak')
-               {
-               
-                 // echo "Sucessfully";
-                header("location:/coronaspeak/case/clinicview.php");
-               // break;
-               }
-               if($_SESSION['email']=='testing' && $_SESSION['password'] == 'coronaspeak')
-               {
-               
-                 // echo "Sucessfully";
-                header("location:/coronaspeak/case/testingview.php");
-               // break;
-               }
-                 if($_SESSION['email']=='hospital' && $_SESSION['password'] == 'coronaspeak')
-               {
-               
-                 // echo "Sucessfully";
-                header("location:/coronaspeak/case/hospitalview.php");
-               // break;
-               }
-           else if($rows['email']=='idea_analyst@nixwhistle.co'&& $rows['password']=='analyst')
-               {
-                 // echo "Sucessfully";
-                header("location:/coronaspeak/idea/view.php");
-               }
-            else if($rows['email']=='investigator@nixwhistle.co'&& $rows['password']=='investigator')
-               {
-                 // echo "Sucessfully";
-                header("location:/coronaspeak/investigator/view.php");
-               }
-               else if($rows['email']=='reviewer@nixwhistle.co'&& $rows['password']=='reviewer')
-               {
-                 // echo "Sucessfully";
-                header("location:/coronaspeak/reviewer/reviewerview.php");
-               }
-             }
+             
+           
              else
                {
                 // echo "Error: " . $sql . "<br>" . $link->error;
                 // alert("incorrect username and password");
                }
   }
+}
 ?>
-
 
 <?php
    include "../php/common/config.php";
@@ -428,6 +386,71 @@ else
 
 }
 </style>
+    <style type="text/css">
+          .text-line {
+        background-color: transparent;
+        color: white;
+        outline: none;
+        outline-style: none;
+        outline-offset: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom:solid white 1px;
+        padding: 3px 10px;
+        width: 700px;
+        font-size: 16px;
+    }
+     .wid{
+      position: relative;
+      height: 40px;
+    }
+      .image {
+      position: absolute;
+      right: 24px;
+      bottom: 149px;
+    }
+
+.imageandtext {
+  position: relative;
+}
+.image_grid {
+  display: inline-block;
+  padding-left: 5px;
+}
+.image_grid img {                       /*  added rule  */
+  display: block;
+}
+
+.image_grid input {
+  display: none;
+}
+.image_grid input:checked + .caption {
+  background: rgba(0,0,0,0.5);
+}
+.image_grid input:checked + .caption::after {
+  content: '✔';    
+  position: absolute;
+  top: 60%; left: 51%;
+  width: 30px; height: 30px;
+  transform: translate(-50%,-50%);
+  color: #CB3A29;
+  font-size: 20px;
+  text-align: center;
+  border: 3px solid #CB3A29;
+  border-radius: 50%;
+}
+@media screen and (min-width: 1024px) {
+  .resp {
+    position: absolute;
+    margin-left: 1140px;
+    margin-top: 100px;
+  }
+  .sub {
+    margin-left: 100%;
+  }
+}
+ </style>
 <?php include '../siteheader.php'; ?>
 
  <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading" style="background-color: white;">
@@ -442,7 +465,7 @@ else
         <div class="alert alert-light alert-elevate fade show" role="alert" id="disc">
             <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
             <div class="alert-text">
-            Do not hesitate to share your symptoms about Covid 19 (Corona). Los Angeles County Medical Association will make best effort to reach out through the near by testing center, clinic or hospital based on your criticality.
+            Do not hesitate to share your symptoms about Covid 19 (Corona). TN Corona County Medical Association will make best effort to reach out through the near by testing center, clinic or hospital based on your criticality.
 You can stay anonymous and choose to followup with us also
             </div>
         </div>
@@ -463,628 +486,27 @@ You can stay anonymous and choose to followup with us also
             </div> -->
             <div class="kt-portlet__body">
                 <ul class="nav nav-tabs nav-justified" role="tablist">
-                    <li class="nav-item" >
+                    <!-- <li class="nav-item" >
                         <a class="" data-toggle="tab" href="#kt_tabs_1_1">
                             <i class="la la-comment" style="font-size: 50px; color: #034ea2;"></i>  <label style="font-size:20px;font-weight: 500;color: black;">CASE</label>
                         </a>
                     </li>
-               
+                -->
                     <li class="nav-item">
                         <a class="" data-toggle="tab" href="#kt_tabs_1_3">
                             <i class="flaticon-presentation" style="font-size: 50px; color: #afd135;"></i>  <label style="font-size:18px;font-weight: 500;color: black;">INFO</label>
                         </a>
                     </li>
-                    <li class="nav-item">
+               <!--      <li class="nav-item">
                         <a class="" data-toggle="tab" href="#kt_tabs_1_4">
                             <i class="fa flaticon-customer" style="font-size: 50px; color: #034ea2;"></i>  <label style="font-size:18px;font-weight: 500;color: black;">Emotinal Wellness</label>
                         </a>
                     </li>
-                 
+                  -->
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane active" id="kt_tabs_1_1" role="tabpanel">
-
-
-<div class="kt-grid kt-grid--hor kt-grid--root" style="">
-<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
-
-<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
-
-<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-
-<!-- begin:: Content -->
-<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-    <div class="kt-portlet">
-  <div class="kt-portlet__body kt-portlet__body--fit">
-    <div class="kt-grid  kt-wizard-v1 kt-wizard-v1--white" id="kt_wizard_v1" data-ktwizard-state="step-first">
-      <div class="kt-grid__item">
-        <!--begin: Form Wizard Nav -->
-        <div class="kt-wizard-v1__nav">
-          <div class="kt-wizard-v1__nav-items">
-            <!--doc: Replace A tag with SPAN tag to disable the step link click -->
-            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
-              <div class="kt-wizard-v1__nav-body">
-                <div class="kt-wizard-v1__nav-icon">
-                  <i class="flaticon-bus-stop"></i>
-                </div>
-                <div class="kt-wizard-v1__nav-label">
-                  1. Your Info
-                </div>
-              </div>
-            </a>
-            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step">
-              <div class="kt-wizard-v1__nav-body">
-                <div class="kt-wizard-v1__nav-icon">
-                  <i class="flaticon-list"></i>
-                </div>
-                <div class="kt-wizard-v1__nav-label">
-                  2. Symptoms
-                </div>
-              </div>
-            </a>
-            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step">
-              <div class="kt-wizard-v1__nav-body">
-                <div class="kt-wizard-v1__nav-icon">
-                  <i class="flaticon-responsive"></i>
-                </div>
-                <div class="kt-wizard-v1__nav-label">
-                  3. Other Symptoms
-                </div>
-              </div>
-            </a>
-            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step">
-              <div class="kt-wizard-v1__nav-body">
-                <div class="kt-wizard-v1__nav-icon">
-                  <i class="flaticon-truck"></i>
-                </div>
-                <div class="kt-wizard-v1__nav-label">
-                  4. Travel
-                </div>
-              </div>
-            </a>
-            <a class="kt-wizard-v1__nav-item" data-ktwizard-type="step">
-              <div class="kt-wizard-v1__nav-body">
-                <div class="kt-wizard-v1__nav-icon">
-                  <i class="flaticon-globe"></i>
-                </div>
-                <div class="kt-wizard-v1__nav-label">
-                  5. Review and Submit
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <!--end: Form Wizard Nav -->
-
-      </div>
-      <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v1__wrapper">
-        <!--begin: Form Wizard Form-->
-        <form class="kt-form"  method="POST">
-          <!--begin: Form Wizard Step 1-->
-          <div class="kt-wizard-v1__content" data-ktwizard-type="step-content" data-ktwizard-state="current" id="kt_form">
-            <!-- <div class="kt-heading kt-heading--md">Setup Your Current Location</div> -->
-            <div class="kt-form__section kt-form__section--first">
-              <div class="kt-wizard-v1__form">
-
-                <div class="row">
-                  <div class="col-md-6">
-
-
-
-                <div name="Description" style="display: ;">
-            <p style="font-size: 20px; font-weight: 500">DISTRICT :</p>
-            <div>
-                <div id="searchbox2">
-           
-                                                 
-<select id="district" name="district" class="form-control" style="border-color:#B8B8BB;background:transparent;">
-       <option>Select your District</option>
-         <option value='Chennai'  data-title="Chennai">Chennai</option>
-         <option value='Ariyalur'  data-title="Ariyalur">Ariyalur</option>
-         <option value='Chengalpattu'  data-title="Chengalpattu">Chengalpattu</option>
-         <option value='Coimbatore'  data-title="Coimbatore">Coimbatore</option>
-         <option value='Cuddalore'  data-title="Cuddalore">Cuddalore</option>
-         <option value='Dharmapuri'  data-title="Dharmapuri">Dharmapuri</option>
-         <option value='Dindigul'  data-title="Dindigul">Dindigul</option>
-         <option value='Erode'  data-title="Erode">Erode</option>
-         <option value='Kallakurichi'  data-title="Kallakurichi">Kallakurichi</option>
-         <option value='Kanchipuram'  data-title="Kanchipuram">Kanchipuram</option>
-         <option value='Kanniyakumari'  data-title="Kanniyakumari">Kanniyakumari</option>
-         <option value='Karur'  data-title="Karur">Karur</option>
-         <option value='Krishnagiri'  data-title="Krishnagiri">Krishnagiri</option>
-         <option value='Madurai'  data-title="Madurai">Madurai</option>
-         <option value='Mayiladuthurai'  data-title="Mayiladuthurai">Mayiladuthurai</option>
-         <option value='Nagapattinam'  data-title="Nagapattinam">Nagapattinam</option>
-         <option value='Namakkal'  data-title="Namakkal">Namakkal</option>
-         <option value='Nilgiris'  data-title="Nilgiris">Nilgiris</option>
-         <option value='Perambalur'  data-title="Perambalur">Perambalur</option>
-         <option value='Pudukkottai'  data-title="Pudukkottai">Pudukkottai</option>
-         <option value='Ramanathapuram'  data-title="Ramanathapuram">Ramanathapuram</option>
-         <option value='Ranipet'  data-title="Ranipet">Ranipet</option>
-         <option value='Salem'  data-title="Salem">Salem</option>
-         <option value='Sivagangai'  data-title="Sivagangai">Sivagangai</option>
-         <option value='Tenkasi'  data-title="Tenkasi">Tenkasi</option>
-         <option value='Thanjavur'  data-title="Thanjavur">Thanjavur</option>
-         <option value='Theni'  data-title="Theni">Theni</option>
-         <option value='Thoothukudi'  data-title="Thoothukudi">Thoothukudi</option>
-         <option value='Tiruchirappalli'  data-title="Tiruchirappalli">Tiruchirappalli</option>
-         <option value='Tirunelveli'  data-title="Tirunelveli">Tirunelveli</option>
-         <option value='Tirupattur'  data-title="Tirupattur">Tirupattur</option>
-         <option value='Tiruppur'  data-title="Tiruppur">Tiruppur</option>
-         <option value='Tiruvallur'  data-title="Tiruvallur">Tiruvallur</option>
-         <option value='Tiruvannamalai'  data-title="Tiruvannamalai">Tiruvannamalai</option>
-         <option value='Tiruvarur'  data-title="Tiruvarur">Tiruvarur</option>
-         <option value='Vellore'  data-title="Vellore">Vellore</option>
-         <option value='Viluppuram'  data-title="Viluppuram">Viluppuram</option>
-         <option value='Virudhunagar'  data-title="Virudhunagar">Virudhunagar</option>
-
-</select>
-         
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-</div>
-<br>
-<br>
-
-
-
-
-                                        <div class="form-group">
-                                      <div class="kt-section__content">
-                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size: 20px; font-weight: 500">Your Details:</label>
-                    </div>  
-                     <div class="form-group ">
-             
-              <label class="kt-radio kt-radio--solid kt-radio--info" style="color: black;font-size: 14px;background-color: ">
-         <input type="radio" name="radio1" value="Anonymous" id="Anonymous" checked="checked">Keen to be Anonymous
-         <span></span>
-       </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black; font-size: 14px;">
-             <input type="radio" name="radio1" value="disclose" id="disclose"> Keen to disclose
-
-             <span></span>
-           </label>
-
-
-      </div>
-     </div>
-     <div id="details">
-            <div class="row">
-         <div class="col-md-4 ">
-           <input type="text" placeholder="FullName" id="name" name="name" class="form-control">&nbsp;
-        </div>
-      <div class="col-md-4">
-        <input type="text" placeholder="Age" id="email" name="email" class="form-control">&nbsp;
-      </div>
-      <div class="col-md-4">
-        <input type="text" placeholder="Phone" id="phone" name="phone" class="form-control" >
-      </div>
-
-
-  </div>
-  <div class="row">
-     <div class="col-md-12">
-        <input type="text" placeholder="Address" id="address" name="address" class="form-control" >
-      </div>
-  </div>
-
-</div>
-       
-   <input type="hidden" name="secretkey" id="secretkey">
-          <input type="hidden" name="ran" id="ran">
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">1. For whom are You taking this test?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yourself" name="taking_test" value="For yourself">
-                    <label for="yourself">For yourself</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="parent" name="taking_test" value="Parent">
-                    <label for="parent">Parent</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="spouce" name="taking_test" value="Spouce">
-                    <label for="spouce">Spouce</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="Child" name="taking_test" value="Child">
-                    <label for="Child">Child</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="someone_else" name="taking_test" value="Someone else">
-                    <label for="someone_else">Someone else</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">2. What is your age group?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="under12" name="age" value="Less Than 12">
-                    <label for="under12">Less Than 12</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="above12" name="age" value="12-50">
-                    <label for="above12">12-50</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="above51" name="age" value="51-60">
-                    <label for="above51">51-60</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="above60" name="age" value=">60">
-                    <label for="above60">>60</label><span></span> </label><br>
-                   
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">3. What is your gender?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="male" name="gender" value="Male">
-                    <label for="male">Male</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="female" name="gender" value="Female">
-                    <label for="female">Female</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="other" name="gender" value="Other">
-                    <label for="other">Other</label><span></span></label><br>
-                                       
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">4. Do you have fever?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="fever" value="Normal">
-                    <label for="normal">Normal</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="moderate" name="fever" value="Moderate">
-                    <label for="moderate">Moderate</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="heavy" name="fever" value="Heavy">
-                    <label for="heavy">Heavy</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="notAware" name="fever" value="Not aware">
-                    <label for="notAware">Not aware</label><span></span></label><br>
-                                       
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">5. Do you have dry cough?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="drycough" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="no" name="drycough" value="No">
-                    <label for="no">No</label><span></span></label><br>
-                                       
-                </div>
-               
-             
-              </div>
-            </div>
-          </div>
-          <!--end: Form Wizard Step 1-->
-
-          <!--begin: Form Wizard Step 2-->
-          <div class="kt-wizard-v1__content" data-ktwizard-type="step-content">
-<!--             <div class="kt-heading kt-heading--md">Enter the Details of your Delivery</div>
- -->            <div class="kt-form__section kt-form__section--first">
-              <div class="kt-wizard-v1__form">
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">6. Do you have lost or less Feeling to smell?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="feelingsmell" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="feelingsmell" value="Normal">
-                    <label for="normal">Normal</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">7. Do you have throat pain?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="throatpain" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="throatpain" value="Normal">
-                    <label for="normal">Normal</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">8. Does your Body feel weak?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="bodyweak" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="bodyweak" value="Normal">
-                    <label for="normal">Normal</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">9. Do you have No Hunger?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="nohunger" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normalHunger" name="nohunger" value="Normal hunger">
-                    <label for="normalHunger">Normal hunger</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">10. Do you have normal or heavy cough?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="coughrange" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="coughrange" value="Normal">
-                    <label for="normal">Normal</label><span></span></label><br>
-                </div>
-               
-              </div>
-            </div>
-          </div>
-          <!--end: Form Wizard Step 2-->
-
-          <!--begin: Form Wizard Step 3-->
-          <div class="kt-wizard-v1__content" data-ktwizard-type="step-content">
-            <!-- <div class="kt-heading kt-heading--md">Select your Services</div> -->
-            <div class="kt-form__section kt-form__section--first">
-              <div class="kt-wizard-v1__form">
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">11. Do you have breath shortness?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="shortness" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="shortness" value="Normal">
-                    <label for="normal">Normal</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">12. Do you have normal breathing?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="breathing" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="breathing" value="Normal">
-                    <label for="normal">Normal</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">13. Do you Feel drowsy or sleep?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="drowsy" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="drowsy" value="Normal">
-                    <label for="normal">Normal</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">14. Do you feel Pain in chest?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="chestpain" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="chestpain" value="Normal">
-                    <label for="normal">Normal</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">15. Do you have Weakness across body?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="weaknessbody" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="weaknessbody" value="Normal">
-                    <label for="normal">Normal</label><span></span></label><br>
-                </div>
-               
-               
-              </div>
-            </div>
-          </div>
-          <!--end: Form Wizard Step 3-->
-
-          <!--begin: Form Wizard Step 4-->
-          <div class="kt-wizard-v1__content" data-ktwizard-type="step-content">
-            <!-- <div class="kt-heading kt-heading--md">Setup Your Delivery Location</div> -->
-            <div class="kt-form__section kt-form__section--first">
-              <div class="kt-wizard-v1__form">
-                  <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">16. Have you  visited outside state or country  in last 21 days?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="visitedoutside" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="no" name="visitedoutside" value="No">
-                    <label for="no">No</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">17. Have you  came in contact with anyone affected?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="contactaffect" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="no" name="contactaffect" value="No">
-                    <label for="no">No</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">18. Have you visited any of the corona infected countries in last 21 days?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="china" name="infectedcountry" value="China">
-                    <label for="china">China</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="italy" name="infectedcountry" value="Italy">
-                    <label for="italy">Italy</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="spain" name="infectedcountry" value="Spain">
-                    <label for="spain">Spain</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="iran" name="infectedcountry" value="Iran">
-                    <label for="iran">Iran</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="europe" name="infectedcountry" value="Europe">
-                    <label for="europe">Europe</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="middle_east" name="infectedcountry" value="Middle East">
-                    <label for="middle_east">Middle East</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="southeast_asia" name="infectedcountry" value="Southeast asia">
-                    <label for="southeast_asia">Southeast asia</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="country_not_listed" name="infectedcountry" value="Country not listed">
-                    <label for="country_not_listed">Country not listed</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="not_visited" name="infectedcountry" value="Not visited">
-                    <label for="not_visited">Not visited</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">19. Have you or your family came in contact with anyone affected in last 21 days?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="familycontact" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="no" name="familycontact" value="No">
-                    <label for="no">No</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">20. Do you have any of these health condition?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="checkbox" id="diabetes" name="healthcondition" value="Diabetes">
-                    <label for="diabetes">Diabetes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="checkbox" id="high_bp" name="healthcondition" value="High BP">
-                    <label for="high_bp">High BP</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="checkbox" id="heart_diseases" name="healthcondition" value="Heart Diseases">
-                    <label for="heart_diseases">Heart Diseases</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="checkbox" id="kidney" name="healthcondition" value="Kidney">
-                    <label for="kidney">Kidney</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="checkbox" id="lungs" name="healthcondition" value="Lungs">
-                    <label for="lungs">Lungs</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="checkbox" id="stroke" name="healthcondition" value="Stroke">
-                    <label for="stroke">Stroke</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="checkbox" id="immuno" name="healthcondition" value="Immuno compromised condition">
-                    <label for="immuno">Immuno compromised condition</label><span></span></label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="checkbox" id="noneoftheabove" name="healthcondition" value="None of the above">
-                    <label for="noneoftheabove">None of the above</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">21. Any disease symptoms in 24 hours?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="yes" name="diseasesymptoms" value="Yes">
-                    <label for="yes">Yes</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="normal" name="diseasesymptoms" value="Normal">
-                    <label for="normal">Normal</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">22. Other info</p>
-                    <textarea type="text" rows="8" class="form-control output" name="Description" id="Description"  placeholder="Type something here....." style="border-color:#B8B8BB;background:transparent;"></textarea>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">23. Proof</p>
-                    <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone_2">
-                      <div class="dropzone-msg dz-message needsclick">
-                          <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
-                          <!-- <span class="dropzone-msg-desc">Upload up to 10 files</span> -->
-                          <label for="Artifacts" aria-hidden="true">
-                   <img src="csv.svg" title="Upload File" width="35" height="35" >
-                           <input type="file" name="Artifacts" id="Artifacts" style="display: none;">
-                         </label>
-                      </div>
-                    </div>
-                </div>
-               
-               
-                 
-              </div>
-            </div>
-          </div>
-          <!--end: Form Wizard Step 4-->
-
-          <!--begin: Form Wizard Step 5-->
-          <div class="kt-wizard-v1__content" data-ktwizard-type="step-content">
-            <div class="kt-heading kt-heading--md">Review your Details and Submit</div>
-            <div class="kt-form__section kt-form__section--first">
-              <div class="kt-wizard-v1__review">
-                <div class="kt-wizard-v1__review-item">
-                  <div class="kt-wizard-v1__review-title">
-                    Your info
-                  </div>
-                  <div class="kt-wizard-v1__review-content">
-                    <label><b>City:  </b></label><p id="district1"></p>
-                    <label><b>ZipCode:  </b></label><p id="zipcode1"></p>
-                    <label><b>1. From whom are you taking this test :  </b></label><p id="result1"></p>
-                    <label><b>2. What is your age group :  </b></label><p id="result2"></p>
-                    <label><b>3. What is your gender :  </b></label><p id="result3"></p>
-                    <label><b>4. Do you have fever :  </b></label><p id="result4"></p>
-                    <label><b>5. Do you have dry cough :  </b></label><p id="result5"></p>
-                  </div>
-                </div>
-                <div class="kt-wizard-v1__review-item">
-                  <div class="kt-wizard-v1__review-title">
-                    Symptoms
-                  </div>
-                  <div class="kt-wizard-v1__review-content">
-                    <label><b>6. Do you have lost or less Feeling to smell :  </b></label><p id="result6"></p>
-                    <label><b>7. Do you have throat pain :  </b></label><p id="result7"></p>
-                    <label><b>8. Does your Body feel weak :  </b></label><p id="result8"></p>
-                    <label><b>9. Do you have No Hunger :  </b></label><p id="result9"></p>
-                    <label><b>10. Do you have normal or heavy cough :  </b></label><p id="result10"></p>
-                  </div>
-                </div>
-                <div class="kt-wizard-v1__review-item">
-                  <div class="kt-wizard-v1__review-title">
-                    Other Symptoms
-                  </div>
-                  <div class="kt-wizard-v1__review-content">
-                    <label><b>11. Do you have breath shortness :  </b></label><p id="result11"></p>
-                    <label><b>12. Do you have normal breathing :  </b></label><p id="result12"></p>
-                    <label><b>13. Do you Feel drowsy or sleep :  </b></label><p id="result13"></p>
-                    <label><b>14. Do you feel Pain in chest :  </b></label><p id="result14"></p>
-                    <label><b>15. Do you have Weakness across body :  </b></label><p id="result15"></p>
-                  </div>
-                </div>
-                <div class="kt-wizard-v1__review-item">
-                  <div class="kt-wizard-v1__review-title">
-                    Travel
-                  </div>
-                  <div class="kt-wizard-v1__review-content">
-                    <label><b>16. Have you visited outside state or country in last 21 days :  </b></label><p id="result16"></p>
-                    <label><b>17. Have you came in contact with anyone affected :  </b></label><p id="result17"></p>
-                    <label><b>18. Have you visited any of the corona infected countries in last 21 days :  </b></label><p id="result18"></p>
-                    <label><b>19. Have you or your family came in contact with anyone affected in last 21 days :  </b></label><p id="result19"></p>
-                    <label><b>20. Do you have any of these health condition :  </b></label><p id="result20"></p>
-                    <label><b>21. Any disease symptoms in 24 hours :  </b></label><p id="result21"></p>
-                    <label><b>22. Other info :  </b></label><p id="result22"></p>
-                    <label><b>23. Proof :  </b></label><p id="result23"></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--end: Form Wizard Step 5-->
-
-          <!--begin: Form Actions -->
-          <div class="kt-form__actions">
-            <button class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
-              Previous
-            </button>
-         
-                 <input type="submit" name="submit" id="case" value="submit" class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit" style="background-color:#afd135;border:2px solid #afd135;">
-
-            <button class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" onclick="showvalue()" style="background-color:#034ea2;">
-              Next Step
-            </button>
-          </div>
-
-       
-          <!--end: Form Actions -->
-        </form>
-        <!--end: Form Wizard Form-->
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
-  </div>
-</div>
-</div>
-</div>
-
-</div>
-
- <div class="tab-pane" id="kt_tabs_1_3" role="tabpanel">
+                    
+ <div class="tab-pane active" id="kt_tabs_1_3" role="tabpanel">
       <form class="kt-form" method="post">
                     <!--begin: Form Wizard Step 1-->
                     <div class="kt-wizard-v1__content" data-ktwizard-type="step-content" data-ktwizard-state="current" style="padding-left: 10%; padding-right: 10%;">
@@ -1097,44 +519,59 @@ You can stay anonymous and choose to followup with us also
                     </div>  
 
                               <div class="row">
-                                  <div class="col-md-2" style="text-align: center;">
-                                     <i class="fa fa-user-shield" style="font-size: 50px; color: #034ea2;"></i>
-                                 
-                                    <div>
-                                      Death
-                                    </div>
-                                  </div>
-                                  <div class="col-md-2" style="text-align: center;">
-                                    <i class="fa fa-hands-helping" style="font-size: 50px; color: #afd135;"></i>
-                                    <div>
-                                      Neighborhood Alert
-                                    </div>
-                                  </div>
-                                  <div class="col-md-2" style="text-align: center;">
-                                     <i class="fa fa-bus-alt" style="font-size: 50px; color: #034ea2;"></i>
-                                    <div>
-                                      Travel Alert
-                                    </div>
-                                  </div>
-                                  <div class="col-md-2" style="text-align: center;">
-                                    <i class="la la-feed" style="font-size: 50px; color: #afd135;"></i>
-                                    <div>
-                                      Medicine
-                                    </div>
-                                  </div>
-                                     <div class="col-md-2" style="text-align: center;">
-                                    <i class="flaticon-shopping-basket" style="font-size: 50px; color: #034ea2;"></i>
-                                    <div>
-                                      Grocery
-                                    </div>
-                                  </div>
-                                     <div class="col-md-2" style="text-align: center;">
-                                    <i class="fa fa-ambulance" style="font-size: 50px; color: #afd135;"></i>
-                                    <div>
-                                      Operation
-                                    </div>
-                                  </div>
-                                </div>
+                                   <div class="grid-two imageandtext" >
+
+  <div class="imageandtext image_grid">
+    <label for="selimg1" style="text-align: center;">Death <br><br>
+     <i class="fa fa-user-shield" style="font-size: 50px; color: #005eaa;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg1" value="death">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="imageandtext image_grid">
+    <label for="selimg2" style="text-align: center;">Neighborhood Alert<br><br>
+    <i class="fa fa-hands-helping" style="font-size: 50px; color: #4b830d;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg2" value="NeighborhoodAlert">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="imageandtext image_grid">
+    <label for="selimg3" style="text-align: center;">Travel Alert<br><br>
+       <i class="fa fa-bus-alt" style="font-size: 50px; color: #005eaa;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg3" value="travelAlert">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="imageandtext image_grid">
+    <label for="selimg4" style="text-align: center;">Feed<br><br>
+      <i class="la la-feed" style="font-size: 50px; color: #4b830d;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg4" value="feed">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="imageandtext image_grid">
+    <label for="selimg5" style="text-align: center;">Operation<br><br>
+      <i class="fa fa-ambulance" style="font-size: 50px; color: #005eaa;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg5" value="operation">
+    <div class="caption">
+     
+    </div>
+  </div>
+
+</div>
            
                                   <!--   <span class="form-text text-muted">Please enter your Address.</span> -->
                                 </div>
@@ -1265,665 +702,7 @@ You can stay anonymous and choose to followup with us also
  </div>
 
 
-<div class="tab-pane" id="kt_tabs_1_4" role="tabpanel">
-    <div class="kt-container  kt-grid__item kt-grid__item--fluid">
-    <div class="kt-portlet">
-  <div class="kt-portlet__body kt-portlet__body--fit">
-    <div class="kt-grid kt-wizard-v3 kt-wizard-v3--white" id="kt_wizard_v3" data-ktwizard-state="step-first">
-      <div class="kt-grid__item">
-        <!--begin: Form Wizard Nav -->
-        <div class="kt-wizard-v3__nav">
-          <div class="kt-wizard-v3__nav-items">
-            <!--doc: Replace A tag with SPAN tag to disable the step link click -->
-            <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
-              <div class="kt-wizard-v3__nav-body">
-                <div class="kt-wizard-v3__nav-label">
-                  <span>1</span> Anxiety
-                </div>
-                <div class="kt-wizard-v3__nav-bar"></div>
-              </div>
-            </a>
-            <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
-              <div class="kt-wizard-v3__nav-body">
-                <div class="kt-wizard-v3__nav-label">
-                  <span>2</span> Depression
-                </div>
-                <div class="kt-wizard-v3__nav-bar"></div>
-              </div>
-            </a>
-            <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
-              <div class="kt-wizard-v3__nav-body">
-                <div class="kt-wizard-v3__nav-label">
-                  <span>3</span> Stress
-                </div>
-                <div class="kt-wizard-v3__nav-bar"></div>
-              </div>
-            </a>
-            <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
-              <div class="kt-wizard-v3__nav-body">
-                <div class="kt-wizard-v3__nav-label">
-                  <span>4</span> Self Esteem
-                </div>
-                <div class="kt-wizard-v3__nav-bar"></div>
-              </div>
-            </a>
-            <a class="kt-wizard-v3__nav-item" data-ktwizard-type="step">
-              <div class="kt-wizard-v3__nav-body">
-                <div class="kt-wizard-v3__nav-label">
-                  <span>5</span> Review 
-                </div>
-                <div class="kt-wizard-v3__nav-bar"></div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <!--end: Form Wizard Nav -->
 
-      </div>
-      <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v3__wrapper">
-        <!--begin: Form Wizard Form-->
-        <form class="kt-form" id="kt_form" method="post">
-          <!--begin: Form Wizard Step 1-->
-          <div class="kt-wizard-v3__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
-              <div class="kt-form__section kt-form__section--first">
-              <div class="kt-wizard-v1__form">
-
-
-   <input type="hidden" name="secretkey3" id="secretkey">
-          <input type="hidden" name="ran3" id="ran">
-
-
-                <div class="row">
-                  <div class="col-md-6">
-
-
-
-                <div name="Description" style="display: ;">
-            <p style="font-size: 20px; font-weight: 500">City :</p>
-            <div>
-                <div id="searchbox2">
-                                                   
-<select id="district3" name="district3" class="form-control" style="border-color:#B8B8BB;background:transparent;">
-       <option>Select your District</option>
-         <option value='Chennai'  data-title="Chennai">Chennai</option>
-         <option value='Ariyalur'  data-title="Ariyalur">Ariyalur</option>
-         <option value='Chengalpattu'  data-title="Chengalpattu">Chengalpattu</option>
-         <option value='Coimbatore'  data-title="Coimbatore">Coimbatore</option>
-         <option value='Cuddalore'  data-title="Cuddalore">Cuddalore</option>
-         <option value='Dharmapuri'  data-title="Dharmapuri">Dharmapuri</option>
-         <option value='Dindigul'  data-title="Dindigul">Dindigul</option>
-         <option value='Erode'  data-title="Erode">Erode</option>
-         <option value='Kallakurichi'  data-title="Kallakurichi">Kallakurichi</option>
-         <option value='Kanchipuram'  data-title="Kanchipuram">Kanchipuram</option>
-         <option value='Kanniyakumari'  data-title="Kanniyakumari">Kanniyakumari</option>
-         <option value='Karur'  data-title="Karur">Karur</option>
-         <option value='Krishnagiri'  data-title="Krishnagiri">Krishnagiri</option>
-         <option value='Madurai'  data-title="Madurai">Madurai</option>
-         <option value='Mayiladuthurai'  data-title="Mayiladuthurai">Mayiladuthurai</option>
-         <option value='Nagapattinam'  data-title="Nagapattinam">Nagapattinam</option>
-         <option value='Namakkal'  data-title="Namakkal">Namakkal</option>
-         <option value='Nilgiris'  data-title="Nilgiris">Nilgiris</option>
-         <option value='Perambalur'  data-title="Perambalur">Perambalur</option>
-         <option value='Pudukkottai'  data-title="Pudukkottai">Pudukkottai</option>
-         <option value='Ramanathapuram'  data-title="Ramanathapuram">Ramanathapuram</option>
-         <option value='Ranipet'  data-title="Ranipet">Ranipet</option>
-         <option value='Salem'  data-title="Salem">Salem</option>
-         <option value='Sivagangai'  data-title="Sivagangai">Sivagangai</option>
-         <option value='Tenkasi'  data-title="Tenkasi">Tenkasi</option>
-         <option value='Thanjavur'  data-title="Thanjavur">Thanjavur</option>
-         <option value='Theni'  data-title="Theni">Theni</option>
-         <option value='Thoothukudi'  data-title="Thoothukudi">Thoothukudi</option>
-         <option value='Tiruchirappalli'  data-title="Tiruchirappalli">Tiruchirappalli</option>
-         <option value='Tirunelveli'  data-title="Tirunelveli">Tirunelveli</option>
-         <option value='Tirupattur'  data-title="Tirupattur">Tirupattur</option>
-         <option value='Tiruppur'  data-title="Tiruppur">Tiruppur</option>
-         <option value='Tiruvallur'  data-title="Tiruvallur">Tiruvallur</option>
-         <option value='Tiruvannamalai'  data-title="Tiruvannamalai">Tiruvannamalai</option>
-         <option value='Tiruvarur'  data-title="Tiruvarur">Tiruvarur</option>
-         <option value='Vellore'  data-title="Vellore">Vellore</option>
-         <option value='Viluppuram'  data-title="Viluppuram">Viluppuram</option>
-         <option value='Virudhunagar'  data-title="Virudhunagar">Virudhunagar</option>
-
-</select>
-         
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-    
-</div>
-
-
-
-
-<br>
-
-                <div id="div0" name="Description" style="display: ;">
-            <p style="font-size: 20px; font-weight: 500">Category :</p>
-            <div>
-                <div id="searchbox2">
-           
-<select class="form-control kt-select2" id="kt_select2_3" name="category3" multiple="multiple" style="width: 100%; height:60px;" placeholder="select">
-        <option value="DEPRESSSION" selected>DEPRESSSION</option>
-        <option value="ANXIETY">ANXIETY</option>
-        <option value="STRESS">STRESS</option>
-
-
-        <option value="ADHD">ADHD</option>
-        <option value="ALCOHOL/DRUGUSE">ALCOHOL/DRUG USE</option>
-        <option value="BIPOLAR">BIPOLAR</option>
-        <option value="BORDERLINE">BORDERLINE(BPD)</option>
-        <option value="BREAKUP">BREAK UPS</option>
-        <option value="BULLYING">BULLYING</option>
-        <option value="CANCER">CANCER</option>
-        <option value="CHRONICPAIN">CHRONIC PAIN</option>
-        <option value="DIABETES">DIABETES</option>
-        <option value="DISABILITIES">DISABILITIES</option>
-        <option value="DOMESTICVIOLENCE">DOMESTIC VIOLENCE</option>
-        <option value="EATINGDISORDERS">EATING DISORDERS</option>
-        <option value="EXERCISEMOTIVATION">EXERCISE MOTIVATION</option>
-        <option value="FORGIVENESS">FORGIVENESS</option>
-        <option value="GENERALMENTALHEALTH">GENERAL MENTAL HEALTH</option>
-        <option value="GETTINGUNSTUCK">GETTING UNSTUCK</option>
-        <option value="GRIEF">GRIEF</option>
-        <option value="LGBTQ+">LGBTQ+</option>
-        <option value="LONELINESS">LONELINESS</option>
-        <option value="MANAGINGEMOTIONS">MANAGING EMOTIONS</option>
-        <option value="MENSANDWOMENSISSUES">MENS AND WOMENS ISSUES</option>
-        <option value="OBSESSIVECOMPLSIVEDISORDER">OBSESSIVE COMPULSIVE DISORDER(OCD)</option>
-        <option value="PANICATTACKS">PANIC ATTACKS</option>
-        <option value="PARENTING">PARENTING</option>
-        <option value="PERINATALMOODDISORDER">PERINATAL MOOD DISORDER</option>
-        <option value="PTSD/TRAUMA">PTSD/TRAUMA</option>
-        <option value="RECOVERY">RECOVERY</option>
-        <option value="RELATIONSHIPSTRESS">RELATIONSHIP STRESS</option>
-        <option value="SELFESTEEM">SELF ESTEEM</option>
-        <option value="SELFHARM">SELF HARM</option>
-        <option value="SLEEPINGWELL">SLEEPING WELL</option>
-        <option value="SLEEPLESSNESS">SLEEPLESSNESS</option>
-        <option value="SOCIALANXIETY">SOCIAL ANXIETY</option>
-        <option value="SPIRITUALITY">SPIRITUALITY</option>
-        <option value="STUDENTLIFT">STUDENT LIFT</option>
-        <option value="WEIGHTMANAGEMENT">WEIGHT MANAGEMENT</option>
-        <option value="WORKSTRESS">WORK STRESS</option>
-
-
-</select>
-         
-        </div>
-      </div>
-    </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">1. I found myself getting upset by quite trivial things ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="quitetrivial" name="quite_trivial" value="Not at all">
-                    <label for="quitetrivial">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="quitetrivial" name="quite_trivial" value="All the time">
-                    <label for="quitetrivial">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">2. I was aware of dryness of my mouth ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="dryness" name="dryness" value="Not at all">
-                    <label for="dryness">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="dryness" name="dryness" value="All the time">
-                    <label for="dryness">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">3. I couldn't seem to experience any positive feeling at all ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="positivefeeling" name="positive_feeling" value="Not at all">
-                    <label for="positivefeeling">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="positivefeeling" name="positivefeeling" value="All the time">
-                    <label for="positivefeeling">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">4. I experienced breathing difficulty (eg, excessively rapid breathing, breathlessness in the absence of physical exertion) ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="breathing" name="breathing_difficult" value="Not at all">
-                    <label for="breathing">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="breathing" name="breathing_difficult" value="All the time">
-                    <label for="breathing">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">5. I just couldn't seem to get going ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="getgoing" name="seem" value="Not at all">
-                    <label for="getgoing">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="getgoing" name="seem" value="All the time">
-                    <label for="getgoing">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">6. I tended to over-react to situations ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="situations" name="over-react" value="Not at all">
-                    <label for="situations">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="situations" name="over-react" value="All the time">
-                    <label for="situations">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">7. I had a feeling of shakiness (eg, legs going to give way) ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="shakiness" name="shakiness" value="Not at all">
-                    <label for="shakiness">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="shakiness" name="shakiness" value="All the time">
-                    <label for="shakiness">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">8. I found it difficult to relax ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="relax" name="difficult_relax" value="Not at all">
-                    <label for="relax">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="relax" name="difficult_relax" value="All the time">
-                    <label for="relax">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">9. II found myself in situations that made me so anxious I was most relieved when they ended ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="anxious" name="anxious" value="Not at all">
-                    <label for="anxious">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="anxious" name="anxious" value="All the time">
-                    <label for="anxious">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">10. I felt that I had nothing to look forward to ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="forward" name="look_forward" value="Not at all">
-                    <label for="forward">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="forward" name="look_forward" value="All the time">
-                    <label for="forward">All the time</label><span></span></label><br>
-                </div>
-               
-               
-             
-              </div>
-            </div>
-          </div>
-          <!--end: Form Wizard Step 1-->
-
-          <!--begin: Form Wizard Step 2-->
-          <div class="kt-wizard-v3__content" data-ktwizard-type="step-content">
-              <div class="kt-form__section kt-form__section--first">
-              <div class="kt-wizard-v1__form">
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">11. I found myself getting upset rather easily ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="upset" name="upset" value="Not at all">
-                    <label for="upset">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="upset" name="upset" value="All the time">
-                    <label for="upset">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">12. I felt that I was using a lot of nervous energy ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="nervous" name="nervous" value="Not at all">
-                    <label for="nervous">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="nervous" name="nervous" value="All the time">
-                    <label for="nervous">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">13. I felt sad and depressed ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="saddepressed" name="depressed" value="Not at all">
-                    <label for="saddepressed">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="saddepressed" name="depressed" value="All the time">
-                    <label for="saddepressed">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">14. I found myself getting impatient when I was delayed in any way (eg, lifts, traffic lights, being kept waiting) ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="impatient" name="delayed" value="Not at all">
-                    <label for="impatient">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="impatient" name="delayed" value="All the time">
-                    <label for="impatient">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">15. I had a feeling of faintness ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="faintness" name="faintness" value="Not at all">
-                    <label for="faintness">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="faintness" name="faintness" value="All the time">
-                    <label for="faintness">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">16. I felt that I had lost interest in just about everything ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="lostinterest" name="faintness_interest" value="Not at all">
-                    <label for="lostinterest">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="lostinterest" name="faintness_interest" value="All the time">
-                    <label for="lostinterest">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">17. I felt I wasn't worth much as a person ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="worthperson" name="worth" value="Not at all">
-                    <label for="worthperson">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="worthperson" name="worth" value="All the time">
-                    <label for="worthperson">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">18. I felt that I was rather touchy ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="touchy" name="rather_touchy" value="Not at all">
-                    <label for="touchy">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="touchy" name="rather_touchy" value="All the time">
-                    <label for="touchy">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">19. I perspired noticeably (eg, hands sweaty) in the absence of high temperatures or physical exertion ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="noticeably" name="noticeably" value="Not at all">
-                    <label for="noticeably">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="noticeably" name="noticeably" value="All the time">
-                    <label for="noticeably">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">20. I felt scared without any good reason ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="goodreason" name="scared" value="Not at all">
-                    <label for="scared">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="scared" name="scared" value="All the time">
-                    <label for="scared">All the time</label><span></span></label><br>
-                </div>
-               
-              </div>
-            </div>
-          </div>
-          <!--end: Form Wizard Step 2-->
-
-          <!--begin: Form Wizard Step 3-->
-          <div class="kt-wizard-v3__content" data-ktwizard-type="step-content">
-              <div class="kt-form__section kt-form__section--first">
-              <div class="kt-wizard-v1__form">
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">21. I felt that life wasn't worthwhile ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="worthwhile" name="worthwhile" value="Not at all">
-                    <label for="worthwhile">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="worthwhile" name="worthwhile" value="All the time">
-                    <label for="worthwhile">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">22. I found it hard to wind down ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="winddown" name="wind_down" value="Not at all">
-                    <label for="winddown">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="winddown" name="wind_down" value="All the time">
-                    <label for="winddown">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">23. I had difficulty in swallowing ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="swallowing" name="swallowing" value="Not at all">
-                    <label for="swallowing">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="swallowing" name="swallowing" value="All the time">
-                    <label for="swallowing">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">24. I couldn't seem to get any enjoyment out of the things I did ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="enjoyment" name="enjoyment" value="Not at all">
-                    <label for="enjoyment">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="enjoyment" name="enjoyment" value="All the time">
-                    <label for="enjoyment">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">25. I was aware of the action of my heart in the absence of physical exertion (eg, sense of heart rate increase, heart missing a beat) ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="physicalexertion" name="absence" value="Not at all">
-                    <label for="physicalexertion">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="physicalexertion" name="absence" value="All the time">
-                    <label for="physicalexertion">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">26. I felt down-hearted and blue ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="feltdown" name="down-hearted" value="Not at all">
-                    <label for="feltdown">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="feltdown" name="down-hearted" value="All the time">
-                    <label for="feltdown">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">27. I found that I was very irritable ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="irritable" name="irritable" value="Not at all">
-                    <label for="irritable">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="irritable" name="irritable" value="All the time">
-                    <label for="irritable">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">28. I felt I was close to panic ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="closepanic" name="panic" value="Not at all">
-                    <label for="closepanic">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="closepanic" name="panic" value="All the time">
-                    <label for="closepanic">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">29. I found it hard to calm down after something upset me ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="somethingupset" name="somethingupset" value="Not at all">
-                    <label for="somethingupset">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="somethingupset" name="somethingupset" value="All the time">
-                    <label for="somethingupset">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">30. I feared that I would be "thrown" by some trivial but unfamiliar task ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="trivial" name="unfamiliar" value="Not at all">
-                    <label for="trivial">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="trivial" name="unfamiliar" value="All the time">
-                    <label for="trivial">All the time</label><span></span></label><br>
-                </div>
-               
-               
-              </div>
-            </div>
-          </div>
-          <!--end: Form Wizard Step 3-->
-
-          <!--begin: Form Wizard Step 4-->
-          <div class="kt-wizard-v3__content" data-ktwizard-type="step-content">
-<!--             <div class="kt-heading kt-heading--md">Setup Your Delivery Location</div>
- -->            <div class="kt-form__section kt-form__section--first">
-              <div class="kt-wizard-v1__form">
-                  <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">31. I was unable to become enthusiastic about anything ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="enthusiastic" name="enthusiastic" value="Not at all">
-                    <label for="enthusiastic">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="enthusiastic" name="enthusiastic" value="All the time">
-                    <label for="enthusiastic">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">32. I found it difficult to tolerate interruptions to what I was doing ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="interruptions" name="interruptions" value="Not at all">
-                    <label for="interruptions">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="interruptions" name="interruptions" value="All the time">
-                    <label for="interruptions">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">33. I was in a state of nervous tension ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="nervoustension" name="tension" value="Not at all">
-                    <label for="nervoustension">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="nervoustension" name="tension" value="All the time">
-                    <label for="nervoustension">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">34. I felt I was pretty worthless ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="prettyworthless" name="worthless" value="Not at all">
-                    <label for="prettyworthless">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="prettyworthless" name="worthless" value="All the time">
-                    <label for="prettyworthless">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">35. I was intolerant of anything that kept me from getting on with what I was doing ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="intolerant" name="intolerant" value="Not at all">
-                    <label for="intolerant">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="intolerant" name="intolerant" value="All the time">
-                    <label for="intolerant">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">36. I felt terrified ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="terrified" name="terrified" value="Not at all">
-                    <label for="terrified">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="terrified" name="terrified" value="All the time">
-                    <label for="terrified">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">37. I could see nothing in the future to be hopeful about ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="hopefulabout" name="hopeful" value="Not at all">
-                    <label for="hopefulabout">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="hopefulabout" name="hopeful" value="All the time">
-                    <label for="hopefulabout">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">38. I felt that life was meaningless ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="meaningless" name="meaningless" value="Not at all">
-                    <label for="meaningless">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="meaningless" name="meaningless" value="All the time">
-                    <label for="meaningless">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">39. I found myself getting agitated   ?</p>
-                 <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="agitated" name="agitated" value="Not at all">
-                    <label for="agitated">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="agitated" name="agitated" value="All the time">
-                    <label for="agitated">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">40. I was worried about situations in which I might panic and make a fool of myself ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="panic" name="" value="Not at all">
-                    <label for="panic">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="panic" name=" fool_myself" value="All the time">
-                    <label for="panic">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">41. I experienced trembling (eg, in the hands) ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="trembling" name="trembling" value="Not at all">
-                    <label for="trembling">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="trembling" name="trembling" value="All the time">
-                    <label for="trembling">All the time</label><span></span></label><br>
-                </div>
-                <div class="form-group">
-                  <p style="font-size: 20px; font-weight: 500">42. I found it difficult to work up the initiative to do things ?</p>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="difficultwork" name="initiative" value="Not at all">
-                    <label for="difficultwork">Not at all</label><span></span> </label><br>
-                    <label class="kt-radio kt-radio--solid kt-radio--success" style="color: black;">
-                    <input type="radio" id="difficultwork" name="initiative" value="All the time">
-                    <label for="difficultwork">All the time</label><span></span></label><br>
-                </div>
-<!-- 
-                <div id="div0" name="Description" style="display: ;">
-            <p style="font-size: 20px; font-weight: 500">Category :</p>
-            <div>
-                <div id="searchbox2">
-           
-<select class="form-control kt-select2" id="kt_select2_3" name="param" multiple="multiple" style="width: 100%;" placeholder="select">
-        <option value="DEPRESSSION" selected>DEPRESSSION</option>
-        <option value="ANXIETY">ANXIETY</option>
-        <option value="STRESS">STRESS</option>
-        <option value="ADHD">ADHD</option>
-        <option value="ALCOHOL/DRUGUSE">ALCOHOL/DRUG USE</option>
-        <option value="BIPOLAR">BIPOLAR</option>
-        <option value="BORDERLINE">BORDERLINE(BPD)</option>
-        <option value="BREAKUP">BREAK UPS</option>
-        <option value="BULLYING">BULLYING</option>
-        <option value="CANCER">CANCER</option>
-        <option value="CHRONICPAIN">CHRONIC PAIN</option>
-        <option value="DIABETES">DIABETES</option>
-        <option value="DISABILITIES">DISABILITIES</option>
-        <option value="DOMESTICVIOLENCE">DOMESTIC VIOLENCE</option>
-        <option value="EATINGDISORDERS">EATING DISORDERS</option>
-        <option value="EXERCISEMOTIVATION">EXERCISE MOTIVATION</option>
-        <option value="FORGIVENESS">FORGIVENESS</option>
-        <option value="GENERALMENTALHEALTH">GENERAL MENTAL HEALTH</option>
-        <option value="GETTINGUNSTUCK">GETTING UNSTUCK</option>
-        <option value="GRIEF">GRIEF</option>
-        <option value="LGBTQ+">LGBTQ+</option>
-        <option value="LONELINESS">LONELINESS</option>
-        <option value="MANAGINGEMOTIONS">MANAGING EMOTIONS</option>
-        <option value="MENSANDWOMENSISSUES">MENS AND WOMENS ISSUES</option>
-        <option value="OBSESSIVECOMPLSIVEDISORDER">OBSESSIVE COMPULSIVE DISORDER(OCD)</option>
-        <option value="PANICATTACKS">PANIC ATTACKS</option>
-        <option value="PARENTING">PARENTING</option>
-        <option value="PERINATALMOODDISORDER">PERINATAL MOOD DISORDER</option>
-        <option value="PTSD/TRAUMA">PTSD/TRAUMA</option>
-        <option value="RECOVERY">RECOVERY</option>
-        <option value="RELATIONSHIPSTRESS">RELATIONSHIP STRESS</option>
-        <option value="SELFESTEEM">SELF ESTEEM</option>
-        <option value="SELFHARM">SELF HARM</option>
-        <option value="SLEEPINGWELL">SLEEPING WELL</option>
-        <option value="SLEEPLESSNESS">SLEEPLESSNESS</option>
-        <option value="SOCIALANXIETY">SOCIAL ANXIETY</option>
-        <option value="SPIRITUALITY">SPIRITUALITY</option>
-        <option value="STUDENTLIFT">STUDENT LIFT</option>
-        <option value="WEIGHTMANAGEMENT">WEIGHT MANAGEMENT</option>
-        <option value="WORKSTRESS">WORK STRESS</option>
-
-
-</select>
-         
-        </div>
-      </div>
-    </div> -->
              
               </div>
             </div>
@@ -1931,90 +710,11 @@ You can stay anonymous and choose to followup with us also
           <!--end: Form Wizard Step 4-->
 
           <!--begin: Form Wizard Step 5-->
-          <div class="kt-wizard-v3__content" data-ktwizard-type="step-content">
-            <div class="kt-heading kt-heading--md">Review your Details and Submit</div>
-              <div class="kt-form__section kt-form__section--first">
-              <div class="kt-wizard-v1__review">
-                <div class="kt-wizard-v1__review-item">
-                  <div class="kt-wizard-v1__review-title">
-                    Your info
-                  </div>
-                  <div class="kt-wizard-v1__review-content">
-                    <label><b>1. I found myself getting upset by quite trivial things :  </b></label><p id="res1"></p>
-                    <label><b>2. I was aware of dryness of my mouth :  </b></label><p id="res2"></p>
-                    <label><b>3. I couldn't seem to experience any positive feeling at all :  </b></label><p id="res3"></p>
-                    <label><b>4. I experienced breathing difficulty :  </b></label><p id="res4"></p>
-                    <label><b>5. I just couldn't seem to get going :  </b></label><p id="res5"></p>
-                    <label><b>6. I tended to over-react to situations :  </b></label><p id="res6"></p>
-                    <label><b>7. I had a feeling of shakiness :  </b></label><p id="res7"></p>
-                    <label><b>8. I found it difficult to relax :  </b></label><p id="res8"></p>
-                    <label><b>9. I found myself in situations that made me so anxious I was most relieved when they ended :  </b></label><p id="res9"></p>
-                    <label><b>10. I felt that I had nothing to look forward to :  </b></label><p id="res10"></p>
-                  </div>
-                </div>
-                <div class="kt-wizard-v1__review-item">
-                  <div class="kt-wizard-v1__review-title">
-                    Symptoms
-                  </div>
-                  <div class="kt-wizard-v1__review-content">
-                    <label><b>11. I found myself getting upset rather easily :  </b></label><p id="res11"></p>
-                    <label><b>12. I felt that I was using a lot of nervous energy :  </b></label><p id="res12"></p>
-                    <label><b>13. I felt sad and depressed :  </b></label><p id="res13"></p>
-                    <label><b>14. I found myself getting impatient when I was delayed in any way  :  </b></label><p id="res14"></p>
-                    <label><b>15. I had a feeling of faintness :  </b></label><p id="res15"></p>
-                     <label><b>16. I felt that I had lost interest in just about everything :  </b></label><p id="res16"></p>
-                    <label><b>17. I felt I wasn't worth much as a person :  </b></label><p id="res17"></p>
-                    <label><b>18. I felt that I was rather touchy :  </b></label><p id="res18"></p>
-                    <label><b>19. I perspired noticeably (eg, hands sweaty) in the absence of high temperatures or physical exertion :  </b></label><p id="res19"></p>
-                    <label><b>20. I felt scared without any good reason :  </b></label><p id="res20"></p>
-                   
-                  </div>
-                </div>
-                <div class="kt-wizard-v1__review-item">
-                  <div class="kt-wizard-v1__review-title">
-                    Other Symptoms
-                  </div>
-                  <div class="kt-wizard-v1__review-content">
-                    <label><b>21. I felt that life wasn't worthwhile :  </b></label><p id="res21"></p>
-                    <label><b>22. I found it hard to wind down :  </b></label><p id="res22"></p>
-                    <label><b>23. I had difficulty in swallowing :  </b></label><p id="res23"></p>
-                    <label><b>24. I couldn't seem to get any enjoyment out of the things I did :  </b></label><p id="res24"></p>
-                    <label><b>25. I was aware of the action of my heart in the absence of physical exertion :  </b></label><p id="res25"></p>
-                     <label><b>26. I felt down-hearted and blue :  </b></label><p id="res26"></p>
-                    <label><b>27. I found that I was very irritable :  </b></label><p id="res27"></p>
-                    <label><b>28. I felt I was close to panic :  </b></label><p id="res28"></p>
-                    <label><b>29. I found it hard to calm down after something upset me :  </b></label><p id="res29"></p>
-                    <label><b>30. I feared that I would be "thrown" by some trivial but unfamiliar task :  </b></label><p id="res30"></p>
-                  </div>
-                </div>
-                <div class="kt-wizard-v1__review-item">
-                  <div class="kt-wizard-v1__review-title">
-                    Travel
-                  </div>
-                  <div class="kt-wizard-v1__review-content">
-                   <label><b>31. I was unable to become enthusiastic about anything :  </b></label><p id="res31"></p>
-                    <label><b>32. I found it difficult to tolerate interruptions to what I was doing :  </b></label><p id="res32"></p>
-                    <label><b>33. I was in a state of nervous tension :  </b></label><p id="res33"></p>
-                    <label><b>34. I felt I was pretty worthless :  </b></label><p id="res34"></p>
-                    <label><b>35. I was intolerant of anything that kept me from getting on with what I was doing :  </b></label><p id="res35"></p>
-                    <label><b>36. I felt terrified :  </b></label><p id="res36"></p>
-                    <label><b>37. I could see nothing in the future to be hopeful about :  </b></label><p id="res37"></p>
-                    <label><b>38. I felt that life was meaningless :  </b></label><p id="res38"></p>
-                    <label><b>39. I found myself getting agitated :  </b></label><p id="res39"></p>
-                    <label><b>40. I was worried about situations in which I might panic and make a fool of myself :  </b></label><p id="res40"></p>
-                    <label><b>41. I experienced trembling  :  </b></label><p id="res41"></p>
-                    <label><b>42. I found it difficult to work up the initiative to do things :  </b></label><p id="res42"></p>
-                    <label><b>43. Category : </b></label><p id="res43"></p>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
           <!--end: Form Wizard Step 5-->
 
           <!--begin: Form Actions -->
-          <div class="kt-form__actions">
+     <!--      <div class="kt-form__actions">
             <button class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
               Previous
             </button>
@@ -2023,7 +723,7 @@ You can stay anonymous and choose to followup with us also
             <button class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next" onclick="showvalue1()">
               Next Step
             </button>
-          </div>
+          </div> -->
           <!--end: Form Actions -->
         </form>
        
