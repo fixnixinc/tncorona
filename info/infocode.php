@@ -1,5 +1,64 @@
 <?php
-include "../php/common/config.php";
+ 
+  if(isset($_POST['admin']))
+  {
+   $email=$_POST['email'];
+    $password=$_POST['password'];
+      $sql="SELECT email,password FROM user Where email='$email' and password='$password'";
+     $result=mysqli_query($link,$sql);
+            if($rows=mysqli_fetch_assoc($result))
+             {    
+             
+             
+               if($rows['email']=='tncoronaspeak@nixwhistle.com'&& $rows['password'] == 'tncoronaspeak')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/tncorona/info/dashboard.php");
+               // break;
+               }
+             
+           
+             else
+               {
+                // echo "Error: " . $sql . "<br>" . $link->error;
+                // alert("incorrect username and password");
+               }
+  }
+}
+?>
+
+<?php
+ include '../php/common/config.php';
+  if(isset($_POST['track']))
+  {
+   $ran=$_POST['ran'];
+    $secretkey=$_POST['secretkey'];
+      $sql="SELECT secretkey,ran FROM `case` where ran='$ran' and secretkey='$secretkey'";
+     $result=mysqli_query($link,$sql);
+             if($rows=mysqli_fetch_assoc($result))
+             {    
+               if($rows['ran']==$ran && $rows['secretkey']==$secretkey)
+               {
+                  echo "Sucessfully";
+                header("location:/tncorona/case/followup.php?ran=".$rows['ran']);
+               }
+             }
+            
+               else
+               {
+                 $sql="SELECT secretkey,ran FROM `info` where ran='$ran' and secretkey='$secretkey'";
+     $result=mysqli_query($link,$sql);
+             if($rows=mysqli_fetch_assoc($result))
+             {    
+               if($rows['ran']==$ran && $rows['secretkey']==$secretkey)
+               {
+                  echo "Sucessfully";
+                header("location:/tncorona/info/followup.php?ran=".$rows['ran']);
+               }
+             }
+               }
+  }
 ?>
 <!DOCTYPE html>
 
@@ -208,3 +267,6 @@ include "../footer.php"; ?>
 
 </body>
 </html>
+
+
+<!-- Modified on 24-04-20 -->

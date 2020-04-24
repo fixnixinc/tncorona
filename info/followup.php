@@ -1,4 +1,34 @@
 <?php
+ include 'php/common/config.php';
+  if(isset($_POST['admin']))
+  {
+   $email=$_POST['email'];
+    $password=$_POST['password'];
+      $sql="SELECT email,password FROM user Where email='$email' and password='$password'";
+     $result=mysqli_query($link,$sql);
+            if($rows=mysqli_fetch_assoc($result))
+             {    
+             
+             
+               if($rows['email']=='tncoronaspeak@nixwhistle.com'&& $rows['password'] == 'tncoronaspeak')
+               {
+               
+                 // echo "Sucessfully";
+                header("location:/tncorona/info/dashboard.php");
+               // break;
+               }
+             
+           
+             else
+               {
+                // echo "Error: " . $sql . "<br>" . $link->error;
+                // alert("incorrect username and password");
+               }
+  }
+}
+?>
+
+<?php
     include "../php/common/config.php";
      $tipno = $_GET['ran'];
     $query = "SELECT * FROM info WHERE ran='$tipno' order by id desc";
@@ -135,6 +165,11 @@ font-size: 13px;
 <button type="button" data-toggle="collapse" data-target="#demo" class="flaticon2-arrow" style="border-radius: 25px; background-color: #86346C; color: #ffffff; font-size: 16px;">  History</button>
 </div><br>
 <div id="demo" class="collapse">
+
+  <label style="color: black;"><strong>Management Update:</strong></label>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['WBUpdate'];?> </textarea>
+
+
 <div class="container">
   <label style="color: black;"><strong>Category :</strong></label>
 <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['category'];?>" style="background: transparent;">
@@ -359,3 +394,6 @@ for (i = 0; i < coll.length; i++) {
     }
   },1000)
 </script> -->
+
+
+<!-- Modified on 24-04-20 -->

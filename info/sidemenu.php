@@ -36,7 +36,7 @@
 								</li>
 							
                           
-								<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/dashboard.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text"> Reviewer</span></a></li>
+								<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/infoview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text"> Reviewer</span></a></li>
 						
 								
 
@@ -52,3 +52,4 @@
 </body>
 </html>
 		
+		<!-- Modified on 24-04-20 -->
