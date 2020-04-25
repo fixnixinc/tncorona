@@ -198,8 +198,7 @@ if in case of urgency, contact your district control room number-<?php echo $row
 }
   }
 ?>
-<?php
-include "../footer.php"; ?>
+<?php include '../new_footer.html'?>
 <script type="text/javascript">
   const myInp = document.getElementById("copy");
   const btnCopy = document.getElementById("cpybtn");

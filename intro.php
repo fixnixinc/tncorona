@@ -540,8 +540,8 @@ Please Submit the form below for my assistance.
                     </li>
                 -->
                     <li class="nav-item">
-                        <a class="" data-toggle="tab" href="#kt_tabs_1_3">
-                            <i class="flaticon-presentation" style="font-size: 50px; color: #afd135;"></i>  <label style="font-size:18px;font-weight: 500;color: black;">My Problem</label>
+                        <a class="" data-toggle="" href="#kt_tabs_1_3">
+                            <i class="flaticon-presentation" style="font-size: 50px; color: #afd135;"></i>  <label style="font-size:18px;font-weight: 500;color: black;">Assistance Required</label>
                         </a>
                     </li>
                <!--      <li class="nav-item">
@@ -557,7 +557,7 @@ Please Submit the form below for my assistance.
       <form class="kt-form" method="post" enctype="multipart/form-data">
                     <!--begin: Form Wizard Step 1-->
                     <div class="kt-wizard-v1__content" data-ktwizard-type="step-content" data-ktwizard-state="current" style="padding-left: 10%; padding-right: 10%;">
-                        <div class="kt-heading kt-heading--md" style="font-size: 18px; font-weight: 300">Assistance Register:</div>
+                        <div class="kt-heading kt-heading--md" style="font-size: 18px; font-weight: 300"></div>
                         <div class="kt-form__section kt-form__section--first">
                             <div class="kt-wizard-v1__form">
                                 <div class="form-group">
@@ -594,7 +594,7 @@ Please Submit the form below for my assistance.
     <div class="caption">
      
     </div>
-  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
 <div class="imageandtext image_grid">
     <label for="selimg2" style="text-align: center;">Neighborhood Alert<br><br>
     <i class="fa fa-hands-helping" style="font-size: 50px; color: #4b830d;"></i>
@@ -690,7 +690,7 @@ Please Submit the form below for my assistance.
                 <h3 class="dropzone-msg-title">Drop files here or click to upload.</h3>
                 <!-- <span class="dropzone-msg-desc">Upload up to 10 files</span> -->
                 <label for="Artifacts" aria-hidden="true">
-         <img src="csv.svg" title="Upload File" width="35" height="35" >
+        <i class="fa fa-cloud-upload-alt" style="font-size: 30px;"></i>
                  <input type="file" name="Artifacts" id="Artifacts" style="display: none;">
                </label>
             </div>
@@ -711,7 +711,7 @@ Please Submit the form below for my assistance.
            <input type="text" placeholder="FullName" id="name" name="name1" class="form-control" required="">&nbsp;
         </div>
       <div class="col-md-4">
-        <input type="text" placeholder="Phone" id="email" name="email1" class="form-control">&nbsp;
+        <input type="text" placeholder="Phone" id="email" name="email1" class="form-control" required="">&nbsp;
       </div>
       <div class="col-md-4">
 
