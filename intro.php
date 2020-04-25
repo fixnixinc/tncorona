@@ -490,10 +490,10 @@ width:100%;
 <div class="sub-heading">
 No matter what's troubling you, get the support you need, right now from Tamilnadu government. We’re in This together
 </div><br>
-<div class="home-actions">
+<!-- <div class="home-actions"> -->
 
 <!-- <span class="appointment button"><a href="https://telegra.ph/TN-Corona-Speak-03-27" style="color: white;">CHAT NOW</a></span> -->
-</div>
+<!-- </div> -->
 
 </div>
  
@@ -1102,8 +1102,6 @@ No matter what's troubling you, get the support you need, right now from Tamilna
 </div>
 </div>
 
-
-<?php include 'footer.php'; ?>
 
        <script>
             var KTAppOptions = {"colors":{"state":{"brand":"#374afb","light":"#ffffff","dark":"#282a3c","primary":"#5867dd","success":"#34bfa3","info":"#36a3f7","warning":"#ffb822","danger":"#fd3995"},"base":{"label":["#c5cbe3","#a1a8c3","#3d4465","#3e4466"],"shape":["#f0f3ff","#d9dffa","#afb4d4","#646c9a"]}}};
