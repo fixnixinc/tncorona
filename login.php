@@ -10,17 +10,15 @@ include 'siteheader.php'; ?>
      $result=mysqli_query($link,$sql);
             if($rows=mysqli_fetch_assoc($result))
              {    
-              $password == 'tnCoronaSpeak';
-                if(md5($password) == '113f994e0db1d4ad21cd1dd80c0ab85e'){
-              
-               if($rows['email']=='tnCoronaSpeak@nixwhistle.com'&& $rows['password'] == 'tnCoronaSpeak')
+                // if(md5($password) == '113f994e0db1d4ad21cd1dd80c0ab85e'){
+    if($rows['email']=='tncoronaspeak@nixwhistle.com' && $rows['password']=='tncoronaspeak')
                {
                
                  // echo "Sucessfully";
                 header("location:/tncorona/info/dashboard.php");
                // break;
                }
-             }
+         
            else if($rows['email']=='idea_analyst@nixwhistle.co'&& $rows['password']=='analyst')
                {
                  // echo "Sucessfully";
@@ -158,7 +156,7 @@ include 'siteheader.php'; ?>
               </div>
             </div> -->
             <div class="kt-login__actions">
-              <button type="submit"  name="login" class="btn btn-info" style="border-radius:20px;width:90px;">Sign In</button>
+              <input type="submit" type="submit" value="login" name="login" class="btn btn-info" style="border-radius:20px;width:90px;">
             </div>
           </form>
         </div>

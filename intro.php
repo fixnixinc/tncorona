@@ -170,7 +170,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         <script src="assets/js/today.js"></script>
 
     </head>
-    <?php include 'siteheader.php'; ?>
+    <?php include 'new_nav_header.html'; ?>
   <style type="text/css">
     #banner{
     /*background-image: url('png/front.png');*/
@@ -185,7 +185,7 @@ align-items: center;
  /*background-image: url('png/front.png');*/
         height: 250px;
 /*        width:100%;
-*/   
+*/  
  box-sizing:cover;
       background-repeat: no-repeat;
   }
@@ -486,11 +486,18 @@ width:100%;
 <div class="kt-portlet">
   <div class="kt-portlet__body" id="banner">
    <div class="banner-container">
-<div class="heading">
-  Get help. Get better.
+    <div class="heading">
+Welcome to the online Corona Helpdesk
 </div>
+<!-- <div class="heading">
+
+  Get help. Get better.
+</div> -->
 <div class="sub-heading">
 No matter what's troubling you, get the support you need, right now from Tamilnadu government. We’re in This together
+</div><br>
+<div class="sub-heading">
+Please Submit the form below for my assistance.
 </div><br>
 <!-- <div class="home-actions"> -->
 
@@ -532,25 +539,34 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                   -->
                 </ul>
                 <div class="tab-content">
-                    
+                   
  <div class="tab-pane active" id="kt_tabs_1_3" role="tabpanel">
       <form class="kt-form" method="post" enctype="multipart/form-data">
                     <!--begin: Form Wizard Step 1-->
                     <div class="kt-wizard-v1__content" data-ktwizard-type="step-content" data-ktwizard-state="current" style="padding-left: 10%; padding-right: 10%;">
-                        <div class="kt-heading kt-heading--md" style="font-size: 18px; font-weight: 300">Share your problem:</div>
+                        <div class="kt-heading kt-heading--md" style="font-size: 18px; font-weight: 300">Assistance Register:</div>
                         <div class="kt-form__section kt-form__section--first">
                             <div class="kt-wizard-v1__form">
                                 <div class="form-group">
                                  <div class="kt-section__content">
-                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Info:</label>
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Subject:</label>
                     </div>  
 
                               <div class="row">
                                    <div class="grid-two imageandtext" >
+<div class="imageandtext image_grid">
+    <label for="selimg6" style="text-align: center;">Medical Assistance <br><br>
+     <i class="flaticon-network" style="font-size: 50px; color: #005eaa;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg6" value="medical">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
   <div class="imageandtext image_grid">
     <label for="selimg1" style="text-align: center;">Death <br><br>
-     <i class="fa fa-user-shield" style="font-size: 50px; color: #005eaa;"></i>
+     <i class="flaticon-bus-stop" style="font-size: 50px; color: #4b830d;"></i>
     </label>
     <input type="radio" name="selimg" id="selimg1" value="death">
     <div class="caption">
@@ -558,7 +574,18 @@ No matter what's troubling you, get the support you need, right now from Tamilna
     </div>
   </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+ 
+
   <div class="imageandtext image_grid">
+    <label for="selimg3" style="text-align: center;">Emergency Travel Needs<br><br>
+       <i class="fa fa-bus-alt" style="font-size: 60px; color: #005eaa;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg3" value="travelAlert">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="imageandtext image_grid">
     <label for="selimg2" style="text-align: center;">Neighborhood Alert<br><br>
     <i class="fa fa-hands-helping" style="font-size: 50px; color: #4b830d;"></i>
     </label>
@@ -567,18 +594,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
      
     </div>
   </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <div class="imageandtext image_grid">
-    <label for="selimg3" style="text-align: center;">Travel Alert<br><br>
-       <i class="fa fa-bus-alt" style="font-size: 50px; color: #005eaa;"></i>
-    </label>
-    <input type="radio" name="selimg" id="selimg3" value="travelAlert">
-    <div class="caption">
-     
-    </div>
-  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <div class="imageandtext image_grid">
+  <!-- <div class="imageandtext image_grid">
     <label for="selimg4" style="text-align: center;">Feed<br><br>
       <i class="la la-feed" style="font-size: 50px; color: #4b830d;"></i>
     </label>
@@ -586,10 +602,10 @@ No matter what's troubling you, get the support you need, right now from Tamilna
     <div class="caption">
      
     </div>
-  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 
   <div class="imageandtext image_grid">
-    <label for="selimg5" style="text-align: center;">Operation<br><br>
+    <label for="selimg5" style="text-align: center;">Others <br><br>
       <i class="fa fa-ambulance" style="font-size: 50px; color: #005eaa;"></i>
     </label>
     <input type="radio" name="selimg" id="selimg5" value="operation">
@@ -657,13 +673,13 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                                    
                                     <div class="form-group">
                                       <div class="kt-section__content">
-                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Description:</label>
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Brief Note On Assistance Requirement:</label>
                     </div>  
                          <textarea type="text" rows="8" class="form-control" name="Description1" id="Description1"></textarea>
                                 </div>
                                <div class="form-group">
                                       <div class="kt-section__content">
-                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Attachment:</label>
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Relerant Attachments (If any):</label>
                     </div>  
                      <div class="form-group">
        
@@ -681,10 +697,10 @@ No matter what's troubling you, get the support you need, right now from Tamilna
       </div>
 
                                         <div class="form-group">
-                                  
+                                 
                      <div class="form-group">
              
-    
+   
       </div>
      </div>
            <div id="details1">
@@ -693,11 +709,11 @@ No matter what's troubling you, get the support you need, right now from Tamilna
            <input type="text" placeholder="FullName" id="name" name="name1" class="form-control" required="">&nbsp;
         </div>
       <div class="col-md-4">
-        <input type="text" placeholder="Email" id="email" name="email1" class="form-control">&nbsp;
+        <input type="text" placeholder="Phone" id="email" name="email1" class="form-control">&nbsp;
       </div>
       <div class="col-md-4">
 
-        <input type="text"  placeholder="Phone Number" id="phone" name="phone1" class="form-control" required="">
+        <input type="text"  placeholder="Email" id="phone" name="phone1" class="form-control" required="">
 
       </div>
 
@@ -769,17 +785,17 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                 </div>
                 <div class="kt-wizard-v2__nav-label">
                   <div class="kt-wizard-v2__nav-label-title">
-                  
+                 
                   </div>
                   <div class="kt-wizard-v2__nav-label-desc">
-                  
+                 
                   </div>
                 </div>
               </div>
             </a> -->
 
 
-          
+         
 <!--     <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step" data-ktwizard-state="step-first">
               <div class="kt-wizard-v2__nav-body">
                 <div class="kt-wizard-v2__nav-icon">
@@ -813,7 +829,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
        <!--    </div>
         </div> -->
         <!--end: Form Wizard Nav -->
-<!-- 
+<!--
       </div> -->
       <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v2__wrapper" style="background-image:url('png/backimg4.jpg');">
         <!--begin: Form Wizard Form-->
@@ -829,7 +845,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
              <!--      <div class="header" style="background: #afd135;height: 6px;">
                                                                                
                                 </div> -->
-      <!-- <div class='tableauPlaceholder' id='viz1587030737912' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TNCoronaSpeak1&#47;TNCoronaSpeak' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>    -->           
+      <!-- <div class='tableauPlaceholder' id='viz1587030737912' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TNCoronaSpeak1&#47;TNCoronaSpeak' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>    -->          
  <script type='text/javascript'>                    
            var divElement = document.getElementById('viz1587030737912');                    
          var vizElement = divElement.getElementsByTagName('object')[0];                  
@@ -856,7 +872,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
             <!-- <div class="kt-heading kt-heading--md">Setup Your Current Location</div> -->
             <div class="kt-form__section kt-form__section--first">
               <div class="kt-wizard-v2__form">
-          
+         
                <div class="col-md-12" id="corona_logo">
                  <div class="card" style=" box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;">
                       <div class="header" style="background: #afd135;height: 6px;">
@@ -1555,6 +1571,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
 
 
 </script>
+<?php include 'new_footer.html'?>
 
       </body>
       </html>
@@ -1564,3 +1581,5 @@ No matter what's troubling you, get the support you need, right now from Tamilna
 <!-- changes made at 25-04-2020-->
 <!-- Map removed  pic-->
 <!-- Text centered -->
+
+-
