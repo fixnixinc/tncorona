@@ -477,7 +477,20 @@ width:100%;
 
 
     <body  class="kt-page--loading-enabled kt-page--loading kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--transparent kt-page--loading">
-
+<div class="kt-container  kt-grid__item kt-grid__item--fluid" ><br><br>
+        <div class="row">
+    <div class="col">
+        <div class="zoom">
+        <div class="alert alert-light alert-elevate fade show" role="alert" id="disc">
+            <!-- <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div> -->
+            <div class="alert-text">
+             <img src="png/jj.jpeg" width="100%" height="50%">
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
         <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
                       <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
@@ -509,7 +522,7 @@ Please Submit the form below for my assistance.
 </div>
 <!-- SpeakUp  start -->
 
- <div class="kt-container  kt-grid__item kt-grid__item--fluid" id="content">
+ <div class="kt-container  kt-grid__item kt-grid__item--fluid" id="content" style="margin-top: 100px;">
                                          <div class="kt-portlet">
            <!--  <div class="kt-portlet__head">
                 <div class="kt-portlet__head-label">
@@ -668,7 +681,7 @@ Please Submit the form below for my assistance.
                                 </div>
                                <div class="form-group">
                                       <div class="kt-section__content">
-                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Relerant Attachments (If any):</label>
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Relevant Attachments (If any):</label>
                     </div>  
                      <div class="form-group">
        
