@@ -153,7 +153,7 @@ if(isset($_POST['submit']))
 </h3></center>
             
           </div>
-          <form class="kt-form" method="post" action="">
+          <form class="" method="post" action="">
             <div class="input-group">
               <input class="form-control" type="text"  placeholder="Email" id="email" name="email" autocomplete="off">
             </div>
@@ -170,9 +170,11 @@ if(isset($_POST['submit']))
               <div class="col kt-align-right">
                 <a href="javascript:;" id="kt_login_forgot" class="kt-link kt-login__link">Forget Password ?</a>
               </div>
-            </div> -->
-            <div class="kt-login__actions">
+            </div> --><br><br><br>
+            <div >
+              <center>
               <button type="submit"  name="login" class="btn btn-info" style="border-radius:20px;width:90px;">Sign In</button>
+            </center>
             </div>
           </form>
         </div>
