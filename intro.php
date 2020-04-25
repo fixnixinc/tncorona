@@ -535,7 +535,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
       <form class="kt-form" method="post" enctype="multipart/form-data">
                     <!--begin: Form Wizard Step 1-->
                     <div class="kt-wizard-v1__content" data-ktwizard-type="step-content" data-ktwizard-state="current" style="padding-left: 10%; padding-right: 10%;">
-                        <div class="kt-heading kt-heading--md" style="font-size: 18px; font-weight: 300">Setup Your Current Info:</div>
+                        <div class="kt-heading kt-heading--md" style="font-size: 18px; font-weight: 300">Share your problem:</div>
                         <div class="kt-form__section kt-form__section--first">
                             <div class="kt-wizard-v1__form">
                                 <div class="form-group">
@@ -695,7 +695,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
       </div>
       <div class="col-md-4">
 
-        <input type="text"  placeholder="1234-567-890" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" id="phone" name="phone1" class="form-control" required="">
+        <input type="text"  placeholder="Phone Number" id="phone" name="phone1" class="form-control" required="">
 
       </div>
 
@@ -755,10 +755,10 @@ No matter what's troubling you, get the support you need, right now from Tamilna
     <div class="kt-portlet">
   <div class="kt-portlet__body kt-portlet__body--fit">
     <div class="kt-grid  kt-wizard-v2 kt-wizard-v2--white" id="kt_wizard_v2" data-ktwizard-state="step-first">
-      <div class="kt-grid__item kt-wizard-v2__aside">
+      <!-- <div class="kt-grid__item kt-wizard-v2__aside"> -->
         <!--begin: Form Wizard Nav -->
-        <div class="kt-wizard-v2__nav" >
-          <div class="kt-wizard-v2__nav-items" >
+   <!--      <div class="kt-wizard-v2__nav" >
+          <div class="kt-wizard-v2__nav-items" > -->
             <!--doc: Replace A tag with SPAN tag to disable the step link click -->
          <!--    <a class="kt-wizard-v2__nav-item"  data-ktwizard-type="step" >
               <div class="kt-wizard-v2__nav-body">
@@ -778,7 +778,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
 
 
           
-    <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step" data-ktwizard-state="step-first">
+<!--     <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step" data-ktwizard-state="step-first">
               <div class="kt-wizard-v2__nav-body">
                 <div class="kt-wizard-v2__nav-icon">
                   <i class="flaticon-bus-stop" style="color: #afd135;"></i>
@@ -787,12 +787,12 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                   <div class="kt-wizard-v2__nav-label-title">
                     Districts
                   </div>
-                  <!-- <div class="kt-wizard-v2__nav-label-desc">
+                  <div class="kt-wizard-v2__nav-label-desc">
                     Choose Your countries Map
-                  </div> -->
+                  </div>
                 </div>
               </div>
-            </a>
+            </a> -->
          <!--   <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step">
               <div class="kt-wizard-v2__nav-body">
                 <div class="kt-wizard-v2__nav-icon">
@@ -808,11 +808,11 @@ No matter what's troubling you, get the support you need, right now from Tamilna
             </a> -->
            
          
-          </div>
-        </div>
+       <!--    </div>
+        </div> -->
         <!--end: Form Wizard Nav -->
-
-      </div>
+<!-- 
+      </div> -->
       <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v2__wrapper" style="background-image:url('png/backimg4.jpg');">
         <!--begin: Form Wizard Form-->
         <form class="kt-form" id="kt_form" >
@@ -847,28 +847,30 @@ No matter what's troubling you, get the support you need, right now from Tamilna
         </div>
           <!--end: Form Wizard Step 1-->
 
+
+
           <!--begin: Form Wizard Step 2-->
-          <div class="kt-wizard-v2__content" data-ktwizard-type="step-content">
+          <div class="kt-wizard-v2__content" data-ktwizard-type="step-content" id="map">
             <!-- <div class="kt-heading kt-heading--md">Setup Your Current Location</div> -->
             <div class="kt-form__section kt-form__section--first">
               <div class="kt-wizard-v2__form">
           
-               <div class="col-md-12" id="corona_logo" style="margin-left:-100px;">
+               <div class="col-md-12" id="corona_logo">
                  <div class="card" style=" box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;">
                       <div class="header" style="background: #afd135;height: 6px;">
                                    </div>
-                                                                         <div>
+             <!--   <div>
           <div class="content col-md-12" id="stats">
-            <div class="container-fluid">
+            <div class="container-fluid"> -->
               <!-- <h4 class="page-title">Global Data</h4> -->
-              <div class="row col-md-12">
+<!--               <div class="row col-md-12">
                 <div class="col-md-1.5">
                   <div >
                     <div class="card-body ">
                       <div class="row">
                         <div class="col-7 d-flex align-items-center">
                           <div class="numbers">
-                            <p class="card-category"  style="color:orange">Confirmed</p>
+                            <p class="card-category"  style="color:orange">Death</p>
                             <h4 class="card-title" id="confirmed_cases"  style="color:orange">42</h4>
                           </div>
                         </div>
@@ -882,7 +884,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                       <div class="row">
                         <div class="col-7 d-flex align-items-center">
                           <div class="numbers">
-                            <p class="card-category"  style="color:blue">Active</p>
+                            <p class="card-category"  style="color:blue">Neighborhood Alert</p>
                             <h4 class="card-title" id="active_cases"  style="color:blue">33</h4>
                           </div>
                         </div>
@@ -896,7 +898,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                       <div class="row" >
                         <div class="col-7 d-flex align-items-center">
                           <div class="numbers">
-                            <p class="card-category" style="color:green">Recovered</p>
+                            <p class="card-category" style="color:green">Travel Alert</p>
                             <h4 class="card-title" style="color:green" id="recovered_cases"></h4>
                           </div>
                         </div>
@@ -910,7 +912,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                       <div class="row">
                         <div class="col-7 d-flex align-items-center">
                           <div class="numbers">
-                            <p class="card-category" style="color:red">Death</p>
+                            <p class="card-category" style="color:red">Feed</p>
                             <h4 class="card-title" id="death_cases" style="color:red"></h4>
                           </div>
                         </div>
@@ -923,7 +925,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                     <div class="card-body">
                         <div class="col-7 d-flex align-items-center">
                           <div class="numbers">
-                            <p class="card-category" style="color:grey">District</p>
+                            <p class="card-category" style="color:grey">Operation</p>
                             <h4 class="card-title" style="color:grey" id="district_na">-</h4>
                           </div>
                         </div>
@@ -936,7 +938,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                     <div class="card-body">
                         <div class="col-7 d-flex align-items-center">
                           <div class="numbers">
-                            <p class="card-category" style="color:orange">Confirmed</p>
+                            <p class="card-category" style="color:orange">Operation</p>
                             <h4 class="card-title" style="color:orange" id="confirmed_cases_na"></h4>
                           </div>
                         </div>
@@ -958,12 +960,12 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                   </div>
                 </div>
 
-              </div>
-            </div>
+              </div> -->
+    <!--         </div>
           </div>
         </div>
-
-                                                                        <div class="card-body">
+ -->
+                                                                      <!--   <div class="card-body">
                     <svg class="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px" height="500px" viewBox="0 0 2340 2032" enable-background="new 0 0 2340 2032" xml:space="preserve"><link xmlns="" type="text/css" id="dark-mode" rel="stylesheet" href=""/><style xmlns="" type="text/css" id="dark-mode-custom-style"/>
                       <g id="districts">
                       <g id="tn">
@@ -1056,7 +1058,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
 
 
               </div>
-            </div>
+            </div> -->
           </div>
           <!--end: Form Wizard Step 2-->
 
@@ -1560,3 +1562,4 @@ No matter what's troubling you, get the support you need, right now from Tamilna
 
 
 <!-- changes made at 25-04-2020-->
+<!-- Map removed -->
