@@ -32,7 +32,7 @@
 							
 							<ul class="kt-menu__nav ">
 								
-								<li class="kt-menu__item " aria-haspopup="true"><a href="info/view.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Info</span></a>
+								<li class="kt-menu__item " aria-haspopup="true"><a href="info/view.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Central despatch</span></a>
 								</li>
 							
                           

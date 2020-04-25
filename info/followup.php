@@ -1,31 +1,34 @@
 <?php
  include 'php/common/config.php';
-  if(isset($_POST['admin']))
+  if(isset($_POST['track']))
   {
-   $email=$_POST['email'];
-    $password=$_POST['password'];
-      $sql="SELECT email,password FROM user Where email='$email' and password='$password'";
+   $ran=$_POST['ran'];
+    $secretkey=$_POST['secretkey'];
+      $sql="SELECT secretkey,ran FROM `case` where ran='$ran' and secretkey='$secretkey'";
      $result=mysqli_query($link,$sql);
-            if($rows=mysqli_fetch_assoc($result))
+             if($rows=mysqli_fetch_assoc($result))
              {    
-             
-             
-               if($rows['email']=='tncoronaspeak@nixwhistle.com'&& $rows['password'] == 'tncoronaspeak')
+               if($rows['ran']==$ran && $rows['secretkey']==$secretkey)
                {
-               
-                 // echo "Sucessfully";
-                header("location:/tncorona/info/dashboard.php");
-               // break;
+                  echo "Sucessfully";
+                header("location:/tncorona/case/followup.php?ran=".$rows['ran']);
                }
-             
+             }
            
-             else
+               else
                {
-                // echo "Error: " . $sql . "<br>" . $link->error;
-                // alert("incorrect username and password");
+                 $sql="SELECT secretkey,ran FROM `info` where ran='$ran' and secretkey='$secretkey'";
+     $result=mysqli_query($link,$sql);
+             if($rows=mysqli_fetch_assoc($result))
+             {    
+               if($rows['ran']==$ran && $rows['secretkey']==$secretkey)
+               {
+                  echo "Sucessfully";
+                header("location:/tncorona/info/followup.php?ran=".$rows['ran']);
+               }
+             }
                }
   }
-}
 ?>
 
 <?php
@@ -76,65 +79,10 @@
 <link href="assets/vendors/general/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
 <link href="assets/vendors/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/general/dual-listbox/dist/dual-listbox.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
-<link href="assets/vendors/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
-<link href="assets/toggleButton/bootstrap-toggle.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="assets/jquery-ui-1.11.4/jquery-ui.css"/>
- <link href="assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
- <link rel="shortcut icon" href=" ./assets/media/company-logos/whistle.png" />
-
- 
-<style>
-
-.investigator {
-color: #000;
-}
-.blower{
-color: #8ac6d1;
-}
-.message{
-font-size: 11px;
-}
-.labelt{
-font-size: 13px;
-}
 
 
-.collapsible {
-   
-  cursor: pointer;
- 
-  /*width: 9%;*/
-  /*border: none;*/
-  text-align: right;
-  outline: none;
-  font-size: 15px;
-  background: #FAFAFA;
-
-}
-
-
-.content {
-  display: none;
-  overflow: hidden;
- 
-}
-
-   label {
-    color: #ffffff;
-   }
- 
-</style>
 </head>
-
+<?php include '../siteheader.php'?>
 <body  class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 <h2 style="margin-left: 400px;"></h2>
 <form method="post">
@@ -156,7 +104,7 @@ font-size: 13px;
  if($rows=mysqli_fetch_assoc($result)) {
   ?>
  <div class="container">
-  <label style="color: black;"><strong>Info Update:</strong></label>
+  <label style="color: black;"><strong>Citizen Update:</strong></label>
   <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['WBUpdate'];?> </textarea>
 </div>
 <?php } ?>
@@ -166,9 +114,11 @@ font-size: 13px;
 </div><br>
 <div id="demo" class="collapse">
 
-  <label style="color: black;"><strong>Management Update:</strong></label>
-  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['WBUpdate'];?> </textarea>
+  <label style="color: black;"><strong>Management Synopsis:</strong></label>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['MUpdate'];?> </textarea>
 
+  <label style="color: black;"><strong>Reinvestigate Update:</strong></label>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['reinvestigate'];?> </textarea>
 
 <div class="container">
   <label style="color: black;"><strong>Category :</strong></label>
@@ -267,6 +217,7 @@ font-size: 13px;
 </body>
 
 </html>
+<?php include '../footer.php'; ?>
   <script>
             var KTAppOptions = {"colors":{"state":{"brand":"#2c77f4","light":"#ffffff","dark":"#282a3c","primary":"#5867dd","success":"#34bfa3","info":"#36a3f7","warning":"#ffb822","danger":"#fd3995"},"base":{"label":["#c5cbe3","#a1a8c3","#3d4465","#3e4466"],"shape":["#f0f3ff","#d9dffa","#afb4d4","#646c9a"]}}};
         </script>
