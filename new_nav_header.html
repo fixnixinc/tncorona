@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+      #header_design{
+        background-color: #F7EFE3;  
+       
+        height: 40px;
+
+      }
+
+      @font-face{
+        font-family: covid;
+        src:url(./assets/fonts/covid.ttf);
+      }
+
+
+      #covid19_heading{
+        font-family: covid;
+        font-size: 22px;
+        color: #56B455;
+      }
+
+
+
+
+      @media only screen and (max-width: 599px){
+          #header_design{
+            height: 95px;
+          }
+
+          #header_cm_image{
+            margin-top: 22px;
+          }
+
+          #text_head{
+            visibility: hidden;
+          }
+      }
+
+    </style>
+ 
+  </head>
+  <body>
+    <!-- Section for entering the Jumbotron Design -->
+    <div class="jumbotron jumbotron-fluid" id="header_design">
+      <div class="container-fluid" style="margin-top:-55px;">
+          <!-- Creating Image Flexbox -->
+          <div class="d-flex bd-highlight" id="header_cm_image">
+
+            <div class="p-2 flex-xl-fill bd-highlight">
+              ​<picture >
+                <source srcset="./assets/img/jj.png" type="image/svg+xml">
+                <img src="./assets/img/jj.png" class="img-fluid" alt="CM_TN_JJ" style="height: 110px; width: 105px; margin-top: -14px;">
+              </picture>
+            </div>
+
+            <div class="p-2 flex-md-fill bd-highlight" id="text_head">
+             <label id="covid19_heading">COVID-19</label>
+              <!-- <h2>GET HELP. GET BETTER</h2> -->
+              <!-- <p style="font-size: 10px;">No Matter what's troubling you. Get the support you need, right now from <br> TamilNadu government. we're in this together.</p>
+          -->
+            </div>
+
+            <div class="p-2 flex-xl--fill bd-highlight">
+              <picture >
+                <source srcset="./assets/img/ops.png" type="image/svg+xml">
+                <img src="./assets/img/ops.png" class="img-fluid" alt="CM_TN_JJ" style="height: 110px; width: 105px; margin-top: -14px;">
+              </picture>
+            </div>
+
+          </div>
+          <!-- Creating Image Flexbox -->
+      </div>
+    </div>
+  
+    <!-- Section for entering the Jumbotron Design -->
+
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="margin-top: -30px;">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="color: #FFFFFF;">Track<span class="sr-only"></span></a>
+      </li>
+      
+   
+  </div>
+</nav>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

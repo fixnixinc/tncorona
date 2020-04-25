@@ -185,7 +185,7 @@ align-items: center;
  /*background-image: url('png/front.png');*/
         height: 250px;
 /*        width:100%;
-*/   
+*/  
  box-sizing:cover;
       background-repeat: no-repeat;
   }
@@ -486,11 +486,18 @@ width:100%;
 <div class="kt-portlet">
   <div class="kt-portlet__body" id="banner">
    <div class="banner-container">
-<div class="heading">
-  Get help. Get better.
+    <div class="heading">
+Welcome to the online Corona Helpdesk
 </div>
+<!-- <div class="heading">
+
+  Get help. Get better.
+</div> -->
 <div class="sub-heading">
 No matter what's troubling you, get the support you need, right now from Tamilnadu government. We’re in This together
+</div><br>
+<div class="sub-heading">
+Please Submit the form below for my assistance.
 </div><br>
 <!-- <div class="home-actions"> -->
 
@@ -532,44 +539,42 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                   -->
                 </ul>
                 <div class="tab-content">
-                    
+                   
  <div class="tab-pane active" id="kt_tabs_1_3" role="tabpanel">
       <form class="kt-form" method="post" enctype="multipart/form-data">
                     <!--begin: Form Wizard Step 1-->
                     <div class="kt-wizard-v1__content" data-ktwizard-type="step-content" data-ktwizard-state="current" style="padding-left: 10%; padding-right: 10%;">
-                        <div class="kt-heading kt-heading--md" style="font-size: 18px; font-weight: 300">Share your problem:</div>
+                        <div class="kt-heading kt-heading--md" style="font-size: 18px; font-weight: 300">Assistance Register:</div>
                         <div class="kt-form__section kt-form__section--first">
                             <div class="kt-wizard-v1__form">
                                 <div class="form-group">
                                  <div class="kt-section__content">
-                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Info:</label>
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Subject:</label>
                     </div>  
 
                               <div class="row">
-                                   <div class="grid-two imageandtext" >
+                                   <div class="grid-two imageandtext">
+<div class="imageandtext image_grid">
+    <label for="selimg6" style="text-align: center;">Medical Assistance <br><br>
+     <i class="flaticon-network" style="font-size: 50px; color: #005eaa;"></i>
+    </label>
+    <input type="radio" name="selimg" id="selimg6" value="medical">
+    <div class="caption">
+     
+    </div>
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
   <div class="imageandtext image_grid">
     <label for="selimg1" style="text-align: center;">Death <br><br>
-     <i class="fa fa-user-shield" style="font-size: 50px; color: #005eaa;"></i>
+     <i class="flaticon-bus-stop" style="font-size: 50px; color: #4b830d;"></i>
     </label>
     <input type="radio" name="selimg" id="selimg1" value="death">
     <div class="caption">
      
     </div>
   </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <div class="imageandtext image_grid">
-    <label for="selimg2" style="text-align: center;">Neighborhood Alert<br><br>
-    <i class="fa fa-hands-helping" style="font-size: 50px; color: #4b830d;"></i>
-    </label>
-    <input type="radio" name="selimg" id="selimg2" value="NeighborhoodAlert">
-    <div class="caption">
-     
-    </div>
-  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <div class="imageandtext image_grid">
-    <label for="selimg3" style="text-align: center;">Travel Alert<br><br>
+<div class="imageandtext image_grid">
+    <label for="selimg3" style="text-align: center;">Emergency Travel Needs<br><br>
        <i class="fa fa-bus-alt" style="font-size: 50px; color: #005eaa;"></i>
     </label>
     <input type="radio" name="selimg" id="selimg3" value="travelAlert">
@@ -577,19 +582,19 @@ No matter what's troubling you, get the support you need, right now from Tamilna
      
     </div>
   </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <div class="imageandtext image_grid">
-    <label for="selimg4" style="text-align: center;">Feed<br><br>
-      <i class="la la-feed" style="font-size: 50px; color: #4b830d;"></i>
+<div class="imageandtext image_grid">
+    <label for="selimg2" style="text-align: center;">Neighborhood Alert<br><br>
+    <i class="fa fa-hands-helping" style="font-size: 50px; color: #4b830d;"></i>
     </label>
-    <input type="radio" name="selimg" id="selimg4" value="feed">
+    <input type="radio" name="selimg" id="selimg2" value="NeighborhoodAlert">
     <div class="caption">
      
     </div>
   </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+
   <div class="imageandtext image_grid">
-    <label for="selimg5" style="text-align: center;">Operation<br><br>
+    <label for="selimg5" style="text-align: center;">Others <br><br>
       <i class="fa fa-ambulance" style="font-size: 50px; color: #005eaa;"></i>
     </label>
     <input type="radio" name="selimg" id="selimg5" value="operation">
@@ -609,61 +614,61 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                     <div class="row">
                       <div class="col-md-6">
                                                                                        
-<select id="district2" name="district2" class="form-control" style="border-color:#B8B8BB;background:transparent;">
+<select id="district" name="district2" class="form-control" style="border-color:#B8B8BB;background:transparent;">
        <option>Select your District</option>
-         <option value='Chennai'  data-title="Chennai">Chennai</option>
-         <option value='Ariyalur'  data-title="Ariyalur">Ariyalur</option>
-         <option value='Chengalpattu'  data-title="Chengalpattu">Chengalpattu</option>
-         <option value='Coimbatore'  data-title="Coimbatore">Coimbatore</option>
-         <option value='Cuddalore'  data-title="Cuddalore">Cuddalore</option>
-         <option value='Dharmapuri'  data-title="Dharmapuri">Dharmapuri</option>
-         <option value='Dindigul'  data-title="Dindigul">Dindigul</option>
-         <option value='Erode'  data-title="Erode">Erode</option>
-         <option value='Kallakurichi'  data-title="Kallakurichi">Kallakurichi</option>
-         <option value='Kanchipuram'  data-title="Kanchipuram">Kanchipuram</option>
-         <option value='Kanniyakumari'  data-title="Kanniyakumari">Kanniyakumari</option>
-         <option value='Karur'  data-title="Karur">Karur</option>
-         <option value='Krishnagiri'  data-title="Krishnagiri">Krishnagiri</option>
-         <option value='Madurai'  data-title="Madurai">Madurai</option>
-         <option value='Mayiladuthurai'  data-title="Mayiladuthurai">Mayiladuthurai</option>
-         <option value='Nagapattinam'  data-title="Nagapattinam">Nagapattinam</option>
-         <option value='Namakkal'  data-title="Namakkal">Namakkal</option>
-         <option value='Nilgiris'  data-title="Nilgiris">Nilgiris</option>
-         <option value='Perambalur'  data-title="Perambalur">Perambalur</option>
-         <option value='Pudukkottai'  data-title="Pudukkottai">Pudukkottai</option>
-         <option value='Ramanathapuram'  data-title="Ramanathapuram">Ramanathapuram</option>
-         <option value='Ranipet'  data-title="Ranipet">Ranipet</option>
-         <option value='Salem'  data-title="Salem">Salem</option>
-         <option value='Sivagangai'  data-title="Sivagangai">Sivagangai</option>
-         <option value='Tenkasi'  data-title="Tenkasi">Tenkasi</option>
-         <option value='Thanjavur'  data-title="Thanjavur">Thanjavur</option>
-         <option value='Theni'  data-title="Theni">Theni</option>
-         <option value='Thoothukudi'  data-title="Thoothukudi">Thoothukudi</option>
-         <option value='Tiruchirappalli'  data-title="Tiruchirappalli">Tiruchirappalli</option>
-         <option value='Tirunelveli'  data-title="Tirunelveli">Tirunelveli</option>
-         <option value='Tirupattur'  data-title="Tirupattur">Tirupattur</option>
-         <option value='Tiruppur'  data-title="Tiruppur">Tiruppur</option>
-         <option value='Tiruvallur'  data-title="Tiruvallur">Tiruvallur</option>
-         <option value='Tiruvannamalai'  data-title="Tiruvannamalai">Tiruvannamalai</option>
-         <option value='Tiruvarur'  data-title="Tiruvarur">Tiruvarur</option>
-         <option value='Vellore'  data-title="Vellore">Vellore</option>
-         <option value='Viluppuram'  data-title="Viluppuram">Viluppuram</option>
-         <option value='Virudhunagar'  data-title="Virudhunagar">Virudhunagar</option>
+         <option value='04329-228709'  data-title="Chennai">Chennai</option>
+         <option value='04329-228709'  data-title="Ariyalur">Ariyalur</option>
+         <option value='044-27237107/27237207'  data-title="Chengalpattu">Chengalpattu</option>
+         <option value='0422-2301114'  data-title="Coimbatore">Coimbatore</option>
+         <option value='04142-220700'  data-title="Cuddalore">Cuddalore</option>
+         <option value='04142-220700'  data-title="Dharmapuri">Dharmapuri</option>
+         <option value='0451-2460320'  data-title="Dindigul">Dindigul</option>
+         <option value='0424-2260211'  data-title="Erode">Erode</option>
+         <option value='04151-220000'  data-title="Kallakurichi">Kallakurichi</option>
+         <option value='0424-2260211'  data-title="Kanchipuram">Kanchipuram</option>
+         <option value='04652-231077'  data-title="Kanniyakumari">Kanniyakumari</option>
+         <option value='04324-256306'  data-title="Karur">Karur</option>
+         <option value='04343-234424'  data-title="Krishnagiri">Krishnagiri</option>
+         <option value='0452-2546160'  data-title="Madurai">Madurai</option>
+         <option value='0452-2546162'  data-title="Mayiladuthurai">Mayiladuthurai</option>
+         <option value='04365-252500'  data-title="Nagapattinam">Nagapattinam</option>
+         <option value='04286-281425/8220402437'  data-title="Namakkal">Namakkal</option>
+         <option value='0423-2444012/2444013'  data-title="Nilgiris">Nilgiris</option>
+         <option value='04328-224455'  data-title="Perambalur">Perambalur</option>
+         <option value='04322-222207'  data-title="Pudukkottai">Pudukkottai</option>
+         <option value='04567-230060'  data-title="Ramanathapuram">Ramanathapuram</option>
+         <option value='0416-2258016'  data-title="Ranipet">Ranipet</option>
+         <option value='0427-2452202'  data-title="Salem">Salem</option>
+         <option value='0427-2452202'  data-title="Sivagangai">Sivagangai</option>
+         <option value='0462-2501070/2501012'  data-title="Tenkasi">Tenkasi</option>
+         <option value='04362-230121'  data-title="Thanjavur">Thanjavur</option>
+         <option value='04546-261093'  data-title="Theni">Theni</option>
+         <option value='0461-2340101'  data-title="Thoothukudi">Thoothukudi</option>
+         <option value='0431-2418995'  data-title="Tiruchirappalli">Tiruchirappalli</option>
+         <option value='0462-2501070/2501012'  data-title="Tirunelveli">Tirunelveli</option>
+         <option value='04179-222111'  data-title="Tirupattur">Tirupattur</option>
+         <option value='0421-2971199'  data-title="Tiruppur">Tiruppur</option>
+         <option value='044-27664177/27666746'  data-title="Tiruvallur">Tiruvallur</option>
+         <option value='04175-1077  04175-232377'  data-title="Tiruvannamalai">Tiruvannamalai</option>
+         <option value='04366-226623'  data-title="Tiruvarur">Tiruvarur</option>
+         <option value='0416-2258016'  data-title="Vellore">Vellore</option>
+         <option value='04146-223265'  data-title="Viluppuram">Viluppuram</option>
+         <option value='04562-252601/252017'  data-title="Virudhunagar">Virudhunagar</option>
+         <option>Others</option>
 
-</select>
-                                    </div>
+</select>                     </div>
                                   </div>
                                 </div>
                                    
                                     <div class="form-group">
                                       <div class="kt-section__content">
-                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Description:</label>
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Brief Note On Assistance Requirement:</label>
                     </div>  
                          <textarea type="text" rows="8" class="form-control" name="Description1" id="Description1"></textarea>
                                 </div>
                                <div class="form-group">
                                       <div class="kt-section__content">
-                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Attachment:</label>
+                        <label data-toggle="kt-popover" title="tooltip title" data-content="And here's some amazing content. It's very engaging. Right?" class="kt-heading kt-heading--md" style="font-size:16px;font-weight: 600;">Relerant Attachments (If any):</label>
                     </div>  
                      <div class="form-group">
        
@@ -681,10 +686,10 @@ No matter what's troubling you, get the support you need, right now from Tamilna
       </div>
 
                                         <div class="form-group">
-                                  
+                                 
                      <div class="form-group">
              
-    
+   
       </div>
      </div>
            <div id="details1">
@@ -693,11 +698,11 @@ No matter what's troubling you, get the support you need, right now from Tamilna
            <input type="text" placeholder="FullName" id="name" name="name1" class="form-control" required="">&nbsp;
         </div>
       <div class="col-md-4">
-        <input type="text" placeholder="Email" id="email" name="email1" class="form-control">&nbsp;
+        <input type="text" placeholder="Phone" id="email" name="email1" class="form-control">&nbsp;
       </div>
       <div class="col-md-4">
 
-        <input type="text"  placeholder="Phone Number" id="phone" name="phone1" class="form-control" required="">
+        <input type="text"  placeholder="Email" id="phone" name="phone1" class="form-control" required="">
 
       </div>
 
@@ -769,17 +774,17 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                 </div>
                 <div class="kt-wizard-v2__nav-label">
                   <div class="kt-wizard-v2__nav-label-title">
-                  
+                 
                   </div>
                   <div class="kt-wizard-v2__nav-label-desc">
-                  
+                 
                   </div>
                 </div>
               </div>
             </a> -->
 
 
-          
+         
 <!--     <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step" data-ktwizard-state="step-first">
               <div class="kt-wizard-v2__nav-body">
                 <div class="kt-wizard-v2__nav-icon">
@@ -813,7 +818,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
        <!--    </div>
         </div> -->
         <!--end: Form Wizard Nav -->
-<!-- 
+<!--
       </div> -->
       <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v2__wrapper" style="background-image:url('png/backimg4.jpg');">
         <!--begin: Form Wizard Form-->
@@ -829,7 +834,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
              <!--      <div class="header" style="background: #afd135;height: 6px;">
                                                                                
                                 </div> -->
-      <!-- <div class='tableauPlaceholder' id='viz1587030737912' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TNCoronaSpeak1&#47;TNCoronaSpeak' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>    -->           
+      <!-- <div class='tableauPlaceholder' id='viz1587030737912' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TNCoronaSpeak1&#47;TNCoronaSpeak' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TN&#47;TNCoronaSpeak1&#47;TNCoronaSpeak&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>    -->          
  <script type='text/javascript'>                    
            var divElement = document.getElementById('viz1587030737912');                    
          var vizElement = divElement.getElementsByTagName('object')[0];                  
@@ -856,7 +861,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
             <!-- <div class="kt-heading kt-heading--md">Setup Your Current Location</div> -->
             <div class="kt-form__section kt-form__section--first">
               <div class="kt-wizard-v2__form">
-          
+         
                <div class="col-md-12" id="corona_logo">
                  <div class="card" style=" box-shadow:  1px 1px 2px #D9D7D6, 0 0 25px #D9D7D6, 0 0 5px #D9D7D6;">
                       <div class="header" style="background: #afd135;height: 6px;">
@@ -1555,6 +1560,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
 
 
 </script>
+<?php include 'new_footer.html'?>
 
       </body>
       </html>
@@ -1564,3 +1570,5 @@ No matter what's troubling you, get the support you need, right now from Tamilna
 <!-- changes made at 25-04-2020-->
 <!-- Map removed  pic-->
 <!-- Text centered -->
+
+-

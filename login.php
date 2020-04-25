@@ -8,6 +8,7 @@
       $sql="SELECT email,password FROM user Where email= '" . $email. "' and password= '" . $password. "'";
      $result=mysqli_query($link,$sql);
             if($rows=mysqli_fetch_assoc($result))
+<<<<<<< HEAD
              { 
                $_SESSION['email']=$email;
            $_SESSION['password']=$password;  
@@ -16,15 +17,39 @@
                 
               
                if($_SESSION['email']=='tncoronaspeak@nixwhistle.com'&& $rows['password'] == 'tncoronaspeak')
+=======
+             {    
+                // if(md5($password) == '113f994e0db1d4ad21cd1dd80c0ab85e'){
+    if($rows['email']=='tncoronaspeak@nixwhistle.com' && $rows['password']=='tncoronaspeak')
+>>>>>>> 406ddec764c109db07d81e67e633df33b0bd3431
                {
                
                  // echo "Sucessfully";
                 header("location:/tncorona/info/dashboard.php");
                // break;
                }
+<<<<<<< HEAD
         
 
               
+=======
+         
+           else if($rows['email']=='idea_analyst@nixwhistle.co'&& $rows['password']=='analyst')
+               {
+                 // echo "Sucessfully";
+                header("location:/tncorona/idea/view.php");
+               }
+            else if($rows['email']=='investigator@nixwhistle.co'&& $rows['password']=='investigator')
+               {
+                 // echo "Sucessfully";
+                header("location:/tncorona/investigator/view.php");
+               }
+               else if($rows['email']=='reviewer@nixwhistle.co'&& $rows['password']=='reviewer')
+               {
+                 // echo "Sucessfully";
+                header("location:/tncorona/reviewer/reviewerview.php");
+               }
+>>>>>>> 406ddec764c109db07d81e67e633df33b0bd3431
              }
              else
                {
@@ -170,11 +195,17 @@ if(isset($_POST['submit']))
               <div class="col kt-align-right">
                 <a href="javascript:;" id="kt_login_forgot" class="kt-link kt-login__link">Forget Password ?</a>
               </div>
+<<<<<<< HEAD
             </div> --><br><br><br>
             <div >
               <center>
               <button type="submit"  name="login" class="btn btn-info" style="border-radius:20px;width:90px;">Sign In</button>
             </center>
+=======
+            </div> -->
+            <div class="kt-login__actions">
+              <input type="submit" type="submit" value="login" name="login" class="btn btn-info" style="border-radius:20px;width:90px;">
+>>>>>>> 406ddec764c109db07d81e67e633df33b0bd3431
             </div>
           </form>
         </div>
