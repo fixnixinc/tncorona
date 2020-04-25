@@ -477,6 +477,27 @@ width:100%;
 
 
     <body  class="kt-page--loading-enabled kt-page--loading kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--transparent kt-page--loading">
+        <div class="kt-portlet__body" id="banner">
+   <div class="">
+    <div class="heading" style="text-align: center;font-size: 28px;">
+Welcome to the online Corona Helpdesk
+</div>
+<!-- <div class="heading">
+
+  Get help. Get better.
+</div> -->
+<!-- <div class="sub-heading">
+No matter what's troubling you, get the support you need, right now from Tamilnadu government. We’re in This together
+</div><br> -->
+
+<!-- <div class="home-actions"> -->
+
+<!-- <span class="appointment button"><a href="https://telegra.ph/TN-Corona-Speak-03-27" style="color: white;">CHAT NOW</a></span> -->
+<!-- </div> -->
+
+</div>
+ 
+</div>
 <div class="kt-container  kt-grid__item kt-grid__item--fluid" ><br><br>
         <div class="row">
     <div class="col">
@@ -491,35 +512,18 @@ width:100%;
     </div>
 </div>
 </div>
+<br>
+<br>
+<p style="text-align: center;font-size: 18px;">
+  Please Submit the form below for my assistance.
+ </p><br>
         <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
                       <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
  <div class="kt-grid__item kt-grid__item--fluid" style="margin-top: -50px;" >
     <!-- begin:: Hero -->
 <div class="kt-portlet">
-  <div class="kt-portlet__body" id="banner">
-   <div class="banner-container">
-    <div class="heading">
-Welcome to the online Corona Helpdesk
-</div>
-<!-- <div class="heading">
 
-  Get help. Get better.
-</div> -->
-<div class="sub-heading">
-No matter what's troubling you, get the support you need, right now from Tamilnadu government. We’re in This together
-</div><br>
-<div class="sub-heading">
-Please Submit the form below for my assistance.
-</div><br>
-<!-- <div class="home-actions"> -->
-
-<!-- <span class="appointment button"><a href="https://telegra.ph/TN-Corona-Speak-03-27" style="color: white;">CHAT NOW</a></span> -->
-<!-- </div> -->
-
-</div>
- 
-</div>
 <!-- SpeakUp  start -->
 
  <div class="kt-container  kt-grid__item kt-grid__item--fluid" id="content" style="margin-top: 100px;">
@@ -715,7 +719,7 @@ Please Submit the form below for my assistance.
       </div>
       <div class="col-md-4">
 
-        <input type="text"  placeholder="Email" id="phone" name="phone1" class="form-control" required="">
+        <input type="text"  placeholder="Email" id="phone" name="phone1" class="form-control">
 
       </div>
 
