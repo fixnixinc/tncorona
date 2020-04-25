@@ -1,85 +1,31 @@
 <?php
  include 'php/common/config.php';
- session_start();
   if(isset($_POST['login']))
   {
    $email=$_POST['email'];
     $password=$_POST['password'];
-      $sql="SELECT email,password FROM user Where email= '" . $email. "' and password= '" . $password. "'";
+      $sql="SELECT email,password FROM user Where email='$email' and password='$password'";
      $result=mysqli_query($link,$sql);
             if($rows=mysqli_fetch_assoc($result))
-<<<<<<< HEAD
-             { 
-               $_SESSION['email']=$email;
-           $_SESSION['password']=$password;  
-            $_SESSION['last_name']=$name;   
-              $password == 'tncoronaspeak';
-                
-              
-               if($_SESSION['email']=='tncoronaspeak@nixwhistle.com'&& $rows['password'] == 'tncoronaspeak')
-=======
              {    
-                // if(md5($password) == '113f994e0db1d4ad21cd1dd80c0ab85e'){
-    if($rows['email']=='tncoronaspeak@nixwhistle.com' && $rows['password']=='tncoronaspeak')
->>>>>>> 406ddec764c109db07d81e67e633df33b0bd3431
+             
+             
+               if($rows['email']=='tncoronaspeak@nixwhistle.com'&& $rows['password'] == 'tncoronaspeak')
                {
                
                  // echo "Sucessfully";
                 header("location:/tncorona/info/dashboard.php");
                // break;
                }
-<<<<<<< HEAD
-        
-
-              
-=======
-         
-           else if($rows['email']=='idea_analyst@nixwhistle.co'&& $rows['password']=='analyst')
-               {
-                 // echo "Sucessfully";
-                header("location:/tncorona/idea/view.php");
-               }
-            else if($rows['email']=='investigator@nixwhistle.co'&& $rows['password']=='investigator')
-               {
-                 // echo "Sucessfully";
-                header("location:/tncorona/investigator/view.php");
-               }
-               else if($rows['email']=='reviewer@nixwhistle.co'&& $rows['password']=='reviewer')
-               {
-                 // echo "Sucessfully";
-                header("location:/tncorona/reviewer/reviewerview.php");
-               }
->>>>>>> 406ddec764c109db07d81e67e633df33b0bd3431
-             }
+             
+           
              else
                {
                 // echo "Error: " . $sql . "<br>" . $link->error;
                 // alert("incorrect username and password");
                }
   }
-?>
-<?php
-if(isset($_POST['submit']))
-{
-     $infowellsec=$_POST['infowellsec'];
-     $infowellkey=$_POST['infowellkey'];
-
-     $sql="SELECT infowellsec, infowellkey from tncoronaspeak where infowellsec='$infowellsec' and infowellkey='$infowellkey'";
-     $result=mysqli_query($link,$sql);
-     if($row=mysqli_fetch_assoc($result))
-     {
-         if($row['infowellsec']==$infowellsec && $row['infowellkey']==$infowellkey)
-         {
-             header("location:./case/followup.php?infowellsec=".$row['infowellsec']);
-         }
-     }
-     else
-     {
-         echo "error".$sql.$link->error;
-     }
 }
-
-
 ?>
 
 
@@ -91,7 +37,7 @@ if(isset($_POST['submit']))
 <base href="/tncorona/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>tncoronaspeak | Login</title>
+        <title>tncorona | Login</title>
         <meta name="description" content="Login page example">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -173,12 +119,12 @@ if(isset($_POST['submit']))
 
           <div class="kt-login__head">
           <center><h3 class="kt-login__title" style="color:black;">
- If you are country authority, regulator who are officially handling the cases, information, please apply for login with us for your country data mailing to tncoronaspeak@nixwhistle.com
+ If you are country authority, regulator who are officially handling the cases, information, please apply for login with us for your country data mailing to tncorona@nixwhistle.com
 
 </h3></center>
             
           </div>
-          <form class="" method="post" action="">
+          <form class="kt-form" method="post" action="">
             <div class="input-group">
               <input class="form-control" type="text"  placeholder="Email" id="email" name="email" autocomplete="off">
             </div>
@@ -195,17 +141,9 @@ if(isset($_POST['submit']))
               <div class="col kt-align-right">
                 <a href="javascript:;" id="kt_login_forgot" class="kt-link kt-login__link">Forget Password ?</a>
               </div>
-<<<<<<< HEAD
-            </div> --><br><br><br>
-            <div >
-              <center>
-              <button type="submit"  name="login" class="btn btn-info" style="border-radius:20px;width:90px;">Sign In</button>
-            </center>
-=======
             </div> -->
             <div class="kt-login__actions">
-              <input type="submit" type="submit" value="login" name="login" class="btn btn-info" style="border-radius:20px;width:90px;">
->>>>>>> 406ddec764c109db07d81e67e633df33b0bd3431
+              <button type="submit"  name="login" class="btn btn-info" style="border-radius:20px;width:90px;">Sign In</button>
             </div>
           </form>
         </div>
