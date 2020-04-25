@@ -228,13 +228,6 @@ Info - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) .
 
 <br>
 <div class="container">
-<div class="form-group">
-  <label style="font-size: 14px;"><strong>Management Synopsis:</strong></label> 
-     	<div class="">
-   <textarea type="text" class="form-control" name="MUpdate"  id="MUpdate" placeholder=""  style="height: 150px; border-color:#A1E6EA"> </textarea>
-   <span id="apdate" style="color: red;"></span>
-</div>
-   </div>
 
    <div class="form-group">
   <label style="font-size: 14px;"><strong> Update to citizen:</strong></label> 
@@ -243,6 +236,14 @@ Info - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) .
    <span id="apdate" style="color: red;"></span>
 </div>
    </div>
+   <div class="form-group">
+  <label style="font-size: 14px;"><strong>Management Synopsis:</strong></label> 
+      <div class="">
+   <textarea type="text" class="form-control" name="MUpdate"  id="MUpdate" placeholder=""  style="height: 150px; border-color:#A1E6EA"> </textarea>
+   <span id="apdate" style="color: red;"></span>
+</div>
+   </div>
+
    <?php 
    if($rows2=mysqli_fetch_assoc($result2))
    {

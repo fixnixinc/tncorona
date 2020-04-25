@@ -33,13 +33,13 @@
 
 <!-- <li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/reviewerview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-layers-1"></i><span class="kt-menu__link-text" style="text-align: center;"><br>Case</span></a>
 </li> -->
-<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/infoview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Info</span></a>
+<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/infoview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-graph"></i><span class="kt-menu__link-text" style="text-align: center;">Central despatch</span></a>
 </li>
 
 
 <!-- <li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/report.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-drop"></i><span class="kt-menu__link-text" style="text-align: center;">Case <br>Report</span></a></li>
  -->
-<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/inforeport.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-drop"></i><span class="kt-menu__link-text" style="text-align: center;">Info <br>Report</span></a></li>
+<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/inforeport.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-drop"></i><span class="kt-menu__link-text" style="text-align: center;">Closed <br></span></a></li>
 
 <!-- <li class="kt-menu__item " aria-haspopup="true"><a href="view/audit/auditPublished.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text"> Reports</span></a></li> -->
 
