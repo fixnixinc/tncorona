@@ -174,26 +174,28 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   <style type="text/css">
     #banner{
     /*background-image: url('png/front.png');*/
-    height: 700px;
+    /*height: 450px;*/
     box-sizing:cover;
-    background-position: right;
-      background-repeat: no-repeat;
+/*    background-position: right;
+*/      background-repeat: no-repeat;
+align-items: center;
   }
   @media only screen and (max-width: 767px) {
   #banner{
  /*background-image: url('png/front.png');*/
-        height: 1200px;
-        width:100%;
-    box-sizing:cover;
+        height: 250px;
+/*        width:100%;
+*/   
+ box-sizing:cover;
       background-repeat: no-repeat;
   }
 
   }
 .banner-container {
-    width: 45%;
-    position: relative;
-    top: 190px;
-    left: 100px;
+    width: 50%;
+    /*position: relative;*/
+  /*  top: 190px;
+    left: 100px;*/
 }
 @media only screen and (max-width: 767px)
 {
@@ -1561,3 +1563,4 @@ No matter what's troubling you, get the support you need, right now from Tamilna
 
 <!-- changes made at 25-04-2020-->
 <!-- Map removed  pic-->
+<!-- Text centered -->

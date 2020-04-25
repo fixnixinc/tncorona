@@ -305,7 +305,7 @@ span.psw {
   <div class="kt-header-mobile__toolbar">
    
     <!-- <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button> -->
-    <button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more-1" style="color: black;"></i></button>
+   <!--  <button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more-1" style="color: black;"></i></button> -->
   </div>
 </div>
 <!-- end:: Header Mobile -->
