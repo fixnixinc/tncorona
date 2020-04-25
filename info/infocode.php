@@ -144,7 +144,7 @@
    
 <?php
 
-$sql = "SELECT secretkey,ran from info order by id DESC limit 1";
+$sql = "SELECT secretkey,ran,countries from info order by id DESC limit 1";
 $result = mysqli_query($link, $sql);
 if (mysqli_num_rows($result) > 0) {
 
@@ -164,7 +164,7 @@ if (mysqli_num_rows($result) > 0) {
               <div class="modal-body" style="text-align:center;">
                <div class="form-group">
                 <h4 style="color: red">Please check back in 15 minutes for the status
-if in case of urgency, contact your district control room number</h4>
+if in case of urgency, contact your district control room number-<?php echo $row['countries'];?></h4>
                 <label style="font-size: 20px;"><b>Info Number</b></label><br>
                 <span class="no" id="quantity" maxlength="14" style="border-color: #30B7B7; color:black;font-size: 36px;"><?php echo substr($row['ran'], 0, 4) . "  " . substr($row['ran'], 4, 4) . "  " . substr($row['ran'],8,4) . "  " . substr($row['ran'], 12, 4);?></span>
                 <input type="text" id="copy" style="position: absolute;left: -1000px; top: -1000px;" value="<?php echo $row['ran']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;

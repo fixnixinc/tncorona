@@ -25,10 +25,6 @@
 
 
  
-   <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-more.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/maps/modules/map.js"></script>
@@ -36,8 +32,7 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
-                   
+    
    <link href="assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
 <link rel="shortcut icon" href="./assets/media/company-logos/speakup1.png" />
   </head>
@@ -549,7 +544,7 @@ width:100%;
         enabled: false
     },
     xAxis: {
-      categories: ["Death", "Neighborhood Alert", "Travel Alert", "Feed", "Operation"],
+      categories: ["Medical Assistance", "Death", "Neighborhood Alert", "Travel Alert", "Others"],
     },
     plotOptions: {
         series: {

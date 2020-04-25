@@ -1,5 +1,3 @@
-<?php 
-include 'siteheader.php'; ?>
 <?php
  include 'php/common/config.php';
   if(isset($_POST['login']))
@@ -10,42 +8,28 @@ include 'siteheader.php'; ?>
      $result=mysqli_query($link,$sql);
             if($rows=mysqli_fetch_assoc($result))
              {    
-                // if(md5($password) == '113f994e0db1d4ad21cd1dd80c0ab85e'){
-    if($rows['email']=='tncoronaspeak@nixwhistle.com' && $rows['password']=='tncoronaspeak')
+             
+             
+               if($rows['email']=='tncoronaspeak@nixwhistle.com'&& $rows['password'] == 'tncoronaspeak')
                {
                
                  // echo "Sucessfully";
                 header("location:/tncorona/info/dashboard.php");
                // break;
                }
-         
-           else if($rows['email']=='idea_analyst@nixwhistle.co'&& $rows['password']=='analyst')
-               {
-                 // echo "Sucessfully";
-                header("location:/tncorona/idea/view.php");
-               }
-            else if($rows['email']=='investigator@nixwhistle.co'&& $rows['password']=='investigator')
-               {
-                 // echo "Sucessfully";
-                header("location:/tncorona/investigator/view.php");
-               }
-               else if($rows['email']=='reviewer@nixwhistle.co'&& $rows['password']=='reviewer')
-               {
-                 // echo "Sucessfully";
-                header("location:/tncorona/reviewer/reviewerview.php");
-               }
-             }
+             
+           
              else
                {
                 // echo "Error: " . $sql . "<br>" . $link->error;
                 // alert("incorrect username and password");
                }
   }
+}
 ?>
 
 
 <!DOCTYPE html>
-
 
 <html lang="en" >
     <!-- begin::Head -->
@@ -53,7 +37,7 @@ include 'siteheader.php'; ?>
 <base href="/tncorona/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
-        <title>corona | Login</title>
+        <title>tncorona | Login</title>
         <meta name="description" content="Login page example">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -102,7 +86,7 @@ include 'siteheader.php'; ?>
 
 <!--begin::Global Theme Styles(used by all pages) -->
                    
-                    <link href="./assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
+                    <link href="./assets/css/demo2/style.bundle.css" rel="stylesheet" type="text/css" />
                 <!--end::Global Theme Styles -->
 
         <!--begin::Layout Skins(used by all pages) -->
@@ -110,6 +94,9 @@ include 'siteheader.php'; ?>
 
         <link rel="shortcut icon" href="./assets/media/company-logos/virus.png" />
     </head>
+      <?php
+      include "siteheader.php";
+    ?>
     <!-- end::Head -->
 
     <!-- begin::Body -->
@@ -132,17 +119,17 @@ include 'siteheader.php'; ?>
 
           <div class="kt-login__head">
           <center><h3 class="kt-login__title" style="color:black;">
- If you are country authority, regulator who are officially handling the cases, information, please apply for login with us for your country data mailing to tnCoronaSpeak@nixwhistle.com
+ If you are country authority, regulator who are officially handling the cases, information, please apply for login with us for your country data mailing to tncorona@nixwhistle.com
 
 </h3></center>
             
           </div>
           <form class="kt-form" method="post" action="">
             <div class="input-group">
-              <input class="form-control" type="text" style="color: white;" placeholder="Email" id="email" name="email" autocomplete="off">
+              <input class="form-control" type="text"  placeholder="Email" id="email" name="email" autocomplete="off">
             </div>
             <div class="input-group">
-              <input class="form-control" type="password" style="color: white; border-color: white;" placeholder="Password" name="password" id="password">
+              <input class="form-control" type="password" placeholder="Password" name="password" id="password">
             </div>
             <!-- <div class="row kt-login__extra">
               <div class="col">
@@ -156,7 +143,7 @@ include 'siteheader.php'; ?>
               </div>
             </div> -->
             <div class="kt-login__actions">
-              <input type="submit" type="submit" value="login" name="login" class="btn btn-info" style="border-radius:20px;width:90px;">
+              <button type="submit"  name="login" class="btn btn-info" style="border-radius:20px;width:90px;">Sign In</button>
             </div>
           </form>
         </div>
@@ -221,8 +208,7 @@ include 'siteheader.php'; ?>
   </div>
  
 <!-- end:: Page -->
-<?php 
-include 'footer.php'; ?>
+
 
         <!-- begin::Global Config(global config for global JS sciprts) -->
         <script>
@@ -302,7 +288,7 @@ include 'footer.php'; ?>
 
 <!--begin::Global Theme Bundle(used by all pages) -->
                
-             <script src="./assets/js/demo3/scripts.bundle.js" type="text/javascript"></script>
+             <script src="./assets/js/demo2/scripts.bundle.js" type="text/javascript"></script>
         <!--end::Global Theme Bundle -->
 
        
@@ -310,6 +296,9 @@ include 'footer.php'; ?>
                             <script src="./assets/js/demo3/pages/login/login-general.js" type="text/javascript"></script>
                         <!--end::Page Scripts -->
             </body>
+                  <?php 
+      include "footer.php"; ?>
     <!-- end::Body -->
 </html>
 
+<!-- updated with footer all A2-->

@@ -170,7 +170,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         <script src="assets/js/today.js"></script>
 
     </head>
-    <?php include 'new_nav_header.html'; ?>
+    <?php include 'siteheader.php'; ?>
   <style type="text/css">
     #banner{
     /*background-image: url('png/front.png');*/
@@ -553,7 +553,7 @@ Please Submit the form below for my assistance.
                     </div>  
 
                               <div class="row">
-                                   <div class="grid-two imageandtext" >
+                                   <div class="grid-two imageandtext">
 <div class="imageandtext image_grid">
     <label for="selimg6" style="text-align: center;">Medical Assistance <br><br>
      <i class="flaticon-network" style="font-size: 50px; color: #005eaa;"></i>
@@ -573,12 +573,9 @@ Please Submit the form below for my assistance.
      
     </div>
   </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
- 
-
-  <div class="imageandtext image_grid">
+<div class="imageandtext image_grid">
     <label for="selimg3" style="text-align: center;">Emergency Travel Needs<br><br>
-       <i class="fa fa-bus-alt" style="font-size: 60px; color: #005eaa;"></i>
+       <i class="fa fa-bus-alt" style="font-size: 50px; color: #005eaa;"></i>
     </label>
     <input type="radio" name="selimg" id="selimg3" value="travelAlert">
     <div class="caption">
@@ -593,16 +590,8 @@ Please Submit the form below for my assistance.
     <div class="caption">
      
     </div>
-  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <!-- <div class="imageandtext image_grid">
-    <label for="selimg4" style="text-align: center;">Feed<br><br>
-      <i class="la la-feed" style="font-size: 50px; color: #4b830d;"></i>
-    </label>
-    <input type="radio" name="selimg" id="selimg4" value="feed">
-    <div class="caption">
-     
-    </div>
-  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+  </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
   <div class="imageandtext image_grid">
     <label for="selimg5" style="text-align: center;">Others <br><br>
@@ -625,49 +614,49 @@ Please Submit the form below for my assistance.
                     <div class="row">
                       <div class="col-md-6">
                                                                                        
-<select id="district2" name="district2" class="form-control" style="border-color:#B8B8BB;background:transparent;">
+<select id="district" name="district2" class="form-control" style="border-color:#B8B8BB;background:transparent;">
        <option>Select your District</option>
-         <option value='Chennai'  data-title="Chennai">Chennai</option>
-         <option value='Ariyalur'  data-title="Ariyalur">Ariyalur</option>
-         <option value='Chengalpattu'  data-title="Chengalpattu">Chengalpattu</option>
-         <option value='Coimbatore'  data-title="Coimbatore">Coimbatore</option>
-         <option value='Cuddalore'  data-title="Cuddalore">Cuddalore</option>
-         <option value='Dharmapuri'  data-title="Dharmapuri">Dharmapuri</option>
-         <option value='Dindigul'  data-title="Dindigul">Dindigul</option>
-         <option value='Erode'  data-title="Erode">Erode</option>
-         <option value='Kallakurichi'  data-title="Kallakurichi">Kallakurichi</option>
-         <option value='Kanchipuram'  data-title="Kanchipuram">Kanchipuram</option>
-         <option value='Kanniyakumari'  data-title="Kanniyakumari">Kanniyakumari</option>
-         <option value='Karur'  data-title="Karur">Karur</option>
-         <option value='Krishnagiri'  data-title="Krishnagiri">Krishnagiri</option>
-         <option value='Madurai'  data-title="Madurai">Madurai</option>
-         <option value='Mayiladuthurai'  data-title="Mayiladuthurai">Mayiladuthurai</option>
-         <option value='Nagapattinam'  data-title="Nagapattinam">Nagapattinam</option>
-         <option value='Namakkal'  data-title="Namakkal">Namakkal</option>
-         <option value='Nilgiris'  data-title="Nilgiris">Nilgiris</option>
-         <option value='Perambalur'  data-title="Perambalur">Perambalur</option>
-         <option value='Pudukkottai'  data-title="Pudukkottai">Pudukkottai</option>
-         <option value='Ramanathapuram'  data-title="Ramanathapuram">Ramanathapuram</option>
-         <option value='Ranipet'  data-title="Ranipet">Ranipet</option>
-         <option value='Salem'  data-title="Salem">Salem</option>
-         <option value='Sivagangai'  data-title="Sivagangai">Sivagangai</option>
-         <option value='Tenkasi'  data-title="Tenkasi">Tenkasi</option>
-         <option value='Thanjavur'  data-title="Thanjavur">Thanjavur</option>
-         <option value='Theni'  data-title="Theni">Theni</option>
-         <option value='Thoothukudi'  data-title="Thoothukudi">Thoothukudi</option>
-         <option value='Tiruchirappalli'  data-title="Tiruchirappalli">Tiruchirappalli</option>
-         <option value='Tirunelveli'  data-title="Tirunelveli">Tirunelveli</option>
-         <option value='Tirupattur'  data-title="Tirupattur">Tirupattur</option>
-         <option value='Tiruppur'  data-title="Tiruppur">Tiruppur</option>
-         <option value='Tiruvallur'  data-title="Tiruvallur">Tiruvallur</option>
-         <option value='Tiruvannamalai'  data-title="Tiruvannamalai">Tiruvannamalai</option>
-         <option value='Tiruvarur'  data-title="Tiruvarur">Tiruvarur</option>
-         <option value='Vellore'  data-title="Vellore">Vellore</option>
-         <option value='Viluppuram'  data-title="Viluppuram">Viluppuram</option>
-         <option value='Virudhunagar'  data-title="Virudhunagar">Virudhunagar</option>
+         <option value='04329-228709'  data-title="Chennai">Chennai</option>
+         <option value='04329-228709'  data-title="Ariyalur">Ariyalur</option>
+         <option value='044-27237107/27237207'  data-title="Chengalpattu">Chengalpattu</option>
+         <option value='0422-2301114'  data-title="Coimbatore">Coimbatore</option>
+         <option value='04142-220700'  data-title="Cuddalore">Cuddalore</option>
+         <option value='04142-220700'  data-title="Dharmapuri">Dharmapuri</option>
+         <option value='0451-2460320'  data-title="Dindigul">Dindigul</option>
+         <option value='0424-2260211'  data-title="Erode">Erode</option>
+         <option value='04151-220000'  data-title="Kallakurichi">Kallakurichi</option>
+         <option value='0424-2260211'  data-title="Kanchipuram">Kanchipuram</option>
+         <option value='04652-231077'  data-title="Kanniyakumari">Kanniyakumari</option>
+         <option value='04324-256306'  data-title="Karur">Karur</option>
+         <option value='04343-234424'  data-title="Krishnagiri">Krishnagiri</option>
+         <option value='0452-2546160'  data-title="Madurai">Madurai</option>
+         <option value='0452-2546162'  data-title="Mayiladuthurai">Mayiladuthurai</option>
+         <option value='04365-252500'  data-title="Nagapattinam">Nagapattinam</option>
+         <option value='04286-281425/8220402437'  data-title="Namakkal">Namakkal</option>
+         <option value='0423-2444012/2444013'  data-title="Nilgiris">Nilgiris</option>
+         <option value='04328-224455'  data-title="Perambalur">Perambalur</option>
+         <option value='04322-222207'  data-title="Pudukkottai">Pudukkottai</option>
+         <option value='04567-230060'  data-title="Ramanathapuram">Ramanathapuram</option>
+         <option value='0416-2258016'  data-title="Ranipet">Ranipet</option>
+         <option value='0427-2452202'  data-title="Salem">Salem</option>
+         <option value='0427-2452202'  data-title="Sivagangai">Sivagangai</option>
+         <option value='0462-2501070/2501012'  data-title="Tenkasi">Tenkasi</option>
+         <option value='04362-230121'  data-title="Thanjavur">Thanjavur</option>
+         <option value='04546-261093'  data-title="Theni">Theni</option>
+         <option value='0461-2340101'  data-title="Thoothukudi">Thoothukudi</option>
+         <option value='0431-2418995'  data-title="Tiruchirappalli">Tiruchirappalli</option>
+         <option value='0462-2501070/2501012'  data-title="Tirunelveli">Tirunelveli</option>
+         <option value='04179-222111'  data-title="Tirupattur">Tirupattur</option>
+         <option value='0421-2971199'  data-title="Tiruppur">Tiruppur</option>
+         <option value='044-27664177/27666746'  data-title="Tiruvallur">Tiruvallur</option>
+         <option value='04175-1077  04175-232377'  data-title="Tiruvannamalai">Tiruvannamalai</option>
+         <option value='04366-226623'  data-title="Tiruvarur">Tiruvarur</option>
+         <option value='0416-2258016'  data-title="Vellore">Vellore</option>
+         <option value='04146-223265'  data-title="Viluppuram">Viluppuram</option>
+         <option value='04562-252601/252017'  data-title="Virudhunagar">Virudhunagar</option>
+         <option>Others</option>
 
-</select>
-                                    </div>
+</select>                     </div>
                                   </div>
                                 </div>
                                    
