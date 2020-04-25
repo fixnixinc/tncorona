@@ -173,7 +173,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     <?php include 'siteheader.php'; ?>
   <style type="text/css">
     #banner{
-    background-image: url('png/front.png');
+    /*background-image: url('png/front.png');*/
     height: 700px;
     box-sizing:cover;
     background-position: right;
@@ -181,7 +181,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   }
   @media only screen and (max-width: 767px) {
   #banner{
- background-image: url('png/front.png');
+ /*background-image: url('png/front.png');*/
         height: 1200px;
         width:100%;
     box-sizing:cover;
