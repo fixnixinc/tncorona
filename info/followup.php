@@ -105,7 +105,7 @@
   ?>
  <div class="container">
   <label style="color: black;"><strong>Citizen Update:</strong></label>
-  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['WBUpdate'];?> </textarea>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;border: 1px solid #e2e5ec;border-color:black;" disabled=""><?php echo $rows['WBUpdate'];?> </textarea>
 </div>
 <?php } ?>
 <br>
@@ -115,23 +115,29 @@
 <div id="demo" class="collapse">
 
   <label style="color: black;"><strong>District Instruction From Central Despatch:</strong></label>
-  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['MUpdate'];?> </textarea><br>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;border: 1px solid #e2e5ec;border-color:black;" disabled=""><?php echo $rows['MUpdate'];?> </textarea><br>
 
   <label style="color: black;"><strong>District Resolution Update:</strong></label>
-  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['resolution'];?> </textarea>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;border: 1px solid #e2e5ec;border-color:black;" disabled=""><?php echo $rows['resolution'];?> </textarea>
 <label style="color: black;"><strong>District Reinvestigate Update:</strong></label>
-  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['reinvestigate'];?> </textarea><br>
-<div class="container">
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;border: 1px solid #e2e5ec;border-color:black;" disabled=""><?php echo $rows['reinvestigate'];?> </textarea><br>
+  <div class="panel-body"style="border: 1px solid #e2e5ec;border-color:black;">
+
+<div class="row">
+  <div class="col-md-6">
   <label style="color: black;"><strong>Subject :</strong></label>
-<input type="text" name="email" class="form-control" disabled value="<?php echo $rows['category'];?>" style="background: transparent;">
-</div><br>
-<div class="container">
+<span class="form-control" name="email" class="" disabled ><?php echo $rows['category'];?></span>
+</div>
+ <div class="col-md-6">
   <label style="color: black;"><strong>District Control Number :</strong></label>
-<input type="text" name="email" class="form-control" disabled value="<?php echo $rows['countries'];?>" style="background: transparent;">
+<span class="form-control" name="email" class="" disabled ><?php echo $rows['countries'];?></span>
+</div>
+</div>
+<br>
 </div><br>
-<div class="container">
+<div class="">
   <label style="color: black;"><strong>Brief note on assistance :</strong></label>
-  <textarea type="text" rows="8" class="form-control" disabled  style="background: transparent;"><?php echo $rows['Description'];?></textarea>
+  <textarea type="text" rows="8" class="form-control" disabled  style="background: transparent;border: 1px solid #e2e5ec;border-color:black;"><?php echo $rows['Description'];?></textarea>
 </div>
 <br>
 <div class="">
@@ -164,14 +170,14 @@
   <input type="text" name="email" class="form-control" disabled value="<?php echo $rows1['name'];?>" style="background: transparent;">
    </div>
    <div class="col-md-4 input_val">
-     <label style="color: black;">Email :</label>
+     <label style="color: black;">Phone :</label>
      <!--<input type="text" placeholder="Designation" class="form-control" style="border-color: #216582;">-->
-    <input type="text" name="email" class="form-control" disabled value="<?php echo $rows1['email'];?>" style="background: transparent;">
+    <input type="text" name="email" class="form-control" disabled value="<?php echo $rows1['phone'];?>" style="background: transparent;">
    </div>
    <div class="col-md-4 input_val">
-     <label style="color: black;">Phone No :</label>
+     <label style="color: black;">Email:</label>
     <!-- <input type="text" placeholder="Department" class="form-control" style="border-color: #216582;">-->
-  <input type="text" name="email" class="form-control" disabled value="<?php echo $rows1['phone'];?>" style="background: transparent;">   </div>
+  <input type="text" name="email" class="form-control" disabled value="<?php echo $rows1['email'];?>" style="background: transparent;">   </div>
  
 <!-- <div class="input-group after-add-more col-md-1">
            <button class="btn add-more" type="button" title="Add Row"><i style="color:green;font-size:20px;" class="fa flaticon-plus"></i></button>

@@ -285,197 +285,76 @@ Info - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) .
 </script>
 <div class="container collapse" id="data"><br>
 <!-- <div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;"> -->
+<label style="color: black;"><strong>District Instruction From Central Despatch:</strong></label>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;border: 1px solid #e2e5ec;border-color:black;" disabled=""><?php echo $rows['MUpdate'];?> </textarea><br>
 
-<div class="row form-group">        
+  <label style="color: black;"><strong>District Resolution Update:</strong></label>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;border: 1px solid #e2e5ec;border-color:black;" disabled=""><?php echo $rows['resolution'];?> </textarea>
+<label style="color: black;"><strong>District Reinvestigate Update:</strong></label>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;border: 1px solid #e2e5ec;border-color:black;" disabled=""><?php echo $rows['reinvestigate'];?> </textarea><br>
+  <div class="panel-body"style="border: 1px solid #e2e5ec;border-color:black;">
 
-<div class="col-md-6">
-<label><strong>Category</strong></label><br>
-<span id="createdAt" class="form-control"><?php echo $rows['category'];?></span>
-</div>
-<div class="col-md-6">
-<label><strong>Country</strong> </label><br>
-<span id="Business Unit" class="form-control"><?php echo $rows['countries'];?></span>
-</div>
-
-    </div>	
-   <!--<div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;">-->
-
-<!--<div class="container hide" id="data" style="border:2px solid #C3C8C6; margin-left: -18px; height: 90px;">	-->
-
-<!--</div>-->
-
-  <!-- <div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;">-->
-
-  <!--   <div class="container hide" id="data" style="border:1px solid #C3C8C6; margin-left: -18px; height: 90px;"> -->
-
-
-<b>Details:</b><br><br>
-<div class="panel-body"style="border: 1px solid #e2e5ec;border-color:#A1E6EA">
-<div class="row form-group" style="margin:20px;">
-<div class="col-md-4 input_val">
-<label>Name</label>
-<span id="personsInvolved" class="form-control"><?php echo $rows['name'];?></span>
-</div>
-<div class="col-md-4 input_val">   
-<label>Email</label>
-<span id="Designation" class="form-control"><?php echo $rows['email'];?></span>
-</div>
-<div class="col-md-4 input_val">                  
-<label>Phone</label>
-<span id="Department" class="form-control"><?php echo $rows['phone'];?></span>
-</div>
-</div>
-</div><br>
-
-<br>
-
-    <div class="row form-group">
-
-<div class="col-md-12">
-<label><strong>Description</strong></label><br><br>
-<textarea id="nature" rows="7" class="form-control" disabled><?php echo $rows['Description'];?></textarea>
-</div>
-
-    </div>
-<div class="form-group">
-  <label style="font-size: 14px;  background-color: coral;"><b>Artifacts</b></label>
-   
-  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-        <a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
-      </div>
-   </div><br>
-
-   <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;">District Instruction</label>
-   
-  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-       <?php echo $rows['MUpdate'];?>
-      </div>
-   </div><br>
-    <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;">Update Citizen</label>
-   
-  <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
-        <?php echo $rows['WBUpdate'];?>
-      </div>
-   </div><br>
-
-
-
-</div>
-<?php
-}
-?>
-
-<br>
-<div class="container">
 <div class="row">
-<!-- <div class="col-md-11">
-  <button class="collapsible btn btn-success">Interaction</button>
-
-  <div id="demo" class="collapse"><br>
-    <h3>Chat History</h3>
-  <div style="min-height: 200px; width: 1119px; max-height: 100px; overflow: auto;border:1px solid #C3C8C6;">
-        <div class="conversations"></div>
-      
-      </div>
-   </div>
-</div> -->
-
-<!-- <div class="col-md-1" style="float: right;">
-  <button class="btn-warning collapsible"><i class="fa flaticon-attachment">Artifacts</i></button>
-    <div id="demo1" class="collapse"><br>
-    <h3></h3>
-
-  <div style="min-height: 200px; width: 250px; max-height: 100px;border:1px solid #C3C8C6;margin-left: -200px;">
-        <a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
-      </div>
-     
-   </div>
-</div> -->
-
+  <div class="col-md-6">
+  <label style="color: black;"><strong>Subject :</strong></label>
+<span class="form-control" name="email" class="" disabled ><?php echo $rows['category'];?></span>
 </div>
-
- <!--<div class="container hide" style="margin-top: 50px;margin-left: 80px;">
-  <button data-toggle="collapse" data-target="#demo"><img src="histroy.png" style="height: 40px; width: 40px;"></button>
-
-  <div id="demo" class="collapse">
-  <div style="min-height: 300px; max-height: 300px; overflow: auto;border:1px solid #C3C8C6;width: 950px;"><h2>Histroy</h2>
-        <div class="conversations"></div>
-      
-      </div>
-   </div>
-
+ <div class="col-md-6">
+  <label style="color: black;"><strong>District Control Number :</strong></label>
+<span class="form-control" name="email" class="" disabled ><?php echo $rows['countries'];?></span>
+</div>
+</div>
+<br>
 </div><br>
+<div class="">
+  <label style="color: black;"><strong>Brief note on assistance :</strong></label>
+  <textarea type="text" rows="8" class="form-control" disabled  style="background: transparent;border: 1px solid #e2e5ec;border-color:black;"><?php echo $rows['Description'];?></textarea>
+</div>
+<br>
+<div class="">
 
-
-</div>-->
+     <label class="" style="font-size: 14px;color: black;"><strong>Artifacts</strong></label>
+ <div class="panel-body"style="border: 1px solid #e2e5ec;border-color:black;">
+<div id="" class="">
+<div class="row">
+  <div class="input-group" style="margin: 20px;">
+<a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
+    </div>
+  </div>
 </div>
 </div>
+</div>
 
-<div class="container">
-                                  <!--Edit image png section-->
+<div class="">
+     <label class="" style="font-size: 14px;color: black;"><strong>Your Details :</strong></label>
+ 
+<div class="panel-body"style="border: 1px solid #e2e5ec;border-color:black;">
+<div id="people1" class="">
+<br>
 
-           <!-- <div class="">
-       	<div class="">
-           <a href=""><img src="edit.png"style="height: 35px;width: 35px; margin-left: 1210px; margin-top: -140px"></a> 
-       </div></div>-->   
-
-   
-
-
-
-  <div class="form-group">
-
-       <br>
-
-  <!-- Button to Open the Modal -->
-   <!-- The Modal -->
-
-  <div class="modal" id="update">
-   <div class="modal-dialog">
-     <div class="modal-content">
-     
-   
-       <!-- Modal body -->
-       <div class="modal-body">
-        <h3 class="modal-title">Succssfully Updated!</h3>
-       </div>
-     
-     </div>
+<div class="row">
+  <div class="input-group" style="margin:20px;">
+   <div class="col-md-4 input_val">
+     <label style="color: black;">Full Name :</label>
+  <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['name'];?>" style="background: transparent;">
    </div>
- </div>
+   <div class="col-md-4 input_val">
+     <label style="color: black;">Phone :</label>
+     <!--<input type="text" placeholder="Designation" class="form-control" style="border-color: #216582;">-->
+    <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['phone'];?>" style="background: transparent;">
+   </div>
+   <div class="col-md-4 input_val">
+     <label style="color: black;">Email:</label>
+    <!-- <input type="text" placeholder="Department" class="form-control" style="border-color: #216582;">-->
+  <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['email'];?>" style="background: transparent;">   </div>
+ 
+<!-- <div class="input-group after-add-more col-md-1">
+           <button class="btn add-more" type="button" title="Add Row"><i style="color:green;font-size:20px;" class="fa flaticon-plus"></i></button>
+       </div> -->
 
-
-</div>
-
-<br><br>
-</div>
-
-   <div class="modal fade" id="myModal" role="dialog">
-   <div class="modal-dialog">
-   
-     <!-- Modal content-->
-     <div class="modal-content">
-       <div class="modal-header">
-         <h4 class="modal-title">Live Conversation</h4>
-         <button type="button" class="close" data-dismiss="modal" ></button>
        </div>
-       <div class="modal-body" style="min-height: 300px; max-height: 300px; overflow: auto;">
-       	<div class="conversations"></div>
-         
-       </div>
-
-       <div class="modal-footer" >
-       	<div class="col-md-9">
-<input type="text" id="query" name="" class="form-control" placeholder="Provide more info...">
-</div>
-<div class="col-md-3"><input type="button" onclick="messagesent()" name="" class="btn btn-primary" value="Send Message" style="background-color: #2E9461;"></div>
-       </div>
-     </div>
- </div>
-</div> 
-    
+   </div>
+   <br><br>
 </div>
 </div>
 </div>
@@ -493,7 +372,7 @@ Info - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) .
 
 <?php
 
-
+}
 
 ?>
 

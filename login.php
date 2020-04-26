@@ -119,7 +119,7 @@
 
           <div class="kt-login__head">
           <center><h3 class="kt-login__title" style="color:black;">
- If you are country authority, regulator who are officially handling the cases, information, please apply for login with us for your country data mailing to tncorona@nixwhistle.com
+ If you are country authority, regulator who are officially handling the cases, information, please apply for login with us for your country data mailing to tncoronaspeak@nixwhistle.com
 
 </h3></center>
             
