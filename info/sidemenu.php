@@ -36,11 +36,11 @@
 								</li>
 							
                           
-								<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/infoview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text"> Reviewer</span></a></li>
+								<li class="kt-menu__item " aria-haspopup="true"><a href="reviewer/infoview.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text"> District</span></a></li>
 						
 								
 
-								<li class="kt-menu__item " aria-haspopup="true"><a href="info/Report.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text"> Report</span></a></li>
+								<li class="kt-menu__item " aria-haspopup="true"><a href="info/Report.php" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-analytics-2"></i><span class="kt-menu__link-text"> Closed</span></a></li>
 						
 						
 							</ul> 

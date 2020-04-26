@@ -181,7 +181,7 @@ if ($rows=mysqli_fetch_assoc($result)) {
 <br>
   <div class="container">
   <label class="kt-radio kt-radio--solid kt-radio--success">
-  <input type="radio" name="radio1" value="1"/>District Instruction<span></span></label>&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="radio1" value="1"/>District Resolution<span></span></label>&nbsp;&nbsp;&nbsp;
   <label class="kt-radio kt-radio--solid kt-radio--danger">
 <input type="radio" name="radio1" value="2"/>District Detailed Analysis<span></span></label>
 <br>
@@ -189,7 +189,7 @@ if ($rows=mysqli_fetch_assoc($result)) {
     <!-- <label style="font-size: 14px;"><strong>Resolution </strong></label> -->
 <div class="rad ra1" style="display: none">
 <!--  <span id="resolution" class="form-control" style="font-size: 13px;height: 150px;"></span> -->
-<textarea id="resolution" name="resolution" class="form-control" style="font-size: 13px;height: 150px; border-color: #A1E6EA;" placeholder="District Instruction"></textarea>
+<textarea id="resolution" name="resolution" class="form-control" style="font-size: 13px;height: 150px; border-color: #A1E6EA;" placeholder="District Resolution"></textarea>
         </div>
 
 
