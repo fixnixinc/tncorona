@@ -131,7 +131,7 @@
 </div><br>
 <div class="container">
   <label style="color: black;"><strong>Brief note on assistance :</strong></label>
-  <textarea type="text" rows="8" class="form-control" disabled  style="background: transparent;">value="<?php echo $rows['Description'];?>"</textarea>
+  <textarea type="text" rows="8" class="form-control" disabled  style="background: transparent;"><?php echo $rows['Description'];?></textarea>
 </div>
 <br>
 <div class="">
