@@ -297,7 +297,7 @@
                         <!--end::Page Scripts -->
             </body>
                   <?php 
-      include "footer.php"; ?>
+      include "new_footer.html"; ?>
     <!-- end::Body -->
 </html>
 
