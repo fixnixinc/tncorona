@@ -33,7 +33,7 @@
 
 <?php
     include "../php/common/config.php";
-     $tipno = $_GET['id'];
+     $tipno = $_GET['ran'];
     $query = "SELECT * FROM info WHERE ran='$tipno' order by id desc";
     $result = mysqli_query($link,$query);
     $query1 = "SELECT * FROM info WHERE ran='$tipno'";
