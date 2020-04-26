@@ -710,11 +710,11 @@ No matter what's troubling you, get the support you need, right now from Tamilna
            <input type="text" placeholder="FullName" id="name" name="name1" class="form-control" required="">&nbsp;
         </div>
       <div class="col-md-4">
-        <input type="text" placeholder="Phone" id="email" name="email1" class="form-control" required="">&nbsp;
+        <input type="text" placeholder="Email" id="email" name="email1" class="form-control" >&nbsp;
       </div>
       <div class="col-md-4">
 
-        <input type="text"  placeholder="Email" id="phone" name="phone1" class="form-control">
+        <input type="text"  placeholder="Phone" id="phone" name="phone1" class="form-control" required="">
 
       </div>
 
