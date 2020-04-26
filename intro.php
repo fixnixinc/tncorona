@@ -544,16 +544,11 @@ No matter what's troubling you, get the support you need, right now from Tamilna
                     </li>
                 -->
                     <li class="nav-item">
-                        <a class="" data-toggle="" href="#kt_tabs_1_3">
+                        <a class="">
                             <i class="flaticon-presentation" style="font-size: 50px; color: #afd135;"></i>  <label style="font-size:18px;font-weight: 500;color: black;">Assistance Required</label>
                         </a>
                     </li>
-               <!--      <li class="nav-item">
-                        <a class="" data-toggle="tab" href="#kt_tabs_1_4">
-                            <i class="fa flaticon-customer" style="font-size: 50px; color: #034ea2;"></i>  <label style="font-size:18px;font-weight: 500;color: black;">Emotinal Wellness</label>
-                        </a>
-                    </li>
-                  -->
+             
                 </ul>
                 <div class="tab-content">
                    
@@ -779,64 +774,7 @@ No matter what's troubling you, get the support you need, right now from Tamilna
     <div class="kt-portlet">
   <div class="kt-portlet__body kt-portlet__body--fit">
     <div class="kt-grid  kt-wizard-v2 kt-wizard-v2--white" id="kt_wizard_v2" data-ktwizard-state="step-first">
-      <!-- <div class="kt-grid__item kt-wizard-v2__aside"> -->
-        <!--begin: Form Wizard Nav -->
-   <!--      <div class="kt-wizard-v2__nav" >
-          <div class="kt-wizard-v2__nav-items" > -->
-            <!--doc: Replace A tag with SPAN tag to disable the step link click -->
-         <!--    <a class="kt-wizard-v2__nav-item"  data-ktwizard-type="step" >
-              <div class="kt-wizard-v2__nav-body">
-                <div class="kt-wizard-v2__nav-icon">
-                  <i class="flaticon-globe" style="color:#034ea2; "></i>
-                </div>
-                <div class="kt-wizard-v2__nav-label">
-                  <div class="kt-wizard-v2__nav-label-title">
-                 
-                  </div>
-                  <div class="kt-wizard-v2__nav-label-desc">
-                 
-                  </div>
-                </div>
-              </div>
-            </a> -->
-
-
-         
-<!--     <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step" data-ktwizard-state="step-first">
-              <div class="kt-wizard-v2__nav-body">
-                <div class="kt-wizard-v2__nav-icon">
-                  <i class="flaticon-bus-stop" style="color: #afd135;"></i>
-                </div>
-                <div class="kt-wizard-v2__nav-label">
-                  <div class="kt-wizard-v2__nav-label-title">
-                    Districts
-                  </div>
-                  <div class="kt-wizard-v2__nav-label-desc">
-                    Choose Your countries Map
-                  </div>
-                </div>
-              </div>
-            </a> -->
-         <!--   <a class="kt-wizard-v2__nav-item" data-ktwizard-type="step">
-              <div class="kt-wizard-v2__nav-body">
-                <div class="kt-wizard-v2__nav-icon">
-                 <i class="flaticon-analytics" style="color:#034ea2; "></i>
-                </div>
-                <div class="kt-wizard-v2__nav-label">
-                  <div class="kt-wizard-v2__nav-label-title">
-                    PREDICTION
-                  </div>
-             
-                </div>
-              </div>
-            </a> -->
-           
-         
-       <!--    </div>
-        </div> -->
-        <!--end: Form Wizard Nav -->
-<!--
-      </div> -->
+     
       <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v2__wrapper" style="background-image:url('png/backimg4.jpg');">
         <!--begin: Form Wizard Form-->
         <form class="kt-form" id="kt_form" >

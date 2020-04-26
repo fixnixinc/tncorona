@@ -237,7 +237,7 @@ Info - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) .
 </div>
    </div>
    <div class="form-group">
-  <label style="font-size: 14px;"><strong>Management Synopsis:</strong></label> 
+  <label style="font-size: 14px;"><strong>District Instruction:</strong></label> 
       <div class="">
    <textarea type="text" class="form-control" name="MUpdate"  id="MUpdate" placeholder=""  style="height: 150px; border-color:#A1E6EA"> </textarea>
    <span id="apdate" style="color: red;"></span>
@@ -346,7 +346,7 @@ Info - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) .
    </div><br>
 
    <div class="form-group">
-  <label style="font-size: 14px;  background-color: #f71462;color: white;">Management Update</label>
+  <label style="font-size: 14px;  background-color: #f71462;color: white;">District Instruction</label>
    
   <div style="min-height: 200px; max-height: 100px;border:1px solid #C3C8C6;">
        <?php echo $rows['MUpdate'];?>

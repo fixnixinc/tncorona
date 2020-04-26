@@ -114,28 +114,44 @@
 </div><br>
 <div id="demo" class="collapse">
 
-  <label style="color: black;"><strong>Management Synopsis:</strong></label>
-  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['MUpdate'];?> </textarea>
+  <label style="color: black;"><strong>District Instruction From Central Despatch:</strong></label>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['MUpdate'];?> </textarea><br>
 
-  <label style="color: black;"><strong>Reinvestigate Update:</strong></label>
-  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['reinvestigate'];?> </textarea>
-
+  <label style="color: black;"><strong>District Resolution Update:</strong></label>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['resolution'];?> </textarea>
+<label style="color: black;"><strong>District Reinvestigate Update:</strong></label>
+  <textarea type="text" class="form-control" rows="8"  placeholder=""  style="background: transparent;" disabled=""><?php echo $rows['reinvestigate'];?> </textarea><br>
 <div class="container">
-  <label style="color: black;"><strong>Category :</strong></label>
+  <label style="color: black;"><strong>Subject :</strong></label>
 <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['category'];?>" style="background: transparent;">
 </div><br>
-
 <div class="container">
-  <label style="color: black;"><strong>Description :</strong></label>
-  <input type="text" name="email" class="form-control" disabled value="<?php echo $rows['Description'];?>" style="background: transparent;">
+  <label style="color: black;"><strong>District Control Number :</strong></label>
+<input type="text" name="email" class="form-control" disabled value="<?php echo $rows['countries'];?>" style="background: transparent;">
+</div><br>
+<div class="container">
+  <label style="color: black;"><strong>Brief note on assistance :</strong></label>
+  <textarea type="text" rows="8" class="form-control" disabled value="<?php echo $rows['Description'];?>" style="background: transparent;"></textarea>
 </div>
 <br>
+<div class="">
 
+     <label class="" style="font-size: 14px;color: black;"><strong>Artifacts</strong></label>
+ <div class="panel-body"style="border: 1px solid #e2e5ec;border-color:black;">
+<div id="" class="">
+<div class="row">
+  <div class="input-group" style="margin: 20px;">
+<a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
 
-<div class="container">
+<div class="">
      <label class="" style="font-size: 14px;color: black;"><strong>Your Details :</strong></label>
  
-<div class="panel-body"style="border: 1px solid #e2e5ec;border-color:#A1E6EA">
+<div class="panel-body"style="border: 1px solid #e2e5ec;border-color:black;">
 <div id="people1" class="">
 <br>
  <?php
@@ -170,19 +186,7 @@
 </div>
 <br>
 <br>
-<div class="">
 
-     <label class="" style="font-size: 14px;color: black;"><strong>Artifacts</strong></label>
- <div class="panel-body"style="border: 1px solid #e2e5ec;border-color:#A1E6EA">
-<div id="" class="">
-<div class="row">
-  <div class="input-group" style="margin: 20px;">
-<a href="./documents/<?php echo $rows['Artifacts']; ?>" style="font-size: 16px;"><?php echo $rows['Artifacts'];?></a>
-    </div>
-  </div>
-</div>
-</div>
-</div>
 <br>
 <!-- 
     <div class="form-group">
@@ -217,7 +221,7 @@
 </body>
 
 </html>
-<?php include '../footer.php'; ?>
+<?php include '../new_footer.html'; ?>
   <script>
             var KTAppOptions = {"colors":{"state":{"brand":"#2c77f4","light":"#ffffff","dark":"#282a3c","primary":"#5867dd","success":"#34bfa3","info":"#36a3f7","warning":"#ffb822","danger":"#fd3995"},"base":{"label":["#c5cbe3","#a1a8c3","#3d4465","#3e4466"],"shape":["#f0f3ff","#d9dffa","#afb4d4","#646c9a"]}}};
         </script>
